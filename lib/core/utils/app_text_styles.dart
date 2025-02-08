@@ -15,4 +15,33 @@ class AppTextStyles {
     color: AppColors.greyTextColor,
     fontFamily: AppFonts.productSans,
   );
+  static TextStyle font22 = TextStyle(
+    fontSize: 22.sp,
+    color: AppColors.whiteColor,
+    fontFamily: AppFonts.productSans,
+  );
+  static TextStyle font20 = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeight.w700,
+    fontFamily: AppFonts.productSans,
+  );
+  static TextStyle font13 = TextStyle(
+    fontSize: 13.sp,
+    color: AppColors.greyText13Color,
+    fontWeight: FontWeight.w500,
+    fontFamily: AppFonts.productSans,
+  );
+  static TextStyle font12 = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.darkColor,
+    fontWeight: FontWeight.w500,
+    fontFamily: AppFonts.productSans,
+  );
+  static TextStyle font16 = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.darkColor,
+    fontWeight: FontWeight.w700,
+    fontFamily: AppFonts.productSans,
+  );
 }

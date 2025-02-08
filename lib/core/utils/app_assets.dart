@@ -5,4 +5,7 @@ class AppAssets {
   static String access = 'assets/images/accessories.svg';
   static String beauty = 'assets/images/beauty.svg';
   static String collection = 'assets/images/collection.svg';
+  static String collection3 = 'assets/images/collection3.png';
+  static String feature = 'assets/images/feature.svg';
+  static String feature2 = 'assets/images/feature2.png';
 }
