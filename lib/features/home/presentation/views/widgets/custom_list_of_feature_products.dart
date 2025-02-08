@@ -10,25 +10,28 @@ class CustomListOfFeatureProducts extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          children: [
-            Text(
-              'Feature Products',
-              style: AppTextStyles.font20,
-            ),
-            Spacer(),
-            GestureDetector(
-              onTap: () {},
-              child: Text(
-                'Show all',
-                style: AppTextStyles.font13,
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          child: Row(
+            children: [
+              Text(
+                'Feature Products',
+                style: AppTextStyles.font20,
               ),
-            ),
-          ],
+              Spacer(),
+              GestureDetector(
+                onTap: () {},
+                child: Text(
+                  'Show all',
+                  style: AppTextStyles.font13,
+                ),
+              ),
+            ],
+          ),
         ),
         SizedBox(height: 20),
         SizedBox(
-          height: 227.h,
+          height: 210.h,
           //width: 126.w,
           child: ListView.builder(
               shrinkWrap: true,
@@ -36,7 +39,9 @@ class CustomListOfFeatureProducts extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return Padding(
-                  padding: const EdgeInsets.only(right: 18.0),
+                  padding: const EdgeInsets.only(
+                    left: 25,
+                  ),
                   child: CustomFeatureProduct(),
                 );
               }),

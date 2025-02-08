@@ -44,4 +44,14 @@ class AppTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: AppFonts.productSans,
   );
+  static TextStyle font12Light = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.lightGreyText12Color,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font20Light = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.lightGreyText20Color,
+    fontFamily: AppFonts.productSansLight,
+  );
 }

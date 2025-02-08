@@ -8,4 +8,6 @@ class AppAssets {
   static String collection3 = 'assets/images/collection3.png';
   static String feature = 'assets/images/feature.svg';
   static String feature2 = 'assets/images/feature2.png';
+  static String newCollection = 'assets/images/newCollection.svg';
+  static String newCollecpng = 'assets/images/newCollecpng.png';
 }
