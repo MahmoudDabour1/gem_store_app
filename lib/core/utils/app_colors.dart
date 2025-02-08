@@ -11,6 +11,6 @@ class AppColors {
   static const Color lightGreyText12Color = Color(0xFF777E90);
   static const Color lightGreyText20Color = Color(0xFF353945);
   static const Color firstGreyContainerColor = Color(0xFFE2E2E2);
-  static Color firstGreyContainerColorwithOpacity =
-      Color(0xFFE2E2E2).withOpacity(0.5);
+  static const Color backgroundimageColor = Color(0xFFC4C4C4);
+  //
 }

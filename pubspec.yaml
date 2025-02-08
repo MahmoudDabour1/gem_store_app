@@ -71,6 +71,11 @@ flutter:
     - family: ProductSans-Light
       fonts:
         - asset: assets/fonts/FontsFree-Net-ProductSans-Light.ttf
+
+
+    - family: ProductSans-Medium
+      fonts:
+        - asset: assets/fonts/FontsFree-Net-ProductSans-Medium.ttf   
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

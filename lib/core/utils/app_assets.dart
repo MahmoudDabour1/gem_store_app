@@ -10,4 +10,6 @@ class AppAssets {
   static String feature2 = 'assets/images/feature2.png';
   static String newCollection = 'assets/images/newCollection.svg';
   static String newCollecpng = 'assets/images/newCollecpng.png';
+  static String recommended = 'assets/images/recommended.svg';
+  static String recommendpng = 'assets/images/recommedpng.png';
 }

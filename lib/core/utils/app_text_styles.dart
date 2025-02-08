@@ -36,7 +36,7 @@ class AppTextStyles {
     fontSize: 12.sp,
     color: AppColors.darkColor,
     fontWeight: FontWeight.w500,
-    fontFamily: AppFonts.productSans,
+    fontFamily: AppFonts.productSansMedium,
   );
   static TextStyle font16 = TextStyle(
     fontSize: 16.sp,
