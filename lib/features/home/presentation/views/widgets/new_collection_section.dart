@@ -16,27 +16,31 @@ class NewCollectionSection extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(24.0),
         child: Row(children: [
-          Column(
-            children: [
-              Row(
-                children: [
-                  Container(
-                    height: 12.h,
-                    width: 0.79.w,
-                    color: AppColors.lightGreyText12Color,
-                  ),
-                  SizedBox(width: 10.w),
-                  Text(
-                    'NEW COLLECTION',
-                    style: AppTextStyles.font12Light,
-                  ),
-                ],
-              ),
-              SizedBox(height: 15.h),
-              Text('HANG OUT \n& PARTY', style: AppTextStyles.font20Light),
-            ],
+          Expanded(
+            child: Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      height: 12.h,
+                      width: 0.79.w,
+                      color: AppColors.lightGreyText12Color,
+                    ),
+                    SizedBox(width: 10.w),
+                    Text(
+                      'NEW COLLECTION',
+                      style: AppTextStyles.font12Light,
+                    ),
+                  ],
+                ),
+                SizedBox(height: 15.h),
+                Flexible(
+                    child: Text('HANG OUT & PARTY ',
+                        style: AppTextStyles.font20Light)),
+              ],
+            ),
           ),
-          Spacer(),
+          SizedBox(width: 20.w),
           Stack(alignment: Alignment.center, children: [
             Container(
               height: 132.h,

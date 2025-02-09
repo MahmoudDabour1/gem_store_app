@@ -6,6 +6,7 @@ import 'package:gem_store_app/features/home/presentation/views/widgets/custom_li
 import 'package:gem_store_app/features/home/presentation/views/widgets/custom_list_of_feature_products.dart';
 import 'package:gem_store_app/features/home/presentation/views/widgets/custom_list_of_recommended_product.dart';
 import 'package:gem_store_app/features/home/presentation/views/widgets/new_collection_section.dart';
+import 'package:gem_store_app/features/home/presentation/views/widgets/top_collection_section.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});
@@ -16,7 +17,7 @@ class HomeScreenBody extends StatelessWidget {
       child: Column(
         children: [
           Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 20.h),
+            padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 25.h),
             child: Column(
               children: [
                 CustomAppBar(),
@@ -32,7 +33,16 @@ class HomeScreenBody extends StatelessWidget {
           SizedBox(height: 10.h),
           NewCollectionSection(),
           SizedBox(height: 20.h),
-          CustomListOfRecommendedProduct()
+          CustomListOfRecommendedProduct(),
+          SizedBox(height: 20.h),
+          Column(
+            children: [
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 20.h),
+                child: TopCollectionSection(),
+              ),
+            ],
+          ),
         ],
       ),
     );

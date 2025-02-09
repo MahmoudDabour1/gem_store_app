@@ -54,4 +54,29 @@ class AppTextStyles {
     color: AppColors.lightGreyText20Color,
     fontFamily: AppFonts.productSansLight,
   );
+  static TextStyle font20Lightw300 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w300,
+    color: AppColors.lightGreyText20Colorw300,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font20Medium = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.lightGreyText20Color,
+    fontWeight: FontWeight.w500,
+    fontFamily: AppFonts.productSansMedium,
+  );
+
+  static TextStyle font13Roboto = TextStyle(
+      fontSize: 13.sp,
+      color: AppColors.lightGreyText13RobotoColor,
+      fontWeight: FontWeight.w400,
+      fontFamily: AppFonts.roboto);
+
+  static TextStyle font17Light = TextStyle(
+    fontSize: 17.sp,
+    fontWeight: FontWeight.w300,
+    color: AppColors.darkColor,
+    fontFamily: AppFonts.productSansLight,
+  );
 }

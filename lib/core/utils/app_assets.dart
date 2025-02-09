@@ -12,4 +12,6 @@ class AppAssets {
   static String newCollecpng = 'assets/images/newCollecpng.png';
   static String recommended = 'assets/images/recommended.svg';
   static String recommendpng = 'assets/images/recommedpng.png';
+  static String topCollection = 'assets/images/topCollection.png';
+  static String topCollection2 = 'assets/images/topCollection2.png';
 }

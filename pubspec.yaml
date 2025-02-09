@@ -75,7 +75,11 @@ flutter:
 
     - family: ProductSans-Medium
       fonts:
-        - asset: assets/fonts/FontsFree-Net-ProductSans-Medium.ttf   
+        - asset: assets/fonts/FontsFree-Net-ProductSans-Medium.ttf
+
+    - family: Roboto
+      fonts:
+        - asset: assets/fonts/Roboto-VariableFont_wdth,wght.ttf       
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
