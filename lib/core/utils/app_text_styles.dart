@@ -79,4 +79,10 @@ class AppTextStyles {
     color: AppColors.darkColor,
     fontFamily: AppFonts.productSansLight,
   );
+
+  static TextStyle font10Brown = TextStyle(
+    fontSize: 10.sp,
+    color: AppColors.brownColor,
+    fontFamily: AppFonts.productSans,
+  );
 }

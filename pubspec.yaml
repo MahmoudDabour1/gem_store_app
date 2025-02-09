@@ -31,6 +31,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
+  flutter_bloc: ^9.0.0
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.17
   logger: ^2.5.0
@@ -66,12 +67,11 @@ flutter:
     - family: Product Sans
       fonts:
         - asset: assets/fonts/Product Sans Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+    #       - asset: fonts/Schyler-Italic.ttf
+    #         style: italic
     - family: ProductSans-Light
       fonts:
         - asset: assets/fonts/FontsFree-Net-ProductSans-Light.ttf
-
 
     - family: ProductSans-Medium
       fonts:
@@ -79,7 +79,7 @@ flutter:
 
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto-VariableFont_wdth,wght.ttf       
+        - asset: assets/fonts/Roboto-VariableFont_wdth,wght.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
