@@ -1,3 +1,17 @@
+buildscript {
+    ext {
+        // Update to a compatible Gradle version
+        gradle_version = '8.1.0'
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:$gradle_version"
+    }
+}
+
 allprojects {
     repositories {
         google()
