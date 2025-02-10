@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/theming/app_colors.dart';
-import 'package:gem_store_app/features/cart/cart_screen.dart';
-import 'package:gem_store_app/features/checkout/checkout_screen.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
+
+import 'features/track_order/track_order.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -30,7 +28,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: AppColors.greenColor),
           useMaterial3: true,
         ),
-        home: CartScreen(),
+        home: TrackOrderScreen(),
       ),
     );
   }
