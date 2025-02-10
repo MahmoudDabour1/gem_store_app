@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/theming/app_colors.dart';
-import 'package:gem_store_app/core/theming/app_styles.dart';
-import 'package:gem_store_app/core/widgets/app_back_button.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gem_store_app/core/utils/app_assets.dart';
+import 'package:gem_store_app/core/utils/app_text_styles.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
-
-  const CustomAppBar({super.key, required this.title});
+class CustomAppBar extends StatelessWidget {
+  const CustomAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: AppColors.scaffoldBackGroundColor,
-      elevation: 0,
-      leading: AppBackButton(),
-      leadingWidth: 100.w,
-      title: Text(
-        title,
-        style: AppStyles.font18BlackSemiBold,
-      ),
-      centerTitle: true,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        GestureDetector(
+          onTap: () {},
+          child: SvgPicture.asset(
+            AppAssets.appBar,
+          ),
+        ),
+        Spacer(),
+        Text(
+          'Gemstore',
+          style: AppTextStyles.font20Bold,
+        ),
+        Spacer(),
+      ],
     );
   }
-
-  @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }

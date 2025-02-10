@@ -3,10 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/theming/app_colors.dart';
 import 'package:gem_store_app/features/cart/cart_screen.dart';
 import 'package:gem_store_app/features/checkout/checkout_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 
-import 'features/onboarding/onboarding_screen.dart';
-
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await ScreenUtil.ensureScreenSize();
   runApp(const MyApp());
 }
 
