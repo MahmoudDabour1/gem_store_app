@@ -8,6 +8,7 @@ import 'package:gem_store_app/features/checkout/widgets/country_drop_down_widget
 import 'package:gem_store_app/features/checkout/widgets/delivery_home_container.dart';
 import 'package:gem_store_app/features/checkout/widgets/location_and_done_shape.dart';
 
+import '../../core/widgets/app_custom_app_bar.dart';
 import '../../core/widgets/app_custom_button.dart';
 import 'check_out_done_screen.dart';
 
@@ -17,7 +18,7 @@ class CheckoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Checkout"),
+      appBar: AppCustomAppBar(title: "Checkout"),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
         child: SingleChildScrollView(

@@ -8,13 +8,15 @@ import 'package:gem_store_app/core/widgets/app_custom_button.dart';
 import 'package:gem_store_app/core/widgets/custom_app_bar.dart';
 import 'package:gem_store_app/features/checkout/widgets/location_and_done_shape.dart';
 
+import '../../core/widgets/app_custom_app_bar.dart';
+
 class CheckOutDoneScreen extends StatelessWidget {
   const CheckOutDoneScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: "Checkout"),
+      appBar: AppCustomAppBar(title: "Checkout"),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Padding(
