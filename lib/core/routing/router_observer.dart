@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
+
 var logger = Logger();
+
 class RouterObserver extends NavigatorObserver {
   @override
   void didPush(Route<dynamic> route, Route<dynamic>? previousRoute) {
@@ -30,12 +32,15 @@ class RouterObserver extends NavigatorObserver {
     logger.i('Removed route: $routeName');
     super.didRemove(route, previousRoute);
   }
+
   @override
-  void didStartUserGesture(Route<dynamic> route, Route<dynamic>? previousRoute) {
+  void didStartUserGesture(
+      Route<dynamic> route, Route<dynamic>? previousRoute) {
     String? routeName = _extractRouteName(route);
     logger.i('Started user gesture: $routeName');
     super.didStartUserGesture(route, previousRoute);
   }
+
   @override
   void didStopUserGesture() {
     logger.i('Stopped user gesture');
