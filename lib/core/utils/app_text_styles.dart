@@ -99,12 +99,30 @@ class AppTextStyles {
   static TextStyle font14 = TextStyle(
     fontSize: 14.sp,
     fontWeight: FontWeight.w500,
-    color: AppColors.lightGreyText20Colorw300,
     fontFamily: AppFonts.productSansMedium,
   );
   static TextStyle font14Light = TextStyle(
     fontSize: 14.sp,
     color: AppColors.blackColor,
     fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font24 = TextStyle(
+    fontSize: 24.sp,
+    color:AppColors.blackColor,
+    fontWeight: FontWeight.bold,
+    fontFamily: AppFonts.productSans,
+  );
+  
+  static TextStyle font12BlackLight = TextStyle(
+    fontSize: 12.sp,
+    
+    color: AppColors.blackColor,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font16white= TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.whiteColor,
+    fontWeight: FontWeight.w700,
+    fontFamily: AppFonts.productSans,
   );
 }

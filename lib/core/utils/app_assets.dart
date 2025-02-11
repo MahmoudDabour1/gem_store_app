@@ -20,4 +20,7 @@ class AppAssets {
   static String shoes = 'assets/images/shoes.png';
   static String accessCategory = 'assets/images/access.png';
   static String clothingCategory = 'assets/images/clothingCategory.png';
+  static String appleLogo = 'assets/images/appleLogo.png';
+  static String googleLogo = 'assets/images/googleLogo.png';
+  static String facebookLogo = 'assets/images/facebookLogo.png';
 }
