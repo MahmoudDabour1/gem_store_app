@@ -7,7 +7,7 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
-          builder: (_) =>  OnboardingScreen(),
+          builder: (_) => OnboardingScreen(),
         );
       default:
         return null;

@@ -23,7 +23,6 @@ class AppTextStyles {
   static TextStyle font20 = TextStyle(
     fontSize: 20.sp,
     color: AppColors.blackColor,
-    fontWeight: FontWeight.w700,
     fontFamily: AppFonts.productSans,
   );
   static TextStyle font13 = TextStyle(
@@ -84,5 +83,28 @@ class AppTextStyles {
     fontSize: 10.sp,
     color: AppColors.brownColor,
     fontFamily: AppFonts.productSans,
+  );
+
+  static TextStyle font12w300Light = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w300,
+    color: AppColors.lightGreyText12w300Color,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font10dark = TextStyle(
+    fontSize: 10.sp,
+    color: AppColors.darkColor,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.lightGreyText20Colorw300,
+    fontFamily: AppFonts.productSansMedium,
+  );
+  static TextStyle font14Light = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.blackColor,
+    fontFamily: AppFonts.productSansLight,
   );
 }
