@@ -31,8 +31,7 @@ class CustomListOfFeatureProducts extends StatelessWidget {
         ),
         SizedBox(height: 20),
         SizedBox(
-          height: 210.h,
-          //width: 126.w,
+          height: 240.h,
           child: ListView.builder(
               shrinkWrap: true,
               itemCount: 5,

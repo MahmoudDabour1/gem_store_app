@@ -23,7 +23,6 @@ class AppTextStyles {
   static TextStyle font20 = TextStyle(
     fontSize: 20.sp,
     color: AppColors.blackColor,
-    fontWeight: FontWeight.w700,
     fontFamily: AppFonts.productSans,
   );
   static TextStyle font13 = TextStyle(
@@ -83,6 +82,47 @@ class AppTextStyles {
   static TextStyle font10Brown = TextStyle(
     fontSize: 10.sp,
     color: AppColors.brownColor,
+    fontFamily: AppFonts.productSans,
+  );
+
+  static TextStyle font12w300Light = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w300,
+    color: AppColors.lightGreyText12w300Color,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font10dark = TextStyle(
+    fontSize: 10.sp,
+    color: AppColors.darkColor,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font14 = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    fontFamily: AppFonts.productSansMedium,
+  );
+  static TextStyle font14Light = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.blackColor,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font24 = TextStyle(
+    fontSize: 24.sp,
+    color:AppColors.blackColor,
+    fontWeight: FontWeight.bold,
+    fontFamily: AppFonts.productSans,
+  );
+  
+  static TextStyle font12BlackLight = TextStyle(
+    fontSize: 12.sp,
+    
+    color: AppColors.blackColor,
+    fontFamily: AppFonts.productSansLight,
+  );
+  static TextStyle font16white= TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.whiteColor,
+    fontWeight: FontWeight.w700,
     fontFamily: AppFonts.productSans,
   );
 }

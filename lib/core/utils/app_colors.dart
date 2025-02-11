@@ -15,6 +15,17 @@ class AppColors {
   static const Color lightGreyText20Colorw300 = Color(0xFF777E90);
   static const Color lightGreyText13RobotoColor = Color(0xFF737680);
   static const Color brownColor = Color(0xFF3A2C27);
-
-  //
+  static const Color lightGreyText12w300Color = Color(0xFFBEBFC4);
+  static const Color favouriteIconColor = Color(0xFFFF6E6E);
+  static const Color starColor = Color(0xFF508A7B);
+  static const Color morewhiteColor = Color(0xFFFAFAFA);
+  static const Color clothingColor = Color(0xFFA3A798);
+  static const Color accessoriesColor = Color(0xFF898280);
+  static const Color shoesColor = Color(0xFF44565C);
+  static const Color collectionColor = Color(0xFFB9AEB2);
+  static const Color ellipseColorForClothing = Color(0xFFC2C7B5);
+  static const Color ellipseColorForAccessories = Color(0xFF9C9492);
+  static const Color ellipseColorForShoes = Color(0xFF5B7178);
+  static const Color ellipseColorForCollection = Color(0xFFD1CACD);
+   static const Color blueColor = Color(0xFF0000FF);
 }
