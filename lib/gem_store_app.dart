@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/theming/app_colors.dart';
+import 'package:gem_store_app/core/routing/app_router.dart';
+import 'package:gem_store_app/core/routing/routes.dart';
 
+import 'core/theming/app_colors.dart';
 import 'features/track_order/track_order.dart';
 
-void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  await ScreenUtil.ensureScreenSize();
-  runApp(const MyApp());
-}
+class GemStoreApp extends StatelessWidget {
+  final AppRouter appRouter;
+  const GemStoreApp({super.key, required this.appRouter});
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -28,7 +24,9 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: AppColors.greenColor),
           useMaterial3: true,
         ),
-        home: TrackOrderScreen(),
+        onGenerateRoute: appRouter.generateRoute,
+        navigatorObservers: [NavigatorObserver()],
+        initialRoute: Routes.cartScreen,
       ),
     );
   }
