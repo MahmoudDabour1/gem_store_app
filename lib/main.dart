@@ -1,15 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/gem_store_app.dart';
-
-
-void main() {
-  runApp(const GemStoreApp());
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/theming/app_colors.dart';
-import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 import 'package:gem_store_app/features/login/login_screen.dart';
-
-import 'features/track_order/track_order.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -39,5 +31,4 @@ class MyApp extends StatelessWidget {
       ),
     );
   }
-
 }
