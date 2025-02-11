@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import '../../../../core/themes/styles.dart';
+import '../../../../core/utils/app_text_styles.dart';
 
 class BluredButton extends StatelessWidget {
   final double height;
@@ -33,7 +33,7 @@ class BluredButton extends StatelessWidget {
               onPressed: onPressed,
               child: Text(
                 title,
-                style: AppStyles.font16Weight700.copyWith(color: Colors.white),
+                style: AppTextStyles.font16Weight700.copyWith(color: Colors.white),
               )),
         ),
       ),

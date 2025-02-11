@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/theming/app_colors.dart';
-import '../../../core/theming/app_styles.dart';
-import '../../../core/theming/font_weight_helper.dart';
+import '../../../core/utils/app_text_styles.dart';
+import '../../../core/utils/font_weight_helper.dart';
+import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/spacing.dart';
 
 class CartListViewItem extends StatefulWidget {
@@ -42,7 +42,7 @@ class _CartListViewItemState extends State<CartListViewItem> {
                     children: [
                       Text(
                         "Turtleneck Sweater",
-                        style: AppStyles.font18BlackSemiBold,
+                        style: AppTextStyles.font18BlackSemiBold,
                       ),
                       // CheckboxListTile(value: true, onChanged: (value){})
                     ],
@@ -50,7 +50,7 @@ class _CartListViewItemState extends State<CartListViewItem> {
                   verticalSpace(13),
                   Text(
                     "\$ 39.99",
-                    style: AppStyles.font18BlackSemiBold.copyWith(
+                    style: AppTextStyles.font18BlackSemiBold.copyWith(
                       fontSize: 16.sp,
                     ),
                   ),
@@ -59,7 +59,7 @@ class _CartListViewItemState extends State<CartListViewItem> {
                       children: [
                         Text(
                           "Size: L  |  Color: Black",
-                          style: AppStyles.font14DArkGraySemiBold.copyWith(
+                          style: AppTextStyles.font14DArkGraySemiBold.copyWith(
                             fontWeight: FontWeightHelper.medium,
                             fontSize: 12.sp,
                           ),
@@ -91,7 +91,7 @@ class _CartListViewItemState extends State<CartListViewItem> {
                                   )),
                               Text(
                                 number.toString(),
-                                style: AppStyles.font14DArkGraySemiBold
+                                style: AppTextStyles.font14DArkGraySemiBold
                                     .copyWith(
                                   fontWeight: FontWeightHelper.medium,
                                   fontSize: 14.sp,

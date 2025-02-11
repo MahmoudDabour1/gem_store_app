@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gem_store_app/core/theming/app_styles.dart';
-import 'package:gem_store_app/core/theming/font_weight_helper.dart';
+import 'package:gem_store_app/core/utils/font_weight_helper.dart';
 import 'package:gem_store_app/core/utils/spacing.dart';
 import 'package:gem_store_app/core/widgets/app_custom_button.dart';
-import 'package:gem_store_app/core/widgets/custom_app_bar.dart';
 import 'package:gem_store_app/features/checkout/widgets/location_and_done_shape.dart';
 
+import '../../core/utils/app_text_styles.dart';
 import '../../core/widgets/app_custom_app_bar.dart';
 
 class CheckOutDoneScreen extends StatelessWidget {
@@ -30,7 +29,7 @@ class CheckOutDoneScreen extends StatelessWidget {
                 RSizedBox.vertical(43),
                 Text(
                   "Order Completed",
-                  style: AppStyles.font25BlackBold,
+                  style: AppTextStyles.font25BlackBold,
                 ),
                 verticalSpace(80),
                 Center(child: SvgPicture.asset("assets/svgs/bag_svg.svg")),
@@ -38,7 +37,7 @@ class CheckOutDoneScreen extends StatelessWidget {
                 Center(
                   child: Text(
                     "Thank you for your purchase.\nYou can view your order in ‘My Orders’\n section.",
-                    style: AppStyles.font14DArkGraySemiBold.copyWith(
+                    style: AppTextStyles.font14DArkGraySemiBold.copyWith(
                       fontWeight: FontWeightHelper.medium,
                     ),
                     textAlign: TextAlign.center,

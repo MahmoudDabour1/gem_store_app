@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/features/discover/presentation/views/widgets/custom_searched_item.dart';
+
+import '../../../../../core/utils/app_text_styles.dart';
 
 class CustomListOfSearchedItems extends StatelessWidget {
   const CustomListOfSearchedItems({super.key});

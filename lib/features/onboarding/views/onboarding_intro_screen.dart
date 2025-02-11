@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/themes/colors.dart';
-import 'package:gem_store_app/core/themes/styles.dart';
-import 'package:gem_store_app/core/untils/app_strings.dart';
+import 'package:gem_store_app/core/utils/app_strings.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_cubit.dart';
 import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_state.dart';
 import 'package:gem_store_app/features/onboarding/views/widgets/blured_button.dart';
 import 'package:gem_store_app/features/onboarding/views/widgets/scrolling_items_and_indicator.dart';
+
+import '../../../core/utils/app_text_styles.dart';
 
 class OnboardingIntroScreen extends StatelessWidget {
   const OnboardingIntroScreen({super.key});
@@ -24,7 +25,7 @@ class OnboardingIntroScreen extends StatelessWidget {
               Column(
                 children: [
                   Expanded(child: Container(color: Colors.white)),
-                  Expanded(child: Container(color: ColorManager.mainGreyColor)),
+                  Expanded(child: Container(color: AppColors.greyContainerColor)),
                 ],
               ),
               Positioned(
@@ -38,11 +39,11 @@ class OnboardingIntroScreen extends StatelessWidget {
                           children: [
                             Text(
                               AppStrings.onBoardingItemsTitles[index],
-                              style: AppStyles.font20Weight600.copyWith(height: 2.h),
+                              style: AppTextStyles.font20Weight600.copyWith(height: 2.h),
                             ),
                             Text(
                               AppStrings.onBoardingItemsSubTitles[index],
-                              style: AppStyles.font16regular,
+                              style: AppTextStyles.font16regular,
                             ),
                           ],
                         );

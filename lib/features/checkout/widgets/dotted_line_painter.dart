@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../core/theming/app_colors.dart';
+import '../../../core/utils/app_colors.dart';
 
 class DottedLinePainter extends CustomPainter {
   @override

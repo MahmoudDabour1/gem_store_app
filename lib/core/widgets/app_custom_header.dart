@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:gem_store_app/core/theming/app_styles.dart';
 
+import '../utils/app_text_styles.dart';
 import 'app_back_button.dart';
 
 class AppCustomHeader extends StatelessWidget {
@@ -16,7 +16,7 @@ class AppCustomHeader extends StatelessWidget {
         Center(
             child: Text(
           titleText,
-          style: AppStyles.font18BlackSemiBold,
+          style: AppTextStyles.font18BlackSemiBold,
         )),
       ],
     );

@@ -1,23 +1,32 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/routing/app_router.dart';
-import 'package:gem_store_app/core/routing/router_observer.dart';
 import 'package:gem_store_app/core/routing/routes.dart';
+import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
+import 'core/utils/app_colors.dart';
 
 class GemStoreApp extends StatelessWidget {
-  const GemStoreApp({super.key});
+  final AppRouter appRouter;
+  const GemStoreApp({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(375, 812),
+      designSize: const Size(375, 812),
       minTextAdapt: true,
-      splitScreenMode: true,
       child: MaterialApp(
+        title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
-         onGenerateRoute: (settings) => AppRouter.generateRoute(settings),
-         navigatorObservers: [RouterObserver()],
-         initialRoute: Routes.onBoardingScreen,
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.scaffoldBackGroundColor,
+          brightness: Brightness.light,
+          colorScheme: ColorScheme.fromSeed(seedColor: AppColors.greenColor),
+          useMaterial3: true,
+        ),
+        onGenerateRoute: appRouter.generateRoute,
+        navigatorObservers: [NavigatorObserver()],
+        initialRoute: Routes.cartScreen,
+        home: DiscoverScreen(),
       ),
     );
   }

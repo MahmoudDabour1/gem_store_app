@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../core/theming/app_colors.dart';
-import '../../../core/theming/app_styles.dart';
-import '../../../core/theming/font_weight_helper.dart';
+import '../../../core/utils/app_text_styles.dart';
+import '../../../core/utils/font_weight_helper.dart';
+import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/spacing.dart';
 
 class TrackOrderListViewItem extends StatelessWidget {
@@ -66,14 +66,14 @@ class TrackOrderListViewItem extends StatelessWidget {
               children: [
                 Text(
                   title,
-                  style: AppStyles.font11BlackLight.copyWith(
+                  style: AppTextStyles.font11BlackLight.copyWith(
                     fontWeight: FontWeightHelper.medium,
                   ),
                 ),
                 SizedBox(height: 4),
                 Text(
                   dateTime,
-                  style: AppStyles.font11BlackLight.copyWith(
+                  style: AppTextStyles.font11BlackLight.copyWith(
                       fontWeight: FontWeightHelper.medium,
                       fontSize: 12.sp,
                       color: AppColors.lightGrayColor
