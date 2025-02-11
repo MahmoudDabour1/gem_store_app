@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import '../theming/app_colors.dart';
-import '../theming/app_styles.dart';
+import '../utils/app_colors.dart';
+import '../utils/app_text_styles.dart';
 
 class AppCustomButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -44,7 +43,7 @@ class AppCustomButton extends StatelessWidget {
       ),
       child: Text(
         text,
-        style:textStyle?? AppStyles.font16WhiteSemiBold,
+        style:textStyle?? AppTextStyles.font16WhiteSemiBold,
       ),
     );
   }

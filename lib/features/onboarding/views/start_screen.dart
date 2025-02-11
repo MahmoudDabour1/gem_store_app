@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/untils/app_assets.dart';
 import 'package:gem_store_app/features/onboarding/views/widgets/title_and_button.dart';
+
+import '../../../core/utils/app_assets.dart';
 
 class StartScreen extends StatelessWidget {
   const StartScreen({super.key});

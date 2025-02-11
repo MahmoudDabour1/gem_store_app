@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/theming/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_assets.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/features/login/widgets/custom_circle_avatar.dart';
 import 'package:gem_store_app/features/login/widgets/custom_text_form_field.dart';
+
+import '../../core/utils/app_colors.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});

@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_fonts.dart';
 
+import 'font_weight_helper.dart';
+
 class AppTextStyles {
   static TextStyle font20Bold = TextStyle(
     fontSize: 20.sp,
@@ -125,4 +127,67 @@ class AppTextStyles {
     fontWeight: FontWeight.w700,
     fontFamily: AppFonts.productSans,
   );
+  static TextStyle font11BlackLight = TextStyle(
+    fontSize: 11.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeightHelper.light,
+  ); static TextStyle font10DarkGrayMedium = TextStyle(
+    fontSize: 10.sp,
+    color: AppColors.darkGrayColor,
+    fontWeight: FontWeightHelper.medium,
+  ); static TextStyle font25BlackBold = TextStyle(
+    fontSize: 25.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeightHelper.bold,
+  );static TextStyle font14DArkGraySemiBold = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.darkGrayColor,
+    fontWeight: FontWeightHelper.semiBold,
+  );static TextStyle font14DarkGrayMedium = TextStyle(
+    fontSize: 14.sp,
+    color: AppColors.darkGrayColor,
+    fontWeight: FontWeightHelper.medium,
+  );static TextStyle font18BlackSemiBold = TextStyle(
+    fontSize: 18.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeightHelper.semiBold,
+  );static TextStyle font16WhiteSemiBold = TextStyle(
+    fontSize: 16.sp,
+    color: AppColors.whiteColor,
+    fontWeight: FontWeightHelper.semiBold,
+  );
+  static TextStyle font25Weight700 = TextStyle(
+    fontSize: 25.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle font16regular = TextStyle(fontSize: 16.sp);
+
+  static TextStyle font16Weight700 = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle font20Weight600 = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+  );
+
+  static TextStyle font13Weight400 =
+  TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w400);
+
+  static TextStyle font18Weight700 = TextStyle(
+      fontSize: 18.sp, fontWeight: FontWeight.w700, color: Colors.white);
+
+  static TextStyle font14weight400 = TextStyle(
+      fontSize: 14.sp, fontWeight: FontWeight.w400, color: Colors.grey);
+
+  static TextStyle font40Bold =
+  TextStyle(fontSize: 40.sp, fontWeight: FontWeight.bold);
+
+  static TextStyle font12regular =
+  TextStyle(color: Colors.grey, fontSize: 12.sp);
+
+  static TextStyle font26Weight600 =
+  TextStyle(fontSize: 26.sp, fontWeight: FontWeight.w600);
 }

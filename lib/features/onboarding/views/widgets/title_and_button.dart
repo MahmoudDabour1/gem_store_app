@@ -2,8 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/helpers/extenstions.dart';
 import 'package:gem_store_app/core/routing/routes.dart';
-import 'package:gem_store_app/core/themes/styles.dart';
 import 'package:gem_store_app/features/onboarding/views/widgets/blured_button.dart';
+
+import '../../../../core/utils/app_text_styles.dart';
 
 class TitleAndButton extends StatelessWidget {
   const TitleAndButton({super.key});
@@ -15,13 +16,13 @@ class TitleAndButton extends StatelessWidget {
         Text(
           "Welcome to GemStore!",
           textAlign: TextAlign.center,
-          style: AppStyles.font25Weight700
+          style: AppTextStyles.font25Weight700
               .copyWith(color: Colors.white, height: 2.h),
         ),
         Text(
           " The home for a fashionista",
           textAlign: TextAlign.center,
-          style: AppStyles.font16regular.copyWith(color: Colors.white),
+          style: AppTextStyles.font16regular.copyWith(color: Colors.white),
         ),
         const SizedBox(
           height: 50,
@@ -31,7 +32,7 @@ class TitleAndButton extends StatelessWidget {
           width: 190.w,
           title:"Get Started",
           onPressed: () {
-            context.pushNamed(Routes.onBoardingIntroScreen);
+            context.pushNamed(Routes.onBoardingScreen);
           },
         )
       ],

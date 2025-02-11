@@ -1,7 +1,6 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../../core/theming/app_styles.dart';
+import '../../../core/utils/app_text_styles.dart';
 import '../../../core/utils/spacing.dart';
 import 'cart_price_item.dart';
 
@@ -18,8 +17,8 @@ class CartPriceItemsWidget extends StatelessWidget {
       CartPriceItem(
         firstText: "Total",
         lastText: "110",
-        firstTextStyle: AppStyles.font18BlackSemiBold,
-        lastTextStyle: AppStyles.font18BlackSemiBold,
+        firstTextStyle: AppTextStyles.font18BlackSemiBold,
+        lastTextStyle: AppTextStyles.font18BlackSemiBold,
       ),
       verticalSpace(28),
     ]);

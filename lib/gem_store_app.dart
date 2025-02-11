@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/routing/app_router.dart';
-import 'package:gem_store_app/core/routing/router_observer.dart';
 import 'package:gem_store_app/core/routing/routes.dart';
-import 'package:gem_store_app/core/theming/app_colors.dart';
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
-import 'core/theming/app_colors.dart';
-import 'features/track_order/track_order.dart';
+import 'core/utils/app_colors.dart';
 
 class GemStoreApp extends StatelessWidget {
   final AppRouter appRouter;
