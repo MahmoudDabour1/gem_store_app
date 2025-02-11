@@ -25,7 +25,8 @@ class OnboardingIntroScreen extends StatelessWidget {
               Column(
                 children: [
                   Expanded(child: Container(color: Colors.white)),
-                  Expanded(child: Container(color: AppColors.greyContainerColor)),
+                  Expanded(
+                      child: Container(color: AppColors.greyContainerColor)),
                 ],
               ),
               Positioned(
@@ -34,12 +35,15 @@ class OnboardingIntroScreen extends StatelessWidget {
                   children: [
                     BlocBuilder<ScrollingCubit, ScrollingState>(
                       builder: (context, state) {
-                        int index = (state is IncreaseDecreaseScrollingState) ? state.currentPage : 0;
+                        int index = (state is IncreaseDecreaseScrollingState)
+                            ? state.currentPage
+                            : 0;
                         return Column(
                           children: [
                             Text(
                               AppStrings.onBoardingItemsTitles[index],
-                              style: AppTextStyles.font20Weight600.copyWith(height: 2.h),
+                              style: AppTextStyles.font20semiBold
+                                  .copyWith(height: 2.h),
                             ),
                             Text(
                               AppStrings.onBoardingItemsSubTitles[index],
@@ -50,9 +54,7 @@ class OnboardingIntroScreen extends StatelessWidget {
                       },
                     ),
                     SizedBox(height: 40.h),
-                    
                     const ScrollingItemsAndIndicator(),
-
                     SizedBox(height: 30.h),
                     BluredButton(
                       title: "Shopping now",

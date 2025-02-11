@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "production",
+            "request": "launch",
+            "type": "dart",
+            "program": "D:/gem_store_app/lib/main_production.dart",
+            
+            "args": [
+                "--flavor",
+                "production"
+            ],  
+        },
+        {
+            "name": "gem_store_app",
+            "request": "launch",
+            "type": "dart"
+        },
+        {
+            "name": "gem_store_app (profile mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "profile"
+        },
+        {
+            "name": "gem_store_app (release mode)",
+            "request": "launch",
+            "type": "dart",
+            "flutterMode": "release"
+        }
+    ]
+}

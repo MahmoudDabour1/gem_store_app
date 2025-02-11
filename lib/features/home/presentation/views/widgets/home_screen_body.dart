@@ -23,7 +23,7 @@ class HomeScreenBody extends StatelessWidget {
               children: [
                 CustomAppBar(
                   title: 'Gemstore',
-                  textStyle: AppTextStyles.font20Bold,
+                  textStyle: AppTextStyles.font20BlackBold,
                 ),
                 SizedBox(height: 25.h),
                 CustomListOfCategory(),

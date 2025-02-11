@@ -16,7 +16,7 @@ class SubListOfCategoru extends StatelessWidget {
         collapsedBackgroundColor: Colors.transparent,
         title: Text(
           'Clothing',
-          style: AppTextStyles.font14Light,
+          style: AppTextStyles.font14BlackRegular,
         ),
         trailing: SizedBox(
           width: 70.w,
@@ -25,7 +25,7 @@ class SubListOfCategoru extends StatelessWidget {
             children: [
               Text(
                 '24 Items',
-                style: AppTextStyles.font12Light
+                style: AppTextStyles.font12GreyRegular
                     .copyWith(color: Color(0xFFA3A5AD)),
               ),
               Spacer(),
@@ -47,7 +47,7 @@ class SubListOfCategoru extends StatelessWidget {
                     ListTile(
                       title: Text(
                         'Jeans',
-                        style: AppTextStyles.font14Light,
+                        style: AppTextStyles.font14BlackRegular,
                       ),
                       trailing: SizedBox(
                         width: 70.w,
@@ -56,7 +56,7 @@ class SubListOfCategoru extends StatelessWidget {
                           children: [
                             Text(
                               '24 Items',
-                              style: AppTextStyles.font12Light
+                              style: AppTextStyles.font12GreyRegular
                                   .copyWith(color: Color(0xFFA3A5AD)),
                             ),
                             Spacer(),

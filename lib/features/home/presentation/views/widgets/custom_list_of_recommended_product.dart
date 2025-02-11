@@ -17,14 +17,14 @@ class CustomListOfRecommendedProduct extends StatelessWidget {
             children: [
               Text(
                 'Recommended',
-                style: AppTextStyles.font20,
+                style: AppTextStyles.font20BlackRegular,
               ),
               Spacer(),
               GestureDetector(
                 onTap: () {},
                 child: Text(
                   'Show all',
-                  style: AppTextStyles.font13,
+                  style: AppTextStyles.font13GreyMedium,
                 ),
               ),
             ],

@@ -29,14 +29,14 @@ class NewCollectionSection extends StatelessWidget {
                     SizedBox(width: 10.w),
                     Text(
                       'NEW COLLECTION',
-                      style: AppTextStyles.font12Light,
+                      style: AppTextStyles.font12GreyRegular,
                     ),
                   ],
                 ),
                 SizedBox(height: 15.h),
                 Flexible(
                     child: Text('HANG OUT & PARTY ',
-                        style: AppTextStyles.font20Light)),
+                        style: AppTextStyles.font20GreyLight)),
               ],
             ),
           ),

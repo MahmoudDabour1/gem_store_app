@@ -34,7 +34,7 @@ class CustomTopSectionSecond extends StatelessWidget {
                       SizedBox(width: 10.w),
                       Text(
                         'Sale up to 40%',
-                        style: AppTextStyles.font12Light,
+                        style: AppTextStyles.font12GreyRegular,
                       ),
                     ],
                   ),
@@ -44,7 +44,7 @@ class CustomTopSectionSecond extends StatelessWidget {
                         overflow: TextOverflow.ellipsis,
                         maxLines: 3,
                         // textAlign: TextAlign.center,
-                        style: AppTextStyles.font20Medium),
+                        style: AppTextStyles.font20GreyMedium),
                   ),
                 ],
               ),

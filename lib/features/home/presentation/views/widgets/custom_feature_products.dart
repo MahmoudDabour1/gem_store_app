@@ -24,12 +24,12 @@ class CustomFeatureProduct extends StatelessWidget {
         SizedBox(height: 10.h),
         Text(
           'Long Sleeve Dress',
-          style: AppTextStyles.font12,
+          style: AppTextStyles.font12Darkmedium,
         ),
         SizedBox(height: 5.h),
         Text(
           '\$ ${39.99}',
-          style: AppTextStyles.font16,
+          style: AppTextStyles.font16DarkBold,
         )
       ],
     );

@@ -18,7 +18,9 @@ class DiscoverScreenBody extends StatelessWidget {
           padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 25.h),
           child: Column(
             children: [
-              CustomAppBar(title: 'Discover', textStyle: AppTextStyles.font20),
+              CustomAppBar(
+                  title: 'Discover',
+                  textStyle: AppTextStyles.font20BlackRegular),
               SizedBox(height: 20),
               HeaderOfDiscover(),
             ],

@@ -34,10 +34,10 @@ class CustomRecommendedProduct extends StatelessWidget {
             children: [
               Text(
                 'White fashion hoodie',
-                style: AppTextStyles.font12,
+                style: AppTextStyles.font12Darkmedium,
               ),
               SizedBox(height: 5.h),
-              Text('\$ 39.99', style: AppTextStyles.font16),
+              Text('\$ 39.99', style: AppTextStyles.font16DarkBold),
             ],
           ),
         ],

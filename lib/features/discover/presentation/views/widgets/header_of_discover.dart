@@ -38,7 +38,7 @@ class HeaderOfDiscover extends StatelessWidget {
                   contentPadding: EdgeInsets.symmetric(vertical: 12.h),
                   border: InputBorder.none,
                   hintText: 'Search',
-                  hintStyle: AppTextStyles.font14,
+                  hintStyle: AppTextStyles.font14Medium,
                   prefixIcon: GestureDetector(
                     onTap: () {
                       context
@@ -51,7 +51,7 @@ class HeaderOfDiscover extends StatelessWidget {
                     ),
                   ),
                 ),
-                style: AppTextStyles.font14,
+                style: AppTextStyles.font14Medium,
               ),
             ),
             Spacer(),

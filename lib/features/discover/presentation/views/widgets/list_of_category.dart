@@ -10,6 +10,7 @@ class ListOfCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
         shrinkWrap: true,
+        physics: NeverScrollableScrollPhysics(),
         itemBuilder: (context, index) {
           return SubListOfCategoru();
         },

@@ -16,7 +16,7 @@ class TitleAndButton extends StatelessWidget {
         Text(
           "Welcome to GemStore!",
           textAlign: TextAlign.center,
-          style: AppTextStyles.font25Weight700
+          style: AppTextStyles.font25Bold
               .copyWith(color: Colors.white, height: 2.h),
         ),
         Text(
@@ -30,7 +30,7 @@ class TitleAndButton extends StatelessWidget {
         BluredButton(
           height: 55.h,
           width: 190.w,
-          title:"Get Started",
+          title: "Get Started",
           onPressed: () {
             context.pushNamed(Routes.onBoardingScreen);
           },

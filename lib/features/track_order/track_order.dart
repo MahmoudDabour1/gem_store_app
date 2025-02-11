@@ -23,7 +23,7 @@ class TrackOrderScreen extends StatelessWidget {
             RichText(
                 text: TextSpan(
               text: "Delivered on",
-              style: AppTextStyles.font12
+              style: AppTextStyles.font12Darkmedium
                   .copyWith(color: AppColors.lightGrayColor),
               children: [
                 TextSpan(
@@ -38,7 +38,7 @@ class TrackOrderScreen extends StatelessWidget {
             RichText(
               text: TextSpan(
                 text: "Tracking Number :",
-                style: AppTextStyles.font12
+                style: AppTextStyles.font12Darkmedium
                     .copyWith(color: AppColors.lightGrayColor),
                 children: [
                   TextSpan(

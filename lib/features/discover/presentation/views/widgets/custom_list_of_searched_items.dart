@@ -13,7 +13,8 @@ class CustomListOfSearchedItems extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text('Found\n152 Results',
-            style: AppTextStyles.font20.copyWith(color: Color(0xFF33302E))),
+            style: AppTextStyles.font20BlackRegular
+                .copyWith(color: Color(0xFF33302E))),
         SizedBox(height: 20.h),
         GridView.builder(
           shrinkWrap: true,

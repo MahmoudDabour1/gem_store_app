@@ -12,7 +12,8 @@ class BluredButton extends StatelessWidget {
       {super.key,
       required this.height,
       required this.width,
-      required this.onPressed, required this.title});
+      required this.onPressed,
+      required this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +34,7 @@ class BluredButton extends StatelessWidget {
               onPressed: onPressed,
               child: Text(
                 title,
-                style: AppTextStyles.font16Weight700.copyWith(color: Colors.white),
+                style: AppTextStyles.font16Bold.copyWith(color: Colors.white),
               )),
         ),
       ),

@@ -48,7 +48,7 @@ class _DiscoverCategoryItemState extends State<DiscoverCategoryItem> {
                   padding: const EdgeInsets.only(left: 20),
                   child: Text(
                     widget.title,
-                    style: AppTextStyles.font16
+                    style: AppTextStyles.font16DarkBold
                         .copyWith(color: AppColors.whiteColor),
                   ),
                 ),

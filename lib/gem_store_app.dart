@@ -25,7 +25,7 @@ class GemStoreApp extends StatelessWidget {
         ),
         onGenerateRoute: appRouter.generateRoute,
         navigatorObservers: [NavigatorObserver()],
-        initialRoute: Routes.cartScreen,
+        initialRoute: Routes.discoverScreen,
         home: DiscoverScreen(),
       ),
     );

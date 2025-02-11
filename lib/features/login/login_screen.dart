@@ -23,31 +23,32 @@ class LoginScreen extends StatelessWidget {
               SizedBox(height: 93.h),
               Text(
                 "Log into ",
-                style:AppTextStyles.font24,
+                style: AppTextStyles.font24BlackBold,
               ),
-              Text(
-                "Your account",
-                style: AppTextStyles.font24
-              ),
+              Text("Your account", style: AppTextStyles.font24BlackBold),
               SizedBox(height: 48.h),
               CustomTextFormField(
                 label: 'Email Address',
               ),
-               SizedBox(height: 20.h,),
+              SizedBox(
+                height: 20.h,
+              ),
               CustomTextFormField(
                 label: 'Password',
               ),
-                SizedBox(height: 28.h,),
+              SizedBox(
+                height: 28.h,
+              ),
               Row(
                 children: [
                   Spacer(flex: 1),
-                  Text(
-                    "Forget Password?",
-                    style: AppTextStyles.font12BlackLight
-                  ),
+                  Text("Forget Password?",
+                      style: AppTextStyles.font12BlackRegular),
                 ],
               ),
-               SizedBox(height: 25.h,),
+              SizedBox(
+                height: 25.h,
+              ),
               Center(
                 child: Container(
                   height: 51.sp,
@@ -58,27 +59,37 @@ class LoginScreen extends StatelessWidget {
                       ),
                       borderRadius: BorderRadius.circular(40.sp)),
                   child: Center(
-                      child: Text(
-                    "LOG IN",
-                    style: AppTextStyles.font16white
-                  )),
+                      child:
+                          Text("LOG IN", style: AppTextStyles.font16whiteBold)),
                 ),
               ),
-              SizedBox(height: 18.h,),
+              SizedBox(
+                height: 18.h,
+              ),
               Center(
-                  child: Text(
-                "or log in with",
-                style: AppTextStyles.font12BlackLight
-              )),
-               SizedBox(height: 40.h,),
+                  child: Text("or log in with",
+                      style: AppTextStyles.font12BlackRegular)),
+              SizedBox(
+                height: 40.h,
+              ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  CustomCircleAvatar(image: AppAssets.appleLogo,),
-                  SizedBox(width: 20.w,),
-                  CustomCircleAvatar(image: AppAssets.googleLogo,),
-                   SizedBox(width: 20.w,),
-                  CustomCircleAvatar(image: AppAssets.facebookLogo,)
+                  CustomCircleAvatar(
+                    image: AppAssets.appleLogo,
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  CustomCircleAvatar(
+                    image: AppAssets.googleLogo,
+                  ),
+                  SizedBox(
+                    width: 20.w,
+                  ),
+                  CustomCircleAvatar(
+                    image: AppAssets.facebookLogo,
+                  )
                 ],
               )
             ],
@@ -88,4 +99,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
