@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/theming/app_colors.dart';
+import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
 
 import 'features/track_order/track_order.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: AppColors.greenColor),
           useMaterial3: true,
         ),
-        home: TrackOrderScreen(),
+        home: DiscoverScreen(),
       ),
     );
   }

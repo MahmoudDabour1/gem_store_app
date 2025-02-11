@@ -22,7 +22,7 @@ class CustomListOfSearchedItems extends StatelessWidget {
             crossAxisCount: 2,
             crossAxisSpacing: 8.w,
             mainAxisSpacing: 8.h,
-            childAspectRatio: 0.53,
+            childAspectRatio: 0.59,
           ),
           itemBuilder: (context, index) {
             return CustomSearchedItem();
