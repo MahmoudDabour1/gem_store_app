@@ -20,8 +20,6 @@ class DiscoverScreenBody extends StatelessWidget {
             children: [
               CustomAppBar(title: 'Discover', textStyle: AppTextStyles.font20),
               SizedBox(height: 20),
-              const HeaderOfDiscover(),
-              SizedBox(height: 20),
               HeaderOfDiscover(),
             ],
           ),
