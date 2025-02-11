@@ -27,4 +27,5 @@ class AppColors {
   static const Color ellipseColorForAccessories = Color(0xFF9C9492);
   static const Color ellipseColorForShoes = Color(0xFF5B7178);
   static const Color ellipseColorForCollection = Color(0xFFD1CACD);
+   static const Color blueColor = Color(0xFF0000FF);
 }
