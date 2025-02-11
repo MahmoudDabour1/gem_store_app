@@ -14,4 +14,10 @@ class AppAssets {
   static String recommendpng = 'assets/images/recommedpng.png';
   static String topCollection = 'assets/images/topCollection.png';
   static String topCollection2 = 'assets/images/topCollection2.png';
+  static String filter = 'assets/images/filter.svg';
+  static String clothing = 'assets/images/clothing.svg';
+  static String clo = 'assets/images/clo.png';
+  static String shoes = 'assets/images/shoes.png';
+  static String accessCategory = 'assets/images/access.png';
+  static String clothingCategory = 'assets/images/clothingCategory.png';
 }
