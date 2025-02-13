@@ -7,6 +7,7 @@ import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_sta
 import 'package:gem_store_app/features/onboarding/views/widgets/srolling_item.dart';
 
 import '../../../../core/utils/app_assets.dart';
+import '../../../../core/utils/spacing.dart';
 
 
 class ScrollingItemsAndIndicator extends StatelessWidget {
@@ -39,7 +40,7 @@ class ScrollingItemsAndIndicator extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(height: 50.h),
+        verticalSpace(50),
         BlocBuilder<ScrollingCubit, ScrollingState>(
           builder: (context, state) {
             int currentPage = (state is IncreaseDecreaseScrollingState) ? state.currentPage : 0;
@@ -53,7 +54,7 @@ class ScrollingItemsAndIndicator extends StatelessWidget {
                     height: 7.h,
                     width: 7.w,
                     decoration: BoxDecoration(
-                      color: index == currentPage ? Colors.white : AppColors.greyContainerColor,
+                      color: index == currentPage ? Colors.white : AppColors.deepGrayColor,
                       borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Colors.white),
                     ),

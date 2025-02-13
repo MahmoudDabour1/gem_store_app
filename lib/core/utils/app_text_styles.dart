@@ -81,6 +81,7 @@ class AppTextStyles {
       color: AppColors.lightGreyText13RobotoColor,
       fontWeight: FontWeight.w400,
       fontFamily: AppFonts.roboto);
+
   static TextStyle font13Weight400 =
       TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w400);
 
@@ -131,6 +132,7 @@ class AppTextStyles {
   static TextStyle font16regular = TextStyle(fontSize: 16.sp);
   static TextStyle font16Bold = TextStyle(
     fontSize: 16.sp,
+    fontFamily: AppFonts.productSans,
     fontWeight: FontWeightHelper.bold,
   );
 
@@ -189,8 +191,10 @@ class AppTextStyles {
     color: AppColors.blackColor,
     fontWeight: FontWeightHelper.bold,
   );
-  static TextStyle font25Bold = TextStyle(
+  static TextStyle font25WhiteBold = TextStyle(
     fontSize: 25.sp,
+    color: Colors.white,
+    fontFamily: AppFonts.productSans,
     fontWeight: FontWeightHelper.bold,
   );
 

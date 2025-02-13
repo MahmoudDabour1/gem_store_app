@@ -11,4 +11,12 @@ abstract class AppStrings {
      " The home for a fashionista",
 
   ];
+
+  static const String startScreenTitle = "Welcome to GemStore!";
+
+  static const String startScreenSubTitle ="The home for a fashionista";
+
+  static const String getStartedButtonString = "Get Started";
+
+  static const String shoppingNowButtonString = "Shopping now";
 }
