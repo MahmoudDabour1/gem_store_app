@@ -1,14 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/extenstions.dart';
 import 'package:gem_store_app/core/utils/app_strings.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_cubit.dart';
 import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_state.dart';
 import 'package:gem_store_app/features/onboarding/views/widgets/blured_button.dart';
 import 'package:gem_store_app/features/onboarding/views/widgets/scrolling_items_and_indicator.dart';
-
+import '../../../core/routing/routes.dart';
 import '../../../core/utils/app_text_styles.dart';
+import '../../../core/utils/spacing.dart';
 
 class OnboardingIntroScreen extends StatelessWidget {
   const OnboardingIntroScreen({super.key});
@@ -26,7 +28,7 @@ class OnboardingIntroScreen extends StatelessWidget {
                 children: [
                   Expanded(child: Container(color: Colors.white)),
                   Expanded(
-                      child: Container(color: AppColors.greyContainerColor)),
+                      child: Container(color: AppColors.deepGrayColor)),
                 ],
               ),
               Positioned(
@@ -53,14 +55,16 @@ class OnboardingIntroScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    SizedBox(height: 40.h),
+                    verticalSpace( 40),
                     const ScrollingItemsAndIndicator(),
-                    SizedBox(height: 30.h),
+                    verticalSpace(30),
                     BluredButton(
-                      title: "Shopping now",
+                      title: AppStrings.shoppingNowButtonString,
                       height: 53.h,
                       width: 200.w,
-                      onPressed: () {
+                      onPressed: (){
+
+                        context.pushNamed(Routes.loginScreen);
                         context.read<ScrollingCubit>().destroyController();
                       },
                     ),

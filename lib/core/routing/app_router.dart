@@ -16,6 +16,14 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => OnboardingScreen(),
         );
+      case Routes.onBoardingIntroScreen:
+        return MaterialPageRoute(
+          builder: (_) => OnboardingIntroScreen(),
+        );
+      case Routes.loginScreen:
+        return MaterialPageRoute(
+          builder: (_) => LoginScreen(),
+        );
       case Routes.checkoutScreen:
         return MaterialPageRoute(
           builder: (_) => CheckoutScreen(),
