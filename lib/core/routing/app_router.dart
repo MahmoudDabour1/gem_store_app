@@ -6,6 +6,7 @@ import 'package:gem_store_app/features/discover/presentation/views/discover_scre
 import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 import 'package:gem_store_app/features/login/login_screen.dart';
 import 'package:gem_store_app/features/onboarding/views/onboarding_intro_screen.dart';
+import 'package:gem_store_app/features/product_details/views/item_details_views.dart';
 
 import '../../features/checkout/checkout_screen.dart';
 import '../../features/onboarding/views/onboarding_screen.dart';
@@ -24,6 +25,11 @@ class AppRouter {
       case Routes.loginScreen:
         return MaterialPageRoute(
           builder: (_) => LoginScreen(),
+        );
+
+      case Routes.productDetailsScreen:
+        return MaterialPageRoute(
+          builder: (_) => ItemDetailsViews(),
         );
       case Routes.checkoutScreen:
         return MaterialPageRoute(
