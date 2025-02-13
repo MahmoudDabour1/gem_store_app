@@ -11,7 +11,7 @@ class CustomSearchedItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 253.h,
+      height: 250.h,
       width: 141.w,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -47,6 +47,7 @@ class CustomSearchedItem extends StatelessWidget {
                   ],
                 ),
                 child: IconButton(
+                  iconSize: 20.sp,
                   padding: EdgeInsets.zero,
                   onPressed: () {},
                   icon: Icon(

@@ -13,6 +13,16 @@
             ],  
         },
         {
+            "name": "development",
+            "request": "launch",
+            "type": "dart",
+            "program": "D:/gem_store_app/lib/main_development.dart",
+            "args": [
+                "--flavor",
+                "D:/gem_store_app/lib/main_development.dart"
+            ],
+        },
+        {
             "name": "gem_store_app",
             "request": "launch",
             "type": "dart"
