@@ -34,4 +34,6 @@ class AppAssets {
   static String imagesActiveFavoriteIcon =
       "assets/images/activate_favorite_icon.png";
   static String imagesTestItem = "assets/images/test_item.png";
+
+  static String cartIcon = "assets/images/shoping_bag.png";
 }
