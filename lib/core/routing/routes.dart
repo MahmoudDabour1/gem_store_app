@@ -10,6 +10,10 @@ abstract class Routes {
 
   static const String productDetailsScreen = "/productDetailsScreen";
 
+ 
+
+
   static const String wishlistScreen = '/wishlistScreen';
+
 
 }

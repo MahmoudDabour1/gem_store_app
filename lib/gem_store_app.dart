@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/routing/app_router.dart';
 import 'package:gem_store_app/core/routing/routes.dart';
+
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
 
 import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_cubit.dart';
@@ -31,9 +32,6 @@ class GemStoreApp extends StatelessWidget {
         ),
         onGenerateRoute: appRouter.generateRoute,
         navigatorObservers: [NavigatorObserver()],
-
-        initialRoute: Routes.productDetailsScreen,
-        home: OnboardingScreen(),
 
         initialRoute: Routes.wishlistScreen,
         home: WishlistScreen(),
