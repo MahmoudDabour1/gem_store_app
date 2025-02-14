@@ -26,6 +26,7 @@ class CustomAppBar extends StatelessWidget {
           //style: AppTextStyles.font20Bold,
         ),
         Spacer(),
+        //Icon(Icons.notifications_on_outlined)
       ],
     );
   }
