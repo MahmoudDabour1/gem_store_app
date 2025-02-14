@@ -7,7 +7,13 @@ abstract class Routes {
   static const String cartScreen = '/cartScreen';
   static const String homeScreen = '/homeScreen';
   static const String discoverScreen = '/discoverScreen';
+
   static const String productDetailsScreen = "/productDetailsScreen";
-  static const String wishlistScreen = "/wishlistScreen";
+
+ 
+
+
+  static const String wishlistScreen = '/wishlistScreen';
+
 
 }
