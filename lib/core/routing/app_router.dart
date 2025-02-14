@@ -4,6 +4,8 @@ import 'package:gem_store_app/features/cart/cart_screen.dart';
 import 'package:gem_store_app/features/checkout/check_out_done_screen.dart';
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
 import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
+import 'package:gem_store_app/features/login/login_screen.dart';
+import 'package:gem_store_app/features/onboarding/views/onboarding_intro_screen.dart';
 import 'package:gem_store_app/features/wishlist/presentation/views/wishlist_screen.dart';
 
 import '../../features/checkout/checkout_screen.dart';
