@@ -9,9 +9,7 @@ import 'package:gem_store_app/features/onboarding/views/onboarding_intro_screen.
 import 'package:gem_store_app/features/product_details/views/item_details_views.dart';
 
 import 'package:gem_store_app/features/wishlist/presentation/views/wishlist_board_view.dart';
-=======
 import 'package:gem_store_app/features/wishlist/presentation/views/wishlist_screen.dart';
-
 
 import '../../features/checkout/checkout_screen.dart';
 import '../../features/onboarding/views/onboarding_screen.dart';
@@ -52,7 +50,7 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => HomeScreen(),
         );
-     
+
       case Routes.discoverScreen:
         return MaterialPageRoute(
           builder: (_) => DiscoverScreen(),
