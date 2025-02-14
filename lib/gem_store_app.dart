@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/routing/app_router.dart';
 import 'package:gem_store_app/core/routing/routes.dart';
+import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
 
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
 
@@ -32,10 +33,8 @@ class GemStoreApp extends StatelessWidget {
         ),
         onGenerateRoute: appRouter.generateRoute,
         navigatorObservers: [NavigatorObserver()],
-
-        initialRoute: Routes.wishlistScreen,
-        home: WishlistScreen(),
-
+        initialRoute: Routes.bottomNavBar,
+        home: BottomNavBar(),
       ),
     );
   }

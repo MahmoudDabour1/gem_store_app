@@ -27,16 +27,17 @@ class AppColors {
   static const Color ellipseColorForAccessories = Color(0xFF9C9492);
   static const Color ellipseColorForShoes = Color(0xFF5B7178);
   static const Color ellipseColorForCollection = Color(0xFFD1CACD);
-   static const Color blueColor = Color(0xFF0000FF);
+  static const Color blueColor = Color(0xFF0000FF);
   static const scaffoldBackGroundColor = Color(0xFFFAFAFA);
   static const darkBlueColor = Color(0xFF1E3354);
   static const lighterGrayColor = Color(0xFFF1F2F3);
   static const moreLighterGrayColor = Color(0xFFFDFDFD);
   static const lightGrayColor = Color(0xFFC8C7CC);
-  static const deepGrayColor= Color(0xFF464447);
+  static const deepGrayColor = Color(0xFF464447);
   static const darkGrayColor = Color(0xFF777E90);
   static const darkerGrayColor = Color(0xFF343434);
   static const greenColor = Color(0xFF508A7B);
   static const Color black33 = Color(0xff33302E);
   static const Color transparent = Colors.transparent;
+  static const Color navColor = Color(0xffE6E8EC);
 }

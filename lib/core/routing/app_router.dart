@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gem_store_app/core/routing/routes.dart';
+import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
 import 'package:gem_store_app/features/cart/cart_screen.dart';
 import 'package:gem_store_app/features/checkout/check_out_done_screen.dart';
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
@@ -58,6 +59,10 @@ class AppRouter {
       case Routes.wishlistScreen:
         return MaterialPageRoute(
           builder: (_) => WishlistScreen(),
+        );
+      case Routes.bottomNavBar:
+        return MaterialPageRoute(
+          builder: (_) => BottomNavBar(),
         );
 
       default:

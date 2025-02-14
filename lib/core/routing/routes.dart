@@ -1,6 +1,6 @@
 abstract class Routes {
   static const String onBoardingScreen = '/onBoardingScreen';
-  static const String onBoardingIntroScreen ="/onBoardingIntroScreen";
+  static const String onBoardingIntroScreen = "/onBoardingIntroScreen";
   static const String loginScreen = "/loginScreen";
   static const String checkoutScreen = '/checkoutScreen';
   static const String checkoutDoneScreen = '/checkoutDoneScreen';
@@ -10,10 +10,6 @@ abstract class Routes {
 
   static const String productDetailsScreen = "/productDetailsScreen";
 
- 
-
-
   static const String wishlistScreen = '/wishlistScreen';
-
-
+  static const String bottomNavBar = '/bottomNavBar';
 }
