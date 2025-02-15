@@ -19,8 +19,8 @@ class AppBackButton extends StatelessWidget {
       child: Padding(
         padding:  EdgeInsets.all(10.r),
         child: Container(
-          width: 20.w,
-          height: 20.h,
+          width: 40.w,
+          height: 40.h,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(

@@ -52,6 +52,7 @@ class AppTextFormField extends StatelessWidget {
           ),
         ),
         labelText: labelText,
+        labelStyle: AppTextStyles.font16lightGreyhintText
       ),
       obscureText: isObscureText ?? false,
       style: AppTextStyles.font11BlackLight,

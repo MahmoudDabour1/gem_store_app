@@ -5,22 +5,12 @@
             "name": "production",
             "request": "launch",
             "type": "dart",
-            "program": "lib/main_production.dart",
+            "program": "D:/gem_store_app/lib/main_production.dart",
             
             "args": [
                 "--flavor",
                 "production"
             ],  
-        },
-        {
-            "name": "development",
-            "request": "launch",
-            "type": "dart",
-            "program": "lib/main_development.dart",
-            "args": [
-                "--flavor",
-                "development"
-            ],
         },
         {
             "name": "gem_store_app",

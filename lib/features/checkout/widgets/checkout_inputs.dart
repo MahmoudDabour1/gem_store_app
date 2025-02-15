@@ -10,7 +10,7 @@ class CheckoutInputs extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      spacing: 35.h,
+     // spacing: 35.h,
       children: [
         AppTextFormField(labelText: "First name *", validator: (value) {}),
         AppTextFormField(labelText: "Last name *", validator: (value) {}),
