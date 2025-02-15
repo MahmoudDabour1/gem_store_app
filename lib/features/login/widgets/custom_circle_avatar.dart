@@ -12,9 +12,9 @@ final String image;
   Widget build(BuildContext context) {
     return CircleAvatar(
       backgroundColor: AppColors.blackColor,
-      radius: 31.sp,
+      radius: 21.sp,
       child: CircleAvatar(
-        radius: 30.sp,
+        radius: 20.sp,
         backgroundColor: AppColors.whiteColor,
         child: Image.asset(image,fit:BoxFit.fill,),
       ),

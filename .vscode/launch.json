@@ -5,7 +5,7 @@
             "name": "production",
             "request": "launch",
             "type": "dart",
-            "program": "D:/gem_store_app/lib/main_production.dart",
+            "program": "lib/main_production.dart",
             
             "args": [
                 "--flavor",
@@ -16,10 +16,10 @@
             "name": "development",
             "request": "launch",
             "type": "dart",
-            "program": "D:/gem_store_app/lib/main_development.dart",
+            "program": "lib/main_development.dart",
             "args": [
                 "--flavor",
-                "D:/gem_store_app/lib/main_development.dart"
+                "development"
             ],
         },
         {

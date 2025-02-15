@@ -12,4 +12,5 @@ abstract class Routes {
 
   static const String wishlistScreen = '/wishlistScreen';
   static const String bottomNavBar = '/bottomNavBar';
+  static const String settingScreen ='/settingScreen';
 }

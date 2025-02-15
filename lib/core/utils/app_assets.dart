@@ -24,6 +24,10 @@ class AppAssets {
   static String googleLogo = 'assets/images/googleLogo.png';
   static String facebookLogo = 'assets/images/facebookLogo.png';
   static String imagesOboardeingStart = "assets/images/onboarding_start.png";
+    static String rightArrow = "assets/images/rightArrow.svg";
+  static String language = "assets/images/language.png";
+  static String pricavyPolicy = "assets/images/Pricavy Policy.png";
+  static String termsOfUse = "assets/images/termsOfUse.png";
   static List<String> imagesOboardeingItems = [
     "assets/images/onboarding_item1.png",
     "assets/images/onboarding_item2.png",
