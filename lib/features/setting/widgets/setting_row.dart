@@ -7,10 +7,12 @@ import 'package:gem_store_app/core/utils/spacing.dart';
 
 class SettingRow extends StatelessWidget {
   const SettingRow({
-    super.key, required this.name, required this.image,
+    super.key,
+    required this.name,
+    required this.image,
   });
-final String name;
-final String image;
+  final String name;
+  final String image;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,10 +21,10 @@ final String image;
           height: 50.sp,
           child: Row(
             children: [
-             Image.asset(image),
+              Image.asset(image),
               horizontalSpace(20),
               Text(
-               name,
+                name,
                 style: AppTextStyles.font14Medium,
               ),
               Spacer(

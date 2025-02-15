@@ -4,7 +4,7 @@ class AppAssets {
   static String men = 'assets/images/men.svg';
   static String access = 'assets/images/accessories.svg';
   static String beauty = 'assets/images/beauty.svg';
-  static String filterIcon ="assets/svgs/Filter_big.svg";
+  static String filterIcon = "assets/svgs/Filter_big.svg";
   static String collection = 'assets/images/collection.svg';
   static String collection3 = 'assets/images/collection3.png';
   static String feature = 'assets/images/feature.svg';
@@ -24,8 +24,13 @@ class AppAssets {
   static String appleLogo = 'assets/images/appleLogo.png';
   static String googleLogo = 'assets/images/googleLogo.png';
   static String facebookLogo = 'assets/images/facebookLogo.png';
-  static String profilePhoto ="assets/images/profile_img.png";
+  static String profilePhoto = "assets/images/profile_img.png";
   static String imagesOboardeingStart = "assets/images/onboarding_start.png";
+  static String rightArrow = "assets/images/rightArrow.svg";
+  static String language = "assets/images/language.png";
+  static String pricavyPolicy = "assets/images/Pricavy Policy.png";
+  static String termsOfUse = "assets/images/termsOfUse.png";
+
   static List<String> imagesOboardeingItems = [
     "assets/images/onboarding_item1.png",
     "assets/images/onboarding_item2.png",
@@ -36,7 +41,6 @@ class AppAssets {
   static String imagesActiveFavoriteIcon =
       "assets/images/activate_favorite_icon.png";
   static String imagesTestItem = "assets/images/test_item.png";
-
 
   static String cartIcon = "assets/images/shoping_bag.png";
 }

@@ -18,15 +18,22 @@ class SettingScreen extends StatelessWidget {
           children: [
             CustomAppBar(
                 title: "Setting", textStyle: AppTextStyles.font20BlackBold),
-                verticalSpace(60),
-                 SettingRow(name: 'Language', image:AppAssets.language,),
-                  SettingRow(name: 'Terms of Use', image:AppAssets.termsOfUse,),
-                   SettingRow(name: 'Pricavy Policy', image:AppAssets.pricavyPolicy,),
-           
+            verticalSpace(60),
+            SettingRow(
+              name: 'Language',
+              image: AppAssets.language,
+            ),
+            SettingRow(
+              name: 'Terms of Use',
+              image: AppAssets.termsOfUse,
+            ),
+            SettingRow(
+              name: 'Privacy Policy',
+              image: AppAssets.pricavyPolicy,
+            ),
           ],
         ),
       ),
     );
   }
 }
-

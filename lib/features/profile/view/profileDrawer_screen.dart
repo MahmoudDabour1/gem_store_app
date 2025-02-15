@@ -7,11 +7,9 @@ import 'package:gem_store_app/core/utils/app_strings.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/features/profile/view/widgets/modeButton.dart';
 
-
 class ProfileDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return Drawer(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -20,17 +18,17 @@ class ProfileDrawer extends StatelessWidget {
             child: Row(
               children: [
                 CircleAvatar(
-                  radius: 30.r,
-
-                  backgroundImage: AssetImage(AppAssets.profilePhoto)
-                ),
+                    radius: 30.r,
+                    backgroundImage: AssetImage(AppAssets.profilePhoto)),
                 SizedBox(width: 10.w),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Sunie Pham", style: AppTextStyles.font18BlackSemiBold),
-                    Text("sunieux@gmail.com", style: AppTextStyles.font14DArkGraySemiBold),
+                    Text("Sunie Pham",
+                        style: AppTextStyles.font18BlackSemiBold),
+                    Text("sunieux@gmail.com",
+                        style: AppTextStyles.font14DArkGraySemiBold),
                   ],
                 )
               ],
@@ -53,13 +51,13 @@ class ProfileDrawer extends StatelessWidget {
             title: Text(AppStrings.aboutUs),
             onTap: () {},
           ),
-          SizedBox(height: 50.h,),
+          SizedBox(
+            height: 50.h,
+          ),
           Padding(
-            padding:  EdgeInsets.symmetric(horizontal: 15.w),
+            padding: EdgeInsets.symmetric(horizontal: 15.w),
             child: ModeButton(),
           ),
-
-
         ],
       ),
     );
