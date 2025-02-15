@@ -28,7 +28,7 @@ final String image;
               Spacer(
                 flex: 1,
               ),
-              SvgPicture.asset(AppAssets.rightArrow),
+              SvgPicture.asset("assets/images/rightArrow.svg"),
               horizontalSpace(5)
             ],
           ),

@@ -11,31 +11,27 @@ class StartScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-      
-      body: Stack(
-        alignment: Alignment.center,
-
-        children: [
-          Container(
-            height: double.infinity,
-            width: double.infinity,
-            foregroundDecoration: BoxDecoration(
-              color: Colors.black.withValues(alpha: .5)
+        body: Stack(
+          alignment: Alignment.center,
+          children: [
+            Container(
+              height: double.infinity,
+              width: double.infinity,
+              foregroundDecoration:
+                  BoxDecoration(color: Colors.black.withValues(alpha: .5)),
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                    AppAssets.imagesOboardeingStart,
+                  ),
+                ),
+              ),
             ),
-            decoration: BoxDecoration(
-              image: DecorationImage(fit: BoxFit.cover,image:AssetImage(AppAssets.imagesOboardeingStart,)
-              )
-            ),
-          ),
-
-          Positioned(
-            bottom: 100.h,
-            child: TitleAndButton()
-            )
-        ],
-
+            Positioned(bottom: 100.h, child: TitleAndButton())
+          ],
+        ),
       ),
-    )
     );
   }
 }

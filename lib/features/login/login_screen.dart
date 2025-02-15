@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/extenstions.dart';
 import 'package:gem_store_app/core/utils/app_assets.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/core/utils/spacing.dart';
@@ -8,6 +9,7 @@ import 'package:gem_store_app/core/widgets/app_text_form_field.dart';
 import 'package:gem_store_app/features/login/widgets/custom_circle_avatar.dart';
 
 
+import '../../core/routing/routes.dart';
 import '../../core/utils/app_colors.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -58,7 +60,9 @@ class LoginScreen extends StatelessWidget {
               ),
               Center(
                 child: AppCustomButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pushNamed(Routes.bottomNavBar);
+                  },
                   text: "LOG IN",
                   textStyle: AppTextStyles.font16whiteBold,
                   buttonColor: AppColors.buttonLoginColor,

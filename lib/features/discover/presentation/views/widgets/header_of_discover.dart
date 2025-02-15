@@ -2,12 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gem_store_app/core/helpers/extenstions.dart';
 import 'package:gem_store_app/core/utils/app_assets.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/features/discover/presentation/manager/cubit/show_searched_items_cubit.dart';
 import 'package:gem_store_app/features/discover/presentation/views/widgets/custom_list_of_discovery_category.dart';
 import 'package:gem_store_app/features/discover/presentation/views/widgets/custom_list_of_searched_items.dart';
+
+import '../../../../../core/routing/routes.dart';
 
 class HeaderOfDiscover extends StatelessWidget {
   const HeaderOfDiscover({super.key});
@@ -33,25 +36,31 @@ class HeaderOfDiscover extends StatelessWidget {
                   ),
                 ],
               ),
-              child: TextFormField(
-                decoration: InputDecoration(
-                  contentPadding: EdgeInsets.symmetric(vertical: 12.h),
-                  border: InputBorder.none,
-                  hintText: 'Search',
-                  hintStyle: AppTextStyles.font14Medium,
-                  prefixIcon: GestureDetector(
-                    onTap: () {
-                      context
-                          .read<ShowSearchedItemsCubit>()
-                          .showSearchedItems();
-                    },
-                    child: Icon(
-                      Icons.search_rounded,
-                      color: AppColors.lightGreyText20Colorw300,
+              child: GestureDetector(
+                onTap: () {
+                  context.pushNamed(Routes.search);
+                },
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    contentPadding: EdgeInsets.symmetric(vertical: 12.h),
+                    border: InputBorder.none,
+                    enabled: false,
+                    hintText: 'Search',
+                    hintStyle: AppTextStyles.font14Medium,
+                    prefixIcon: GestureDetector(
+                      onTap: () {
+                        context
+                            .read<ShowSearchedItemsCubit>()
+                            .showSearchedItems();
+                      },
+                      child: Icon(
+                        Icons.search_rounded,
+                        color: AppColors.lightGreyText20Colorw300,
+                      ),
                     ),
                   ),
+                  style: AppTextStyles.font14Medium,
                 ),
-                style: AppTextStyles.font14Medium,
               ),
             ),
             Spacer(),
