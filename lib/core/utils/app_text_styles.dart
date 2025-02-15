@@ -143,12 +143,14 @@ class AppTextStyles {
   );
 
   // font 17
-  static TextStyle font17DarkLight = TextStyle(
-    fontSize: 17.sp,
-    fontWeight: FontWeightHelper.light,
-    color: AppColors.darkColor,
-    fontFamily: AppFonts.productSansLight,
-  );
+  static TextStyle font17DarkLight = TextStyle();
+
+
+
+
+
+  // font 17
+
 
   // font 14
   static TextStyle font14Medium = TextStyle(
@@ -206,10 +208,7 @@ class AppTextStyles {
   );
   static TextStyle font25WhiteBold = TextStyle(
     fontSize: 25.sp,
-    color: Colors.white,
-    fontFamily: AppFonts.productSans,
-    fontWeight: FontWeightHelper.bold,
-  );
+    color: Colors.white,);
 
   //font 18
   static TextStyle font18BlackSemiBold = TextStyle(

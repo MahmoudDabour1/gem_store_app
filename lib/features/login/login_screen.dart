@@ -2,8 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/utils/app_assets.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
+import 'package:gem_store_app/core/utils/spacing.dart';
+import 'package:gem_store_app/core/widgets/app_custom_button.dart';
+import 'package:gem_store_app/core/widgets/app_text_form_field.dart';
 import 'package:gem_store_app/features/login/widgets/custom_circle_avatar.dart';
-import 'package:gem_store_app/features/login/widgets/custom_text_form_field.dart';
+
 
 import '../../core/utils/app_colors.dart';
 
@@ -20,24 +23,28 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: 93.h),
+              verticalSpace(93),
               Text(
                 "Log into ",
                 style: AppTextStyles.font24BlackBold,
               ),
               Text("Your account", style: AppTextStyles.font24BlackBold),
-              SizedBox(height: 48.h),
-              CustomTextFormField(
-                label: 'Email Address',
+              verticalSpace(48),
+              AppTextFormField(
+                labelText: "Email Address",
+                validator: (value) {},
+                keyboardType: TextInputType.emailAddress,
               ),
-              SizedBox(
-                height: 20.h,
+              verticalSpace(
+                20,
               ),
-              CustomTextFormField(
-                label: 'Password',
+              AppTextFormField(
+                labelText: "Password",
+                validator: (value) {},
+                keyboardType: TextInputType.visiblePassword,
               ),
-              SizedBox(
-                height: 28.h,
+              verticalSpace(
+                28,
               ),
               Row(
                 children: [
@@ -46,31 +53,29 @@ class LoginScreen extends StatelessWidget {
                       style: AppTextStyles.font12BlackRegular),
                 ],
               ),
-              SizedBox(
-                height: 25.h,
+              verticalSpace(
+                25,
               ),
               Center(
-                child: Container(
-                  height: 51.sp,
-                  width: 147.sp,
-                  decoration: BoxDecoration(
-                      color: Color(
-                        0xff2D201C,
-                      ),
-                      borderRadius: BorderRadius.circular(40.sp)),
-                  child: Center(
-                      child:
-                          Text("LOG IN", style: AppTextStyles.font16whiteBold)),
+                child: AppCustomButton(
+                  onPressed: () {},
+                  text: "LOG IN",
+                  textStyle: AppTextStyles.font16whiteBold,
+                  buttonColor: AppColors.buttonLoginColor,
+                height: 50,
+                width: 147,
+                radius:40 ,
                 ),
               ),
-              SizedBox(
-                height: 18.h,
+
+              verticalSpace(
+                18,
               ),
               Center(
                   child: Text("or log in with",
                       style: AppTextStyles.font12BlackRegular)),
-              SizedBox(
-                height: 40.h,
+              verticalSpace(
+                 40,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -78,14 +83,14 @@ class LoginScreen extends StatelessWidget {
                   CustomCircleAvatar(
                     image: AppAssets.appleLogo,
                   ),
-                  SizedBox(
-                    width: 20.w,
+                  horizontalSpace(
+                     20,
                   ),
                   CustomCircleAvatar(
                     image: AppAssets.googleLogo,
                   ),
-                  SizedBox(
-                    width: 20.w,
+                  horizontalSpace(
+                  20,
                   ),
                   CustomCircleAvatar(
                     image: AppAssets.facebookLogo,

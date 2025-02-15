@@ -40,4 +40,7 @@ class AppColors {
   static const greenColor = Color(0xFF508A7B);
   static const Color black33 = Color(0xff33302E);
   static const Color transparent = Colors.transparent;
+
+  static const Color navColor = Color(0xffE6E8EC);
+    static const Color buttonLoginColor = Color(0xff2D201C);
 }

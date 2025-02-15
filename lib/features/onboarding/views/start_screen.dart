@@ -20,7 +20,7 @@ class StartScreen extends StatelessWidget {
             height: double.infinity,
             width: double.infinity,
             foregroundDecoration: BoxDecoration(
-              // color: Colors.black.withValues(alpha: .5)
+              color: Colors.black.withValues(alpha: .5)
             ),
             decoration: BoxDecoration(
               image: DecorationImage(fit: BoxFit.cover,image:AssetImage(AppAssets.imagesOboardeingStart,)
