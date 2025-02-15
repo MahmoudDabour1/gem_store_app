@@ -36,7 +36,7 @@ class CustomTopSectionFirst extends StatelessWidget {
                       SizedBox(width: 10.w),
                       Text(
                         'Sale up to 40%',
-                        style: AppTextStyles.font12Light,
+                        style: AppTextStyles.font12GreyRegular,
                       ),
                     ],
                   ),
@@ -45,7 +45,7 @@ class CustomTopSectionFirst extends StatelessWidget {
                     child: Text(
                       'FOR SLIM & BEAUTY',
                       maxLines: 2,
-                      style: AppTextStyles.font20Lightw300,
+                      style: AppTextStyles.font20GreyLight,
                     ),
                   ),
                 ],

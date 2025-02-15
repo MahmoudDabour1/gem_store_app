@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/color_manager.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gem_store_app/core/utils/app_assets.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
+import 'package:gem_store_app/core/utils/app_strings.dart';
+import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/core/widgets/custom_button.dart';
 
 class FilterDrawer extends StatefulWidget {
@@ -19,7 +23,6 @@ class _FilterDrawerState extends State<FilterDrawer> {
   List<int> selectedRatings = [];
   String selectedCategory = "Crop Tops";
   List<String> selectedDiscounts = [];
-
   final List<String> colors = ["#E08B2C", "#D82C2C", "#2C3E50", "#A8B0B9", "#D7AFA2"];
   final List<int> ratings = [1, 2, 3, 4, 5];
   final List<String> discounts = ["50% off", "40% off", "30% off", "25% off"];
@@ -33,12 +36,14 @@ class _FilterDrawerState extends State<FilterDrawer> {
       selectedDiscounts.clear();
     });
   }
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: AppColors.whiteColor,
       width: MediaQuery.of(context).size.width * 0.8,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 35.h),
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 35.h),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -46,15 +51,17 @@ class _FilterDrawerState extends State<FilterDrawer> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text("Filter", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                Icon(Icons.tune, color: Colors.black54),
+                Text(AppStrings.filter, style: AppTextStyles.font20GreyMedium,),
+                SvgPicture.asset(AppAssets.filterIcon,
+                  width: 30.w,height: 30.h,
+                ),
               ],
             ),
             Divider(),
-
-            Text("Price", style: TextStyle(fontWeight: FontWeight.bold,fontSize: 20),),
+           SizedBox(height: 15.h,),
+            Text(AppStrings.price, style: AppTextStyles.font14Medium),
             RangeSlider(
-              activeColor: ColorManager.black33,
+              activeColor: AppColors.black33,
               values: RangeValues(_minPrice, _maxPrice),
               min: 0,
               max: 1000,
@@ -67,9 +74,10 @@ class _FilterDrawerState extends State<FilterDrawer> {
                 });
               },
             ),
+            SizedBox(height: 20.h,),
 
-            // Color Selection
-            Text("Color", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(AppStrings.color,  style: AppTextStyles.font14Medium),
+            SizedBox(height: 15.h,),
             Row(
               children: colors.map((hex) {
                 return GestureDetector(
@@ -83,14 +91,14 @@ class _FilterDrawerState extends State<FilterDrawer> {
                     });
                   },
                   child: Container(
-                    margin: EdgeInsets.symmetric(horizontal: 5),
-                    width: 30,
-                    height: 30,
+                    margin: EdgeInsets.symmetric(horizontal: 5.w),
+                    width: 30.w,
+                    height: 30.h,
                     decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color: Color(int.parse("0xFF${hex.substring(1)}")),
                       border: selectedColors.contains(hex)
-                          ? Border.all(color: Colors.black, width: 2)
+                          ? Border.all(color: Colors.black, width: 2.w)
                           : null,
                     ),
                   ),
@@ -98,16 +106,18 @@ class _FilterDrawerState extends State<FilterDrawer> {
               }).toList(),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 20.h,),
 
-            // Star Rating
-            Text("Star Rating", style: TextStyle(fontWeight: FontWeight.bold)),
+
+            Text(AppStrings.starRating,  style: AppTextStyles.font14Medium),
+            SizedBox(height: 15.h,),
             Wrap(
               spacing: 8.0,
               children: ratings.map((rating) {
                 return ChoiceChip(
-                  selectedColor: ColorManager.black33.withOpacity(0.2),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30))
+                  backgroundColor: AppColors.whiteColor,
+                  selectedColor: AppColors.black33.withOpacity(0.2),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r))
                   ,
                   label: Text("★ $rating",),
                   selected: selectedRatings.contains(rating),
@@ -124,9 +134,10 @@ class _FilterDrawerState extends State<FilterDrawer> {
               }).toList(),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 20.h,),
 
-            Text("Category", style: TextStyle(fontWeight: FontWeight.bold)),
+            Text(AppStrings.category,  style: AppTextStyles.font14Medium),
+            SizedBox(height: 15.h,),
             Container(
               width: 250.w,
               decoration: BoxDecoration(border: Border.all(color: Color(0xff33302E)),borderRadius: BorderRadius.circular(20.r)),
@@ -150,17 +161,19 @@ class _FilterDrawerState extends State<FilterDrawer> {
               ),
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 20.h,),
 
-            // Discount Selection
-            Text("Discount", style: TextStyle(fontWeight: FontWeight.bold)),
+
+            Text(AppStrings.discount,  style: AppTextStyles.font14Medium),
+            SizedBox(height: 15.h,),
             Wrap(
               spacing: 8.0,
               children: discounts.map((discount) {
                 return ChoiceChip(
-                  selectedColor: ColorManager.black33.withOpacity(0.2),
-                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                  label: Text(discount),
+                  backgroundColor: AppColors.whiteColor,
+                  selectedColor: AppColors.black33.withOpacity(0.2),
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.r)),
+                  label: Text(discount,style: AppTextStyles.font13BlackW600,),
                   selected: selectedDiscounts.contains(discount),
                   onSelected: (selected) {
                     setState(() {
@@ -177,12 +190,12 @@ class _FilterDrawerState extends State<FilterDrawer> {
 
             Spacer(),
 
-            // Apply & Reset Buttons
+
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 TextButton(
-                    onPressed:resetFilters, child: Text("Reset")),
+                    onPressed:resetFilters, child: Text(AppStrings.reset,style: AppTextStyles.font14Medium,)),
                 CustomButton(
                   width: 90.w,
                   onPressed: () => widget.onApply({
@@ -193,12 +206,12 @@ class _FilterDrawerState extends State<FilterDrawer> {
                     "category": selectedCategory,
                     "discounts": selectedDiscounts,
                   }),
-                  text: ("Apply"),
+                  text: (AppStrings.apply),
                 ),
               ],
             ),
 
-            SizedBox(height: 10),
+            SizedBox(height: 10.h),
           ],
         ),
       ),

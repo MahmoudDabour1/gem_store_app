@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/core/theming/app_colors.dart';
 
-import '../theming/app_styles.dart';
+import '../utils/app_colors.dart';
+import '../utils/app_text_styles.dart';
 
 class AppTextFormField extends StatelessWidget {
   final String labelText;
@@ -52,9 +52,10 @@ class AppTextFormField extends StatelessWidget {
           ),
         ),
         labelText: labelText,
+        labelStyle: AppTextStyles.font16lightGreyhintText
       ),
       obscureText: isObscureText ?? false,
-      style: AppStyles.font11BlackLight,
+      style: AppTextStyles.font11BlackLight,
       validator: (value) {
         return validator(value!);
       },

@@ -41,7 +41,7 @@ class CustomTopSectionThird extends StatelessWidget {
                 SizedBox(height: 20.h),
                 Flexible(
                   child: Text('The Office Life',
-                      maxLines: 3, style: AppTextStyles.font17Light),
+                      maxLines: 3, style: AppTextStyles.font17DarkLight),
                 ),
               ],
             ),

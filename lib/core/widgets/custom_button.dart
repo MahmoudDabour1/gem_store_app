@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/color_manager.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
   final double width;
@@ -9,18 +9,21 @@ class CustomButton extends StatelessWidget {
   final Color? fontColor;
   final double fontSize;
   final double? radius;
+
   const CustomButton(
       {super.key,
-        required this.text,
-        this.onPressed,
-        this.color,
-        this.width = double.infinity,
-        this.height = 48,
-        this.fontSize = 16,
-        this.fontColor,
-        this.radius});
+      required this.text,
+      this.onPressed,
+      this.color,
+      this.width = double.infinity,
+      this.height = 48,
+      this.fontSize = 16,
+      this.fontColor,
+      this.radius});
+
   final String text;
   final void Function()? onPressed;
+
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -29,8 +32,8 @@ class CustomButton extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(radius ?? 100.r),
         ),
-        disabledBackgroundColor: color ?? ColorManager.primary,
-        backgroundColor: color ?? ColorManager.primary,
+        disabledBackgroundColor: color ?? AppColors.black33,
+        backgroundColor: color ?? AppColors.black33,
       ),
       onPressed: onPressed,
       child: Text(

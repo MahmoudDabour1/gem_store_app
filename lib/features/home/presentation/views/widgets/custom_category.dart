@@ -62,8 +62,8 @@ class CustomCategory extends StatelessWidget {
             Text(
               title,
               style: context.read<CategoryCubit>().currentIndex == index
-                  ? AppTextStyles.font10Brown
-                  : AppTextStyles.font10,
+                  ? AppTextStyles.font10BrownRegular
+                  : AppTextStyles.font10GreyRegular,
             ),
           ],
         );

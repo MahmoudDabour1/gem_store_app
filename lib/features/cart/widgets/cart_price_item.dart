@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/theming/app_colors.dart';
-import '../../../core/theming/app_styles.dart';
+import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/app_text_styles.dart';
 
 class CartPriceItem extends StatelessWidget {
   final String firstText;
@@ -26,14 +26,14 @@ class CartPriceItem extends StatelessWidget {
           padding: EdgeInsets.symmetric(vertical: 20.w),
           child: Text(
             firstText,
-            style: firstTextStyle ?? AppStyles.font14DarkGrayMedium,
+            style: firstTextStyle ?? AppTextStyles.font14DarkGrayMedium,
           ),
         ),
         Text(
           "\$$lastText",
           style: lastTextStyle ??
-              AppStyles.font14DarkGrayMedium.copyWith(
-                color: AppColors.primaryColor,
+              AppTextStyles.font14DarkGrayMedium.copyWith(
+                color: AppColors.blackColor,
               ),
         ),
       ],

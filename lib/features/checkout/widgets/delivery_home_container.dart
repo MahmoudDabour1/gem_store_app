@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/theming/app_colors.dart';
-import '../../../core/theming/app_styles.dart';
-import '../../../core/theming/font_weight_helper.dart';
+import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/app_text_styles.dart';
+import '../../../core/utils/font_weight_helper.dart';
 import '../../../core/utils/spacing.dart';
 
 class DeliveryHomeContainer extends StatelessWidget {
@@ -42,14 +42,14 @@ class DeliveryHomeContainer extends StatelessWidget {
                   children: [
                     Text(
                       "Free",
-                      style: AppStyles.font14DArkGraySemiBold.copyWith(
+                      style: AppTextStyles.font14DArkGraySemiBold.copyWith(
                         fontWeight: FontWeightHelper.medium,
                       ),
                     ),
                     horizontalSpace(20),
                     Text(
                       "Delivery to home",
-                      style: AppStyles.font14DArkGraySemiBold.copyWith(
+                      style: AppTextStyles.font14DArkGraySemiBold.copyWith(
                           fontWeight: FontWeightHelper.medium,
                           color: AppColors.darkGrayColor),
                     ),
@@ -57,7 +57,7 @@ class DeliveryHomeContainer extends StatelessWidget {
                 ),
                 Text(
                   "Delivery from 3 to 7 business days",
-                  style: AppStyles.font11BlackLight.copyWith(
+                  style: AppTextStyles.font11BlackLight.copyWith(
                       fontSize: 12.sp, color: AppColors.lightGrayColor),
                 ),
               ],

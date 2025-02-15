@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../theming/app_colors.dart';
+import '../utils/app_colors.dart';
 
 class AppBackButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -19,12 +19,12 @@ class AppBackButton extends StatelessWidget {
       child: Padding(
         padding:  EdgeInsets.all(10.r),
         child: Container(
-          width: 20.w,
-          height: 20.h,
+          width: 40.w,
+          height: 40.h,
           decoration: BoxDecoration(
             boxShadow: [
               BoxShadow(
-                color: AppColors.primaryColor.withOpacity(0.2),
+                color: AppColors.blackColor.withOpacity(0.2),
                 blurRadius: 10.r,
                 offset: const Offset(0, 2),
               ),

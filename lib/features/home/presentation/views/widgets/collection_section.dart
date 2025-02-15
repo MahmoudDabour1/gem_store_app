@@ -33,7 +33,7 @@ class CollectionSection extends StatelessWidget {
           children: 'Autumn Collection 2022'.split(' ').map((word) {
             return Text(
               word,
-              style: AppTextStyles.font22,
+              style: AppTextStyles.font22WhiteRegular,
             );
           }).toList(),
         ),

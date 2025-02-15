@@ -38,6 +38,11 @@ dependencies:
   logger:
   flutter_screenutil:
   flutter_svg:
+  bloc: ^9.0.0
+  flutter_rating_bar: ^4.0.1
+  provider:
+  image_picker:
+  permission_handler: ^11.3.1
 
 dev_dependencies:
   flutter_test:
@@ -58,6 +63,7 @@ flutter:
     - assets/svg/
     - assets/images/
     - assets/svgs/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
