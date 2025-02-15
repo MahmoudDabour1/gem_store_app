@@ -3,6 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
 import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
+import 'package:gem_store_app/features/profile/view/profile_screen.dart';
+import 'package:gem_store_app/features/profile/view/settings_screen.dart';
+import 'package:gem_store_app/features/search/presentation/search_view/search_screen.dart';
 import 'package:gem_store_app/features/track_order/track_order.dart';
 
 class BottomNavBar extends StatefulWidget {
@@ -19,7 +22,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
     HomeScreen(),
     DiscoverScreen(),
     TrackOrderScreen(),
-    Center(child: Text("Profile Screen")),
+    SettingsScreen(),
   ];
 
   void _onItemTap(int index) {

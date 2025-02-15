@@ -33,8 +33,7 @@ class GemStoreApp extends StatelessWidget {
         ),*/
         onGenerateRoute: appRouter.generateRoute,
         navigatorObservers: [NavigatorObserver()],
-        initialRoute: Routes.search,
-        home: OnboardingScreen(),
+        initialRoute: Routes.onBoardingScreen,
       ),
     );
   }

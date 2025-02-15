@@ -19,10 +19,9 @@ class SettingScreen extends StatelessWidget {
             CustomAppBar(
                 title: "Setting", textStyle: AppTextStyles.font20BlackBold),
                 verticalSpace(60),
-                 SettingRow(name: 'Language', image:AppAssets.language,),
-                  SettingRow(name: 'Terms of Use', image:AppAssets.termsOfUse,),
-                   SettingRow(name: 'Pricavy Policy', image:AppAssets.pricavyPolicy,),
-           
+                 SettingRow(name: 'Language', image:"assets/images/language.png",),
+                  SettingRow(name: 'Terms of Use', image:"assets/images/termsOfUse.png",),
+                   SettingRow(name: 'Pricavy Policy', image:"assets/images/termsOfUse.png",),
           ],
         ),
       ),
