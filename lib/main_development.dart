@@ -12,11 +12,9 @@ void main() async {
   runApp(
     ChangeNotifierProvider(
       create: (context) => ThemeProvider(),
-      child:GemStoreApp(
+      child: GemStoreApp(
         appRouter: AppRouter(),
-
       ),
     ),
   );
-
 }

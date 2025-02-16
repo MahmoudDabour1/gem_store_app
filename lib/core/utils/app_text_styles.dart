@@ -6,10 +6,27 @@ import 'package:gem_store_app/core/utils/app_fonts.dart';
 import 'font_weight_helper.dart';
 
 class AppTextStyles {
+  static TextStyle font25BlackRegular = TextStyle(
+    fontSize: 25.sp,
+    color: AppColors.blackColor,
+    fontFamily: AppFonts.productSans,
+  );
   //font 20
+  static TextStyle font20BlackextraLight = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.blackColor,
+    fontWeight: FontWeightHelper.extraLight,
+    fontFamily: AppFonts.productSans,
+  );
   static TextStyle font20BlackBold = TextStyle(
     fontSize: 20.sp,
     color: AppColors.blackColor,
+    fontWeight: FontWeightHelper.bold,
+    fontFamily: AppFonts.productSans,
+  );
+  static TextStyle font20White = TextStyle(
+    fontSize: 20.sp,
+    color: AppColors.whiteColor,
     fontWeight: FontWeightHelper.bold,
     fontFamily: AppFonts.productSans,
   );
@@ -145,12 +162,7 @@ class AppTextStyles {
   // font 17
   static TextStyle font17DarkLight = TextStyle();
 
-
-
-
-
   // font 17
-
 
   // font 14
   static TextStyle font14Medium = TextStyle(
@@ -159,11 +171,10 @@ class AppTextStyles {
     fontFamily: AppFonts.productSansMedium,
   );
   static TextStyle font13BlackW600 = TextStyle(
-    fontSize: 14.sp,
-    fontWeight: FontWeightHelper.semiBold,
-    fontFamily: AppFonts.productSansMedium,
-    color: AppColors.black33
-  );
+      fontSize: 14.sp,
+      fontWeight: FontWeightHelper.semiBold,
+      fontFamily: AppFonts.productSansMedium,
+      color: AppColors.black33);
 
   static TextStyle font14BlackRegular = TextStyle(
     fontSize: 14.sp,
@@ -208,7 +219,8 @@ class AppTextStyles {
   );
   static TextStyle font25WhiteBold = TextStyle(
     fontSize: 25.sp,
-    color: Colors.white,);
+    color: Colors.white,
+  );
 
   //font 18
   static TextStyle font18BlackSemiBold = TextStyle(

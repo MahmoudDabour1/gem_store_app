@@ -6,8 +6,9 @@ import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/core/utils/spacing.dart';
 import 'package:gem_store_app/core/widgets/app_custom_button.dart';
 import 'package:gem_store_app/core/widgets/app_text_form_field.dart';
+import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
+import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 import 'package:gem_store_app/features/login/widgets/custom_circle_avatar.dart';
-
 
 import '../../core/routing/routes.dart';
 import '../../core/utils/app_colors.dart';
@@ -61,17 +62,20 @@ class LoginScreen extends StatelessWidget {
               Center(
                 child: AppCustomButton(
                   onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => BottomNavBar()));
                     context.pushNamed(Routes.bottomNavBar);
                   },
                   text: "LOG IN",
                   textStyle: AppTextStyles.font16whiteBold,
                   buttonColor: AppColors.buttonLoginColor,
-                height: 50,
-                width: 147,
-                radius:40 ,
+                  height: 50,
+                  width: 147,
+                  radius: 40,
                 ),
               ),
-
               verticalSpace(
                 18,
               ),
@@ -79,7 +83,7 @@ class LoginScreen extends StatelessWidget {
                   child: Text("or log in with",
                       style: AppTextStyles.font12BlackRegular)),
               verticalSpace(
-                 40,
+                40,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -88,13 +92,13 @@ class LoginScreen extends StatelessWidget {
                     image: AppAssets.appleLogo,
                   ),
                   horizontalSpace(
-                     20,
+                    20,
                   ),
                   CustomCircleAvatar(
                     image: AppAssets.googleLogo,
                   ),
                   horizontalSpace(
-                  20,
+                    20,
                   ),
                   CustomCircleAvatar(
                     image: AppAssets.facebookLogo,

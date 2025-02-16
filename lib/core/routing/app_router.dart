@@ -7,6 +7,8 @@ import 'package:gem_store_app/features/discover/presentation/views/discover_scre
 import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 import 'package:gem_store_app/features/login/login_screen.dart';
 import 'package:gem_store_app/features/onboarding/views/onboarding_intro_screen.dart';
+import 'package:gem_store_app/features/orderinfo/views/orders_screen.dart';
+import 'package:gem_store_app/features/product_details/views/item_details_views.dart';
 import 'package:gem_store_app/features/product_details/views/item_details_views.dart';
 import 'package:gem_store_app/features/profile/view/profileDrawer_screen.dart';
 import 'package:gem_store_app/features/profile/view/profile_screen.dart';
@@ -70,11 +72,30 @@ class AppRouter {
         return MaterialPageRoute(
           builder: (_) => DiscoverScreen(),
         );
-
       case Routes.productDetailsScreen:
         return MaterialPageRoute(
           builder: (_) => ItemDetailsViews(),
         );
+      case Routes.checkoutScreen:
+        return MaterialPageRoute(
+          builder: (_) => CheckoutScreen(),
+        );
+      case Routes.checkoutDoneScreen:
+        return MaterialPageRoute(
+          builder: (_) => CheckOutDoneScreen(),
+        );
+      case Routes.cartScreen:
+        return MaterialPageRoute(
+          builder: (_) => CartScreen(),
+        );
+      case Routes.homeScreen:
+        return MaterialPageRoute(
+          builder: (_) => HomeScreen(),
+        );
+
+      case Routes.discoverScreen:
+        return MaterialPageRoute(
+          builder: (_) => DiscoverScreen(),
       case Routes.settingScreen:
         return MaterialPageRoute(
           builder: (_) => SettingScreen(),
@@ -82,6 +103,10 @@ class AppRouter {
       case Routes.wishlistScreen:
         return MaterialPageRoute(
           builder: (_) => WishlistScreen(),
+        );
+      case Routes.ordersScreen:
+        return MaterialPageRoute(
+          builder: (_) => OrdersView(),
         );
       case Routes.bottomNavBar:
         return MaterialPageRoute(
