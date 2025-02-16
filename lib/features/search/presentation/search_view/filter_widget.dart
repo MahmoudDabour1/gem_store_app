@@ -10,7 +10,7 @@ import 'package:gem_store_app/core/widgets/custom_button.dart';
 class FilterDrawer extends StatefulWidget {
   final Function(Map<String, dynamic>) onApply;
 
-  FilterDrawer({required this.onApply});
+  const FilterDrawer({required this.onApply});
 
   @override
   _FilterDrawerState createState() => _FilterDrawerState();

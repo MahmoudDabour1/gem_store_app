@@ -14,7 +14,7 @@ class CustomSearchedItem extends StatelessWidget {
       height: 250.h,
       width: 141.w,
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        //crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
             alignment: Alignment.topRight,
@@ -59,38 +59,46 @@ class CustomSearchedItem extends StatelessWidget {
             ],
           ),
           SizedBox(height: 10.h),
-          Text(
-            'Long Sleeve Dress',
-            style: AppTextStyles.font12Darkmedium,
-          ),
-          SizedBox(height: 5.h),
-          Row(
-            children: [
-              Text(
-                '\$ ${39.99}',
-                style: AppTextStyles.font16DarkBold,
-              ),
-              SizedBox(width: 10.w),
-              Text(
-                '\$ ${54.99}',
-                style: AppTextStyles.font12GreyRegular.copyWith(
-                  decoration: TextDecoration.lineThrough,
-                  color: AppColors.lightGreyText12w300Color,
+          Padding(
+            padding: const EdgeInsets.only(left: 12.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Long Sleeve Dress',
+                  style: AppTextStyles.font12Darkmedium,
                 ),
-              ),
-            ],
-          ),
-          Row(
-            children: [
-              ...List.generate(
-                  5,
-                  (index) => Icon(Icons.star,
-                      color: AppColors.starColor, size: 12.sp)),
-              Text(
-                '(53)',
-                style: AppTextStyles.font10darkRegular,
-              ),
-            ],
+                SizedBox(height: 5.h),
+                Row(
+                  children: [
+                    Text(
+                      '\$ ${39.99}',
+                      style: AppTextStyles.font16DarkBold,
+                    ),
+                    SizedBox(width: 10.w),
+                    Text(
+                      '\$ ${54.99}',
+                      style: AppTextStyles.font12GreyRegular.copyWith(
+                        decoration: TextDecoration.lineThrough,
+                        color: AppColors.lightGreyText12w300Color,
+                      ),
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    ...List.generate(
+                        5,
+                        (index) => Icon(Icons.star,
+                            color: AppColors.starColor, size: 12.sp)),
+                    Text(
+                      '(53)',
+                      style: AppTextStyles.font10darkRegular,
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ),
         ],
       ),

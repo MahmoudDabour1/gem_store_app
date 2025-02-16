@@ -36,7 +36,11 @@ class ItemImages extends StatelessWidget {
                   2,
                   (index) {
                     return GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          if (index == 0) {
+                            Navigator.pop(context);
+                          }
+                        },
                         child: Image.asset(index == 0
                             ? AppAssets.imagesBackButtonIcon
                             : AppAssets.imagesActiveFavoriteIcon));

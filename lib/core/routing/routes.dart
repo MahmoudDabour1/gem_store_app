@@ -15,6 +15,7 @@ abstract class Routes {
   static const String productDetailsScreen = "/productDetailsScreen";
 
   static const String wishlistScreen = '/wishlistScreen';
+  static const String wishlistBoardScreen = '/wishlistBoardScreen';
   static const String bottomNavBar = '/bottomNavBar';
   static const String settingScreen = '/settingScreen';
   static const String settings = "/SettingsScreen";

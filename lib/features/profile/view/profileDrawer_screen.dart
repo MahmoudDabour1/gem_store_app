@@ -8,6 +8,8 @@ import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/features/profile/view/widgets/modeButton.dart';
 
 class ProfileDrawer extends StatelessWidget {
+  const ProfileDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -20,6 +22,9 @@ class ProfileDrawer extends StatelessWidget {
                 CircleAvatar(
                     radius: 30.r,
                     backgroundImage: AssetImage(AppAssets.profilePhoto)),
+                  radius: 30.r,
+                  backgroundImage: AssetImage(AppAssets.profilePhoto)
+                ),
                 SizedBox(width: 10.w),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +43,7 @@ class ProfileDrawer extends StatelessWidget {
             leading: Icon(Icons.settings),
             title: Text(AppStrings.setting),
             onTap: () {
-              context.pushNamed(Routes.settings);
+              context.pushNamed(Routes.settingScreen);
             },
           ),
           ListTile(

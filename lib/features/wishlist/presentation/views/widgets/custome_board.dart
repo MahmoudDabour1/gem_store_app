@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/extenstions.dart';
+import 'package:gem_store_app/core/routing/routes.dart';
 
 
 import '../../../../../core/utils/app_colors.dart';
@@ -24,7 +26,7 @@ class CustomeBoard extends StatelessWidget {
 
           ListTile(
             onTap: () {
-              
+              context.pushNamed(Routes.wishlistScreen);
             },
             title: Text(
               "Going out outfits",

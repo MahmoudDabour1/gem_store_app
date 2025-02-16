@@ -70,7 +70,9 @@ class SettingsScreen extends StatelessWidget {
                     leading: Icon(Icons.favorite, color: Colors.grey),
                     title: Text(AppStrings.myWishlist),
                     trailing: Icon(Icons.arrow_forward_ios, size: 16),
-                    onTap: () {},
+                    onTap: () {
+                      context.pushNamed(Routes.wishlistBoardScreen);
+                    },
                   ),
                   Divider(
                     color: AppColors.greyContainerColor,
