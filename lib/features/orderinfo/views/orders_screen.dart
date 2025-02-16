@@ -36,6 +36,7 @@ class OrdersView extends StatelessWidget {
               child: Container(
                 height: 40,
                 child: TabBar(
+                  dividerHeight: 0,
                   labelPadding: EdgeInsets.symmetric(horizontal: 16),
                   indicator: BoxDecoration(
                     color: Color(0xFF43484B),

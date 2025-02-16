@@ -22,9 +22,6 @@ class ProfileDrawer extends StatelessWidget {
                 CircleAvatar(
                     radius: 30.r,
                     backgroundImage: AssetImage(AppAssets.profilePhoto)),
-                  radius: 30.r,
-                  backgroundImage: AssetImage(AppAssets.profilePhoto)
-                ),
                 SizedBox(width: 10.w),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
