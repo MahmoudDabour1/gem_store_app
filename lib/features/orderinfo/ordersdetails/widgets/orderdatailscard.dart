@@ -1,14 +1,12 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/core/utils/spacing.dart';
-import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
-import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
-import 'package:gem_store_app/features/orderinfo/Rate/views/ratescreen.dart';
 import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
 import 'package:gem_store_app/features/track_order/track_order.dart';
+import 'package:gem_store_app/features/orderinfo/Rate/views/ratescreen.dart';
+import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
 
 class Orderdatailscard extends StatelessWidget {
   final Ordersmodel order;
@@ -19,7 +17,7 @@ class Orderdatailscard extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 20,
+          height: 20.h,
         ),
         GestureDetector(
           onTap: () {
@@ -35,10 +33,10 @@ class Orderdatailscard extends StatelessWidget {
           child: Card(
             color: AppColors.lightGreyText13RobotoColor,
             child: Container(
-              width: 327,
-              height: 92,
+              width: 327.w,
+              height: 92.h,
               child: Padding(
-                padding: const EdgeInsets.all(15),
+                padding: EdgeInsets.all(15.w),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -58,8 +56,8 @@ class Orderdatailscard extends StatelessWidget {
                           : order is OrdDelivered
                               ? "assets/svgs/gift.svg"
                               : "",
-                      width: 50,
-                      height: 50,
+                      width: 50.w,
+                      height: 50.h,
                     ),
                   ],
                 ),
@@ -70,12 +68,12 @@ class Orderdatailscard extends StatelessWidget {
         Card(
           elevation: 5,
           shadowColor: const Color.fromARGB(255, 245, 245, 245),
-          margin: const EdgeInsets.all(20),
+          margin: EdgeInsets.all(20.w),
           color: const Color.fromARGB(255, 255, 255, 255),
           child: Container(
-            width: 327,
-            height: 114,
-            padding: const EdgeInsets.all(16),
+            width: 327.w,
+            height: 114.h,
+            padding: EdgeInsets.all(16.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -92,7 +90,7 @@ class Orderdatailscard extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -106,7 +104,7 @@ class Orderdatailscard extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -125,17 +123,17 @@ class Orderdatailscard extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 10,
+          height: 10.h,
         ),
         Card(
           elevation: 5,
           shadowColor: const Color.fromARGB(255, 245, 245, 245),
-          margin: const EdgeInsets.all(20),
+          margin: EdgeInsets.all(20.w),
           color: const Color.fromARGB(255, 255, 255, 255),
           child: Container(
-            width: 335,
-            height: 247,
-            padding: const EdgeInsets.all(16),
+            width: 335.w,
+            height: 247.h,
+            padding: EdgeInsets.all(16.w),
             child: Column(
               children: [
                 Row(
@@ -147,7 +145,7 @@ class Orderdatailscard extends StatelessWidget {
                     Text("68.00", style: AppTextStyles.font20BlackextraLight),
                   ],
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -157,41 +155,41 @@ class Orderdatailscard extends StatelessWidget {
                     Text("52.00", style: AppTextStyles.font20BlackextraLight),
                   ],
                 ),
-                SizedBox(height: 30),
+                SizedBox(height: 30.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Sub Total", style: TextStyle(fontSize: 20)),
-                    Text("68.00", style: TextStyle(fontSize: 20)),
+                    Text("Sub Total", style: TextStyle(fontSize: 20.sp)),
+                    Text("68.00", style: TextStyle(fontSize: 20.sp)),
                   ],
                 ),
-                SizedBox(height: 5),
+                SizedBox(height: 5.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Shipping", style: TextStyle(fontSize: 20)),
-                    Text("52.00", style: TextStyle(fontSize: 20)),
+                    Text("Shipping", style: TextStyle(fontSize: 20.sp)),
+                    Text("52.00", style: TextStyle(fontSize: 20.sp)),
                   ],
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Container(
-                  width: 308.01,
+                  width: 308.01.w,
                   decoration: ShapeDecoration(
                     shape: RoundedRectangleBorder(
                       side: BorderSide(
-                        width: 0.50,
+                        width: 0.50.w,
                         strokeAlign: BorderSide.strokeAlignCenter,
                         color: Colors.black.withOpacity(0.20000000298023224),
                       ),
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                SizedBox(height: 20.h),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Total", style: TextStyle(fontSize: 20)),
-                    Text("52.00", style: TextStyle(fontSize: 20)),
+                    Text("Total", style: TextStyle(fontSize: 20.sp)),
+                    Text("52.00", style: TextStyle(fontSize: 20.sp)),
                   ],
                 ),
               ],
@@ -199,10 +197,11 @@ class Orderdatailscard extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 20,
+          height: 20.h,
         ),
         Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
                 onPressed: () {
@@ -214,14 +213,14 @@ class Orderdatailscard extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  width: 168,
-                  height: 44,
+                  width: 168.w,
+                  height: 44.h,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24),
+                      borderRadius: BorderRadius.circular(24.r),
                       side: BorderSide(
-                        width: 1,
+                        width: 1.w,
                         color: Color(0xFF777E90),
                       ),
                     ),
@@ -230,7 +229,7 @@ class Orderdatailscard extends StatelessWidget {
                     child: Text(
                       "Return Home",
                       style: TextStyle(
-                        fontSize: 20,
+                        fontSize: 20.sp,
                         color: const Color.fromARGB(255, 0, 0, 0),
                       ),
                     ),
@@ -238,7 +237,7 @@ class Orderdatailscard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 5,
+                width: 5.w,
               ),
               TextButton(
                 onPressed: () {
@@ -250,17 +249,17 @@ class Orderdatailscard extends StatelessWidget {
                   );
                 },
                 child: Container(
-                  width: 119,
-                  height: 44,
+                  width: 119.w,
+                  height: 44.h,
                   decoration: ShapeDecoration(
                       color: AppColors.lightGreyText20Color,
                       shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(24))),
+                          borderRadius: BorderRadius.circular(24.r))),
                   child: Center(
                     child: Text(
                       "Rate",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 20.sp,
                           color: const Color.fromARGB(255, 255, 255, 255)),
                     ),
                   ),

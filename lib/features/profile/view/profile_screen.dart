@@ -32,7 +32,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 title: Text(AppStrings.camera),
                 onTap: () async {
                   if (await _requestPermission(Permission.camera)) {
-                    Navigator.of(context).pop(await _picker.pickImage(source: ImageSource.camera));
+                    Navigator.of(context).pop(
+                        await _picker.pickImage(source: ImageSource.camera));
                   } else {
                     Navigator.of(context).pop(null);
                   }
@@ -43,7 +44,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                 title: Text(AppStrings.gallery),
                 onTap: () async {
                   if (await _requestPermission(Permission.storage)) {
-                    Navigator.of(context).pop(await _picker.pickImage(source: ImageSource.gallery));
+                    Navigator.of(context).pop(
+                        await _picker.pickImage(source: ImageSource.gallery));
                   } else {
                     Navigator.of(context).pop(null);
                   }
@@ -71,13 +73,16 @@ class _ProfileScreenState extends State<ProfileScreen> {
     }
   }
 
-  final TextEditingController _firstNameController = TextEditingController(text: 'Sunie');
-  final TextEditingController _lastNameController = TextEditingController(text: 'Pham');
-  final TextEditingController _emailController = TextEditingController(text: 'sunieux@gmail.com');
-  final TextEditingController _genderController = TextEditingController(text: 'Female');
-  final TextEditingController _phoneController = TextEditingController(text: '(+1) 23456789');
-
-
+  final TextEditingController _firstNameController =
+      TextEditingController(text: 'Sunie');
+  final TextEditingController _lastNameController =
+      TextEditingController(text: 'Pham');
+  final TextEditingController _emailController =
+      TextEditingController(text: 'sunieux@gmail.com');
+  final TextEditingController _genderController =
+      TextEditingController(text: 'Female');
+  final TextEditingController _phoneController =
+      TextEditingController(text: '(+1) 23456789');
 
   @override
   Widget build(BuildContext context) {
@@ -88,16 +93,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: SingleChildScrollView(
           child: Column(
             children: [
-
               Stack(
                 children: [
                   CircleAvatar(
-                    radius: 50.r,backgroundImage: _image == null
+                    radius: 50.r,
+                    backgroundImage: _image == null
                         ? AssetImage(AppAssets.profilePhoto) as ImageProvider
                         : FileImage(
-                      _image!,
-
-                    ),
+                            _image!,
+                          ),
                   ),
                   Positioned(
                     bottom: 0,
@@ -115,9 +119,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
                   ),
-
                 ],
-
               ),
               SizedBox(height: 70.h),
               Column(
@@ -129,7 +131,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: AppTextFormField(
                           controller: _firstNameController,
                           labelText: AppStrings.firstName,
-                          validator: (value) => value.isEmpty ? AppStrings.required : null,
+                          validator: (value) =>
+                              value.isEmpty ? AppStrings.required : null,
                         ),
                       ),
                       Spacer(),
@@ -138,7 +141,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: AppTextFormField(
                           controller: _lastNameController,
                           labelText: AppStrings.lastName,
-                          validator: (value) => value.isEmpty ? AppStrings.required : null,
+                          validator: (value) =>
+                              value.isEmpty ? AppStrings.required : null,
                         ),
                       ),
                     ],
@@ -149,7 +153,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     child: AppTextFormField(
                       controller: _emailController,
                       labelText: AppStrings.email,
-                      validator: (value) => value.isEmpty ? AppStrings.required : null,
+                      validator: (value) =>
+                          value.isEmpty ? AppStrings.required : null,
                     ),
                   ),
                   SizedBox(height: 30.h),
@@ -160,7 +165,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: AppTextFormField(
                           controller: _genderController,
                           labelText: AppStrings.gender,
-                          validator: (value) => value.isEmpty ? AppStrings.required : null,
+                          validator: (value) =>
+                              value.isEmpty ? AppStrings.required : null,
                         ),
                       ),
                       Spacer(),
@@ -169,7 +175,8 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         child: AppTextFormField(
                           controller: _phoneController,
                           labelText: AppStrings.phone,
-                          validator: (value) => value.isEmpty ? AppStrings.required : null,
+                          validator: (value) =>
+                              value.isEmpty ? AppStrings.required : null,
                         ),
                       ),
                     ],
@@ -189,4 +196,3 @@ class _ProfileScreenState extends State<ProfileScreen> {
     );
   }
 }
-

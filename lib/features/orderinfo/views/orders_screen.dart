@@ -23,7 +23,7 @@ class OrdersView extends StatelessWidget {
           appBar: AppBar(
             title: Center(
               child: Padding(
-                padding: EdgeInsets.only(top: 26, right: 35),
+                padding: EdgeInsets.only(top: 26.h, right: 35.w),
                 child: Text(
                   'My Orders',
                   style: AppTextStyles.font25BlackRegular,
@@ -32,14 +32,15 @@ class OrdersView extends StatelessWidget {
             ),
             backgroundColor: Colors.white,
             bottom: PreferredSize(
-              preferredSize: Size.fromHeight(70),
+              preferredSize: Size.fromHeight(70.h),
               child: Container(
-                height: 40,
+                height: 40.h,
                 child: TabBar(
-                  labelPadding: EdgeInsets.symmetric(horizontal: 16),
+                  dividerHeight: 0,
+                  labelPadding: EdgeInsets.symmetric(horizontal: 16.w),
                   indicator: BoxDecoration(
                     color: Color(0xFF43484B),
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(30.r),
                   ),
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: Colors.transparent,
@@ -101,8 +102,8 @@ class OrdersView extends StatelessWidget {
 
   Widget _buildTabItem(String title) {
     return Container(
-      width: 91,
-      height: 28,
+      width: 91.w,
+      height: 28.h,
       alignment: Alignment.center,
       child: Text(
         title,

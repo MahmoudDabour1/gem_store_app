@@ -17,12 +17,12 @@ class OrderCard extends StatelessWidget {
     return Card(
       elevation: 5,
       shadowColor: const Color.fromARGB(255, 245, 245, 245),
-      margin: const EdgeInsets.all(20),
+      margin: EdgeInsets.all(20.w),
       color: Colors.white,
       child: Container(
-        width: 336,
-        height: 182,
-        padding: const EdgeInsets.only(left: 30, top: 13),
+        width: 336.w,
+        height: 182.h,
+        padding: EdgeInsets.only(left: 30.w, top: 13.h),
         child: Column(
           children: [
             Row(
@@ -31,8 +31,8 @@ class OrderCard extends StatelessWidget {
                   "Order #${order.getordernumber()}",
                   style: AppTextStyles.font25BlackRegular,
                 ),
-                const SizedBox(
-                  width: 125,
+                SizedBox(
+                  width: 125.w,
                 ),
                 Text(
                   dateStr,
@@ -40,7 +40,7 @@ class OrderCard extends StatelessWidget {
                 ),
               ],
             ),
-            const SizedBox(height: 15),
+            SizedBox(height: 15.h),
             Row(
               children: [
                 Text(
@@ -49,11 +49,11 @@ class OrderCard extends StatelessWidget {
                 ),
                 Text(
                   " ${order.gettrackingnumber()}",
-                  style: const TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 20.sp),
                 ),
               ],
             ),
-            const SizedBox(height: 15),
+            SizedBox(height: 15.h),
             Row(
               children: [
                 Text(
@@ -61,19 +61,19 @@ class OrderCard extends StatelessWidget {
                   style: AppTextStyles.font20GreyLight,
                 ),
                 Text(" ${order.getquantity()}",
-                    style: const TextStyle(fontSize: 20)),
-                const SizedBox(
-                  width: 100,
+                    style: TextStyle(fontSize: 20.sp)),
+                SizedBox(
+                  width: 100.w,
                 ),
                 Text(
                   "Subtotal: ",
                   style: AppTextStyles.font20GreyLight,
                 ),
-                Text("${order.getsubtotal()}",
-                    style: const TextStyle(fontSize: 20)),
+                Text("\$${order.getsubtotal()}",
+                    style: TextStyle(fontSize: 20.sp)),
               ],
             ),
-            const SizedBox(height: 10),
+            SizedBox(height: 10.h),
             Row(
               children: [
                 Text(
@@ -92,18 +92,18 @@ class OrderCard extends StatelessWidget {
                     fontFamily: AppFonts.productSansLight,
                   ),
                 ),
-                const SizedBox(
-                  width: 115,
+                SizedBox(
+                  width: 115.w,
                 ),
                 Container(
-                  width: 100,
-                  height: 35,
+                  width: 100.w,
+                  height: 35.h,
                   decoration: ShapeDecoration(
                     color: Colors.white,
                     shape: RoundedRectangleBorder(
                       side:
                           const BorderSide(width: 1, color: Color(0xFF777E90)),
-                      borderRadius: BorderRadius.circular(17.5),
+                      borderRadius: BorderRadius.circular(17.5.r),
                     ),
                   ),
                   child: TextButton(
