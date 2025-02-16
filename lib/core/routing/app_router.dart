@@ -9,10 +9,8 @@ import 'package:gem_store_app/features/login/login_screen.dart';
 import 'package:gem_store_app/features/onboarding/views/onboarding_intro_screen.dart';
 import 'package:gem_store_app/features/orderinfo/views/orders_screen.dart';
 import 'package:gem_store_app/features/product_details/views/item_details_views.dart';
-import 'package:gem_store_app/features/product_details/views/item_details_views.dart';
 import 'package:gem_store_app/features/profile/view/profileDrawer_screen.dart';
 import 'package:gem_store_app/features/profile/view/profile_screen.dart';
-import 'package:gem_store_app/features/profile/view/settings_screen.dart';
 import 'package:gem_store_app/features/search/presentation/search_view/search_screen.dart';
 import 'package:gem_store_app/features/setting/setting_screen.dart';
 import 'package:gem_store_app/features/wishlist/presentation/views/wishlist_board_view.dart';
@@ -96,6 +94,7 @@ class AppRouter {
       case Routes.discoverScreen:
         return MaterialPageRoute(
           builder: (_) => DiscoverScreen(),
+        );
       case Routes.settingScreen:
         return MaterialPageRoute(
           builder: (_) => SettingScreen(),

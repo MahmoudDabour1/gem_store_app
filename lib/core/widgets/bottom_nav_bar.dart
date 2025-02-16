@@ -24,8 +24,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
     HomeScreen(),
     DiscoverScreen(),
     OrdersView(),
-    ProfileScreen(),
-    TrackOrderScreen(),
     SettingsScreen(),
   ];
 
