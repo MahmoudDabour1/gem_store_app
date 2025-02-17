@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_assets.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
+import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/app_colors.dart';
+import '../../../../../core/utils/app_text_styles.dart';
 
 class CustomTopSectionFirst extends StatelessWidget {
   // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.

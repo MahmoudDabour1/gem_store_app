@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/spacing.dart';
-import 'package:gem_store_app/features/checkout/widgets/checkout_inputs.dart';
-import 'package:gem_store_app/features/checkout/widgets/delivery_home_container.dart';
-import 'package:gem_store_app/features/checkout/widgets/location_and_done_shape.dart';
+import '../../core/utils/spacing.dart';
+import 'widgets/checkout_inputs.dart';
+import 'widgets/delivery_home_container.dart';
+import 'widgets/location_and_done_shape.dart';
 
 import '../../core/utils/app_text_styles.dart';
 import '../../core/widgets/app_custom_app_bar.dart';

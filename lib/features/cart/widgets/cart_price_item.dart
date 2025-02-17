@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import '../../../core/helpers/sizes_utils_extensions.dart';
 
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_text_styles.dart';

@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
+import '../models/myordersmodel.dart';
 import 'package:meta/meta.dart';
 
 part 'orderinfo_state.dart';

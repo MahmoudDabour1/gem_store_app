@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/core/utils/spacing.dart';
-import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/utils/spacing.dart';
+import '../../../../core/widgets/bottom_nav_bar.dart';
 
 class Ratiereview extends StatefulWidget {
   // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.

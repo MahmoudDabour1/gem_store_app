@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/core/widgets/custom_app_bar.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/collection_section.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_list_of_category.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_list_of_feature_products.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_list_of_recommended_product.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/new_collection_section.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/top_collection_section.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import '../../../../../core/widgets/custom_app_bar.dart';
+import 'collection_section.dart';
+import 'custom_list_of_category.dart';
+import 'custom_list_of_feature_products.dart';
+import 'custom_list_of_recommended_product.dart';
+import 'new_collection_section.dart';
+import 'top_collection_section.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});

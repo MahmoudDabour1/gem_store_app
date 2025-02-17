@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/routing/app_router.dart';
-import 'package:gem_store_app/core/routing/routes.dart';
-import 'package:gem_store_app/features/profile/view/widgets/themeProvider.dart';
+import 'core/routing/app_router.dart';
+import 'core/routing/routes.dart';
+import 'features/profile/view/widgets/themeProvider.dart';
 import 'package:provider/provider.dart';
 
 class GemStoreApp extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/core/utils/app_fonts.dart';
+import 'app_colors.dart';
+import 'app_fonts.dart';
 
 import 'font_weight_helper.dart';
 

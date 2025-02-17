@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/core/routing/routes.dart';
-import 'package:gem_store_app/core/routing/routes_exports.dart';
-import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
+import 'routes.dart';
+import 'routes_exports.dart';
+import '../widgets/bottom_nav_bar.dart';
 import '../enums.dart';
 
 class AppRouter {

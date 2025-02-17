@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
-import 'package:gem_store_app/core/utils/app_assets.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/features/discover/presentation/views/widgets/discover_category_item.dart';
+import '../../../../../core/helpers/sizes_utils_extensions.dart';
+import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/app_colors.dart';
+import 'discover_category_item.dart';
 
 class ListOfDiscoveryCategory extends StatelessWidget {
   const ListOfDiscoveryCategory({super.key});

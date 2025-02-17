@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gem_store_app/core/utils/app_assets.dart';
-import 'package:gem_store_app/features/home/presentation/manager/cubit/category_cubit.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_category.dart';
+import '../../../../../core/utils/app_assets.dart';
+import '../../manager/cubit/category_cubit.dart';
+import 'custom_category.dart';
 
 class CustomListOfCategory extends StatelessWidget {
   const CustomListOfCategory({

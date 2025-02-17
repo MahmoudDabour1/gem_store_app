@@ -2,11 +2,11 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_assets.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/core/utils/app_strings.dart';
-import 'package:gem_store_app/core/widgets/app_custom_button.dart';
-import 'package:gem_store_app/core/widgets/app_text_form_field.dart';
+import '../../../core/utils/app_assets.dart';
+import '../../../core/utils/app_colors.dart';
+import '../../../core/utils/app_strings.dart';
+import '../../../core/widgets/app_custom_button.dart';
+import '../../../core/widgets/app_text_form_field.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
 

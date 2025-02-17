@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/features/track_order/widgets/track_order_list_view_item.dart';
+import 'track_order_list_view_item.dart';
 
 class TrackOrderListView extends StatelessWidget {
   const TrackOrderListView({super.key});

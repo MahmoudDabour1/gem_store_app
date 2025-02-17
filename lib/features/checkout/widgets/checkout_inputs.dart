@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/features/checkout/widgets/country_drop_down_widget.dart';
+import 'country_drop_down_widget.dart';
 
 import '../../../core/widgets/app_text_form_field.dart';
 

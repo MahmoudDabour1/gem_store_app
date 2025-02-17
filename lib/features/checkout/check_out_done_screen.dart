@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gem_store_app/core/utils/font_weight_helper.dart';
-import 'package:gem_store_app/core/utils/spacing.dart';
-import 'package:gem_store_app/core/widgets/app_custom_button.dart';
-import 'package:gem_store_app/features/checkout/widgets/location_and_done_shape.dart';
+import '../../core/utils/font_weight_helper.dart';
+import '../../core/utils/spacing.dart';
+import '../../core/widgets/app_custom_button.dart';
+import 'widgets/location_and_done_shape.dart';
 
 import '../../core/utils/app_text_styles.dart';
 import '../../core/widgets/app_custom_app_bar.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/core/widgets/app_custom_app_bar.dart';
-import 'package:gem_store_app/features/orderinfo/Rate/widgets/ratiereview.dart';
+import '../../../../core/widgets/app_custom_app_bar.dart';
+import '../widgets/ratiereview.dart';
 
 class Ratescreen extends StatefulWidget {
   const Ratescreen({super.key});

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_fonts.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/core/utils/font_weight_helper.dart';
-import 'package:gem_store_app/features/orderinfo/cubit/orderinfo_cubit.dart';
-import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
-import 'package:gem_store_app/features/orderinfo/Rate/widgets/order_list_view.dart';
+import '../../../core/utils/app_fonts.dart';
+import '../../../core/utils/app_text_styles.dart';
+import '../../../core/utils/font_weight_helper.dart';
+import '../cubit/orderinfo_cubit.dart';
+import '../models/myordersmodel.dart';
+import '../Rate/widgets/order_list_view.dart';
 
 class OrdersView extends StatelessWidget {
   const OrdersView({super.key});

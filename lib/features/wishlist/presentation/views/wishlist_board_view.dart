@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/features/wishlist/presentation/views/widgets/custome_app_bar.dart';
-import 'package:gem_store_app/features/wishlist/presentation/views/widgets/custome_board.dart';
+import 'widgets/custome_app_bar.dart';
+import 'widgets/custome_board.dart';
 
 class WishlistBoardView extends StatelessWidget {
   const WishlistBoardView({super.key});

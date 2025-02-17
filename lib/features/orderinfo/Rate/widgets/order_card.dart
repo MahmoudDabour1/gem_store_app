@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_fonts.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
-import 'package:gem_store_app/features/orderinfo/ordersdetails/views/orderdetailsscreen.dart';
+import '../../../../core/utils/app_fonts.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../models/myordersmodel.dart';
+import '../../ordersdetails/views/orderdetailsscreen.dart';
 
 class OrderCard extends StatelessWidget {
   // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/spacing.dart';
-import 'package:gem_store_app/core/widgets/app_custom_button.dart';
-import 'package:gem_store_app/features/cart/widgets/cart_list_view.dart';
-import 'package:gem_store_app/features/cart/widgets/cart_price_items_widget.dart';
+import '../../core/utils/spacing.dart';
+import '../../core/widgets/app_custom_button.dart';
+import 'widgets/cart_list_view.dart';
+import 'widgets/cart_price_items_widget.dart';
 
 import '../../core/widgets/app_custom_app_bar.dart';
 

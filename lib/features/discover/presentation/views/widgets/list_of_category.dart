@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/features/discover/presentation/views/widgets/sub_list_of_category.dart';
+import '../../../../../core/utils/app_colors.dart';
+import 'sub_list_of_category.dart';
 
 class ListOfCategory extends StatelessWidget {
   const ListOfCategory({super.key});

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
+import '../../models/myordersmodel.dart';
 import 'order_card.dart';
 
 class OrderListView extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_state.dart';
+import 'scrolling_state.dart';
 
 class ScrollingCubit extends Cubit<ScrollingState> {
   ScrollingCubit() : super(InitialScrollingState()) {

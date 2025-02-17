@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/core/utils/spacing.dart';
-import 'package:gem_store_app/features/product_details/views/widgets/rating_bar.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/spacing.dart';
+import 'rating_bar.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_text_styles.dart';

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_top_section_first.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_top_section_second.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_top_section_third.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import 'custom_top_section_first.dart';
+import 'custom_top_section_second.dart';
+import 'custom_top_section_third.dart';
 
 class TopCollectionSection extends StatelessWidget {
   const TopCollectionSection({super.key});

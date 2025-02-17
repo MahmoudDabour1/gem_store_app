@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/features/onboarding/views/widgets/title_and_button.dart';
+import 'widgets/title_and_button.dart';
 
 import '../../../core/utils/app_assets.dart';
 

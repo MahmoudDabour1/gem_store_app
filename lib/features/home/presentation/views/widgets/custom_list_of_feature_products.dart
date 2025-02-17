@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/custom_feature_products.dart';
+import '../../../../../core/utils/app_text_styles.dart';
+import 'custom_feature_products.dart';
 
 class CustomListOfFeatureProducts extends StatelessWidget {
   const CustomListOfFeatureProducts({super.key});

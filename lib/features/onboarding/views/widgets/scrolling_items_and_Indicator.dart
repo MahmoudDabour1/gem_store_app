@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_cubit.dart';
-import 'package:gem_store_app/features/onboarding/cubits/scrolling/scrolling_state.dart';
-import 'package:gem_store_app/features/onboarding/views/widgets/srolling_item.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../cubits/scrolling/scrolling_cubit.dart';
+import '../../cubits/scrolling/scrolling_state.dart';
+import 'srolling_item.dart';
 
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/spacing.dart';

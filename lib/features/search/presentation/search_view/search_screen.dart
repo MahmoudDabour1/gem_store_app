@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:gem_store_app/core/utils/app_assets.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/core/utils/app_strings.dart';
-import 'package:gem_store_app/core/widgets/app_back_button.dart';
-import 'package:gem_store_app/features/search/presentation/search_view/filter_widget.dart';
+import '../../../../core/utils/app_assets.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_strings.dart';
+import '../../../../core/widgets/app_back_button.dart';
+import 'filter_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});

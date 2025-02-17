@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
-import 'package:gem_store_app/features/orderinfo/Rate/views/ratescreen.dart';
-import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
-import 'package:gem_store_app/features/track_order/track_order.dart';
+import '../../../../core/helpers/sizes_utils_extensions.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/widgets/bottom_nav_bar.dart';
+import '../../Rate/views/ratescreen.dart';
+import '../../models/myordersmodel.dart';
+import '../../../track_order/track_order.dart';
 
 class Orderdatailscard extends StatelessWidget {
   final Ordersmodel order;

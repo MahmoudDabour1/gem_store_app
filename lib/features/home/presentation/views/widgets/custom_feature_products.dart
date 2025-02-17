@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/helpers/extenstions.dart';
-import 'package:gem_store_app/core/utils/app_assets.dart';
-import 'package:gem_store_app/core/utils/app_text_styles.dart';
+import '../../../../../core/helpers/extenstions.dart';
+import '../../../../../core/utils/app_assets.dart';
+import '../../../../../core/utils/app_text_styles.dart';
 
 import '../../../../../core/routing/routes.dart';
 
