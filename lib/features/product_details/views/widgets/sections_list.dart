@@ -8,16 +8,16 @@ import '../../../../core/utils/app_text_styles.dart';
 import 'custome_review.dart';
 import 'custome_section_of_details.dart';
 
-
-
 class SectionsList extends StatelessWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const SectionsList({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-         CustomeSectionOfDetails(title: "Description", children: [
+        CustomeSectionOfDetails(title: "Description", children: [
           Text(
             overflow: TextOverflow.ellipsis,
             maxLines: 3,
@@ -30,11 +30,9 @@ class SectionsList extends StatelessWidget {
         CustomeSectionOfDetails(title: "Reviews", children: [
           TotalReviewInfo(finalRate: 4.9, totalRates: 85),
           verticalSpace(10),
-
           ListView.builder(
             shrinkWrap: true,
             itemCount: 3,
-            
             physics: NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return SizedBox(
@@ -50,47 +48,48 @@ class SectionsList extends StatelessWidget {
             },
           )
         ]),
-        CustomeSectionOfDetails(
-            title: "Similar Products",
-            children: [
-              SizedBox(
-                // width: d,
-                height: 240.h,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  itemCount: 4,
-                  itemBuilder: (context, index) {
-                    return Container(
-                      margin: EdgeInsets.all(10.w),
-                      height: 230.h,
-                      width: 130.w,
-                      clipBehavior: Clip.hardEdge,
-                      decoration: BoxDecoration(
-        
+        CustomeSectionOfDetails(title: "Similar Products", children: [
+          SizedBox(
+            // width: d,
+            height: 240.h,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 4,
+              itemBuilder: (context, index) {
+                return Container(
+                  margin: EdgeInsets.all(10.w),
+                  height: 230.h,
+                  width: 130.w,
+                  clipBehavior: Clip.hardEdge,
+                  decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10))
+                      borderRadius: BorderRadius.all(Radius.circular(10))),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image.asset(
+                        fit: BoxFit.fill,
+                        "assets/images/Similar_item_test.png",
+                        width: 130.w,
+                        height: 150.h,
                       ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Image.asset(
-                            fit: BoxFit.fill,
-                            "assets/images/Similar_item_test.png",width: 130.w,height: 150.h,
-                            ),
-                
-                          Text("Rise Crop Hoodie",style: AppTextStyles.font12BlackRegular.copyWith(height: 2.h),
-                          ),
-                
-                          Text("\$ 43.00",style: AppTextStyles.font14Medium.copyWith(fontWeight: FontWeightHelper.semiBold),
-                          )
-                        ],
+                      Text(
+                        "Rise Crop Hoodie",
+                        style: AppTextStyles.font12BlackRegular
+                            .copyWith(height: 2.h),
                       ),
-                    );
-                  },
-                ),
-              )
-            ]
-            )
+                      Text(
+                        "\$ 43.00",
+                        style: AppTextStyles.font14Medium
+                            .copyWith(fontWeight: FontWeightHelper.semiBold),
+                      )
+                    ],
+                  ),
+                );
+              },
+            ),
+          )
+        ])
       ],
     );
   }

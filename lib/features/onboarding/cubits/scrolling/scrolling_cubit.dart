@@ -22,6 +22,4 @@ class ScrollingCubit extends Cubit<ScrollingState> {
     pageController.dispose();
     emit(DistroyScrollingState());
   }
-
-
 }

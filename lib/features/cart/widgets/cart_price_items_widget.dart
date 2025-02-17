@@ -10,6 +10,8 @@ class CartPriceItemsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(children: [
+      // TODO: Store and reuse strings in an app strings file for better maintainability and easier localization.
+
       CartPriceItem(firstText: "Product price", lastText: "110"),
       Divider(),
       CartPriceItem(firstText: "Shipping", lastText: "FreeShip"),

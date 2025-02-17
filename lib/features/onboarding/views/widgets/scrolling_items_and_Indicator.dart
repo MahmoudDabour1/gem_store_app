@@ -9,8 +9,9 @@ import 'package:gem_store_app/features/onboarding/views/widgets/srolling_item.da
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/spacing.dart';
 
-
 class ScrollingItemsAndIndicator extends StatelessWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const ScrollingItemsAndIndicator({super.key});
 
   @override
@@ -32,7 +33,9 @@ class ScrollingItemsAndIndicator extends StatelessWidget {
               itemBuilder: (context, index) {
                 return BlocBuilder<ScrollingCubit, ScrollingState>(
                   builder: (context, state) {
-                    int currentPage = (state is IncreaseDecreaseScrollingState) ? state.currentPage : 0;
+                    int currentPage = (state is IncreaseDecreaseScrollingState)
+                        ? state.currentPage
+                        : 0;
                     return CustomeItem(index: index, page: currentPage);
                   },
                 );
@@ -43,7 +46,9 @@ class ScrollingItemsAndIndicator extends StatelessWidget {
         verticalSpace(50),
         BlocBuilder<ScrollingCubit, ScrollingState>(
           builder: (context, state) {
-            int currentPage = (state is IncreaseDecreaseScrollingState) ? state.currentPage : 0;
+            int currentPage = (state is IncreaseDecreaseScrollingState)
+                ? state.currentPage
+                : 0;
             return SizedBox(
               width: 50.w,
               child: Row(
@@ -54,9 +59,11 @@ class ScrollingItemsAndIndicator extends StatelessWidget {
                     height: 7.h,
                     width: 7.w,
                     decoration: BoxDecoration(
-                      color: index == currentPage ? Colors.white : AppColors.deepGrayColor,
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Colors.white),
+                      color: index == currentPage
+                          ? AppColors.white
+                          : AppColors.deepGrayColor,
+                      borderRadius: BorderRadius.circular(10.r),
+                      border: Border.all(color: AppColors.white),
                     ),
                   ),
                 ),

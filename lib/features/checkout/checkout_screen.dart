@@ -11,6 +11,8 @@ import '../../core/widgets/app_custom_button.dart';
 import 'check_out_done_screen.dart';
 
 class CheckoutScreen extends StatelessWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const CheckoutScreen({super.key});
 
   @override

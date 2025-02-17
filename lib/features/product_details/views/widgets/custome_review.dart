@@ -6,7 +6,6 @@ import 'package:gem_store_app/features/product_details/views/widgets/rating_bar.
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_text_styles.dart';
 
-
 class CustomeReview extends StatelessWidget {
   final String userImageUrl;
   final String userName;
@@ -18,7 +17,8 @@ class CustomeReview extends StatelessWidget {
       required this.userImageUrl,
       required this.review,
       required this.rate,
-      required this.dateOfReview, required this.userName});
+      required this.dateOfReview,
+      required this.userName});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class CustomeReview extends StatelessWidget {
                   radius: 30,
                   backgroundImage: AssetImage(AppAssets.imagesTestItem),
                 ),
-                horizontalSpace( 14),
+                horizontalSpace(14),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -58,7 +58,6 @@ class CustomeReview extends StatelessWidget {
         ),
         verticalSpace(10),
         Text(
-
           overflow: TextOverflow.ellipsis,
           maxLines: 3,
           textAlign: TextAlign.justify,

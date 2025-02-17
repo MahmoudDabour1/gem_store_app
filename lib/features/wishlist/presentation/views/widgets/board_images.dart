@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class BoardImages extends StatelessWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const BoardImages({super.key});
 
   @override
@@ -11,24 +13,31 @@ class BoardImages extends StatelessWidget {
       width: 331.w,
       padding: EdgeInsets.all(0),
       clipBehavior: Clip.hardEdge,
-      decoration: BoxDecoration(
-      
-        borderRadius: BorderRadius.circular(34) ),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(34)),
       child: Row(
         children: [
-          
-            Expanded(
-              flex: 2,
-              child: Image.asset("assets/images/image.png",fit: BoxFit.fill,height: 150.h,),
+          Expanded(
+            flex: 2,
+            child: Image.asset(
+              "assets/images/image.png",
+              fit: BoxFit.fill,
+              height: 150.h,
             ),
-            SizedBox(width: 4.w,),
-            Expanded(
-              flex: 2,
-              child: Image.asset("assets/images/image.png",height: 150.h,fit: BoxFit.fill,),
+          ),
+          SizedBox(
+            width: 4.w,
+          ),
+          Expanded(
+            flex: 2,
+            child: Image.asset(
+              "assets/images/image.png",
+              height: 150.h,
+              fit: BoxFit.fill,
             ),
-            SizedBox(
-                  width: 4.w,
-                ),
+          ),
+          SizedBox(
+            width: 4.w,
+          ),
           Expanded(
             flex: 1,
             child: Column(

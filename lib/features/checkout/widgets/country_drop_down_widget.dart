@@ -11,7 +11,7 @@ class CountryDropdownWidget extends StatefulWidget {
 
 class _CountryDropdownWidgetState extends State<CountryDropdownWidget> {
   String? selectedCountry;
-
+// TODO: Move this list to a separate file as a model to keep the UI code focused. Create a model and use it through a model data list.
   final List<Map<String, String>> countryList = [
     {"name": "Afghanistan", "code": "AF"},
     {"name": "Albania", "code": "AL"},

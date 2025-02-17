@@ -57,9 +57,8 @@ class ItemImages extends StatelessWidget {
               children: [
                 for (int index = 0; index < 3; index++)
                   Container(
-                    padding: index == 0
-                        ? EdgeInsets.all(2.h)
-                        : EdgeInsets.all(0),
+                    padding:
+                        index == 0 ? EdgeInsets.all(2.h) : EdgeInsets.all(0),
                     width: index == 0 ? 10.5 : 5.5,
                     height: index == 0 ? 10.5 : 5.5,
                     decoration: BoxDecoration(

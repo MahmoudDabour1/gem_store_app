@@ -20,20 +20,17 @@ class _CustomeRatingBarState extends State<CustomeRatingBar> {
   Widget build(BuildContext context) {
     return Row(
       spacing: 0,
-      
       children: [
         ...List.generate(
           5,
           (index) {
-            return  GestureDetector(
-              onTap: () {
-                
-              },
+            return GestureDetector(
+              onTap: () {},
               child: Icon(
-                    Icons.star,
-                    color: widget.itemColor,
-                    size: widget.itemSize,
-                  ),
+                Icons.star,
+                color: widget.itemColor,
+                size: widget.itemSize,
+              ),
             );
           },
         )

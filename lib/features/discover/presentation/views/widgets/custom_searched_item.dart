@@ -65,6 +65,8 @@ class CustomSearchedItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
+              // TODO: Use the App Strings file
+
                   'Long Sleeve Dress',
                   style: AppTextStyles.font12Darkmedium,
                 ),

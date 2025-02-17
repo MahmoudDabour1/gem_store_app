@@ -5,6 +5,8 @@ import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
 
 class CustomTopSectionFirst extends StatelessWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const CustomTopSectionFirst({
     super.key,
   });

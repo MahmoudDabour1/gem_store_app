@@ -7,13 +7,14 @@ import 'package:gem_store_app/core/utils/spacing.dart';
 import 'package:gem_store_app/core/widgets/app_custom_button.dart';
 import 'package:gem_store_app/core/widgets/app_text_form_field.dart';
 import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
-import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 import 'package:gem_store_app/features/login/widgets/custom_circle_avatar.dart';
 
 import '../../core/routing/routes.dart';
 import '../../core/utils/app_colors.dart';
 
 class LoginScreen extends StatelessWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const LoginScreen({super.key});
 
   @override

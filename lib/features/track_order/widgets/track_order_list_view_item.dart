@@ -8,12 +8,16 @@ import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/spacing.dart';
 
 class TrackOrderListViewItem extends StatelessWidget {
+  // TODO: It's not recommended to pass four arguments. Instead, create a model and pass it.
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   final String title;
   final String dateTime;
   final bool isFirst;
   final bool isLast;
 
-  const TrackOrderListViewItem({super.key,
+  const TrackOrderListViewItem({
+    super.key,
     required this.title,
     required this.dateTime,
     this.isFirst = false,
@@ -51,7 +55,6 @@ class TrackOrderListViewItem extends StatelessWidget {
                     backgroundColor: AppColors.darkerGrayColor,
                   ),
                   verticalSpace(6),
-
                 ],
               ),
           ],
@@ -76,8 +79,7 @@ class TrackOrderListViewItem extends StatelessWidget {
                   style: AppTextStyles.font11BlackLight.copyWith(
                       fontWeight: FontWeightHelper.medium,
                       fontSize: 12.sp,
-                      color: AppColors.lightGrayColor
-                  ),
+                      color: AppColors.lightGrayColor),
                 ),
               ],
             ),

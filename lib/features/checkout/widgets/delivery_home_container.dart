@@ -5,6 +5,7 @@ import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_text_styles.dart';
 import '../../../core/utils/font_weight_helper.dart';
 import '../../../core/utils/spacing.dart';
+// TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
 
 class DeliveryHomeContainer extends StatelessWidget {
   const DeliveryHomeContainer({super.key});
@@ -55,6 +56,8 @@ class DeliveryHomeContainer extends StatelessWidget {
                     ),
                   ],
                 ),
+                // TODO: Use App Strings file
+
                 Text(
                   "Delivery from 3 to 7 business days",
                   style: AppTextStyles.font11BlackLight.copyWith(

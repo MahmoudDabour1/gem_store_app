@@ -18,8 +18,7 @@ class TitleAndButton extends StatelessWidget {
         Text(
           AppStrings.startScreenTitle,
           textAlign: TextAlign.center,
-          style: AppTextStyles.font25WhiteBold
-              .copyWith( height: 2.h),
+          style: AppTextStyles.font25WhiteBold.copyWith(height: 2.h),
         ),
         Text(
           AppStrings.startScreenSubTitle,

@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 
 class CustomButton extends StatelessWidget {
+  // TODO: Why there is 2 custom buttons ???
   final double width;
   final double height;
   final Color? color;

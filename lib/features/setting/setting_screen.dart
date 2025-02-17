@@ -7,6 +7,8 @@ import 'package:gem_store_app/core/widgets/custom_app_bar.dart';
 import 'package:gem_store_app/features/setting/widgets/setting_row.dart';
 
 class SettingScreen extends StatelessWidget {
+  // TODO: Extract the common SettingRow logic into a separate method to reduce code duplication.
+  // TODO: Use constants for the titles and image paths to avoid hardcoding strings.
   const SettingScreen({super.key});
 
   @override
@@ -31,10 +33,19 @@ class SettingScreen extends StatelessWidget {
               name: 'Privacy Policy',
               image: AppAssets.pricavyPolicy,
             ),
-                verticalSpace(60),
-                 SettingRow(name: 'Language', image:"assets/images/language.png",),
-                  SettingRow(name: 'Terms of Use', image:"assets/images/termsOfUse.png",),
-                   SettingRow(name: 'Pricavy Policy', image:"assets/images/termsOfUse.png",),
+            verticalSpace(60),
+            SettingRow(
+              name: 'Language',
+              image: "assets/images/language.png",
+            ),
+            SettingRow(
+              name: 'Terms of Use',
+              image: "assets/images/termsOfUse.png",
+            ),
+            SettingRow(
+              name: 'Pricavy Policy',
+              image: "assets/images/termsOfUse.png",
+            ),
           ],
         ),
       ),

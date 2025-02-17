@@ -5,6 +5,7 @@ import '../../../core/utils/app_text_styles.dart';
 import '../../../core/utils/font_weight_helper.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/spacing.dart';
+// TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
 
 class CartListViewItem extends StatefulWidget {
   const CartListViewItem({super.key});
@@ -30,6 +31,7 @@ class _CartListViewItemState extends State<CartListViewItem> {
           child: Row(
             children: [
               Image.asset(
+                // TODO: Put and Use the image from the assets file
                 "assets/images/girl.png",
                 width: 100.w,
                 height: 100.h,
@@ -75,8 +77,7 @@ class _CartListViewItemState extends State<CartListViewItem> {
                             ),
                           ),
                           child: Row(
-                            mainAxisAlignment:
-                                MainAxisAlignment.spaceEvenly,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             mainAxisSize: MainAxisSize.min,
                             children: [
                               InkWell(

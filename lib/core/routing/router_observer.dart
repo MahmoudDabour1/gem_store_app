@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
 
+// TODO: If you aim to use this Logger, ensure it follows the Singleton design pattern.
+
 var logger = Logger();
 
 class RouterObserver extends NavigatorObserver {

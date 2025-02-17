@@ -6,7 +6,6 @@ import 'package:gem_store_app/features/discover/presentation/views/widgets/custo
 
 class WishlistScreenBody extends StatelessWidget {
   const WishlistScreenBody({super.key});
-
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(

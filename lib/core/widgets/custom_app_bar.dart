@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:gem_store_app/core/helpers/extenstions.dart';
-import 'package:gem_store_app/core/routing/routes.dart';
 import 'package:gem_store_app/core/utils/app_assets.dart';
-import 'package:gem_store_app/features/profile/view/profileDrawer_screen.dart';
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({super.key, required this.title, required this.textStyle});

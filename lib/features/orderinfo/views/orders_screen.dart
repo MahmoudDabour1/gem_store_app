@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_fonts.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/core/utils/font_weight_helper.dart';
 import 'package:gem_store_app/features/orderinfo/cubit/orderinfo_cubit.dart';
 import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
-import 'package:gem_store_app/features/orderinfo/viewmodels/order_list_view.dart';
+import 'package:gem_store_app/features/orderinfo/Rate/widgets/order_list_view.dart';
 
 class OrdersView extends StatelessWidget {
   const OrdersView({super.key});
@@ -33,7 +32,7 @@ class OrdersView extends StatelessWidget {
             backgroundColor: Colors.white,
             bottom: PreferredSize(
               preferredSize: Size.fromHeight(70),
-              child: Container(
+              child: SizedBox(
                 height: 40,
                 child: TabBar(
                   dividerHeight: 0,
@@ -45,6 +44,7 @@ class OrdersView extends StatelessWidget {
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: Colors.transparent,
                   tabs: [
+                    // TODO: Use constants or an enum for the tab titles to avoid hardcoding strings.
                     Tab(child: _buildTabItem("Pending")),
                     Tab(child: _buildTabItem("Delivered")),
                     Tab(child: _buildTabItem("Canceled")),
@@ -57,13 +57,12 @@ class OrdersView extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
+              // TODO: Extract the common BlocBuilder logic into a separate method to reduce code duplication.
               BlocBuilder<OrderinfoCubit, OrderinfoState>(
                 builder: (context, state) {
                   if (state is OrderinfoLoaded) {
                     return OrderListView(
-                      orders: state.orders
-                          .where((order) => order is OrdPending)
-                          .toList(),
+                      orders: state.orders.whereType<OrdPending>().toList(),
                     );
                   }
                   return Center(child: CircularProgressIndicator());
@@ -73,9 +72,7 @@ class OrdersView extends StatelessWidget {
                 builder: (context, state) {
                   if (state is OrderinfoLoaded) {
                     return OrderListView(
-                      orders: state.orders
-                          .where((order) => order is OrdDelivered)
-                          .toList(),
+                      orders: state.orders.whereType<OrdDelivered>().toList(),
                     );
                   }
                   return Center(child: CircularProgressIndicator());
@@ -85,9 +82,7 @@ class OrdersView extends StatelessWidget {
                 builder: (context, state) {
                   if (state is OrderinfoLoaded) {
                     return OrderListView(
-                      orders: state.orders
-                          .where((order) => order is OrdCanceled)
-                          .toList(),
+                      orders: state.orders.whereType<OrdCanceled>().toList(),
                     );
                   }
                   return Center(child: CircularProgressIndicator());

@@ -14,7 +14,7 @@ class CustomFeatureProduct extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         context.pushNamed(Routes.productDetailsScreen);
       },
       child: Column(

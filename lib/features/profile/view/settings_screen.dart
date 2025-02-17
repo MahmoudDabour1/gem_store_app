@@ -8,6 +8,8 @@ import 'package:gem_store_app/core/utils/app_strings.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
 
 class SettingsScreen extends StatelessWidget {
+  const SettingsScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

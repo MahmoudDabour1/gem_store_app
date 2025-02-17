@@ -1,11 +1,9 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_text_styles.dart';
-import 'package:gem_store_app/core/utils/spacing.dart';
 import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
-import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 import 'package:gem_store_app/features/orderinfo/Rate/views/ratescreen.dart';
 import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
 import 'package:gem_store_app/features/track_order/track_order.dart';
@@ -34,7 +32,7 @@ class Orderdatailscard extends StatelessWidget {
           },
           child: Card(
             color: AppColors.lightGreyText13RobotoColor,
-            child: Container(
+            child: SizedBox(
               width: 327,
               height: 92,
               child: Padding(
@@ -75,7 +73,7 @@ class Orderdatailscard extends StatelessWidget {
           child: Container(
             width: 327,
             height: 114,
-            padding: const EdgeInsets.all(16),
+            padding: 16.all,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -115,7 +113,7 @@ class Orderdatailscard extends StatelessWidget {
                       style: AppTextStyles.font20GreyLight,
                     ),
                     Text(
-                      '${order.getdeliveryaddress()}',
+                      order.getdeliveryaddress(),
                       style: AppTextStyles.font20BlackRegular,
                     ),
                   ],

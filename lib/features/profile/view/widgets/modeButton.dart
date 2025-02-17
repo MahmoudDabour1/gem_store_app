@@ -6,6 +6,9 @@ import 'package:gem_store_app/features/profile/view/widgets/themeProvider.dart';
 import 'package:provider/provider.dart';
 
 class ModeButton extends StatelessWidget {
+  // TODO: Try use cubit instead
+  const ModeButton({super.key});
+
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
@@ -27,7 +30,9 @@ class ModeButton extends StatelessWidget {
               duration: Duration(milliseconds: 100),
               padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
               decoration: BoxDecoration(
-                color: themeProvider.isDarkMode ? Colors.transparent : AppColors.whiteColor,
+                color: themeProvider.isDarkMode
+                    ? Colors.transparent
+                    : AppColors.whiteColor,
                 borderRadius: BorderRadius.circular(30.r),
                 boxShadow: themeProvider.isDarkMode
                     ? []
@@ -46,14 +51,15 @@ class ModeButton extends StatelessWidget {
           ),
           Spacer(),
           GestureDetector(
-
             onTap: () => themeProvider.toggleTheme(),
             child: AnimatedContainer(
               width: 90.w,
               duration: Duration(milliseconds: 100),
               padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.w),
               decoration: BoxDecoration(
-                color: themeProvider.isDarkMode ? AppColors.whiteColor : Colors.transparent,
+                color: themeProvider.isDarkMode
+                    ? AppColors.whiteColor
+                    : Colors.transparent,
                 borderRadius: BorderRadius.circular(30.r),
                 boxShadow: themeProvider.isDarkMode
                     ? [BoxShadow(color: Colors.black26, blurRadius: 4)]
@@ -61,8 +67,7 @@ class ModeButton extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  Icon(Icons.nightlight_round,
-                      color: Colors.grey, size: 20),
+                  Icon(Icons.nightlight_round, color: Colors.grey, size: 20),
                   SizedBox(width: 5.w),
                   Text(AppStrings.dark,
                       style: TextStyle(

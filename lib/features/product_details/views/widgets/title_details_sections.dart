@@ -6,8 +6,6 @@ import 'package:gem_store_app/features/product_details/views/widgets/rating_bar.
 import 'package:gem_store_app/features/product_details/views/widgets/sections_list.dart';
 import '../../../../core/utils/app_text_styles.dart';
 
-
-
 class ProductTitleAndDetails extends StatelessWidget {
   const ProductTitleAndDetails({super.key});
 
@@ -25,8 +23,7 @@ class ProductTitleAndDetails extends StatelessWidget {
             ),
             Text(
               "\$ 80.00",
-              style:
-                  AppTextStyles.font26semiBold,
+              style: AppTextStyles.font26semiBold,
             )
           ],
         ),
@@ -34,9 +31,7 @@ class ProductTitleAndDetails extends StatelessWidget {
         Row(
           children: [
             CustomeRatingBar(
-                rate: 5,
-                itemSize: 24,
-                itemColor: AppColors.starColor),
+                rate: 5, itemSize: 24, itemColor: AppColors.starColor),
             Padding(
               padding: EdgeInsets.only(top: 5.h),
               child: Text(

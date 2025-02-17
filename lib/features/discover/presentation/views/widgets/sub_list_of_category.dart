@@ -26,6 +26,8 @@ class SubListOfCategoru extends StatelessWidget {
               Text(
                 '24 Items',
                 style: AppTextStyles.font12GreyRegular
+                    // TODO: Use the colors file
+
                     .copyWith(color: Color(0xFFA3A5AD)),
               ),
               Spacer(),
@@ -38,7 +40,7 @@ class SubListOfCategoru extends StatelessWidget {
         ),
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 20.0),
+            padding: EdgeInsets.only(left: 20.0.w),
             child: Column(
               children: List.generate(
                 2,

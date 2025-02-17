@@ -5,6 +5,8 @@ import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/features/discover/presentation/views/widgets/List_of_category.dart';
 
 class DiscoverCategoryItem extends StatefulWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const DiscoverCategoryItem({
     super.key,
     required this.title,
@@ -45,7 +47,7 @@ class _DiscoverCategoryItemState extends State<DiscoverCategoryItem> {
             child: Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20),
+                  padding: EdgeInsets.only(left: 20.w),
                   child: Text(
                     widget.title,
                     style: AppTextStyles.font16DarkBold
@@ -87,7 +89,7 @@ class _DiscoverCategoryItemState extends State<DiscoverCategoryItem> {
         ),
         if (isExpanded)
           Padding(
-            padding: const EdgeInsets.symmetric(vertical: 8.0),
+            padding: EdgeInsets.symmetric(vertical: 8.0.h),
             child: ListOfCategory(),
           )
       ],

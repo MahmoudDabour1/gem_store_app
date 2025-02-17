@@ -8,9 +8,12 @@ import 'package:gem_store_app/core/utils/app_text_styles.dart';
 import 'package:gem_store_app/core/widgets/custom_button.dart';
 
 class FilterDrawer extends StatefulWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+ // TODO: Extract the filter options and UI elements into separate methods or widgets to reduce the file length and improve readability.
+ // TODO: Use constants or enums for hardcoded strings and values.
   final Function(Map<String, dynamic>) onApply;
 
-  const FilterDrawer({required this.onApply});
+  const FilterDrawer({super.key, required this.onApply});
 
   @override
   _FilterDrawerState createState() => _FilterDrawerState();

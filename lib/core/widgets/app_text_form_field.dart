@@ -45,15 +45,14 @@ class AppTextFormField extends StatelessWidget {
       },
       textInputAction: TextInputAction.next,
       decoration: InputDecoration(
-        border:UnderlineInputBorder(
-          borderSide: BorderSide(
-            color: AppColors.lighterGrayColor,
-            width: 1.0,
+          border: UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.lighterGrayColor,
+              width: 1.0,
+            ),
           ),
-        ),
-        labelText: labelText,
-        labelStyle: AppTextStyles.font16lightGreyhintText
-      ),
+          labelText: labelText,
+          labelStyle: AppTextStyles.font16lightGreyhintText),
       obscureText: isObscureText ?? false,
       style: AppTextStyles.font11BlackLight,
       validator: (value) {

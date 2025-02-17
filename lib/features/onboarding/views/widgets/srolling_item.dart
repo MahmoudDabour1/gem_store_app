@@ -3,11 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/utils/app_assets.dart';
 
-
 class CustomeItem extends StatelessWidget {
   const CustomeItem({
     super.key,
-    required this.page, required this.index,
+    required this.page,
+    required this.index,
   });
 
   final int page;

@@ -15,6 +15,8 @@ class DiscoverScreenBody extends StatelessWidget {
       create: (context) => ShowSearchedItemsCubit(),
       child: SingleChildScrollView(
         child: Padding(
+          // TODO:mCreate an app_constants file and define shared screen padding for all screens.
+
           padding: EdgeInsets.symmetric(horizontal: 25.w, vertical: 25.h),
           child: Column(
             children: [

@@ -6,6 +6,8 @@ import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
 import 'package:gem_store_app/features/orderinfo/ordersdetails/views/orderdetailsscreen.dart';
 
 class OrderCard extends StatelessWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   final Ordersmodel order;
   const OrderCard({super.key, required this.order});
 

@@ -3,22 +3,19 @@ import 'package:gem_store_app/core/utils/app_colors.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
-    super.key, required this.label,
+    super.key,
+    required this.label,
   });
-final String label;
+  final String label;
   @override
   Widget build(BuildContext context) {
-    
     return TextFormField(
-      onFieldSubmitted: (value) {
-        
-      },
+      onFieldSubmitted: (value) {},
       decoration: InputDecoration(
           labelText: label,
           border: OutlineInputBorder(),
-          
-          focusedBorder:
-              OutlineInputBorder(borderSide: BorderSide(color: AppColors.blueColor))),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: AppColors.blueColor))),
     );
   }
 }

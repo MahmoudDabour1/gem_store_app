@@ -28,22 +28,23 @@ class AppCustomButton extends StatelessWidget {
     return ElevatedButton(
       onPressed: onPressed,
       style: ButtonStyle(
-        backgroundColor: WidgetStateProperty.all(buttonColor??AppColors.darkerGrayColor),
+        backgroundColor:
+            WidgetStateProperty.all(buttonColor ?? AppColors.darkerGrayColor),
         fixedSize: WidgetStateProperty.all<Size>(
           Size(
-            width??MediaQuery.sizeOf(context).width.w,
-            height??48.h,
+            width ?? MediaQuery.sizeOf(context).width.w,
+            height ?? 48.h,
           ),
         ),
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(radius??24.r),
+            borderRadius: BorderRadius.circular(radius ?? 24.r),
           ),
         ),
       ),
       child: Text(
         text,
-        style:textStyle?? AppTextStyles.font16WhiteSemiBold,
+        style: textStyle ?? AppTextStyles.font16WhiteSemiBold,
       ),
     );
   }

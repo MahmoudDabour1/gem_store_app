@@ -7,6 +7,8 @@ import 'package:gem_store_app/core/utils/spacing.dart';
 import 'package:gem_store_app/core/widgets/bottom_nav_bar.dart';
 
 class Ratiereview extends StatefulWidget {
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
   const Ratiereview({super.key});
 
   @override
@@ -140,7 +142,7 @@ class _RatiereviewState extends State<Ratiereview> {
                               textAlign: TextAlign.center,
                             ),
                             SizedBox(height: 20),
-                            Container(
+                            SizedBox(
                               width: double.infinity,
                               child: Padding(
                                 padding:

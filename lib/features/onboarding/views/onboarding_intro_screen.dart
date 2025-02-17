@@ -27,8 +27,7 @@ class OnboardingIntroScreen extends StatelessWidget {
               Column(
                 children: [
                   Expanded(child: Container(color: Colors.white)),
-                  Expanded(
-                      child: Container(color: AppColors.deepGrayColor)),
+                  Expanded(child: Container(color: AppColors.deepGrayColor)),
                 ],
               ),
               Positioned(
@@ -55,15 +54,14 @@ class OnboardingIntroScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    verticalSpace( 40),
+                    verticalSpace(40),
                     const ScrollingItemsAndIndicator(),
                     verticalSpace(30),
                     BluredButton(
                       title: AppStrings.shoppingNowButtonString,
                       height: 53.h,
                       width: 200.w,
-                      onPressed: (){
-
+                      onPressed: () {
                         context.pushNamed(Routes.loginScreen);
                         context.read<ScrollingCubit>().destroyController();
                       },

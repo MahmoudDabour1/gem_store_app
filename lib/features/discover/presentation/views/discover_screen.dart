@@ -7,7 +7,10 @@ class DiscoverScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-        child: Scaffold(
-            backgroundColor: Colors.white, body: DiscoverScreenBody()));
+      child: Scaffold(
+        backgroundColor: Colors.white,
+        body: DiscoverScreenBody(),
+      ),
+    );
   }
 }

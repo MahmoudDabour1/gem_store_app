@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/core/utils/app_assets.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/features/discover/presentation/views/widgets/discover_category_item.dart';
@@ -17,20 +17,20 @@ class ListOfDiscoveryCategory extends StatelessWidget {
           image: AppAssets.clothingCategory,
           color: AppColors.ellipseColorForClothing,
         ),
-        SizedBox(height: 15.h),
+        15.hs,
         DiscoverCategoryItem(
           colorForContainer: AppColors.accessoriesColor,
           title: 'ACCESSORIES',
           image: AppAssets.accessCategory,
           color: AppColors.ellipseColorForAccessories,
         ),
-        SizedBox(height: 15.h),
+        15.hs,
         DiscoverCategoryItem(
             colorForContainer: AppColors.shoesColor,
             title: 'SHOES',
             image: AppAssets.shoes,
             color: AppColors.ellipseColorForShoes),
-        SizedBox(height: 15.h),
+        15.hs,
         DiscoverCategoryItem(
           colorForContainer: AppColors.collectionColor,
           title: 'COLLECTION',

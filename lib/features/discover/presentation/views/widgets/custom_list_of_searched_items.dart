@@ -17,6 +17,7 @@ class CustomListOfSearchedItems extends StatelessWidget {
                 .copyWith(color: Color(0xFF33302E))),
         SizedBox(height: 20.h),
         GridView.builder(
+          // TODO: Avoid using `shrink` here, as it may cause memory leaks and UI glitches. Consider an alternative solution.
           shrinkWrap: true,
           physics: NeverScrollableScrollPhysics(),
           itemCount: 10,

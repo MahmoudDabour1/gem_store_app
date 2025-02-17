@@ -17,7 +17,7 @@ class AppBackButton extends StatelessWidget {
             Navigator.of(context).pop();
           },
       child: Padding(
-        padding:  EdgeInsets.all(10.r),
+        padding: EdgeInsets.all(10.r),
         child: Container(
           width: 40.w,
           height: 40.h,
@@ -35,7 +35,7 @@ class AppBackButton extends StatelessWidget {
           child: Align(
             alignment: Alignment.center,
             child: SvgPicture.asset(
-              "assets/svgs/arrow_left_svg.svg",
+              "assets/svgs/arrow_left_svg.svg", // TODO: Add the arrow_left_svg.svg file in the assets folder
               height: 16.h,
               width: 16.w,
             ),

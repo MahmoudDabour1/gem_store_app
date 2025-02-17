@@ -5,10 +5,16 @@ import 'package:gem_store_app/core/utils/app_assets.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/core/utils/app_strings.dart';
 import 'package:gem_store_app/core/widgets/app_back_button.dart';
-import 'package:gem_store_app/features/profile/view/profileDrawer_screen.dart';
 import 'package:gem_store_app/features/search/presentation/search_view/filter_widget.dart';
 
 class SearchScreen extends StatefulWidget {
+  const SearchScreen({super.key});
+
+  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+  // TODO: Consider using a state management solution like Cubit for better scalability and maintainability.
+  // TODO: Extract some widget-building code into separate methods or widgets to improve readability.
+  // TODO: Add error handling for the search input and filter application.
+
   @override
   _SearchScreenState createState() => _SearchScreenState();
 }

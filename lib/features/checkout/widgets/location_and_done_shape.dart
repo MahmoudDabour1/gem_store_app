@@ -6,15 +6,18 @@ import '../../../core/utils/spacing.dart';
 import 'dotted_line_painter.dart';
 
 class LocationAndDoneShape extends StatelessWidget {
-  final String ?changeDoneImage;
-  const LocationAndDoneShape({super.key,this.changeDoneImage});
+  final String? changeDoneImage;
+  const LocationAndDoneShape({super.key, this.changeDoneImage});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(horizontal: 25.w),
+      padding: EdgeInsets.symmetric(horizontal: 25.w),
       child: Row(
         children: [
+          // TODO:Use assets file
+          // TODO: Use the SvgDisplayer widget from core/widgets for better reusability.
+
           SvgPicture.asset("assets/svgs/location_black_svg.svg"),
           horizontalSpace(20),
           Expanded(
@@ -22,7 +25,7 @@ class LocationAndDoneShape extends StatelessWidget {
               painter: DottedLinePainter(),
               child: SizedBox(
                 height: 70.h,
-              ), // Adjust height to match the line
+              ),
             ),
           ),
           horizontalSpace(66),
@@ -31,11 +34,11 @@ class LocationAndDoneShape extends StatelessWidget {
               painter: DottedLinePainter(),
               child: SizedBox(
                 height: 70.h,
-              ), // Adjust height to match the line
+              ),
             ),
           ),
           horizontalSpace(20),
-          SvgPicture.asset(changeDoneImage??"assets/svgs/done_gray_svg.svg"),
+          SvgPicture.asset(changeDoneImage ?? "assets/svgs/done_gray_svg.svg"),
         ],
       ),
     );

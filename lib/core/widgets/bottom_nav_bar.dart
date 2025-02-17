@@ -1,14 +1,13 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
 import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
 import 'package:gem_store_app/features/orderinfo/views/orders_screen.dart';
-import 'package:gem_store_app/features/profile/view/profile_screen.dart';
-import 'package:gem_store_app/features/profile/view/profile_screen.dart';
 import 'package:gem_store_app/features/profile/view/settings_screen.dart';
-import 'package:gem_store_app/features/search/presentation/search_view/search_screen.dart';
-import 'package:gem_store_app/features/track_order/track_order.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -39,12 +38,12 @@ class _BottomNavBarState extends State<BottomNavBar> {
       body: _widgetOptions[_selectedIndex],
       extendBody: true,
       bottomNavigationBar: Container(
-        padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        padding: 10.ph + 10.pv,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: AppColors.white,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(20),
-            topRight: Radius.circular(20),
+            topLeft: Radius.circular(20.r),
+            topRight: Radius.circular(20.r),
           ),
           boxShadow: [
             BoxShadow(
@@ -56,7 +55,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ],
         ),
         child: BottomNavigationBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: AppColors.transparent,
           elevation: 0,
           showSelectedLabels: false,
           showUnselectedLabels: false,

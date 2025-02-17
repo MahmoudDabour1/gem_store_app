@@ -89,7 +89,7 @@ class HeaderOfDiscover extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 20.h),
         BlocBuilder<ShowSearchedItemsCubit, ShowSearchedItemsState>(
           builder: (context, state) {
             if (state is ShowSearchedItems) {

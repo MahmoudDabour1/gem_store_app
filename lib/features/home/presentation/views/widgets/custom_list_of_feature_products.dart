@@ -11,7 +11,7 @@ class CustomListOfFeatureProducts extends StatelessWidget {
     return Column(
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          padding: EdgeInsets.symmetric(horizontal: 25.0.w),
           child: Row(
             children: [
               Text(
@@ -29,7 +29,7 @@ class CustomListOfFeatureProducts extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 20.h),
         SizedBox(
           height: 240.h,
           child: ListView.builder(
