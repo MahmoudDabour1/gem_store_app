@@ -1,15 +1,13 @@
-import 'package:flutter/material.dart';
-
-import '../../../core/utils/app_colors.dart';
+import '../../../core/helpers/public_imports.dart';
 
 class DottedLinePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()
       ..color = AppColors.lightGrayColor
-      ..strokeWidth = 2;
+      ..strokeWidth = 2.w;
 
-    double dashWidth = 3;
+    double dashWidth = 3.w;
     double dashSpace = 10;
     double startX = 0;
 

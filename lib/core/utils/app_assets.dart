@@ -48,4 +48,10 @@ class AppAssets {
   static String imagesTestItem = "${imagesPath}test_item.png";
 
   static String cartIcon = "${imagesPath}shoping_bag.png";
+  static String locationBlack = "${svgPath}location_black_svg.svg";
+  static String doneGray = "${svgPath}done_gray_svg.svg";
+  static String arrowLeft = "${svgPath}arrow_left_svg.svg";
+  static String doneBlack = "${svgPath}done_black_svg.svg";
+  static String bag = "${svgPath}bag_svg.svg";
+  static String girlImage = "${imagesPath}girl.png";
 }
