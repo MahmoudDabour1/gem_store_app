@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import '../../../core/helpers/sizes_utils_extensions.dart';
-
-import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_text_styles.dart';
+import '../../../core/helpers/public_imports.dart';
 
 class CartPriceItem extends StatelessWidget {
   final String firstText;
@@ -10,12 +6,13 @@ class CartPriceItem extends StatelessWidget {
   final TextStyle? firstTextStyle;
   final TextStyle? lastTextStyle;
 
-  const CartPriceItem(
-      {super.key,
-      required this.firstText,
-      required this.lastText,
-      this.firstTextStyle,
-      this.lastTextStyle});
+  const CartPriceItem({
+    super.key,
+    required this.firstText,
+    required this.lastText,
+    this.firstTextStyle,
+    this.lastTextStyle,
+  });
 
   @override
   Widget build(BuildContext context) {

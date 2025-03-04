@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:logger/logger.dart';
+import '../di/dependency_injection.dart';
 
 // TODO: If you aim to use this Logger, ensure it follows the Singleton design pattern.
 
-var logger = Logger();
+var logger = sl<Logger>();
 
 class RouterObserver extends NavigatorObserver {
   @override

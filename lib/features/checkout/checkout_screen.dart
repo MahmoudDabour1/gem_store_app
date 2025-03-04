@@ -1,65 +1,27 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/utils/app_colors.dart';
-import '../../core/utils/spacing.dart';
-import 'widgets/checkout_inputs.dart';
-import 'widgets/delivery_home_container.dart';
-import 'widgets/location_and_done_shape.dart';
-
-import '../../core/utils/app_text_styles.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
+import 'package:gem_store_app/features/checkout/widgets/check_out_upper_widget.dart';
+import 'package:gem_store_app/features/checkout/widgets/checkout_inputs.dart';
+import 'package:gem_store_app/features/checkout/widgets/shopping_method_and_button_widget.dart';
 import '../../core/widgets/app_custom_app_bar.dart';
-import '../../core/widgets/app_custom_button.dart';
-import 'check_out_done_screen.dart';
 
 class CheckoutScreen extends StatelessWidget {
-  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
-
   const CheckoutScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor(context),
-
-      appBar: AppCustomAppBar(title: "Checkout"),
+      appBar: AppCustomAppBar(title: AppStrings.checkout),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        padding: 24.ph,
         child: SingleChildScrollView(
           child: SafeArea(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                LocationAndDoneShape(),
-                Text(
-                  "STEP 1",
-                  style: AppTextStyles.font11BlackLight,
-                ),
-                Text(
-                  "Shipping",
-                  style: AppTextStyles.font25BlackBold,
-                ),
-                verticalSpace(37),
+                CheckOutUpperWidget(),
                 CheckoutInputs(),
-                verticalSpace(61),
-                Text(
-                  "Shipping method",
-                  style: AppTextStyles.font25BlackBold,
-                ),
-                verticalSpace(21),
-                DeliveryHomeContainer(),
-                verticalSpace(50),
-                AppCustomButton(
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => CheckOutDoneScreen(),
-                      ),
-                    );
-                  },
-                  text: "Continue to payment",
-                ),
-                verticalSpace(32),
+                61.hs,
+                ShoppingMethodAndButtonWidget(),
               ],
             ),
           ),
