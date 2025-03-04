@@ -25,10 +25,7 @@ class BluredButton extends StatelessWidget {
           height: height,
           width: width,
           decoration: BoxDecoration(
-            color:
-                // Colors.black,
-                //  const Color.fromARGB(255, 139, 137, 137).withValues(alpha: .92),
-                const Color.fromARGB(255, 139, 137, 137).withValues(alpha: .92),
+            color:const Color.fromARGB(255, 139, 137, 137).withOpacity(.92),
             borderRadius: BorderRadius.circular(25),
             border: Border.all(color: Colors.white),
           ),
@@ -37,7 +34,8 @@ class BluredButton extends StatelessWidget {
               child: Text(
                 title,
                 style: AppTextStyles.font16Bold.copyWith(color: Colors.white),
-              )),
+              )
+          ),
         ),
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/features/wishlist/presentation/views/widgets/displayed_image.dart';
 
 class BoardImages extends StatelessWidget {
   // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
@@ -11,79 +13,43 @@ class BoardImages extends StatelessWidget {
     return Container(
       height: 150.h,
       width: 331.w,
-      padding: EdgeInsets.all(0),
+      padding: 0.allEdgeInsets,
       clipBehavior: Clip.hardEdge,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(34)),
       child: Row(
         children: [
           Expanded(
             flex: 2,
-            child: Image.asset(
-              "assets/images/image.png",
-              fit: BoxFit.fill,
-              height: 150.h,
-            ),
+            child: DisplayedImage.LargerImage,
           ),
-          SizedBox(
-            width: 4.w,
-          ),
+          4.hs,
           Expanded(
             flex: 2,
-            child: Image.asset(
-              "assets/images/image.png",
-              height: 150.h,
-              fit: BoxFit.fill,
-            ),
+            child: DisplayedImage.LargerImage,
           ),
-          SizedBox(
-            width: 4.w,
-          ),
+          4.hs,
           Expanded(
             flex: 1,
             child: Column(
               children: [
-                Image.asset(
-                  "assets/images/image.png",
-                  height: 85.h,
-                  width: 53.w,
-                  fit: BoxFit.fill,
-                ),
-                SizedBox(
-                  height: 2.h,
-                ),
+                DisplayedImage.MediumImage,
+                2.vs,
                 Expanded(
-                  child: Image.asset(
-                    "assets/images/image.png",
-                    width: 53.w,
-                    fit: BoxFit.fill,
-                  ),
+                  child: DisplayedImage.VerySmallImage,
                 ),
               ],
             ),
           ),
-          SizedBox(
-            width: 3.w,
-          ),
+          3.hs,
           Expanded(
               flex: 1,
               child: Column(
                 children: [
                   Expanded(
-                    child: Image.asset(
-                      "assets/images/image.png",
-                      width: 53.w,
-                      fit: BoxFit.fill,
-                    ),
+                    child: DisplayedImage.VerySmallImage,
                   ),
-                  SizedBox(
-                    height: 2.h,
-                  ),
-                  Image.asset(
-                    "assets/images/image.png",
-                    height: 85.h,
-                    width: 53.w,
-                    fit: BoxFit.fill,
-                  ),
+                  2.vs,
+                  DisplayedImage.MediumImage,
                 ],
               )),
         ],
