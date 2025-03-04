@@ -33,7 +33,7 @@ class TrackOrderListViewItem extends StatelessWidget {
           children: [
             CircleAvatar(
               radius: 10.r,
-              backgroundColor: AppColors.whiteColor,
+              backgroundColor:AppColors.whiteColor(context),
               child: SvgPicture.asset("assets/svgs/track_done_svg.svg"),
             ),
             if (!isLast)
