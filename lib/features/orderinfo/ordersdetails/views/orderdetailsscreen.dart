@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../core/widgets/app_custom_app_bar.dart';
-import '../../models/myordersmodel.dart';
-import '../widgets/orderdatailscard.dart';
+import 'package:gem_store_app/core/widgets/app_custom_app_bar.dart';
+import 'package:gem_store_app/features/orderinfo/models/myordersmodel.dart';
+import 'package:gem_store_app/features/orderinfo/ordersdetails/widgets/orderdatailscard.dart';
 
 class Orderdetailsscreen extends StatefulWidget {
   final OrdersModel order;

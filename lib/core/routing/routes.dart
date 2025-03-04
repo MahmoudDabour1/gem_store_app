@@ -1,7 +1,6 @@
 class Routes {
   static const String onBoardingScreen = '/onBoardingScreen';
   static const String onBoardingIntroScreen = "/onBoardingIntroScreen";
-
   static const String loginScreen = "/loginScreen";
   static const String checkoutScreen = '/checkoutScreen';
   static const String checkoutDoneScreen = '/checkoutDoneScreen';
@@ -11,9 +10,7 @@ class Routes {
   static const String ordersScreen = '/ordersScreen';
   static const String search = "/SearchScreen";
   static const String profile = "/ProfileScreen";
-
   static const String productDetailsScreen = "/productDetailsScreen";
-
   static const String wishlistScreen = '/wishlistScreen';
   static const String wishlistBoardScreen = '/wishlistBoardScreen';
   static const String bottomNavBar = '/bottomNavBar';
