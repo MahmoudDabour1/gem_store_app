@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'widgets/discover_screen_body.dart';
 
 class DiscoverScreen extends StatelessWidget {
@@ -8,7 +9,7 @@ class DiscoverScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.whiteColor(context),
         body: DiscoverScreenBody(),
       ),
     );

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
-
 import '../../../../../core/utils/app_text_styles.dart';
 
 class CustomSearchedItem extends StatelessWidget {
@@ -14,7 +14,6 @@ class CustomSearchedItem extends StatelessWidget {
       height: 250.h,
       width: 141.w,
       child: Column(
-        //crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Stack(
             alignment: Alignment.topRight,
@@ -35,7 +34,7 @@ class CustomSearchedItem extends StatelessWidget {
                 height: 27.h,
                 width: 27.w,
                 decoration: BoxDecoration(
-                  color: AppColors.whiteColor,
+                  color:AppColors.whiteColor(context),
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(
@@ -58,26 +57,24 @@ class CustomSearchedItem extends StatelessWidget {
               )
             ],
           ),
-          SizedBox(height: 10.h),
+          10.vs,
           Padding(
             padding: const EdgeInsets.only(left: 12.0),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-              // TODO: Use the App Strings file
-
                   'Long Sleeve Dress',
                   style: AppTextStyles.font12Darkmedium,
                 ),
-                SizedBox(height: 5.h),
+                5.vs,
                 Row(
                   children: [
                     Text(
                       '\$ ${39.99}',
                       style: AppTextStyles.font16DarkBold,
                     ),
-                    SizedBox(width: 10.w),
+                    10.hs,
                     Text(
                       '\$ ${54.99}',
                       style: AppTextStyles.font12GreyRegular.copyWith(

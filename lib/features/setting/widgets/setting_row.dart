@@ -1,17 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import '../../../core/utils/app_text_styles.dart';
-import '../../../core/utils/spacing.dart';
+import 'package:gem_store_app/core/routing/routes_exports.dart';
 
 class SettingRow extends StatelessWidget {
   const SettingRow({
-    super.key,
-    required this.name,
-    required this.image,
+    super.key, required this.settingRowModel,
   });
-  final String name;
-  final String image;
+ 
+  final SettingRowModel settingRowModel;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,16 +17,16 @@ class SettingRow extends StatelessWidget {
           height: 50.sp,
           child: Row(
             children: [
-              Image.asset(image),
+              Image.asset(settingRowModel.image),
               horizontalSpace(20),
               Text(
-                name,
+                settingRowModel.name,
                 style: AppTextStyles.font14Medium,
               ),
               Spacer(
                 flex: 1,
               ),
-              SvgPicture.asset("assets/images/rightArrow.svg"),
+              SvgPicture.asset(AppAssets.rightArrow),
               horizontalSpace(5)
             ],
           ),

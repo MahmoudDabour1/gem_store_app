@@ -17,20 +17,20 @@ class ListOfDiscoveryCategory extends StatelessWidget {
           image: AppAssets.clothingCategory,
           color: AppColors.ellipseColorForClothing,
         ),
-        15.hs,
+        15.vs,
         DiscoverCategoryItem(
           colorForContainer: AppColors.accessoriesColor,
           title: 'ACCESSORIES',
           image: AppAssets.accessCategory,
           color: AppColors.ellipseColorForAccessories,
         ),
-        15.hs,
+        15.vs,
         DiscoverCategoryItem(
             colorForContainer: AppColors.shoesColor,
             title: 'SHOES',
             image: AppAssets.shoes,
             color: AppColors.ellipseColorForShoes),
-        15.hs,
+        15.vs,
         DiscoverCategoryItem(
           colorForContainer: AppColors.collectionColor,
           title: 'COLLECTION',

@@ -13,7 +13,7 @@ class CartListViewItem extends StatelessWidget {
           height: 110.h,
           width: MediaQuery.sizeOf(context).width,
           decoration: BoxDecoration(
-            color: AppColors.whiteColor,
+            color:AppColors.whiteColor(context),
             borderRadius: BorderRadius.circular(20.r),
           ),
           child: Row(

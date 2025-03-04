@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../core/utils/app_colors.dart';
-
+import 'package:gem_store_app/core/routing/routes_exports.dart';
 class CustomCircleAvatar extends StatelessWidget {
   const CustomCircleAvatar({
     super.key,
-    required this.image,
+    required this.circleAvatarModel,
   });
-  final String image;
+ 
+  final CircleAvatarModel circleAvatarModel;
   @override
   Widget build(BuildContext context) {
     return CircleAvatar(
@@ -15,9 +16,9 @@ class CustomCircleAvatar extends StatelessWidget {
       radius: 21.sp,
       child: CircleAvatar(
         radius: 20.sp,
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: AppColors.whiteColor(context),
         child: Image.asset(
-          image,
+          circleAvatarModel.image,
           fit: BoxFit.fill,
         ),
       ),

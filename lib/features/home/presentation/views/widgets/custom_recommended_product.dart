@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
@@ -27,7 +28,7 @@ class CustomRecommendedProduct extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 10.w),
+          10.hs,
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -36,7 +37,7 @@ class CustomRecommendedProduct extends StatelessWidget {
                 'White fashion hoodie',
                 style: AppTextStyles.font12Darkmedium,
               ),
-              SizedBox(height: 5.h),
+              5.vs,
               Text('\$ 39.99', style: AppTextStyles.font16DarkBold),
             ],
           ),

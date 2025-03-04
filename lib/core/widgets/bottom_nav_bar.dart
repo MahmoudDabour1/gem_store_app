@@ -35,12 +35,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
       body: _widgetOptions[_selectedIndex],
       extendBody: true,
       bottomNavigationBar: Container(
         padding: 10.ph + 10.pv,
         decoration: BoxDecoration(
-          color: AppColors.white,
+          color:  AppColors.whiteColor(context),
           borderRadius: BorderRadius.only(
             topLeft: Radius.circular(20.r),
             topRight: Radius.circular(20.r),
@@ -55,7 +56,11 @@ class _BottomNavBarState extends State<BottomNavBar> {
           ],
         ),
         child: BottomNavigationBar(
+          backgroundColor: AppColors.whiteColor(context),
+
+/*
           backgroundColor: AppColors.transparent,
+*/
           elevation: 0,
           showSelectedLabels: false,
           showUnselectedLabels: false,
@@ -87,6 +92,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   Widget _buildNavItem(IconData icon, int index) {
     return Icon(
+
       icon,
       color: _selectedIndex == index ? Colors.black : AppColors.navColor,
       size: 28.sp,

@@ -6,7 +6,6 @@ import 'themeProvider.dart';
 import 'package:provider/provider.dart';
 
 class ModeButton extends StatelessWidget {
-  // TODO: Try use cubit instead
   const ModeButton({super.key});
 
   @override
@@ -27,12 +26,12 @@ class ModeButton extends StatelessWidget {
             onTap: () => themeProvider.toggleTheme(),
             child: AnimatedContainer(
               width: 90.w,
-              duration: Duration(milliseconds: 100),
+              duration: const Duration(milliseconds: 100),
               padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
               decoration: BoxDecoration(
                 color: themeProvider.isDarkMode
                     ? Colors.transparent
-                    : AppColors.whiteColor,
+                    : Colors.white,
                 borderRadius: BorderRadius.circular(30.r),
                 boxShadow: themeProvider.isDarkMode
                     ? []
@@ -42,23 +41,25 @@ class ModeButton extends StatelessWidget {
                 children: [
                   Icon(Icons.wb_sunny, color: Colors.black, size: 20),
                   SizedBox(width: 5.w),
-                  Text(AppStrings.light,
-                      style: TextStyle(
-                          color: Colors.black, fontWeight: FontWeight.bold)),
+                  Text(
+                    'Light',
+                    style: TextStyle(
+                        color: Colors.black, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             ),
           ),
-          Spacer(),
+          const Spacer(),
           GestureDetector(
             onTap: () => themeProvider.toggleTheme(),
             child: AnimatedContainer(
               width: 90.w,
-              duration: Duration(milliseconds: 100),
-              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.w),
+              duration: const Duration(milliseconds: 100),
+              padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
               decoration: BoxDecoration(
                 color: themeProvider.isDarkMode
-                    ? AppColors.whiteColor
+                    ? Colors.white
                     : Colors.transparent,
                 borderRadius: BorderRadius.circular(30.r),
                 boxShadow: themeProvider.isDarkMode
@@ -69,9 +70,11 @@ class ModeButton extends StatelessWidget {
                 children: [
                   Icon(Icons.nightlight_round, color: Colors.grey, size: 20),
                   SizedBox(width: 5.w),
-                  Text(AppStrings.dark,
-                      style: TextStyle(
-                          color: Colors.grey, fontWeight: FontWeight.bold)),
+                  Text(
+                    'Dark',
+                    style: TextStyle(
+                        color: Colors.grey, fontWeight: FontWeight.bold),
+                  ),
                 ],
               ),
             ),
@@ -81,3 +84,7 @@ class ModeButton extends StatelessWidget {
     );
   }
 }
+
+
+
+

@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/spacing.dart';
 import 'rating_bar.dart';
-
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_text_styles.dart';
 
@@ -33,7 +32,7 @@ class CustomeReview extends StatelessWidget {
                   radius: 30,
                   backgroundImage: AssetImage(AppAssets.imagesTestItem),
                 ),
-                horizontalSpace(14),
+                14.hs,
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -41,7 +40,7 @@ class CustomeReview extends StatelessWidget {
                       userName,
                       style: AppTextStyles.font13GreyMedium,
                     ),
-                    verticalSpace(5),
+                    5.vs,
                     CustomeRatingBar(
                         rate: rate,
                         itemSize: 13,
@@ -56,7 +55,7 @@ class CustomeReview extends StatelessWidget {
             )
           ],
         ),
-        verticalSpace(10),
+        10.vs,
         Text(
           overflow: TextOverflow.ellipsis,
           maxLines: 3,
@@ -64,7 +63,7 @@ class CustomeReview extends StatelessWidget {
           review,
           style: AppTextStyles.font12regular,
         ),
-        verticalSpace(10)
+        10.vs
       ],
     );
   }
