@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
 import 'package:gem_store_app/core/routing/routes_exports.dart';
-
-
 
 
 class SettingScreen extends StatelessWidget {

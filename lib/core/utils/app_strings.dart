@@ -49,7 +49,7 @@ abstract class AppStrings {
   static const String aboutUs = "About us";
   static const String myWishlist = 'My Wishlist';
   static const String logOut = 'Log out';
-    //Login
+  //Login
   static const String loginButtonString = "LOG IN";
   static const String emailAddress = "Email Address";
   static const String password = "Password";
@@ -62,6 +62,7 @@ abstract class AppStrings {
   static const String language = "Language";
   static const String termsOfUse = "Terms of Use";
   static const String privacyPolicy = "Privacy Policy";
+
   static const String continueToPayment = 'Continue to payment';
   static const String step1 = 'STEP 1';
   static const String shipping = 'Shipping';
@@ -96,5 +97,4 @@ abstract class AppStrings {
   static const String recommended = 'Recommended';
   static const String gemstore = 'Gemstore';
   static const String topCollections = 'Top Collections';
-
 }
