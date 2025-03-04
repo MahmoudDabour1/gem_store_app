@@ -1,8 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-
-import '../utils/app_colors.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
+import 'package:gem_store_app/core/widgets/svg_displayer.dart';
 
 class AppBackButton extends StatelessWidget {
   final VoidCallback? onPressed;
@@ -29,13 +26,13 @@ class AppBackButton extends StatelessWidget {
                 offset: const Offset(0, 2),
               ),
             ],
-            color: AppColors.whiteColor,
+            color:AppColors.whiteColor(context),
             shape: BoxShape.circle,
           ),
           child: Align(
             alignment: Alignment.center,
-            child: SvgPicture.asset(
-              "assets/svgs/arrow_left_svg.svg", // TODO: Add the arrow_left_svg.svg file in the assets folder
+            child: SvgDisplayer(
+              assetName: AppAssets.arrowLeft,
               height: 16.h,
               width: 16.w,
             ),

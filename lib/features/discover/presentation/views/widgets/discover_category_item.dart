@@ -51,7 +51,7 @@ class _DiscoverCategoryItemState extends State<DiscoverCategoryItem> {
                   child: Text(
                     widget.title,
                     style: AppTextStyles.font16DarkBold
-                        .copyWith(color: AppColors.whiteColor),
+                        .copyWith(color: AppColors.whiteColor(context),),
                   ),
                 ),
                 Spacer(),

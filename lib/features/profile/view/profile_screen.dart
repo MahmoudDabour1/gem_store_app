@@ -2,6 +2,8 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/features/profile/view/widgets/pick_image.dart';
+import 'package:gem_store_app/features/profile/view/widgets/profile_form.dart';
 import '../../../core/utils/app_assets.dart';
 import '../../../core/utils/app_colors.dart';
 import '../../../core/utils/app_strings.dart';
@@ -9,7 +11,7 @@ import '../../../core/widgets/app_custom_button.dart';
 import '../../../core/widgets/app_text_form_field.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-
+/*
 class ProfileScreen extends StatefulWidget {
   // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
 
@@ -187,12 +189,34 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   ),
                   SizedBox(height: 100.h),
                   AppCustomButton(
-                    width: 200.w,
-                    text: AppStrings.saveChange,
+                    width: 200.w, text: AppStrings.saveChange,
                     onPressed: () {},
                   ),
                 ],
               ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}*/
+class ProfileScreen extends StatelessWidget {
+  const ProfileScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+
+    return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
+      body: Padding(
+        padding: EdgeInsets.symmetric(vertical: 75.h, horizontal: 20.w),
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              const ProfileImagePicker(),
+              SizedBox(height: 70.h),
+              const ProfileForm(),
             ],
           ),
         ),

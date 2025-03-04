@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '../../../core/utils/app_text_styles.dart';
-import '../../../core/utils/spacing.dart';
+import '../../../core/helpers/public_imports.dart';
 import 'cart_price_item.dart';
 
 class CartPriceItemsWidget extends StatelessWidget {
@@ -9,20 +6,22 @@ class CartPriceItemsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      // TODO: Store and reuse strings in an app strings file for better maintainability and easier localization.
-
-      CartPriceItem(firstText: "Product price", lastText: "110"),
-      Divider(),
-      CartPriceItem(firstText: "Shipping", lastText: "FreeShip"),
-      Divider(),
-      CartPriceItem(
-        firstText: "Total",
-        lastText: "110",
-        firstTextStyle: AppTextStyles.font18BlackSemiBold,
-        lastTextStyle: AppTextStyles.font18BlackSemiBold,
-      ),
-      verticalSpace(28),
-    ]);
+    return Column(
+      children: [
+        CartPriceItem(
+            firstText: AppStrings.productPrice, lastText: AppStrings.price110),
+        Divider(),
+        CartPriceItem(
+            firstText: AppStrings.shipping, lastText: AppStrings.freeShip),
+        Divider(),
+        CartPriceItem(
+          firstText: AppStrings.total,
+          lastText: AppStrings.price110,
+          firstTextStyle: AppTextStyles.font18BlackSemiBold,
+          lastTextStyle: AppTextStyles.font18BlackSemiBold,
+        ),
+        28.hs,
+      ],
+    );
   }
 }

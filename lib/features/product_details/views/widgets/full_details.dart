@@ -17,6 +17,25 @@ class FullDetails extends StatelessWidget {
     return Column(
       children: [
         CustomeDetailsSheet(),
+        Transform.translate(
+          offset: Offset(0, -60.h),
+          child: Container(
+              padding: EdgeInsets.only(top: 40.w),
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                     /*   color: AppColors.lightGrayColor.withValues(alpha: .6),*/
+                        blurRadius: 10,
+                        offset: Offset(0, -8),
+                        spreadRadius: -.1)
+                  ],
+                  borderRadius: borderRadius),
+              child: Padding(
+                padding: EdgeInsets.only(right: 18.w, left: 25.w),
+                child: ProductTitleAndDetails(),
+              )),
+        ),
         ColoredBox(
           color: Colors.white,
           child: Container(

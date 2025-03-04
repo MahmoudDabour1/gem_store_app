@@ -10,9 +10,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
+
       child: Scaffold(
+        backgroundColor: AppColors.whiteColor(context),
+
         drawer: ProfileDrawer(),
-        backgroundColor: AppColors.white,
         body: HomeScreenBody(),
       ),
     );

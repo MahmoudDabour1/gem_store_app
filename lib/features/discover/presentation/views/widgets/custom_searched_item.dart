@@ -35,7 +35,7 @@ class CustomSearchedItem extends StatelessWidget {
                 height: 27.h,
                 width: 27.w,
                 decoration: BoxDecoration(
-                  color: AppColors.whiteColor,
+                  color:AppColors.whiteColor(context),
                   shape: BoxShape.circle,
                   boxShadow: [
                     BoxShadow(

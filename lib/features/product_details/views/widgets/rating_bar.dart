@@ -19,7 +19,7 @@ class _CustomeRatingBarState extends State<CustomeRatingBar> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      spacing: 0,
+      /*spacing: 0,*/
       children: [
         ...List.generate(
           5,

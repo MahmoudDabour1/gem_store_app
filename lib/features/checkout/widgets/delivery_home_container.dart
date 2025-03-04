@@ -1,11 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
+import 'package:gem_store_app/features/checkout/widgets/shipping_methods_container_texts.dart';
 
-import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_text_styles.dart';
-import '../../../core/utils/font_weight_helper.dart';
-import '../../../core/utils/spacing.dart';
-// TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
 
 class DeliveryHomeContainer extends StatelessWidget {
   const DeliveryHomeContainer({super.key});
@@ -20,7 +15,7 @@ class DeliveryHomeContainer extends StatelessWidget {
         border: Border.symmetric(
           horizontal: BorderSide(
             color: AppColors.lightGrayColor,
-            width: 1,
+            width: 1.w,
           ),
         ),
       ),
@@ -35,36 +30,7 @@ class DeliveryHomeContainer extends StatelessWidget {
               splashRadius: 50.r,
               fillColor: WidgetStateProperty.all(AppColors.greenColor),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      "Free",
-                      style: AppTextStyles.font14DArkGraySemiBold.copyWith(
-                        fontWeight: FontWeightHelper.medium,
-                      ),
-                    ),
-                    horizontalSpace(20),
-                    Text(
-                      "Delivery to home",
-                      style: AppTextStyles.font14DArkGraySemiBold.copyWith(
-                          fontWeight: FontWeightHelper.medium,
-                          color: AppColors.darkGrayColor),
-                    ),
-                  ],
-                ),
-                // TODO: Use App Strings file
-
-                Text(
-                  "Delivery from 3 to 7 business days",
-                  style: AppTextStyles.font11BlackLight.copyWith(
-                      fontSize: 12.sp, color: AppColors.lightGrayColor),
-                ),
-              ],
-            ),
+            ShippingMethodsContainerTexts(),
           ],
         ),
       ),
