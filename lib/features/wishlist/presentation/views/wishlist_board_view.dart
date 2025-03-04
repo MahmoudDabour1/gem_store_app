@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'widgets/custome_app_bar.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/core/routing/routes_exports.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import 'widgets/custome_board.dart';
 
 class WishlistBoardView extends StatelessWidget {
@@ -11,13 +14,18 @@ class WishlistBoardView extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
       backgroundColor: Colors.white,
-      appBar: CustomeWishListAppBar(),
+
+      drawer: ProfileDrawer(),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 67.h),
+              CustomAppBar(
+                title: 'Wishlist',
+                textStyle: AppTextStyles.font20BlackBold,
+              ),
+              67.vs,
               ...List.generate(4, (index) {
                 return CustomeBoard();
               }),
