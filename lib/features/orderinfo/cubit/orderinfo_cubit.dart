@@ -9,60 +9,60 @@ class OrderinfoCubit extends Cubit<OrderinfoState> {
 
   void loadOrders() {
     final orders = [
-      OrdPending(
-          ordernumber: 1,
-          trackingnumber: 1236987,
+      OrderPending(
+          orderNumber: 1,
+          trackingNumber: 1236987,
           quantity: 2,
-          subtotal: 99,
-          deliveryaddress: "benisuef"),
-      OrdDelivered(
-          ordernumber: 2,
-          trackingnumber: 49547,
+          subTotal: 99,
+          deliveryAddress: "benisuef"),
+      OrderDelivered(
+          orderNumber: 2,
+          trackingNumber: 49547,
           quantity: 6,
-          subtotal: 125,
-          deliveryaddress: "benisuef"),
-      OrdDelivered(
-          ordernumber: 9,
-          trackingnumber: 14789,
+          subTotal: 125,
+          deliveryAddress: "benisuef"),
+      OrderDelivered(
+          orderNumber: 9,
+          trackingNumber: 14789,
           quantity: 6,
-          subtotal: 125,
-          deliveryaddress: "benisuef"),
-      OrdDelivered(
-          ordernumber: 10,
-          trackingnumber: 01458,
+          subTotal: 125,
+          deliveryAddress: "benisuef"),
+      OrderDelivered(
+          orderNumber: 10,
+          trackingNumber: 01458,
           quantity: 6,
-          subtotal: 125,
-          deliveryaddress: "benisuef"),
-      OrdPending(
-          ordernumber: 3,
-          trackingnumber: 36985,
+          subTotal: 125,
+          deliveryAddress: "benisuef"),
+      OrderPending(
+          orderNumber: 3,
+          trackingNumber: 36985,
           quantity: 4,
-          subtotal: 15,
-          deliveryaddress: "benisuef"),
-      OrdCanceled(
-          ordernumber: 4,
-          trackingnumber: 524788,
+          subTotal: 15,
+          deliveryAddress: "benisuef"),
+      OrderCanceled(
+          orderNumber: 4,
+          trackingNumber: 524788,
           quantity: 1,
-          subtotal: 965,
-          deliveryaddress: "benisuef"),
-      OrdCanceled(
-          ordernumber: 6,
-          trackingnumber: 38967,
+          subTotal: 965,
+          deliveryAddress: "benisuef"),
+      OrderCanceled(
+          orderNumber: 6,
+          trackingNumber: 38967,
           quantity: 1,
-          subtotal: 28,
-          deliveryaddress: "benisuef"),
-      OrdCanceled(
-          ordernumber: 7,
-          trackingnumber: 98765,
+          subTotal: 28,
+          deliveryAddress: "benisuef"),
+      OrderCanceled(
+          orderNumber: 7,
+          trackingNumber: 98765,
           quantity: 1,
-          subtotal: 67,
-          deliveryaddress: "benisuef"),
-      OrdDelivered(
-          ordernumber: 5,
-          trackingnumber: 8288727,
+          subTotal: 67,
+          deliveryAddress: "benisuef"),
+      OrderDelivered(
+          orderNumber: 5,
+          trackingNumber: 8288727,
           quantity: 2,
-          subtotal: 325,
-          deliveryaddress: "benisuef"),
+          subTotal: 325,
+          deliveryAddress: "benisuef"),
     ];
     emit(OrderinfoLoaded(orders));
   }

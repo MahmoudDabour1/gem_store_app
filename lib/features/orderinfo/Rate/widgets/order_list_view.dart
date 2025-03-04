@@ -3,7 +3,7 @@ import '../../models/myordersmodel.dart';
 import 'order_card.dart';
 
 class OrderListView extends StatelessWidget {
-  final List<Ordersmodel> orders;
+  final List<OrdersModel> orders;
   const OrderListView({super.key, required this.orders});
 
   @override

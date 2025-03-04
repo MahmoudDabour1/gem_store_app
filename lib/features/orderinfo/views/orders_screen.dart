@@ -1,12 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../core/utils/app_fonts.dart';
+// import 'package:flutter_screenutil/flutter_screenutil.dart';
+// import '../../../core/utils/app_fonts.dart';
 import '../../../core/utils/app_text_styles.dart';
-import '../../../core/utils/font_weight_helper.dart';
+// import '../../../core/utils/font_weight_helper.dart';
+import '../Rate/widgets/buildTabItem.dart';
 import '../cubit/orderinfo_cubit.dart';
 import '../models/myordersmodel.dart';
-import '../Rate/widgets/order_list_view.dart';
+// import '../Rate/widgets/order_list_view.dart';
+
+class TabTitles {
+  static const String pending = "Pending";
+  static const String delivered = "Delivered";
+  static const String canceled = "Canceled";
+}
 
 class OrdersView extends StatelessWidget {
   const OrdersView({super.key});
@@ -45,9 +52,9 @@ class OrdersView extends StatelessWidget {
                   indicatorColor: Colors.transparent,
                   tabs: [
                     // TODO: Use constants or an enum for the tab titles to avoid hardcoding strings.
-                    Tab(child: _buildTabItem("Pending")),
-                    Tab(child: _buildTabItem("Delivered")),
-                    Tab(child: _buildTabItem("Canceled")),
+                    Tab(child: buildTabItem(TabTitles.pending)),
+                    Tab(child: buildTabItem(TabTitles.delivered)),
+                    Tab(child: buildTabItem(TabTitles.canceled)),
                   ],
                   labelColor: Colors.white,
                   unselectedLabelColor: Colors.black,
@@ -57,55 +64,11 @@ class OrdersView extends StatelessWidget {
           ),
           body: TabBarView(
             children: [
-              // TODO: Extract the common BlocBuilder logic into a separate method to reduce code duplication.
-              BlocBuilder<OrderinfoCubit, OrderinfoState>(
-                builder: (context, state) {
-                  if (state is OrderinfoLoaded) {
-                    return OrderListView(
-                      orders: state.orders.whereType<OrdPending>().toList(),
-                    );
-                  }
-                  return Center(child: CircularProgressIndicator());
-                },
-              ),
-              BlocBuilder<OrderinfoCubit, OrderinfoState>(
-                builder: (context, state) {
-                  if (state is OrderinfoLoaded) {
-                    return OrderListView(
-                      orders: state.orders.whereType<OrdDelivered>().toList(),
-                    );
-                  }
-                  return Center(child: CircularProgressIndicator());
-                },
-              ),
-              BlocBuilder<OrderinfoCubit, OrderinfoState>(
-                builder: (context, state) {
-                  if (state is OrderinfoLoaded) {
-                    return OrderListView(
-                      orders: state.orders.whereType<OrdCanceled>().toList(),
-                    );
-                  }
-                  return Center(child: CircularProgressIndicator());
-                },
-              ),
+              buildTabContent<OrderPending>(context),
+              buildTabContent<OrderDelivered>(context),
+              buildTabContent<OrderCanceled>(context),
             ],
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildTabItem(String title) {
-    return Container(
-      width: 91,
-      height: 28,
-      alignment: Alignment.center,
-      child: Text(
-        title,
-        style: TextStyle(
-          fontSize: 20.sp,
-          fontWeight: FontWeightHelper.bold,
-          fontFamily: AppFonts.productSans,
         ),
       ),
     );
