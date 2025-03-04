@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../../core/utils/app_assets.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/features/home/presentation/views/widgets/image_container_of_second_top_section.dart';
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 
@@ -10,15 +11,16 @@ class CustomTopSectionSecond extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 209.h,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          color: AppColors.lightGreyColor,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(18.0),
-          child: Row(children: [
+      height: 209.h,
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: AppColors.lightGreyColor,
+      ),
+      child: Padding(
+        padding: 18.all,
+        child: Row(
+          children: [
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -31,41 +33,28 @@ class CustomTopSectionSecond extends StatelessWidget {
                         width: 0.79.w,
                         color: AppColors.lightGreyText12Color,
                       ),
-                      SizedBox(width: 10.w),
+                      10.hs,
                       Text(
                         'Sale up to 40%',
                         style: AppTextStyles.font12GreyRegular,
                       ),
                     ],
                   ),
-                  SizedBox(height: 15.h),
+                  15.vs,
                   Flexible(
                     child: Text('Most sexy & fabulous design',
                         overflow: TextOverflow.ellipsis,
                         maxLines: 3,
-                        // textAlign: TextAlign.center,
                         style: AppTextStyles.font20GreyMedium),
                   ),
                 ],
               ),
             ),
-            SizedBox(width: 50.w),
-            Stack(alignment: Alignment.center, children: [
-              SizedBox(
-                height: 114.h,
-                width: 114.w,
-                child: Container(
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: AppColors.firstGreyContainerColor),
-                ),
-              ),
-              Image.asset(
-                AppAssets.topCollection,
-                height: 229.h,
-              ),
-            ]),
-          ]),
-        ));
+            50.hs,
+            ImageContainerOfSecondTopSection(),
+          ],
+        ),
+      ),
+    );
   }
 }

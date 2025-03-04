@@ -43,4 +43,5 @@ class AppColors {
   static const Color white = Colors.white;
   static const Color navColor = Color(0xffE6E8EC);
   static const Color buttonLoginColor = Color(0xff2D201C);
+  static const Color itemColor = Color(0xFFA3A5AD);
 }

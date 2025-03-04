@@ -49,4 +49,10 @@ abstract class AppStrings {
   static const String aboutUs = "About us";
   static const String myWishlist = 'My Wishlist';
   static const String logOut = 'Log out';
+  static const String discover = 'Discover';
+  static const String featureProducts = 'Feature Products';
+  static const String showAll = 'Show all';
+  static const String recommended = 'Recommended';
+  static const String gemstore = 'Gemstore';
+  static const String topCollections = 'Top Collections';
 }

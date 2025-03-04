@@ -23,13 +23,7 @@ class SubListOfCategoru extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(
-                '24 Items',
-                style: AppTextStyles.font12GreyRegular
-                    // TODO: Use the colors file
-
-                    .copyWith(color: Color(0xFFA3A5AD)),
-              ),
+              Text('24 Items', style: AppTextStyles.font12GreyRegularItem),
               Spacer(),
               Icon(
                 Icons.arrow_forward_ios_rounded,
@@ -58,8 +52,7 @@ class SubListOfCategoru extends StatelessWidget {
                           children: [
                             Text(
                               '24 Items',
-                              style: AppTextStyles.font12GreyRegular
-                                  .copyWith(color: Color(0xFFA3A5AD)),
+                              style: AppTextStyles.font12GreyRegularItem,
                             ),
                             Spacer(),
                             Icon(
