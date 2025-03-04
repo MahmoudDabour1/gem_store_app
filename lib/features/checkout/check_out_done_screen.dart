@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
 import '../../core/utils/font_weight_helper.dart';
 import '../../core/utils/spacing.dart';
 import '../../core/widgets/app_custom_button.dart';
@@ -15,6 +16,8 @@ class CheckOutDoneScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
+
       appBar: AppCustomAppBar(title: "Checkout"),
       body: SafeArea(
         child: SingleChildScrollView(

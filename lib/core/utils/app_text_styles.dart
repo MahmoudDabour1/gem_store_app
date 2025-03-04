@@ -26,7 +26,7 @@ class AppTextStyles {
   );
   static TextStyle font20White = TextStyle(
     fontSize: 20.sp,
-    color: AppColors.whiteColor,
+    color:AppColors.white,
     fontWeight: FontWeightHelper.bold,
     fontFamily: AppFonts.productSans,
   );
@@ -82,7 +82,7 @@ class AppTextStyles {
   // font 22
   static TextStyle font22WhiteRegular = TextStyle(
     fontSize: 22.sp,
-    color: AppColors.whiteColor,
+    color: AppColors.white,
     fontFamily: AppFonts.productSans,
   );
 
@@ -143,13 +143,13 @@ class AppTextStyles {
   );
   static TextStyle font16whiteBold = TextStyle(
     fontSize: 16.sp,
-    color: AppColors.whiteColor,
+    color: AppColors.white,
     fontWeight: FontWeightHelper.bold,
     fontFamily: AppFonts.productSans,
   );
   static TextStyle font16WhiteSemiBold = TextStyle(
     fontSize: 16.sp,
-    color: AppColors.whiteColor,
+    color:AppColors.white,
     fontWeight: FontWeightHelper.semiBold,
   );
   static TextStyle font16regular = TextStyle(fontSize: 16.sp);
@@ -239,3 +239,7 @@ class AppTextStyles {
   static TextStyle font26semiBold =
       TextStyle(fontSize: 26.sp, fontWeight: FontWeightHelper.semiBold);
 }
+
+
+
+

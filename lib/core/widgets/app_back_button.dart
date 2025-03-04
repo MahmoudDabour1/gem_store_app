@@ -29,7 +29,7 @@ class AppBackButton extends StatelessWidget {
                 offset: const Offset(0, 2),
               ),
             ],
-            color: AppColors.whiteColor,
+            color:AppColors.whiteColor(context),
             shape: BoxShape.circle,
           ),
           child: Align(

@@ -43,6 +43,7 @@ dependencies:
   provider:
   image_picker:
   permission_handler: ^11.3.1
+  shared_preferences: ^2.5.2
 
 
 

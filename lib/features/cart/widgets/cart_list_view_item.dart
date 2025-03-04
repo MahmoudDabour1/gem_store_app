@@ -25,7 +25,7 @@ class _CartListViewItemState extends State<CartListViewItem> {
           height: 100.h,
           width: MediaQuery.sizeOf(context).width,
           decoration: BoxDecoration(
-            color: AppColors.whiteColor,
+            color:AppColors.whiteColor(context),
             borderRadius: BorderRadius.circular(20.r),
           ),
           child: Row(

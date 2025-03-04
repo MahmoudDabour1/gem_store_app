@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
 import '../../core/utils/spacing.dart';
 import 'widgets/checkout_inputs.dart';
 import 'widgets/delivery_home_container.dart';
@@ -18,6 +19,8 @@ class CheckoutScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
+
       appBar: AppCustomAppBar(title: "Checkout"),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),

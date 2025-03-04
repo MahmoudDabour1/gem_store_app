@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
 import '../../core/utils/spacing.dart';
 import '../../core/widgets/app_custom_button.dart';
 import 'widgets/cart_list_view.dart';
@@ -20,6 +21,8 @@ class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
+
       appBar: AppCustomAppBar(title: "Your Cart"),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
