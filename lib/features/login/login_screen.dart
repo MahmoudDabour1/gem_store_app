@@ -1,16 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/helpers/extenstions.dart';
-import '../../core/utils/app_assets.dart';
-import '../../core/utils/app_text_styles.dart';
-import '../../core/utils/spacing.dart';
-import '../../core/widgets/app_custom_button.dart';
-import '../../core/widgets/app_text_form_field.dart';
-import '../../core/widgets/bottom_nav_bar.dart';
-import 'widgets/custom_circle_avatar.dart';
-
-import '../../core/routing/routes.dart';
-import '../../core/utils/app_colors.dart';
+import 'package:gem_store_app/core/routing/routes_exports.dart';
 
 class LoginScreen extends StatelessWidget {
   // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
@@ -29,13 +19,14 @@ class LoginScreen extends StatelessWidget {
             children: [
               verticalSpace(93),
               Text(
-                "Log into ",
+                AppStrings.logInto,
                 style: AppTextStyles.font24BlackBold,
               ),
-              Text("Your account", style: AppTextStyles.font24BlackBold),
+              Text(AppStrings.yourAccount,
+                  style: AppTextStyles.font24BlackBold),
               verticalSpace(48),
               AppTextFormField(
-                labelText: "Email Address",
+                labelText: AppStrings.emailAddress,
                 validator: (value) {},
                 keyboardType: TextInputType.emailAddress,
               ),
@@ -43,7 +34,7 @@ class LoginScreen extends StatelessWidget {
                 20,
               ),
               AppTextFormField(
-                labelText: "Password",
+                labelText: AppStrings.password,
                 validator: (value) {},
                 keyboardType: TextInputType.visiblePassword,
               ),
@@ -53,59 +44,27 @@ class LoginScreen extends StatelessWidget {
               Row(
                 children: [
                   Spacer(flex: 1),
-                  Text("Forget Password?",
+                  Text(AppStrings.forgetPassword,
                       style: AppTextStyles.font12BlackRegular),
                 ],
               ),
               verticalSpace(
                 25,
               ),
-              Center(
-                child: AppCustomButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => BottomNavBar()));
-                    context.pushNamed(Routes.bottomNavBar);
-                  },
-                  text: "LOG IN",
-                  textStyle: AppTextStyles.font16whiteBold,
-                  buttonColor: AppColors.buttonLoginColor,
-                  height: 50,
-                  width: 147,
-                  radius: 40,
-                ),
-              ),
+              LoginButton(),
               verticalSpace(
                 18,
               ),
               Center(
-                  child: Text("or log in with",
+                  child: Text(AppStrings.orLogInWith,
                       style: AppTextStyles.font12BlackRegular)),
               verticalSpace(
                 40,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CustomCircleAvatar(
-                    image: AppAssets.appleLogo,
-                  ),
-                  horizontalSpace(
-                    20,
-                  ),
-                  CustomCircleAvatar(
-                    image: AppAssets.googleLogo,
-                  ),
-                  horizontalSpace(
-                    20,
-                  ),
-                  CustomCircleAvatar(
-                    image: AppAssets.facebookLogo,
-                  )
-                ],
-              )
+              SizedBox(
+                  height: 42.sp,
+                  width: double.infinity,
+                  child: ListOfCircleAvatar())
             ],
           ),
         ),

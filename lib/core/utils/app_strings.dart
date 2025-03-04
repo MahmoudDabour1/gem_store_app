@@ -49,4 +49,18 @@ abstract class AppStrings {
   static const String aboutUs = "About us";
   static const String myWishlist = 'My Wishlist';
   static const String logOut = 'Log out';
+  //Login
+  static const String loginButtonString = "LOG IN";
+  static const String emailAddress = "Email Address";
+  static const String password = "Password";
+  static const String forgetPassword = "Forget Password?";
+  static const String orLogInWith = "or log in with";
+  static const String logInto = "Log into ";
+  static const String yourAccount = "Your account";
+  //Setting
+  static const String settingTitle = "Setting";
+  static const String language = "Language";
+  static const String termsOfUse = "Terms of Use";
+  static const String privacyPolicy = "Privacy Policy";
+
 }

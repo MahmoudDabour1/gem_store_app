@@ -32,8 +32,8 @@ class AppCustomButton extends StatelessWidget {
             WidgetStateProperty.all(buttonColor ?? AppColors.darkerGrayColor),
         fixedSize: WidgetStateProperty.all<Size>(
           Size(
-            width ?? MediaQuery.sizeOf(context).width.w,
-            height ?? 48.h,
+            width?.w ?? MediaQuery.sizeOf(context).width.w,
+            height?.h ?? 48.h,
           ),
         ),
         shape: WidgetStateProperty.all<RoundedRectangleBorder>(
@@ -42,9 +42,11 @@ class AppCustomButton extends StatelessWidget {
           ),
         ),
       ),
-      child: Text(
-        text,
-        style: textStyle ?? AppTextStyles.font16WhiteSemiBold,
+      child: Center(
+        child: Text(
+          text,
+          style: textStyle ?? AppTextStyles.font16WhiteSemiBold,
+        ),
       ),
     );
   }
