@@ -13,7 +13,7 @@ class SettingsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.whiteColor,
+      backgroundColor: AppColors.whiteColor(context),
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 70.h, horizontal: 20.w),
         child: Column(
@@ -56,7 +56,7 @@ class SettingsScreen extends StatelessWidget {
               height: 500.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(30.r),
-                color: AppColors.whiteColor,
+                color:AppColors.whiteColor(context),
                 boxShadow: [
                   BoxShadow(
                     color: Colors.grey.withOpacity(0.2),

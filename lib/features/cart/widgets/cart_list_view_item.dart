@@ -1,126 +1,34 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../../core/utils/app_text_styles.dart';
-import '../../../core/utils/font_weight_helper.dart';
-import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/spacing.dart';
-// TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+import '../../../core/helpers/public_imports.dart';
+import 'cart_container_texts_widget.dart';
 
-class CartListViewItem extends StatefulWidget {
+class CartListViewItem extends StatelessWidget {
   const CartListViewItem({super.key});
-
-  @override
-  State<CartListViewItem> createState() => _CartListViewItemState();
-}
-
-class _CartListViewItemState extends State<CartListViewItem> {
-  int number = 0;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
         Container(
-          height: 100.h,
+          height: 110.h,
           width: MediaQuery.sizeOf(context).width,
           decoration: BoxDecoration(
-            color: AppColors.whiteColor,
+            color:AppColors.whiteColor(context),
             borderRadius: BorderRadius.circular(20.r),
           ),
           child: Row(
             children: [
               Image.asset(
-                // TODO: Put and Use the image from the assets file
-                "assets/images/girl.png",
+                AppAssets.girlImage,
                 width: 100.w,
                 height: 100.h,
               ),
-              horizontalSpace(13),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Text(
-                        "Turtleneck Sweater",
-                        style: AppTextStyles.font18BlackSemiBold,
-                      ),
-                      // CheckboxListTile(value: true, onChanged: (value){})
-                    ],
-                  ),
-                  verticalSpace(13),
-                  Text(
-                    "\$ 39.99",
-                    style: AppTextStyles.font18BlackSemiBold.copyWith(
-                      fontSize: 16.sp,
-                    ),
-                  ),
-                  Center(
-                    child: Row(
-                      children: [
-                        Text(
-                          "Size: L  |  Color: Black",
-                          style: AppTextStyles.font14DArkGraySemiBold.copyWith(
-                            fontWeight: FontWeightHelper.medium,
-                            fontSize: 12.sp,
-                          ),
-                        ),
-                        horizontalSpace(8),
-                        Container(
-                          width: 80.w,
-                          height: 30.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(20.r),
-                            border: Border.all(
-                              color: AppColors.darkGrayColor,
-                            ),
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            mainAxisSize: MainAxisSize.min,
-                            children: [
-                              InkWell(
-                                  onTap: () {
-                                    setState(() {
-                                      number--;
-                                    });
-                                  },
-                                  child: Icon(
-                                    Icons.remove,
-                                    size: 20.r,
-                                  )),
-                              Text(
-                                number.toString(),
-                                style: AppTextStyles.font14DArkGraySemiBold
-                                    .copyWith(
-                                  fontWeight: FontWeightHelper.medium,
-                                  fontSize: 14.sp,
-                                ),
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  setState(() {
-                                    number++;
-                                  });
-                                },
-                                child: Icon(
-                                  Icons.add,
-                                  size: 20.r,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              13.hs,
+              CartContainerTextsWidget(),
             ],
           ),
         ),
-        verticalSpace(25),
+        15.vs,
       ],
     );
   }

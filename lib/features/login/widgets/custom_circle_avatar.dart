@@ -16,7 +16,7 @@ class CustomCircleAvatar extends StatelessWidget {
       radius: 21.sp,
       child: CircleAvatar(
         radius: 20.sp,
-        backgroundColor: AppColors.whiteColor,
+        backgroundColor: AppColors.whiteColor(context),
         child: Image.asset(
           circleAvatarModel.image,
           fit: BoxFit.fill,

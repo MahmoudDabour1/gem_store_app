@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/core/utils/app_strings.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 import 'collection_section.dart';
@@ -22,23 +24,23 @@ class HomeScreenBody extends StatelessWidget {
             child: Column(
               children: [
                 CustomAppBar(
-                  title: 'Gemstore',
+                  title: AppStrings.gemstore,
                   textStyle: AppTextStyles.font20BlackBold,
                 ),
-                SizedBox(height: 25.h),
+                25.vs,
                 CustomListOfCategory(),
-                SizedBox(height: 30.h),
+                30.vs,
                 CollectionSection(),
               ],
             ),
           ),
-          SizedBox(height: 20.h),
+          20.vs,
           CustomListOfFeatureProducts(),
-          SizedBox(height: 10.h),
+          10.vs,
           NewCollectionSection(),
-          SizedBox(height: 20.h),
+          20.vs,
           CustomListOfRecommendedProduct(),
-          SizedBox(height: 20.h),
+          20.vs,
           Column(
             children: [
               Padding(

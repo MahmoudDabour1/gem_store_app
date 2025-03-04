@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import '../../../core/helpers/extenstions.dart';
 import '../../../core/utils/app_strings.dart';
 import '../../../core/utils/app_colors.dart';
@@ -10,7 +11,7 @@ import 'widgets/blured_button.dart';
 import 'widgets/scrolling_items_and_indicator.dart';
 import '../../../core/routing/routes.dart';
 import '../../../core/utils/app_text_styles.dart';
-import '../../../core/utils/spacing.dart';
+
 
 class OnboardingIntroScreen extends StatelessWidget {
   const OnboardingIntroScreen({super.key});
@@ -31,20 +32,17 @@ class OnboardingIntroScreen extends StatelessWidget {
                 ],
               ),
               Positioned(
-                top: 50,
+                top: 50.h,
                 child: Column(
                   children: [
                     BlocBuilder<ScrollingCubit, ScrollingState>(
                       builder: (context, state) {
-                        int index = (state is IncreaseDecreaseScrollingState)
-                            ? state.currentPage
-                            : 0;
+                        int index = (state is IncreaseDecreaseScrollingState) ? state.currentPage : 0;
                         return Column(
                           children: [
                             Text(
                               AppStrings.onBoardingItemsTitles[index],
-                              style: AppTextStyles.font20semiBold
-                                  .copyWith(height: 2.h),
+                              style: AppTextStyles.font20semiBold.copyWith(height: 2.h),
                             ),
                             Text(
                               AppStrings.onBoardingItemsSubTitles[index],
@@ -54,9 +52,9 @@ class OnboardingIntroScreen extends StatelessWidget {
                         );
                       },
                     ),
-                    verticalSpace(40),
+                    40.vs,
                     const ScrollingItemsAndIndicator(),
-                    verticalSpace(30),
+                    30.vs,
                     BluredButton(
                       title: AppStrings.shoppingNowButtonString,
                       height: 53.h,

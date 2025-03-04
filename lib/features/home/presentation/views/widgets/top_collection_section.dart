@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/core/utils/app_strings.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import 'custom_top_section_first.dart';
 import 'custom_top_section_second.dart';
@@ -16,7 +17,7 @@ class TopCollectionSection extends StatelessWidget {
         Row(
           children: [
             Text(
-              'Top Collections',
+             AppStrings.topCollections,
               style: AppTextStyles.font20BlackRegular,
             ),
             Spacer(),
@@ -29,15 +30,15 @@ class TopCollectionSection extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 20.h),
+        20.vs,
         CustomTopSectionFirst(),
-        SizedBox(height: 15.h),
+        15.vs,
         CustomTopSectionSecond(),
-        SizedBox(height: 15.h),
+        15.vs,
         Row(
           children: [
             CustomTopSectionThird(),
-            SizedBox(width: 10.w),
+            10.hs,
             CustomTopSectionThird(
               isReversed: true,
             )

@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:gem_store_app/core/routing/routes_exports.dart';
+
+
+
+
 class SettingScreen extends StatelessWidget {
   // TODO: Extract the common SettingRow logic into a separate method to reduce code duplication.
   // TODO: Use constants for the titles and image paths to avoid hardcoding strings.
@@ -9,6 +14,8 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
+
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 32.h, vertical: 28.w),
         child: Column(

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/core/utils/app_strings.dart';
 import '../../../../../core/helpers/extenstions.dart';
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -9,7 +11,6 @@ import '../../../../../core/utils/app_text_styles.dart';
 import '../../manager/cubit/show_searched_items_cubit.dart';
 import 'custom_list_of_discovery_category.dart';
 import 'custom_list_of_searched_items.dart';
-
 import '../../../../../core/routing/routes.dart';
 
 class HeaderOfDiscover extends StatelessWidget {
@@ -45,7 +46,7 @@ class HeaderOfDiscover extends StatelessWidget {
                     contentPadding: EdgeInsets.symmetric(vertical: 12.h),
                     border: InputBorder.none,
                     enabled: false,
-                    hintText: 'Search',
+                    hintText: AppStrings.search,
                     hintStyle: AppTextStyles.font14Medium,
                     prefixIcon: GestureDetector(
                       onTap: () {
@@ -89,11 +90,11 @@ class HeaderOfDiscover extends StatelessWidget {
             ),
           ],
         ),
-        SizedBox(height: 20.h),
+        20.vs,
         BlocBuilder<ShowSearchedItemsCubit, ShowSearchedItemsState>(
           builder: (context, state) {
             if (state is ShowSearchedItems) {
-              return CustomListOfSearchedItems();
+              return Expanded(child: CustomListOfSearchedItems());
             }
             return ListOfDiscoveryCategory();
           },
