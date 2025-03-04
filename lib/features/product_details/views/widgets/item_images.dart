@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/utils/app_colors.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/features/product_details/views/widgets/current_image_indecator.dart';
 
 import '../../../../core/utils/app_assets.dart';
 
@@ -12,8 +13,8 @@ class ItemImages extends StatelessWidget {
     return Stack(
       children: [
         Container(
-            height: MediaQuery.of(context).size.height / 2 - 20.h,
-            width: MediaQuery.of(context).size.width,
+            height: context.screenHeight / 2 - 20.h,
+            width: context.screenWidth,
             color: Color(0xFFFFFCFA),
             child: PageView.builder(
               itemCount: 3,
@@ -27,7 +28,7 @@ class ItemImages extends StatelessWidget {
             )),
         Positioned(
             left: 20.w,
-            width: MediaQuery.of(context).size.width - 40.w,
+            width: context.screenWidth - 40.w,
             top: 20.h,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,37 +49,7 @@ class ItemImages extends StatelessWidget {
                 )
               ],
             )),
-        Positioned(
-            bottom: 70.h,
-            right: 160.w,
-            width: 50.w,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                for (int index = 0; index < 3; index++)
-                  Container(
-                    padding:
-                        index == 0 ? EdgeInsets.all(2.h) : EdgeInsets.all(0),
-                    width: index == 0 ? 10.5 : 5.5,
-                    height: index == 0 ? 10.5 : 5.5,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(7.r),
-                        border: Border.all(
-                            color: AppColors.deepGrayColor, width: 1.5),
-                        color: index == 0
-                            ? Colors.white
-                            : AppColors.deepGrayColor),
-                    child: Container(
-                      height: 5.5.h,
-                      width: 5.5.w,
-                      decoration: BoxDecoration(
-                        color: AppColors.deepGrayColor,
-                        borderRadius: BorderRadius.circular(3.r),
-                      ),
-                    ),
-                  )
-              ],
-            ))
+        CurrentImageIndecator()
       ],
     );
   }

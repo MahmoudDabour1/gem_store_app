@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/utils/font_weight_helper.dart';
+
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/features/product_details/views/widgets/similar_items_section.dart';
+
 import '../../../../core/utils/spacing.dart';
 import 'total_review_info.dart';
 import '../../../../core/utils/app_assets.dart';
@@ -26,7 +28,7 @@ class SectionsList extends StatelessWidget {
             style: AppTextStyles.font12regular,
           ),
         ]),
-        verticalSpace(10),
+        10.vs,
         CustomeSectionOfDetails(title: "Reviews", children: [
           TotalReviewInfo(finalRate: 4.9, totalRates: 85),
           verticalSpace(10),
@@ -48,48 +50,7 @@ class SectionsList extends StatelessWidget {
             },
           )
         ]),
-        CustomeSectionOfDetails(title: "Similar Products", children: [
-          SizedBox(
-            // width: d,
-            height: 240.h,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              itemCount: 4,
-              itemBuilder: (context, index) {
-                return Container(
-                  margin: EdgeInsets.all(10.w),
-                  height: 230.h,
-                  width: 130.w,
-                  clipBehavior: Clip.hardEdge,
-                  decoration: BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(10))),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Image.asset(
-                        fit: BoxFit.fill,
-                        "assets/images/Similar_item_test.png",
-                        width: 130.w,
-                        height: 150.h,
-                      ),
-                      Text(
-                        "Rise Crop Hoodie",
-                        style: AppTextStyles.font12BlackRegular
-                            .copyWith(height: 2.h),
-                      ),
-                      Text(
-                        "\$ 43.00",
-                        style: AppTextStyles.font14Medium
-                            .copyWith(fontWeight: FontWeightHelper.semiBold),
-                      )
-                    ],
-                  ),
-                );
-              },
-            ),
-          )
-        ])
+       SimilarItemsSection()
       ],
     );
   }

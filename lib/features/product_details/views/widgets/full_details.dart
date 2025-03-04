@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/features/product_details/views/widgets/custome_details_sheet.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
-import 'title_details_sections.dart';
 
 import '../../../../core/utils/app_text_styles.dart';
 
@@ -16,6 +16,7 @@ class FullDetails extends StatelessWidget {
         topLeft: Radius.circular(20), topRight: Radius.circular(20));
     return Column(
       children: [
+        CustomeDetailsSheet(),
         Transform.translate(
           offset: Offset(0, -60.h),
           child: Container(

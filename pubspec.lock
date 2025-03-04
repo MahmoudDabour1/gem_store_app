@@ -57,6 +57,10 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.19.0"
+      sha256: ee67cb0715911d28db6bf4af1026078bd6f0128b07a5f66fb2ed94ec6783c09a
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.19.0"
   cross_file:
     dependency: transitive
     description:
@@ -175,10 +179,10 @@ packages:
     dependency: transitive
     description:
       name: flutter_plugin_android_lifecycle
-      sha256: "615a505aef59b151b46bbeef55b36ce2b6ed299d160c51d84281946f0aa0ce0e"
+      sha256: "9ee02950848f61c4129af3d6ec84a1cfc0e47931abc746b03e7a3bc3e8ff6eda"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.24"
+    version: "2.0.22"
   flutter_rating_bar:
     dependency: "direct main"
     description:
@@ -257,10 +261,10 @@ packages:
     dependency: transitive
     description:
       name: image_picker_android
-      sha256: b62d34a506e12bb965e824b6db4fbf709ee4589cf5d3e99b45ab2287b008ee0c
+      sha256: "8c5abf0dcc24fe6e8e0b4a5c0b51a5cf30cefdf6407a3213dae61edc75a70f56"
       url: "https://pub.dev"
     source: hosted
-    version: "0.8.12+20"
+    version: "0.8.12+12"
   image_picker_for_web:
     dependency: transitive
     description:
@@ -333,11 +337,19 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "10.0.7"
+      sha256: "3f87a60e8c63aecc975dda1ceedbc8f24de75f09e4856ea27daf8958f2f0ce05"
+      url: "https://pub.dev"
+    source: hosted
+    version: "10.0.7"
   leak_tracker_flutter_testing:
     dependency: transitive
     description:
       name: leak_tracker_flutter_testing
       sha256: "9491a714cca3667b60b5c420da8217e6de0d1ba7a5ec322fab01758f6998f379"
+      url: "https://pub.dev"
+    source: hosted
+    version: "3.0.8"
+      sha256: "932549fb305594d82d7183ecd9fa93463e9914e1b67cacc34bc40906594a1806"
       url: "https://pub.dev"
     source: hosted
     version: "3.0.8"
@@ -602,6 +614,10 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.12.0"
+      sha256: "73713990125a6d93122541237550ee3352a2d84baad52d375a4cad2eb9b7ce0b"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.12.0"
   stream_channel:
     dependency: transitive
     description:
@@ -618,6 +634,10 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.3.0"
+      sha256: "556692adab6cfa87322a115640c11f13cb77b3f076ddcc5d6ae3c20242bedcde"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.3.0"
   term_glyph:
     dependency: transitive
     description:
@@ -631,6 +651,10 @@ packages:
     description:
       name: test_api
       sha256: "664d3a9a64782fcdeb83ce9c6b39e78fd2971d4e37827b9b06c3aa1edc5e760c"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.7.3"
+      sha256: "5b8a98dafc4d5c4c9c72d8b31ab2b23fc13422348d2997120294d3bac86b4ddb"
       url: "https://pub.dev"
     source: hosted
     version: "0.7.3"
@@ -682,6 +706,10 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "14.3.0"
+      sha256: "5c5f338a667b4c644744b661f309fb8080bb94b18a7e91ef1dbd343bed00ed6d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "14.3.0"
   web:
     dependency: transitive
     description:
@@ -707,5 +735,7 @@ packages:
     source: hosted
     version: "6.5.0"
 sdks:
+  dart: ">=3.6.0 <4.0.0"
+  flutter: ">=3.22.0"
   dart: ">=3.5.0 <4.0.0"
   flutter: ">=3.24.0"
