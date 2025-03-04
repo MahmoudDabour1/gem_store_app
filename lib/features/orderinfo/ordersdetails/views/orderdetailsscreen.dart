@@ -4,7 +4,7 @@ import '../../models/myordersmodel.dart';
 import '../widgets/orderdatailscard.dart';
 
 class Orderdetailsscreen extends StatefulWidget {
-  final Ordersmodel order;
+  final OrdersModel order;
   const Orderdetailsscreen({super.key, required this.order});
 
   @override
@@ -16,7 +16,7 @@ class _OrderdetailsscreenState extends State<Orderdetailsscreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: AppCustomAppBar(title: "Order #${widget.order.getordernumber()}"),
+      appBar: AppCustomAppBar(title: "Order #${widget.order.getOrderNumber()}"),
       body: SingleChildScrollView(
         child: Column(
           children: [

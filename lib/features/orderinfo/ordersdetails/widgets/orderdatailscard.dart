@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../../../../core/helpers/sizes_utils_extensions.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -9,7 +10,7 @@ import '../../models/myordersmodel.dart';
 import '../../../track_order/track_order.dart';
 
 class Orderdatailscard extends StatelessWidget {
-  final Ordersmodel order;
+  final OrdersModel order;
   const Orderdatailscard({super.key, required this.order});
 
   @override
@@ -21,7 +22,7 @@ class Orderdatailscard extends StatelessWidget {
         ),
         GestureDetector(
           onTap: () {
-            if (order is OrdPending) {
+            if (order is OrderPending) {
               Navigator.push(
                 context,
                 MaterialPageRoute(
@@ -42,18 +43,18 @@ class Orderdatailscard extends StatelessWidget {
                   children: [
                     Expanded(
                       child: Text(
-                        order is OrdPending
+                        order is OrderPending
                             ? "Your order is on the way \nclick here to track your order"
-                            : order is OrdDelivered
+                            : order is OrderDelivered
                                 ? "Your order is delivered \nrate product to get 5 points"
                                 : "Your order Canceld",
                         style: AppTextStyles.font20White,
                       ),
                     ),
                     SvgPicture.asset(
-                      order is OrdPending
+                      order is OrderPending
                           ? "assets/svgs/car.svg"
-                          : order is OrdDelivered
+                          : order is OrderDelivered
                               ? "assets/svgs/gift.svg"
                               : "",
                       width: 50,
@@ -73,7 +74,8 @@ class Orderdatailscard extends StatelessWidget {
           child: Container(
             width: 327,
             height: 114,
-            padding: 16.all,
+            // padding: 7.all,
+            margin: 7.all,
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -85,12 +87,13 @@ class Orderdatailscard extends StatelessWidget {
                       style: AppTextStyles.font20GreyLight,
                     ),
                     Text(
-                      '${order.getordernumber()}',
+                      '${order.getOrderNumber()}',
                       style: AppTextStyles.font20BlackRegular,
                     ),
                   ],
                 ),
-                const SizedBox(height: 5),
+                Spacer(),
+                // const SizedBox(height: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -99,21 +102,23 @@ class Orderdatailscard extends StatelessWidget {
                       style: AppTextStyles.font20GreyLight,
                     ),
                     Text(
-                      '${order.gettrackingnumber()}',
+                      '${order.getTrackingNumber()}',
                       style: AppTextStyles.font20BlackRegular,
                     ),
                   ],
                 ),
-                const SizedBox(height: 5),
+                Spacer(),
+                // const SizedBox(height: 5),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       'Delivery Address:',
                       style: AppTextStyles.font20GreyLight,
                     ),
+                    Spacer(),
                     Text(
-                      order.getdeliveryaddress(),
+                      order.getDeliveryAddress(),
                       style: AppTextStyles.font20BlackRegular,
                     ),
                   ],
@@ -145,7 +150,8 @@ class Orderdatailscard extends StatelessWidget {
                     Text("68.00", style: AppTextStyles.font20BlackextraLight),
                   ],
                 ),
-                SizedBox(height: 5),
+                Spacer(),
+                // SizedBox(height: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -155,7 +161,8 @@ class Orderdatailscard extends StatelessWidget {
                     Text("52.00", style: AppTextStyles.font20BlackextraLight),
                   ],
                 ),
-                SizedBox(height: 30),
+                Spacer(),
+                // SizedBox(height: 30),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -163,7 +170,8 @@ class Orderdatailscard extends StatelessWidget {
                     Text("68.00", style: TextStyle(fontSize: 20)),
                   ],
                 ),
-                SizedBox(height: 5),
+                Spacer(),
+                // SizedBox(height: 5),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -171,7 +179,8 @@ class Orderdatailscard extends StatelessWidget {
                     Text("52.00", style: TextStyle(fontSize: 20)),
                   ],
                 ),
-                SizedBox(height: 20),
+                Spacer(),
+                // SizedBox(height: 20),
                 Container(
                   width: 308.01,
                   decoration: ShapeDecoration(
@@ -184,7 +193,8 @@ class Orderdatailscard extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20),
+                Spacer(),
+                // SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -196,11 +206,13 @@ class Orderdatailscard extends StatelessWidget {
             ),
           ),
         ),
+        // Spacer(),
         SizedBox(
           height: 20,
         ),
         Center(
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextButton(
                 onPressed: () {
@@ -236,7 +248,7 @@ class Orderdatailscard extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                width: 5,
+                width: 5.w,
               ),
               TextButton(
                 onPressed: () {
