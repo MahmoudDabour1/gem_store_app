@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/utils/app_colors.dart';
 import '../../core/utils/app_assets.dart';
 import '../../core/utils/app_text_styles.dart';
 import '../../core/utils/spacing.dart';
@@ -14,6 +15,8 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
+
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 32.h, vertical: 28.w),
         child: Column(

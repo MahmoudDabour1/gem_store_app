@@ -24,7 +24,7 @@ class FullDetails extends StatelessWidget {
                   color: Colors.white,
                   boxShadow: [
                     BoxShadow(
-                        color: AppColors.lightGrayColor.withValues(alpha: .6),
+                     /*   color: AppColors.lightGrayColor.withValues(alpha: .6),*/
                         blurRadius: 10,
                         offset: Offset(0, -8),
                         spreadRadius: -.1)

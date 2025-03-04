@@ -1,36 +1,29 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../core/utils/spacing.dart';
+import '../../core/helpers/public_imports.dart';
+import '../../core/widgets/app_custom_app_bar.dart';
 import '../../core/widgets/app_custom_button.dart';
 import 'widgets/cart_list_view.dart';
 import 'widgets/cart_price_items_widget.dart';
 
-import '../../core/widgets/app_custom_app_bar.dart';
-
-class CartScreen extends StatefulWidget {
+class CartScreen extends StatelessWidget {
   const CartScreen({super.key});
-
-  @override
-  State<CartScreen> createState() => _CartScreenState();
-}
-
-class _CartScreenState extends State<CartScreen> {
-  int number = 0;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppCustomAppBar(title: "Your Cart"),
+      appBar: AppCustomAppBar(title: AppStrings.yourCart),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 24.w),
+        padding: 20.ph,
         child: SingleChildScrollView(
           child: Column(
             children: [
-              verticalSpace(30),
+              30.hs,
               CartListView(),
               CartPriceItemsWidget(),
-              AppCustomButton(onPressed: () {}, text: "Proceed to checkout"),
-              verticalSpace(25),
+              AppCustomButton(
+                onPressed: () {},
+                text: AppStrings.proceedToCheckout,
+              ),
+              25.vs,
             ],
           ),
         ),

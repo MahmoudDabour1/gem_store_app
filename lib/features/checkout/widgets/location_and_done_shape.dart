@@ -1,12 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/svg.dart';
-
-import '../../../core/utils/spacing.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
+import '../../../core/widgets/svg_displayer.dart';
 import 'dotted_line_painter.dart';
 
 class LocationAndDoneShape extends StatelessWidget {
   final String? changeDoneImage;
+
   const LocationAndDoneShape({super.key, this.changeDoneImage});
 
   @override
@@ -15,30 +13,23 @@ class LocationAndDoneShape extends StatelessWidget {
       padding: EdgeInsets.symmetric(horizontal: 25.w),
       child: Row(
         children: [
-          // TODO:Use assets file
-          // TODO: Use the SvgDisplayer widget from core/widgets for better reusability.
-
-          SvgPicture.asset("assets/svgs/location_black_svg.svg"),
-          horizontalSpace(20),
+          SvgDisplayer(assetName: AppAssets.locationBlack),
+          20.hs,
           Expanded(
             child: CustomPaint(
               painter: DottedLinePainter(),
-              child: SizedBox(
-                height: 70.h,
-              ),
+              child: 70.vs,
             ),
           ),
-          horizontalSpace(66),
+          66.hs,
           Expanded(
             child: CustomPaint(
               painter: DottedLinePainter(),
-              child: SizedBox(
-                height: 70.h,
-              ),
+              child: 70.vs
             ),
           ),
-          horizontalSpace(20),
-          SvgPicture.asset(changeDoneImage ?? "assets/svgs/done_gray_svg.svg"),
+          20.hs,
+          SvgDisplayer(assetName: changeDoneImage ?? AppAssets.doneGray),
         ],
       ),
     );

@@ -1,6 +1,5 @@
-import 'package:flutter/material.dart';
-
-import '../../../core/utils/app_colors.dart';
+import '../../../core/helpers/public_imports.dart';
+import '../data/models/country_model.dart';
 
 class CountryDropdownWidget extends StatefulWidget {
   const CountryDropdownWidget({super.key});
@@ -11,15 +10,6 @@ class CountryDropdownWidget extends StatefulWidget {
 
 class _CountryDropdownWidgetState extends State<CountryDropdownWidget> {
   String? selectedCountry;
-// TODO: Move this list to a separate file as a model to keep the UI code focused. Create a model and use it through a model data list.
-  final List<Map<String, String>> countryList = [
-    {"name": "Afghanistan", "code": "AF"},
-    {"name": "Albania", "code": "AL"},
-    {"name": "Egypt", "code": "EG"},
-    {"name": "United States", "code": "US"},
-    {"name": "France", "code": "FR"},
-    {"name": "Germany", "code": "DE"},
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -27,19 +17,19 @@ class _CountryDropdownWidgetState extends State<CountryDropdownWidget> {
       body: DropdownButtonFormField<String>(
         value: selectedCountry,
         decoration: InputDecoration(
-          labelText: "Country *",
+          labelText: AppStrings.country,
           border: UnderlineInputBorder(
             borderSide: BorderSide(
               color: AppColors.lighterGrayColor,
-              width: 1.0,
+              width: 1.0.w,
             ),
           ),
           isDense: true,
         ),
         items: countryList.map((country) {
           return DropdownMenuItem<String>(
-            value: country['code'],
-            child: Text(country['name']!),
+            value: country.code,
+            child: Text(country.name),
           );
         }).toList(),
         onChanged: (value) {

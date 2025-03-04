@@ -37,7 +37,7 @@ class CustomCategory extends StatelessWidget {
                     width: 2.w,
                     color: context.read<CategoryCubit>().currentIndex == index
                         ? AppColors.brownColor
-                        : AppColors.whiteColor,
+                        : AppColors.whiteColor(context),
                   ),
                 ),
                 child: Center(

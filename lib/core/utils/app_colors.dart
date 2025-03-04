@@ -5,7 +5,13 @@ class AppColors {
   static const Color greyContainerColor = Color(0xFFF3F3F3);
   static const Color greyTextColor = Color(0xFF9D9D9D);
   static const Color greyText13Color = Color(0xFF9B9B9B);
-  static const Color whiteColor = Color(0xFFFFFFFF);
+  static Color whiteColor(BuildContext context) => Theme.of(context).scaffoldBackgroundColor;
+
+  static Color textColor(BuildContext context) => Theme.of(context).textTheme.bodyMedium?.color ?? Colors.black;
+
+  static Color primaryColor(BuildContext context) => Theme.of(context).primaryColor;
+  static Color secondaryColor(BuildContext context) => Theme.of(context).colorScheme.secondary;
+  //static const Color whiteColor = Color(0xFFFFFFFF);
   static const Color darkColor = Color(0xFF1D1F22);
   static const Color lightGreyColor = Color(0xFFF8F8FA);
   static const Color lightGreyText12Color = Color(0xFF777E90);
@@ -45,3 +51,6 @@ class AppColors {
   static const Color buttonLoginColor = Color(0xff2D201C);
   static const Color itemColor = Color(0xFFA3A5AD);
 }
+
+
+

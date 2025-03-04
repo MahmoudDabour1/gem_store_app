@@ -13,6 +13,8 @@ class TrackOrderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.whiteColor(context),
+
       appBar: AppCustomAppBar(title: "Track Order"),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 24.w),
