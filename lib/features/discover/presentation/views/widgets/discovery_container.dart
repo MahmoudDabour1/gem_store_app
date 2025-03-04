@@ -32,7 +32,7 @@ class DiscoveryContainer extends StatelessWidget {
             child: Text(
               title,
               style: AppTextStyles.font16DarkBold
-                  .copyWith(color: AppColors.whiteColor),
+                  .copyWith(color: AppColors.whiteColor(context)),
             ),
           ),
           Spacer(),

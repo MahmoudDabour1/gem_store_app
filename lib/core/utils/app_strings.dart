@@ -77,4 +77,10 @@ abstract class AppStrings {
   static const String price110 = '110';
   static const String yourCart = 'Your Cart';
   static const String proceedToCheckout = 'Proceed to checkout';
+  static const String discover = 'Discover';
+  static const String featureProducts = 'Feature Products';
+  static const String showAll = 'Show all';
+  static const String recommended = 'Recommended';
+  static const String gemstore = 'Gemstore';
+  static const String topCollections = 'Top Collections';
 }
