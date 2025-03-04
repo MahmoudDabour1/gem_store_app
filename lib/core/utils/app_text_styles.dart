@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_colors.dart';
 import 'app_fonts.dart';
-
 import 'font_weight_helper.dart';
 
 class AppTextStyles {
@@ -119,6 +118,12 @@ class AppTextStyles {
     color: AppColors.lightGreyText12Color,
     fontFamily: AppFonts.productSansLight,
   );
+  static TextStyle font12GreyRegularItem = TextStyle(
+    fontSize: 12.sp,
+    color: AppColors.itemColor,
+    fontFamily: AppFonts.productSansLight,
+  );
+
   static TextStyle font12GreyLight = TextStyle(
     fontSize: 12.sp,
     fontWeight: FontWeightHelper.light,
@@ -161,8 +166,6 @@ class AppTextStyles {
 
   // font 17
   static TextStyle font17DarkLight = TextStyle();
-
-  // font 17
 
   // font 14
   static TextStyle font14Medium = TextStyle(

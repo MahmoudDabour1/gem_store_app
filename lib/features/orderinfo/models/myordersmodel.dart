@@ -1,71 +1,119 @@
-// TODO: Use Dart's naming conventions for classes and methods.
-// TODO: Use a factory constructor or a method to create instances of the subclasses to reduce redundancy.
-// TODO: Consider using an enum for the order state to improve type safety and readability.
+enum OrderState {
+  pending,
+  delivered,
+  canceled,
+}
 
-class Ordersmodel {
-  int ordernumber;
-  int trackingnumber;
+class OrdersModel {
+  int orderNumber;
+  int trackingNumber;
   int quantity;
-  int subtotal;
-  String deliveryaddress;
+  int subTotal;
+  String deliveryAddress;
+  OrderState state;
 
-  Ordersmodel(
-      {required this.ordernumber,
-      required this.trackingnumber,
-      required this.quantity,
-      required this.subtotal,
-      required this.deliveryaddress});
+  OrdersModel({
+    required this.orderNumber,
+    required this.trackingNumber,
+    required this.quantity,
+    required this.subTotal,
+    required this.deliveryAddress,
+    required this.state,
+  });
 
-  int getordernumber() {
-    return ordernumber;
+  factory OrdersModel.create(
+    OrderState state, {
+    required int orderNumber,
+    required int trackingNumber,
+    required int quantity,
+    required int subTotal,
+    required String deliveryAddress,
+  }) {
+    switch (state) {
+      case OrderState.pending:
+        return OrderPending(
+          orderNumber: orderNumber,
+          trackingNumber: trackingNumber,
+          quantity: quantity,
+          subTotal: subTotal,
+          deliveryAddress: deliveryAddress,
+        );
+      case OrderState.delivered:
+        return OrderDelivered(
+          orderNumber: orderNumber,
+          trackingNumber: trackingNumber,
+          quantity: quantity,
+          subTotal: subTotal,
+          deliveryAddress: deliveryAddress,
+        );
+      case OrderState.canceled:
+        return OrderCanceled(
+          orderNumber: orderNumber,
+          trackingNumber: trackingNumber,
+          quantity: quantity,
+          subTotal: subTotal,
+          deliveryAddress: deliveryAddress,
+        );
+    }
   }
 
-  int gettrackingnumber() {
-    return trackingnumber;
+  int getOrderNumber() {
+    return orderNumber;
   }
 
-  int getquantity() {
+  int getTrackingNumber() {
+    return trackingNumber;
+  }
+
+  int getQuantity() {
     return quantity;
   }
 
-  int getsubtotal() {
-    return subtotal;
+  int getSubtotal() {
+    return subTotal;
   }
 
-  String getdeliveryaddress() {
-    return deliveryaddress;
+  String getDeliveryAddress() {
+    return deliveryAddress;
+  }
+
+  OrderState getState() {
+    return state;
   }
 }
 
-class OrdPending extends Ordersmodel {
-  String state = "Pending";
-
-  OrdPending(
-      {required super.ordernumber,
-      required super.trackingnumber,
-      required super.quantity,
-      required super.subtotal,
-      required super.deliveryaddress});
+class OrderPending extends OrdersModel {
+  OrderPending({
+    required super.orderNumber,
+    required super.trackingNumber,
+    required super.quantity,
+    required super.subTotal,
+    required super.deliveryAddress,
+  }) : super(
+          state: OrderState.pending,
+        );
 }
 
-class OrdDelivered extends Ordersmodel {
-  String state = "Delivered";
-
-  OrdDelivered(
-      {required super.ordernumber,
-      required super.trackingnumber,
-      required super.quantity,
-      required super.subtotal,
-      required super.deliveryaddress});
+class OrderDelivered extends OrdersModel {
+  OrderDelivered({
+    required super.orderNumber,
+    required super.trackingNumber,
+    required super.quantity,
+    required super.subTotal,
+    required super.deliveryAddress,
+  }) : super(
+          state: OrderState.delivered,
+        );
 }
 
-class OrdCanceled extends Ordersmodel {
-  String state = "Canceled";
-
-  OrdCanceled(
-      {required super.ordernumber,
-      required super.trackingnumber,
-      required super.quantity,
-      required super.subtotal,
-      required super.deliveryaddress});
+class OrderCanceled extends OrdersModel {
+  OrderCanceled({
+    required super.orderNumber,
+    required super.trackingNumber,
+    required super.quantity,
+    required super.subTotal,
+    required super.deliveryAddress,
+  }) : super(
+          state: OrderState.canceled,
+        );
 }

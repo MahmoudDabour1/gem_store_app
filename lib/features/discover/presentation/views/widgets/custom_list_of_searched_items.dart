@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'custom_searched_item.dart';
-
 import '../../../../../core/utils/app_text_styles.dart';
 
 class CustomListOfSearchedItems extends StatelessWidget {
@@ -9,17 +9,15 @@ class CustomListOfSearchedItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Text('Found\n152 Results',
-            style: AppTextStyles.font20BlackRegular
-                .copyWith(color: Color(0xFF33302E))),
-        SizedBox(height: 20.h),
-        GridView.builder(
-          // TODO: Avoid using `shrink` here, as it may cause memory leaks and UI glitches. Consider an alternative solution.
-          shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+          child: Text('Found\n152 Results',
+              style: AppTextStyles.font20BlackRegular
+                  .copyWith(color: Color(0xFF33302E))),
+        ),
+        SliverToBoxAdapter(child: 20.vs),
+        SliverGrid.builder(
           itemCount: 10,
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2,
