@@ -9,7 +9,6 @@ class CustomAppBar extends StatelessWidget {
   final TextStyle textStyle;
   void _showFilterDrawer(BuildContext context) {
     Scaffold.of(context).openDrawer();
-
   }
 
   @override
