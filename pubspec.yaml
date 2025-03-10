@@ -28,28 +28,25 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  bloc: ^9.0.0
+  cupertino_icons: null
+  device_preview: ^1.2.0
+  firebase_auth: ^5.5.1
+  firebase_core: ^3.12.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.0.0
-
-  # The following adds the Cupertino Icons font to your application.
-  # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons:
-  logger:
-  flutter_screenutil:
-  flutter_svg:
-  bloc: ^9.0.0
   flutter_rating_bar: ^4.0.1
-  provider:
-  image_picker:
-  permission_handler: ^11.3.1
-  shared_preferences: ^2.3.3
-  device_preview: ^1.2.0
+  flutter_screenutil: null
+  flutter_secure_storage: ^9.2.4
+  flutter_svg: null
   get_it: ^8.0.3
-  firebase_core: ^3.12.1
-  firebase_auth: ^5.5.1
   google_sign_in: ^6.3.0
-
+  image_picker: null
+  logger: null
+  permission_handler: ^11.3.1
+  provider: null
+  shared_preferences: ^2.3.3
 
 dev_dependencies:
   flutter_lints: ^5.0.0
@@ -66,11 +63,9 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   # To add assets to your application, add an assets section, like this:
-
   assets:
     - assets/images/
     - assets/svgs/
-
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

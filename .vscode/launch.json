@@ -18,6 +18,7 @@
             "type": "dart",
             "program": "D:/gem_store_app/lib/main_development.dart",
             
+            
             "args": [
                 "--flavor",
                 "development"

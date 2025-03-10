@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/database/local/cach_helper.dart';
+import 'package:gem_store_app/core/di/dependency_injection.dart';
 import '../../../../core/helpers/extenstions.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -30,10 +32,16 @@ class TitleAndButton extends StatelessWidget {
           height: 55.h,
           width: 190.w,
           title: AppStrings.getStartedButtonString,
-          onPressed: () {
-            context.pushNamed(Routes.onBoardingIntroScreen);
+          onPressed: () async {
+            await sl<CacheHelper>().readSecureData(key: 'email') == null ||
+                    await sl<CacheHelper>().readSecureData(key: 'name') == null
+                ? context.pushNamed(
+                    sl<CacheHelper>().getDataBool(key: 'onBoarding') == true
+                        ? Routes.loginScreen
+                        : Routes.onBoardingIntroScreen)
+                : context.pushNamed(Routes.homeScreen);
           },
-        )
+        ),
       ],
     );
   }

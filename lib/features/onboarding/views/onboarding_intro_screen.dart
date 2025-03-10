@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/database/local/cach_helper.dart';
+import 'package:gem_store_app/core/di/dependency_injection.dart';
 import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import '../../../core/helpers/extenstions.dart';
 import '../../../core/utils/app_strings.dart';
@@ -12,9 +14,10 @@ import 'widgets/scrolling_items_and_indicator.dart';
 import '../../../core/routing/routes.dart';
 import '../../../core/utils/app_text_styles.dart';
 
-
 class OnboardingIntroScreen extends StatelessWidget {
-  const OnboardingIntroScreen({super.key});
+  OnboardingIntroScreen({super.key});
+
+  final bool onBourding = sl<CacheHelper>().getData(key: 'onBourding') ?? false;
 
   @override
   Widget build(BuildContext context) {
@@ -37,12 +40,15 @@ class OnboardingIntroScreen extends StatelessWidget {
                   children: [
                     BlocBuilder<ScrollingCubit, ScrollingState>(
                       builder: (context, state) {
-                        int index = (state is IncreaseDecreaseScrollingState) ? state.currentPage : 0;
+                        int index = (state is IncreaseDecreaseScrollingState)
+                            ? state.currentPage
+                            : 0;
                         return Column(
                           children: [
                             Text(
                               AppStrings.onBoardingItemsTitles[index],
-                              style: AppTextStyles.font20semiBold.copyWith(height: 2.h),
+                              style: AppTextStyles.font20semiBold
+                                  .copyWith(height: 2.h),
                             ),
                             Text(
                               AppStrings.onBoardingItemsSubTitles[index],
@@ -60,6 +66,8 @@ class OnboardingIntroScreen extends StatelessWidget {
                       height: 53.h,
                       width: 200.w,
                       onPressed: () {
+                        sl<CacheHelper>()
+                            .saveData(key: 'onBoarding', value: true);
                         context.pushNamed(Routes.loginScreen);
                         context.read<ScrollingCubit>().destroyController();
                       },
