@@ -39,7 +39,7 @@ class TitleAndButton extends StatelessWidget {
                     sl<CacheHelper>().getDataBool(key: 'onBoarding') == true
                         ? Routes.loginScreen
                         : Routes.onBoardingIntroScreen)
-                : context.pushNamed(Routes.homeScreen);
+                : context.pushNamed(Routes.bottomNavBar);
           },
         ),
       ],
