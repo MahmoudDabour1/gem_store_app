@@ -3,6 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/database/local/cach_helper.dart';
 import 'package:gem_store_app/core/di/dependency_injection.dart';
 
+import 'package:gem_store_app/core/database/local/cach_helper.dart';
+import 'package:gem_store_app/core/di/dependency_injection.dart';
 import '../../../../core/helpers/extenstions.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -39,7 +41,7 @@ class TitleAndButton extends StatelessWidget {
                     sl<CacheHelper>().getDataBool(key: 'onBoarding') == true
                         ? Routes.loginScreen
                         : Routes.onBoardingIntroScreen)
-                : context.pushNamed(Routes.homeScreen);
+                : context.pushNamed(Routes.bottomNavBar);
           },
         ),
       ],
