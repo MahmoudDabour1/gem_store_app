@@ -30,9 +30,6 @@ environment:
 dependencies:
   bloc: ^9.0.0
   cupertino_icons: null
-  device_preview: ^1.2.0
-  firebase_auth: ^5.5.1
-  firebase_core: ^3.12.1
   flutter:
     sdk: flutter
   flutter_bloc: ^9.0.0
@@ -40,13 +37,16 @@ dependencies:
   flutter_screenutil: null
   flutter_secure_storage: ^9.2.4
   flutter_svg: null
-  get_it: ^8.0.3
-  google_sign_in: ^6.3.0
   image_picker: null
   logger: null
   permission_handler: ^11.3.1
   provider: null
   shared_preferences: ^2.3.3
+  device_preview: ^1.2.0
+  get_it: ^8.0.3
+  firebase_core: ^3.12.1
+  firebase_auth: ^5.5.1
+  google_sign_in: ^6.2.2
   firebase_analytics: ^11.4.4
 
 
