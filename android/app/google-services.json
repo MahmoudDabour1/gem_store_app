@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "124161607897",
-    "project_id": "gem-store-app-10c46",
-    "storage_bucket": "gem-store-app-10c46.firebasestorage.app"
+    "project_number": "697615145823",
+    "project_id": "gem121",
+    "storage_bucket": "gem121.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:124161607897:android:bc3c8d437393c2159316c8",
+        "mobilesdk_app_id": "1:697615145823:android:74b37dadeb19223729f4ea",
         "android_client_info": {
           "package_name": "com.gemStoreApp.gem_store_app"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB2HGjs0QeCVZRsTxhUs8TpbKYBAqmOM8E"
+          "current_key": "AIzaSyCqQ0zNd2bX8q0tw2SBYy6W1kfAvIpU2c8"
         }
       ],
       "services": {
