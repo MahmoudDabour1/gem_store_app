@@ -21,6 +21,7 @@ void main() async {
   //await sl<CacheHelper>().clearData();
 
   await Firebase.initializeApp(
+    name: 'gem-store-app-10c46',
     options: DefaultFirebaseOptions.currentPlatform,
   );
   //print(sl<CacheHelper>().readSecureData(key: 'email'));
