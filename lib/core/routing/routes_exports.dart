@@ -34,4 +34,5 @@ export 'package:gem_store_app/features/setting/models/setting_row_model.dart';
 export 'package:gem_store_app/features/setting/widgets/list_of_setting_row.dart';
 export 'package:gem_store_app/features/setting/widgets/setting_row.dart';
 export 'package:gem_store_app/core/widgets/custom_app_bar.dart';
+export 'package:gem_store_app/features/update/update_screen.dart';
 
