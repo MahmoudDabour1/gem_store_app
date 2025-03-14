@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import '../analytics/analytics_services.dart';
 import 'routes.dart';
 import 'routes_exports.dart';
 import '../widgets/bottom_nav_bar.dart';
 import '../enums.dart';
 
 class AppRouter {
+  final AnalyticsService analyticsService = AnalyticsService();
+
   Route? generateRoute(RouteSettings settings) {
+    analyticsService.logScreenView(screenName: settings.name ?? 'Unknown');
+
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return buildPageRoute(

@@ -1,3 +1,10 @@
+buildscript {
+    ext.kotlin_version = '2.1.0'  // Update Kotlin to match the required version
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
 plugins {
     id "com.android.application"
     // START: FlutterFire Configuration
@@ -8,6 +15,7 @@ plugins {
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id "dev.flutter.flutter-gradle-plugin"
 }
+
 
 android {
     namespace = "com.gemStoreApp.gem_store_app"
@@ -58,4 +66,9 @@ android {
 
 flutter {
     source = "../.."
+}
+dependencies {
+    implementation platform('com.google.firebase:firebase-bom:33.10.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation( "com.google.firebase:firebase-analytics-ktx")
 }
