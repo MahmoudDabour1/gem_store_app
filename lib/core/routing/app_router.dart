@@ -102,6 +102,11 @@ class AppRouter {
           child: WishlistBoardView(),
           routeSettings: settings,
         );
+          case Routes.updateScreen:
+        return buildPageRoute(
+          child: UpdateScreen(),
+          routeSettings: settings,
+        );
       default:
         return null;
     }

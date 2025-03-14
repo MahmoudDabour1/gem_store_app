@@ -10,6 +10,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:gem_store_app/core/routing/app_router.dart';
 import 'package:gem_store_app/gem_store_app.dart';
 
+import '../lib/core/routing/app_router.dart';
+import '../lib/gem_store_app.dart';
+
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.

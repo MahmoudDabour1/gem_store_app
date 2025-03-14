@@ -14,6 +14,7 @@ class LoginScreen extends StatelessWidget {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 33.sp),
         child: SingleChildScrollView(
+          keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
