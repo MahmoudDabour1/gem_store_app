@@ -63,6 +63,9 @@ class DefaultFirebaseOptions {
     messagingSenderId: '124161607897',
     projectId: 'gem-store-app-10c46',
     storageBucket: 'gem-store-app-10c46.firebasestorage.app',
+    androidClientId: '124161607897-fpj8vnoi726fcrg79q650ej4pip43vji.apps.googleusercontent.com',
+    iosClientId: '124161607897-k4lv65raddpfdbo8fb6251mgka686ja6.apps.googleusercontent.com',
     iosBundleId: 'com.gemStoreApp.gemStoreApp',
   );
+
 }

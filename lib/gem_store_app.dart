@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/utils/themeData.dart';
+import 'package:provider/provider.dart';
+
+import 'core/analytics/analytics_services.dart';
 import 'core/routing/app_router.dart';
 import 'core/routing/routes.dart';
 import 'features/profile/view/widgets/themeProvider.dart';
-import 'package:provider/provider.dart';
+
 class GemStoreApp extends StatelessWidget {
   final AppRouter appRouter;
+  final AnalyticsService analyticsService = AnalyticsService();
 
-  const GemStoreApp({super.key, required this.appRouter});
+  GemStoreApp({super.key, required this.appRouter});
 
   @override
   Widget build(BuildContext context) {
@@ -23,13 +27,12 @@ class GemStoreApp extends StatelessWidget {
         darkTheme: darkTheme,
         themeMode: themeProvider.themeMode,
         onGenerateRoute: appRouter.generateRoute,
-        navigatorObservers: [NavigatorObserver()],
+        navigatorObservers: [
+          NavigatorObserver(),
+          analyticsService.getAnalyticsObserver(),
+        ],
         initialRoute: Routes.onBoardingScreen,
       ),
     );
   }
 }
-
-
-
-

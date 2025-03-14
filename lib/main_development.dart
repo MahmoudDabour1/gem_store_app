@@ -1,10 +1,13 @@
 import 'package:device_preview/device_preview.dart';
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'core/database/local/cach_helper.dart';
 import 'core/di/dependency_injection.dart';
 import 'features/profile/view/widgets/themeProvider.dart';
+import 'firebase_options.dart';
 import 'gem_store_app.dart';
 import 'package:provider/provider.dart';
 
@@ -22,6 +25,7 @@ void main() async {
     name: 'gem-store-app-10c46',
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  FirebaseAnalytics analytics = FirebaseAnalytics.instance;
   //print(sl<CacheHelper>().readSecureData(key: 'email'));
   runApp(
     ChangeNotifierProvider(

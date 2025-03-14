@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
+
 class LoginButton extends StatelessWidget {
   const LoginButton({
     super.key,
@@ -11,9 +12,7 @@ class LoginButton extends StatelessWidget {
       child: AppCustomButton(
         onPressed: () {
           Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => BottomNavBar()));
+              context, MaterialPageRoute(builder: (context) => BottomNavBar()));
           context.pushNamed(Routes.bottomNavBar);
         },
         text: AppStrings.loginButtonString,
