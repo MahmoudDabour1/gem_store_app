@@ -1,17 +1,13 @@
 import 'package:flutter/material.dart';
 // import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/features/orderinfo/Rate/widgets/ordercards/order.dart';
 // import '../../../../core/utils/app_text_styles.dart';
 import '../../../../core/utils/spacing.dart';
 import '../../models/myordersmodel.dart';
 // import '../../ordersdetails/views/orderdetailsscreen.dart';
 import 'ordercards/summary.dart';
-import 'ordercards/detalbuttom.dart';
 
 class OrderCard extends StatelessWidget {
-  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
-
   final OrdersModel order;
   const OrderCard({super.key, required this.order});
 

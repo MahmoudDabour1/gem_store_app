@@ -3,9 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/database/local/cach_helper.dart';
 import 'package:gem_store_app/core/di/dependency_injection.dart';
-
-import 'package:gem_store_app/core/database/local/cach_helper.dart';
-import 'package:gem_store_app/core/di/dependency_injection.dart';
+import 'package:gem_store_app/core/firebase_remote_config/remote_config.dart';
 import '../../../../core/helpers/extenstions.dart';
 import '../../../../core/routing/routes.dart';
 import '../../../../core/utils/app_strings.dart';
@@ -42,12 +40,13 @@ class TitleAndButton extends StatelessWidget {
             print("Logging event: get_started_button_clicked");
 
             await analytics.logEvent(name: 'get_started_button_clicked');
+
             await sl<CacheHelper>().readSecureData(key: 'email') == null ||
                     await sl<CacheHelper>().readSecureData(key: 'name') == null
                 ? context.pushNamed(
                     sl<CacheHelper>().getDataBool(key: 'onBoarding') == true
                         ? Routes.loginScreen
-                        : Routes.onBoardingIntroScreen)
+                        : Routes.bottomNavBar)
                 : context.pushNamed(Routes.bottomNavBar);
           },
         ),
