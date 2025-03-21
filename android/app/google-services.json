@@ -1,49 +1,71 @@
 {
   "project_info": {
-    "project_number": "124161607897",
-    "project_id": "gem-store-app-10c46",
-    "storage_bucket": "gem-store-app-10c46.firebasestorage.app"
+    "project_number": "810265079474",
+    "project_id": "gemauth-c6af9",
+    "storage_bucket": "gemauth-c6af9.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:124161607897:android:bc3c8d437393c2159316c8",
+        "mobilesdk_app_id": "1:810265079474:android:5430578813341236ffa3ab",
         "android_client_info": {
-          "package_name": "com.gemStoreApp.gem_store_app.dev"
+          "package_name": "com.android.application"
         }
       },
       "oauth_client": [
         {
-          "client_id": "124161607897-letjt2hcth4qsue4sevg4pjhlcogb8ht.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.gemStoreApp.gem_store_app.dev",
-            "certificate_hash": "cdafc09f46dd5cfb76c291fa1cd703ca7bd95dff"
-          }
-        },
-        {
-          "client_id": "124161607897-01200bn6q1jjl80ltv36colf2mp1f86b.apps.googleusercontent.com",
+          "client_id": "810265079474-2pcqs10aa9m311jnnvt5fgjjsd3oq6hn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB2HGjs0QeCVZRsTxhUs8TpbKYBAqmOM8E"
+          "current_key": "AIzaSyDsaX4UXb8qcwXbDfVEho-l9XzC-u5qads"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "124161607897-01200bn6q1jjl80ltv36colf2mp1f86b.apps.googleusercontent.com",
+              "client_id": "810265079474-2pcqs10aa9m311jnnvt5fgjjsd3oq6hn.apps.googleusercontent.com",
               "client_type": 3
-            },
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:810265079474:android:c5b12d7349a28604ffa3ab",
+        "android_client_info": {
+          "package_name": "com.gemStoreApp.gem_store_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "810265079474-n1h9arsu8dd8pm9f15m7e7lbb0q2rpkr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.gemStoreApp.gem_store_app",
+            "certificate_hash": "33cb4405452854dc1a268747534846b616e4b60a"
+          }
+        },
+        {
+          "client_id": "810265079474-2pcqs10aa9m311jnnvt5fgjjsd3oq6hn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsaX4UXb8qcwXbDfVEho-l9XzC-u5qads"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
             {
-              "client_id": "124161607897-k4lv65raddpfdbo8fb6251mgka686ja6.apps.googleusercontent.com",
-              "client_type": 2,
-              "ios_info": {
-                "bundle_id": "com.gemStoreApp.gemStoreApp"
-              }
+              "client_id": "810265079474-2pcqs10aa9m311jnnvt5fgjjsd3oq6hn.apps.googleusercontent.com",
+              "client_type": 3
             }
           ]
         }

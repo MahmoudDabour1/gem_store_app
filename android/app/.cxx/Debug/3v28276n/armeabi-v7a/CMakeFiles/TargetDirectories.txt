@@ -1,0 +1,2 @@
+F:/myapps/gem_store_app/android/app/.cxx/Debug/3v28276n/armeabi-v7a/CMakeFiles/edit_cache.dir
+F:/myapps/gem_store_app/android/app/.cxx/Debug/3v28276n/armeabi-v7a/CMakeFiles/rebuild_cache.dir
