@@ -4,6 +4,7 @@ import 'package:gem_store_app/core/di/dependency_injection.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class AuthService {
+  //TODO: ReImplemnt it using Cubit
   final FirebaseAuth auth = FirebaseAuth.instance;
   final GoogleSignIn googleSignIn = GoogleSignIn();
 
