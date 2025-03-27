@@ -16,7 +16,6 @@ import 'gem_store_app.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
-
   //TODO: Create a file called appInit and add in it all app intitializations and use it here
   WidgetsFlutterBinding.ensureInitialized();
   FlutterError.onError = (FlutterErrorDetails details) {

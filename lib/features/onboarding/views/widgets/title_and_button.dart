@@ -36,18 +36,23 @@ class TitleAndButton extends StatelessWidget {
           width: 190.w,
           title: AppStrings.getStartedButtonString,
           onPressed: () async {
-            FirebaseAnalytics analytics = FirebaseAnalytics.instance;
-            print("Logging event: get_started_button_clicked");
-
+            final analytics = FirebaseAnalytics.instance;
             await analytics.logEvent(name: 'get_started_button_clicked');
 
-            await sl<CacheHelper>().readSecureData(key: 'email') == null ||
-                    await sl<CacheHelper>().readSecureData(key: 'name') == null
-                ? context.pushNamed(
-                    sl<CacheHelper>().getDataBool(key: 'onBoarding') == true
-                        ? Routes.loginScreen
-                        : Routes.bottomNavBar)
-                : context.pushNamed(Routes.bottomNavBar);
+            final hasUserCredentials =
+                await sl<CacheHelper>().readSecureData(key: 'email') != null &&
+                    await sl<CacheHelper>().readSecureData(key: 'name') != null;
+
+            final onboardingCompleted =
+                sl<CacheHelper>().getDataBool(key: 'onBoarding') ?? false;
+
+            if (hasUserCredentials) {
+              context.pushNamed(Routes.bottomNavBar);
+            } else {
+              context.pushNamed(onboardingCompleted
+                  ? Routes.loginScreen
+                  : Routes.onBoardingIntroScreen);
+            }
           },
         ),
       ],

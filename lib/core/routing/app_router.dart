@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../features/login/auth/cubit/googleauth_cubit.dart';
 import '../analytics/analytics_services.dart';
 import 'routes.dart';
 import 'routes_exports.dart';
@@ -44,7 +46,10 @@ class AppRouter {
         );
       case Routes.loginScreen:
         return buildPageRoute(
-          child: LoginScreen(),
+          child: BlocProvider(
+            create: (context) => GoogleauthCubit(),
+            child: const LoginScreen(),
+          ),
           routeSettings: settings,
         );
       case Routes.checkoutScreen:
@@ -102,7 +107,7 @@ class AppRouter {
           child: WishlistBoardView(),
           routeSettings: settings,
         );
-          case Routes.updateScreen:
+      case Routes.updateScreen:
         return buildPageRoute(
           child: UpdateScreen(),
           routeSettings: settings,
