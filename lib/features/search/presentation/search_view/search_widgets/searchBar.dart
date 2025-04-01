@@ -23,7 +23,7 @@ class SearchBarWithFilter extends StatelessWidget {
               borderRadius: BorderRadius.circular(30.r),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.grey.withOpacity(0.3),
+                  color: Colors.grey.withValues(alpha:0.3),
                   spreadRadius: 1,
                   blurRadius: 10,
                   offset: const Offset(0, 5),
@@ -55,7 +55,7 @@ class SearchBarWithFilter extends StatelessWidget {
             borderRadius: BorderRadius.circular(13.r),
             boxShadow: [
               BoxShadow(
-                color: Colors.grey.withOpacity(0.3),
+                color: Colors.grey.withValues(alpha:0.3),
                 spreadRadius: 0,
                 blurRadius: 10,
                 offset: const Offset(0, 5),

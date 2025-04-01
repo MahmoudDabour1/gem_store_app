@@ -33,7 +33,7 @@ class HeaderOfDiscover extends StatelessWidget {
                     color: Color.fromRGBO(0, 0, 0, 0.15),
                     offset: const Offset(0, 1),
                     blurRadius: 3,
-                    spreadRadius: 0,
+                    spreadRadius: 0.r,
                   ),
                 ],
               ),
@@ -43,7 +43,7 @@ class HeaderOfDiscover extends StatelessWidget {
                 },
                 child: TextFormField(
                   decoration: InputDecoration(
-                    contentPadding: EdgeInsets.symmetric(vertical: 12.h),
+                    contentPadding: 12.pv,
                     border: InputBorder.none,
                     enabled: false,
                     hintText: AppStrings.search,

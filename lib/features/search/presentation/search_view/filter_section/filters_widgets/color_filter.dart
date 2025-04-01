@@ -6,7 +6,7 @@ class ColorFilter extends StatelessWidget {
   final List<String> selectedColors;
   final Function(String) onColorToggle;
 
-  const ColorFilter({
+  const ColorFilter({super.key, 
     required this.selectedColors,
     required this.onColorToggle,
   });

@@ -5,7 +5,7 @@ class PriceFilter extends StatelessWidget {
   final double maxPrice;
   final Function(RangeValues) onChanged;
 
-  const PriceFilter({
+  const PriceFilter({super.key, 
     required this.minPrice,
     required this.maxPrice,
     required this.onChanged,

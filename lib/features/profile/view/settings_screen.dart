@@ -1,11 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import '../../../core/helpers/extenstions.dart';
 import '../../../core/routing/routes.dart';
-import '../../../core/utils/app_assets.dart';
-import '../../../core/utils/app_colors.dart';
-import '../../../core/utils/app_strings.dart';
-import '../../../core/utils/app_text_styles.dart';
+
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -51,7 +47,7 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(height: 50.h),
+            50.vs,
             Container(
               height: 500.h,
               decoration: BoxDecoration(
@@ -59,7 +55,7 @@ class SettingsScreen extends StatelessWidget {
                 color:AppColors.whiteColor(context),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withOpacity(0.2),
+                    color: Colors.grey.withValues(alpha:0.2),
                     spreadRadius: 2,
                     blurRadius: 5,
                     offset: Offset(0, 2),

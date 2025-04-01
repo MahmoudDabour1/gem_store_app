@@ -1,13 +1,9 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-// import 'package:flutter_screenutil/flutter_screenutil.dart';
-// import '../../../core/utils/app_fonts.dart';
-import '../../../core/utils/app_text_styles.dart';
-// import '../../../core/utils/font_weight_helper.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import '../Rate/widgets/buildTabItem.dart';
 import '../cubit/orderinfo_cubit.dart';
 import '../models/myordersmodel.dart';
-// import '../Rate/widgets/order_list_view.dart';
+
 
 class TabTitles {
   static const String pending = "Pending";
@@ -29,7 +25,7 @@ class OrdersView extends StatelessWidget {
           appBar: AppBar(
             title: Center(
               child: Padding(
-                padding: EdgeInsets.only(top: 26, right: 35),
+                padding: EdgeInsets.only(top: 26.h, right: 35.w),
                 child: Text(
                   'My Orders',
                   style: AppTextStyles.font25BlackRegular,
@@ -40,13 +36,13 @@ class OrdersView extends StatelessWidget {
             bottom: PreferredSize(
               preferredSize: Size.fromHeight(70),
               child: SizedBox(
-                height: 40,
+                height: 40.h,
                 child: TabBar(
-                  dividerHeight: 0,
-                  labelPadding: EdgeInsets.symmetric(horizontal: 16),
+                  dividerHeight: 0.h,
+                  labelPadding: 16.ph,
                   indicator: BoxDecoration(
                     color: Color(0xFF43484B),
-                    borderRadius: BorderRadius.circular(30),
+                    borderRadius: BorderRadius.circular(30.r),
                   ),
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: Colors.transparent,

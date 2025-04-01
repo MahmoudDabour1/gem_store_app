@@ -44,7 +44,7 @@ class DiscoveryContainer extends StatelessWidget {
                 width: 105.w,
                 decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: color.withOpacity(0.5),
+                  color: color.withValues(alpha:0.5),
                 ),
               ),
               Container(

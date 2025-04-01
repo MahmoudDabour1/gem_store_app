@@ -5,7 +5,7 @@ class DiscountFilter extends StatelessWidget {
   final List<String> selectedDiscounts;
   final Function(String) onDiscountToggle;
 
-  const DiscountFilter({
+  const DiscountFilter({super.key, 
     required this.selectedDiscounts,
     required this.onDiscountToggle,
   });

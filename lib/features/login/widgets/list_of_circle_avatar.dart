@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
 // import 'package:gem_store_app/core/auth/googleauth_cubit.dart';
 
@@ -35,7 +35,7 @@ class _ListOfCircleAvatarState extends State<ListOfCircleAvatar> {
           alignment: Alignment.center,
           children: [
             ListView.separated(
-              padding: EdgeInsets.symmetric(horizontal: 70.w),
+              padding: 70.ph,
               physics: const NeverScrollableScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
@@ -49,14 +49,14 @@ class _ListOfCircleAvatarState extends State<ListOfCircleAvatar> {
                 );
               },
               separatorBuilder: (context, index) {
-                return horizontalSpace(20);
+                return 20.hs;
               },
               itemCount: circleAvatarModel.length,
             ),
             if (state is AuthLoading)
               Positioned.fill(
                 child: Container(
-                  color: AppColors.blackColor.withOpacity(0.3),
+                  color: AppColors.blackColor.withValues(alpha:0.3),
                   child: const Center(
                     child: CircularProgressIndicator(),
                   ),

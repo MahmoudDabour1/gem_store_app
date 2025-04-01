@@ -14,7 +14,7 @@ class CustomListOfRecommendedProduct extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          padding: 25.ph,
           child: Row(
             children: [
               Text(
@@ -34,8 +34,7 @@ class CustomListOfRecommendedProduct extends StatelessWidget {
         ),
         20.vs,
         SizedBox(
-          height: 66.h,
-          //width: 126.w,
+          height: 66.h,       
           child: ListView.builder(
             shrinkWrap: true,
             itemCount: 5,

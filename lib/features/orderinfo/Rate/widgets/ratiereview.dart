@@ -1,13 +1,10 @@
-import 'package:flutter/material.dart';
-// import 'package:flutter_rating_bar/flutter_rating_bar.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'package:gem_store_app/features/orderinfo/Rate/widgets/submetrating/feedback.dart';
 import 'package:gem_store_app/features/orderinfo/Rate/widgets/submetrating/ratingbar.dart';
 import 'package:gem_store_app/features/orderinfo/Rate/widgets/submetrating/reviewtext.dart';
 import 'package:gem_store_app/features/orderinfo/Rate/widgets/submetrating/submetbuttom.dart';
-// import '../../../../core/utils/app_colors.dart';
-// import '../../../../core/utils/app_text_styles.dart';
 import '../../../../core/utils/spacing.dart';
-// import '../../../../core/widgets/bottom_nav_bar.dart';
+
 
 class Ratiereview extends StatelessWidget {
   // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
@@ -15,9 +12,9 @@ class Ratiereview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return  Center(
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 30),
+        padding: 30.ph,
         child: _ReviewForm(),
       ),
     );
@@ -32,7 +29,7 @@ class _ReviewForm extends StatefulWidget {
 }
 
 class _ReviewFormState extends State<_ReviewForm> {
-  double _rating = 3.5;
+  final double _rating = 3.5;
   final TextEditingController _controller = TextEditingController();
 
   @override
@@ -40,7 +37,7 @@ class _ReviewFormState extends State<_ReviewForm> {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        verticalSpace(30),
+        30.vs,
         CustomRatingBar(
             rating: _rating,
             onRatingUpdate: (rating) => setState(() => rating = rating)),

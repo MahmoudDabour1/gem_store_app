@@ -32,7 +32,6 @@ class CustomTopSectionThird extends StatelessWidget {
               ),
             ),
           ),
-          //SizedBox(width: 10.w),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

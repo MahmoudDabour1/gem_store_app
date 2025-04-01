@@ -1,22 +1,22 @@
-import 'package:flutter/material.dart';
+import '../../../../../core/helpers/public_imports.dart';
 
 class ReviewTextField extends StatelessWidget {
   final TextEditingController controller;
 
-  const ReviewTextField({required this.controller});
+  const ReviewTextField({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 250,
       child: Card(
         elevation: 5,
-        margin: const EdgeInsets.all(10),
+        margin: 10.allEdgeInsets,
         color: Colors.white,
         child: Stack(
           children: [
             Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: 8.allEdgeInsets,
               child: TextField(
                 controller: controller,
                 decoration: const InputDecoration(
@@ -27,12 +27,12 @@ class ReviewTextField extends StatelessWidget {
                 maxLines: null,
               ),
             ),
-            const Positioned(
+             Positioned(
               bottom: 8,
               right: 8,
               child: Text(
                 '50 characters',
-                style: TextStyle(color: Colors.grey, fontSize: 12),
+                style: AppTextStyles.font12regular,
               ),
             ),
           ],

@@ -15,7 +15,7 @@ class NewCollectionSection extends StatelessWidget {
       height: 157.h,
       color: AppColors.lightGreyColor,
       child: Padding(
-        padding: const EdgeInsets.all(24.0),
+        padding: 24.allEdgeInsets,
         child: Row(
           children: [
             Expanded(
@@ -52,7 +52,7 @@ class NewCollectionSection extends StatelessWidget {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color:
-                          AppColors.firstGreyContainerColor.withOpacity(0.5)),
+                          AppColors.firstGreyContainerColor.withValues(alpha:0.5)),
                 ),
                 Container(
                   height: 100.h,

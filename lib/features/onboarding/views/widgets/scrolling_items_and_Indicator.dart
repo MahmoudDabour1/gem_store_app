@@ -7,7 +7,6 @@ import 'package:gem_store_app/features/onboarding/views/widgets/scrolling_part.d
 
 
 class ScrollingItemsAndIndicator extends StatelessWidget {
-  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
 
   const ScrollingItemsAndIndicator({super.key});
 

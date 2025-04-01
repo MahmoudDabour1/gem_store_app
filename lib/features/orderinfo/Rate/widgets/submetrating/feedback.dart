@@ -1,33 +1,40 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
+import 'package:gem_store_app/core/routing/routes_exports.dart';
 
-import '../../../../../core/widgets/bottom_nav_bar.dart';
+
 
 class FeedbackDialog extends StatelessWidget {
-  const FeedbackDialog();
+  const FeedbackDialog({super.key});
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24)),
-      contentPadding: const EdgeInsets.all(20),
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(24.r)),
+      contentPadding: 20.allEdgeInsets,
       content: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          SvgPicture.asset('assets/svgs/Check.svg', width: 100, height: 100),
-          const SizedBox(height: 20),
-          const Text(
+          SvgPicture.asset('assets/svgs/Check.svg', width: 100.w, height: 100.h),
+          20.vs,
+           Text(
             'Thank you for your feedback!',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            style: AppTextStyles.font20BlackBold.copyWith(
+              color: Colors.black,
+              
+            ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 10),
-          const Text(
+          10.vs,
+           Text(
             'We appreciated your feedback.\nWe’ll use your feedback to improve \nyour experience',
-            style: TextStyle(fontSize: 16),
+            style: AppTextStyles.font16regular.copyWith(
+              color: Colors.black,
+              
+            ),
             textAlign: TextAlign.center,
           ),
-          const SizedBox(height: 20),
+          20.vs,
           ElevatedButton(
             onPressed: () => Navigator.push(
               context,
@@ -36,10 +43,13 @@ class FeedbackDialog extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               backgroundColor: Colors.black,
               shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(40)),
+                  borderRadius: BorderRadius.circular(40.r)),
             ),
-            child: const Text('Done',
-                style: TextStyle(color: Colors.white, fontSize: 16)),
+            child:  Text('Done',
+                style: AppTextStyles.font16regular.copyWith(
+                  color: Colors.white,
+                  
+                )),
           ),
         ],
       ),

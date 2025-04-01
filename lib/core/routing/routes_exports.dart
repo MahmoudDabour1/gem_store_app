@@ -7,7 +7,7 @@ export 'package:gem_store_app/features/login/login_screen.dart';
 export 'package:gem_store_app/features/onboarding/views/onboarding_intro_screen.dart';
 export 'package:gem_store_app/features/orderinfo/views/orders_screen.dart';
 export 'package:gem_store_app/features/product_details/views/item_details_views.dart';
-export 'package:gem_store_app/features/profile/view/profileDrawer_screen.dart';
+export 'package:gem_store_app/features/profile/view/profiledrawer_screen.dart';
 export 'package:gem_store_app/features/profile/view/profile_screen.dart';
 export 'package:gem_store_app/features/search/presentation/search_view/search_screen.dart';
 export 'package:gem_store_app/features/setting/setting_screen.dart';

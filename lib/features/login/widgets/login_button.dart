@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
 
 class LoginButton extends StatelessWidget {
@@ -18,9 +19,9 @@ class LoginButton extends StatelessWidget {
         text: AppStrings.loginButtonString,
         textStyle: AppTextStyles.font16whiteBold,
         buttonColor: AppColors.buttonLoginColor,
-        height: 50,
-        width: 147,
-        radius: 40,
+        height: 50.h,
+        width: 147.w,
+        radius: 40.r,
       ),
     );
   }
