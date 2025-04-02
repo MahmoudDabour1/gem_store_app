@@ -7,7 +7,6 @@ class UpdateScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return UpgradeAlert(
-     
       dialogStyle: UpgradeDialogStyle.material,
       onUpdate: () => true,
       onIgnore: () => true,

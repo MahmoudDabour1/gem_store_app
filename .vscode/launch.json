@@ -1,11 +1,12 @@
 {
   "version": "0.2.0",
   "configurations": [
+  
     {
       "name": "production",
       "request": "launch",
       "type": "dart",
-      "program": "D:/gem_store_app/lib/main_production.dart",
+      "program": "lib/main_production.dart",
       "args": [
         "--flavor",
         "production"
@@ -15,7 +16,7 @@
       "name": "development",
       "request": "launch",
       "type": "dart",
-      "program": "D:/gem_store_app/lib/main_development.dart",
+      "program": "lib/main_development.dart",
       "args": [
         "--flavor",
         "development"
@@ -45,8 +46,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "d:/gem_store_app/windows/flutter",
-      "program": "d:/gem_store_app/windows/flutter/build/Debug/outDebug",
+      "cwd": "gem_store_app/windows/flutter",
+      "program": "gem_store_app/windows/flutter/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

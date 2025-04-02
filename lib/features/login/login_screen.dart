@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -12,36 +13,32 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor:AppColors.whiteColor(context),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 33.sp),
+        padding: 33.ph,
         child: SingleChildScrollView(
           keyboardDismissBehavior: ScrollViewKeyboardDismissBehavior.onDrag,
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              verticalSpace(93),
+              93.vs,
               Text(
                 AppStrings.logInto,
                 style: AppTextStyles.font24BlackBold,
               ),
               Text(AppStrings.yourAccount,
                   style: AppTextStyles.font24BlackBold),
-              verticalSpace(48),
+              93.vs,
               AppTextFormField(
                 labelText: AppStrings.emailAddress,
                 validator: (value) {},
                 keyboardType: TextInputType.emailAddress,
               ),
-              verticalSpace(
-                20,
-              ),
+              20.vs,
               AppTextFormField(
                 labelText: AppStrings.password,
                 validator: (value) {},
                 keyboardType: TextInputType.visiblePassword,
               ),
-              verticalSpace(
-                28,
-              ),
+              28.vs,
               Row(
                 children: [
                   Spacer(flex: 1),
@@ -49,19 +46,13 @@ class LoginScreen extends StatelessWidget {
                       style: AppTextStyles.font12BlackRegular),
                 ],
               ),
-              verticalSpace(
-                25,
-              ),
+              25.vs,
               LoginButton(),
-              verticalSpace(
-                18,
-              ),
+              18.vs,
               Center(
                   child: Text(AppStrings.orLogInWith,
                       style: AppTextStyles.font12BlackRegular)),
-              verticalSpace(
-                40,
-              ),
+              40.vs,
               SizedBox(
                   height: 42.sp,
                   width: double.infinity,

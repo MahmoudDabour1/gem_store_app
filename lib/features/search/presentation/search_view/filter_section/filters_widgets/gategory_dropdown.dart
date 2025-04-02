@@ -5,7 +5,7 @@ class CategoryDropdown extends StatelessWidget {
   final String selectedCategory;
   final Function(String) onCategoryChanged;
 
-  const CategoryDropdown({
+  const CategoryDropdown({super.key, 
     required this.selectedCategory,
     required this.onCategoryChanged,
   });

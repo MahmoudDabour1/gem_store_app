@@ -14,11 +14,6 @@ class CollectionSection extends StatelessWidget {
         width: double.infinity,
         child: ClipRRect(
           borderRadius: BorderRadius.circular(20.r),
-          //   child: SvgPicture.asset(
-          //     AppAssets.collection3,
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
           child: Image.asset(
             AppAssets.collection3,
             fit: BoxFit.cover,

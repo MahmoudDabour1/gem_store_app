@@ -5,7 +5,7 @@ import '../../../core/routing/routes.dart';
 import '../../../core/utils/app_assets.dart';
 import '../../../core/utils/app_strings.dart';
 import '../../../core/utils/app_text_styles.dart';
-import 'widgets/modeButton.dart';
+import 'widgets/modebutton.dart';
 
 class ProfileDrawer extends StatelessWidget {
   const ProfileDrawer({super.key});

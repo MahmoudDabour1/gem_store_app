@@ -23,7 +23,6 @@ class CustomFeatureProduct extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(10.r),
-            //child: SvgPicture.asset(AppAssets.feature),
             child: Image.asset(
               AppAssets.feature2,
               fit: BoxFit.cover,

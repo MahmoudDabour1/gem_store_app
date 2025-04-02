@@ -22,8 +22,8 @@ Widget buildTabContent<T extends OrdersModel>(BuildContext context) {
 
 Widget buildTabItem(String title) {
   return Container(
-    width: 91,
-    height: 28,
+    width: 91.w,
+    height: 28.h,
     alignment: Alignment.center,
     child: Text(
       title,

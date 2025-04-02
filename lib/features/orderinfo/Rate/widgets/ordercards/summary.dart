@@ -1,34 +1,36 @@
-import 'package:flutter/material.dart';
-
-import '../../../../../core/utils/app_text_styles.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import '../../../models/myordersmodel.dart';
 
 class OrderSummary extends StatelessWidget {
   final OrdersModel order;
-  const OrderSummary({required this.order});
+  const OrderSummary({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text("Quantity:", style: AppTextStyles.font20GreyLight),
-            Text("${order.getQuantity()}",
-                style: const TextStyle(fontSize: 20)),
-          ],
+        displayPaymentDetails(
+          title:"Quantity:",
+          value: order.getQuantity(), 
         ),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            Text("Subtotal:", style: AppTextStyles.font20GreyLight),
-            Text("${order.getSubtotal()}",
-                style: const TextStyle(fontSize: 20)),
-          ],
+        displayPaymentDetails(
+          title:"Subtotal:",
+          value: order.getSubtotal(), 
         ),
+       
       ],
     );
+  }
+
+  Row displayPaymentDetails({required String title ,required num value}) {
+    return Row(
+        crossAxisAlignment:title=="Quantity:"? CrossAxisAlignment.start : CrossAxisAlignment.end,
+        children: [
+          Text(title, style: AppTextStyles.font20GreyLight),
+          Text("$value",
+              style:  TextStyle(fontSize: 20.sp)),
+        ],
+      );
   }
 }

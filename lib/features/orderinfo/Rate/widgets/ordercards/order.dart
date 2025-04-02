@@ -27,7 +27,7 @@ class OrderHeader extends StatelessWidget {
 
 class TrackingInfo extends StatelessWidget {
   final OrdersModel order;
-  const TrackingInfo({required this.order});
+  const TrackingInfo({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +35,7 @@ class TrackingInfo extends StatelessWidget {
       children: [
         Text("Tracking number:", style: AppTextStyles.font20GreyLight),
         Text(" ${order.getTrackingNumber()}",
-            style: const TextStyle(fontSize: 20)),
+            style:  TextStyle(fontSize: 20.sp)),
       ],
     );
   }
@@ -43,7 +43,7 @@ class TrackingInfo extends StatelessWidget {
 
 class OrderStatusAndDetailsButton extends StatelessWidget {
   final OrdersModel order;
-  OrderStatusAndDetailsButton({required this.order});
+  const OrderStatusAndDetailsButton({required this.order});
 
   @override
   Widget build(BuildContext context) {
@@ -59,7 +59,7 @@ class OrderStatusAndDetailsButton extends StatelessWidget {
 
 class OrderStatus extends StatelessWidget {
   final OrdersModel order;
-  const OrderStatus({required this.order});
+  const OrderStatus({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {

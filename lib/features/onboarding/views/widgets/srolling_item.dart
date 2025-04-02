@@ -1,7 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 
-import '../../../../core/utils/app_assets.dart';
 
 class CustomeItem extends StatelessWidget {
   const CustomeItem({
@@ -16,11 +14,11 @@ class CustomeItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: page != index ? EdgeInsets.all(25) : EdgeInsets.all(10),
+      margin: page != index ? 25.allEdgeInsets : 10.allEdgeInsets,
       padding: EdgeInsets.only(top: 10.h),
       decoration: BoxDecoration(
           color: Color(0xFFE7E8E9),
-          borderRadius: BorderRadius.all(Radius.circular(7))),
+          borderRadius: BorderRadius.all(Radius.circular(7.r))),
       child: Image.asset(
         AppAssets.imagesOboardeingItems[index],
         fit: BoxFit.contain,

@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../../../../core/utils/app_colors.dart';
-import '../../../../core/utils/app_strings.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'themeProvider.dart';
 import 'package:provider/provider.dart';
 
@@ -14,7 +11,7 @@ class ModeButton extends StatelessWidget {
 
     return Container(
       width: 200.w,
-      padding: EdgeInsets.all(4),
+      padding: 4.allEdgeInsets,
       decoration: BoxDecoration(
         color: themeProvider.isDarkMode ? Colors.grey[800] : Colors.grey[200],
         borderRadius: BorderRadius.circular(30.r),

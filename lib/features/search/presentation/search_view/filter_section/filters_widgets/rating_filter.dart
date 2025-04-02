@@ -5,7 +5,7 @@ class RatingFilter extends StatelessWidget {
   final List<int> selectedRatings;
   final Function(int) onRatingToggle;
 
-  const RatingFilter({
+  const RatingFilter({super.key, 
     required this.selectedRatings,
     required this.onRatingToggle,
   });

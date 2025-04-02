@@ -7,7 +7,7 @@ import 'package:gem_store_app/features/search/presentation/cubit/search_cubit.da
 import 'package:gem_store_app/features/search/presentation/cubit/search_states.dart';
 import 'package:gem_store_app/features/search/presentation/search_view/filter_section/filter_widget.dart';
 import 'package:gem_store_app/features/search/presentation/search_view/search_widgets/recent_searches.dart';
-import 'package:gem_store_app/features/search/presentation/search_view/search_widgets/searchBar.dart';
+import 'package:gem_store_app/features/search/presentation/search_view/search_widgets/searchbar.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});

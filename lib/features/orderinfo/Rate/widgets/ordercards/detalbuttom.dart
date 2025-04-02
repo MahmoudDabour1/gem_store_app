@@ -6,7 +6,7 @@ import '../../../ordersdetails/views/orderdetailsscreen.dart';
 
 class DetailsButton extends StatelessWidget {
   final OrdersModel order;
-  const DetailsButton({required this.order});
+  const DetailsButton({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {

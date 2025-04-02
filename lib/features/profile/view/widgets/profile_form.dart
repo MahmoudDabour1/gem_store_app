@@ -29,7 +29,7 @@ class ProfileForm extends StatelessWidget {
               child: AppTextFormField(
                 controller: firstNameController,
                 labelText: AppStrings.firstName,
-                validator: (value) => value!.isEmpty ? AppStrings.required : null,
+                validator: (value) => value.isEmpty ? AppStrings.required : null,
               ),
             ),
             Spacer(),
@@ -38,7 +38,7 @@ class ProfileForm extends StatelessWidget {
               child: AppTextFormField(
                 controller: lastNameController,
                 labelText: AppStrings.lastName,
-                validator: (value) => value!.isEmpty ? AppStrings.required : null,
+                validator: (value) => value.isEmpty ? AppStrings.required : null,
               ),
             ),
           ],
@@ -49,7 +49,7 @@ class ProfileForm extends StatelessWidget {
           child: AppTextFormField(
             controller: emailController,
             labelText: AppStrings.email,
-            validator: (value) => value!.isEmpty ? AppStrings.required : null,
+            validator: (value) => value.isEmpty ? AppStrings.required : null,
           ),
         ),
         SizedBox(height: 30.h),
@@ -60,7 +60,7 @@ class ProfileForm extends StatelessWidget {
               child: AppTextFormField(
                 controller: genderController,
                 labelText: AppStrings.gender,
-                validator: (value) => value!.isEmpty ? AppStrings.required : null,
+                validator: (value) => value.isEmpty ? AppStrings.required : null,
               ),
             ),
             Spacer(),
@@ -69,7 +69,7 @@ class ProfileForm extends StatelessWidget {
               child: AppTextFormField(
                 controller: phoneController,
                 labelText: AppStrings.phone,
-                validator: (value) => value!.isEmpty ? AppStrings.required : null,
+                validator: (value) => value.isEmpty ? AppStrings.required : null,
               ),
             ),
           ],
