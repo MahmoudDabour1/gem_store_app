@@ -21,11 +21,11 @@ void main() async {
         ),
       ),
     ),
-    //   ChangeNotifierProvider(
-    //     create: (context) => ThemeProvider(),
-    //     child: GemStoreApp(
-    //       appRouter: AppRouter(),
-    //     ),
-    //   ),
+      // ChangeNotifierProvider(
+      //   create: (context) => ThemeProvider(),
+      //   child: GemStoreApp(
+      //     appRouter: AppRouter(),
+      //   ),
+      // ),
   );
 }
