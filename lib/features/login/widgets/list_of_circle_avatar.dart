@@ -1,10 +1,10 @@
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
 // import 'package:gem_store_app/core/auth/googleauth_cubit.dart';
 
 import '../auth/cubit/googleauth_cubit.dart';
+import 'AuthLoading.dart';
 
 class ListOfCircleAvatar extends StatefulWidget {
   const ListOfCircleAvatar({super.key});
@@ -55,12 +55,7 @@ class _ListOfCircleAvatarState extends State<ListOfCircleAvatar> {
             ),
             if (state is AuthLoading)
               Positioned.fill(
-                child: Container(
-                  color: AppColors.blackColor.withValues(alpha:0.3),
-                  child: const Center(
-                    child: CircularProgressIndicator(),
-                  ),
-                ),
+                child: AuthLoadingOverlay(),
               ),
           ],
         );

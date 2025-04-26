@@ -1,7 +1,8 @@
 buildscript {
     ext {
-        // Update to a compatible Gradle version
+        
         gradle_version = '8.1.0'
+        crashlytics_gradle_version = '2.9.9' 
     }
     repositories {
         google()
@@ -9,7 +10,8 @@ buildscript {
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradle_version"
-     classpath "com.google.gms:google-services:4.4.2"
+        classpath "com.google.gms:google-services:4.4.2"
+        classpath "com.google.firebase:firebase-crashlytics-gradle:$crashlytics_gradle_version" 
     }
 }
 

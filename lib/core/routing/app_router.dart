@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gem_store_app/features/search/presentation/search_view/setting/setting_screen.dart';
 import '../../features/login/auth/cubit/googleauth_cubit.dart';
 import '../analytics/analytics_services.dart';
 import 'routes.dart';

@@ -25,7 +25,7 @@ class BluredButton extends StatelessWidget {
           height: height,
           width: width,
           decoration: BoxDecoration(
-            color:const Color.fromARGB(255, 139, 137, 137).withValues(alpha:.92),
+            color:const Color.fromARGB(255, 139, 137, 137).withAlpha(51) ,
             borderRadius: BorderRadius.circular(25),
             border: Border.all(color: Colors.white),
           ),
