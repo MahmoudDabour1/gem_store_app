@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
+import 'package:gem_store_app/features/search/presentation/search_view/setting/models/setting_row_model.dart';
+import 'package:gem_store_app/features/search/presentation/search_view/setting/widgets/setting_row.dart';
 
 
 class ListOfSettingRowWidget extends StatelessWidget {

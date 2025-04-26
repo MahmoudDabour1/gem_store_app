@@ -55,7 +55,7 @@ class SettingsScreen extends StatelessWidget {
                 color:AppColors.whiteColor(context),
                 boxShadow: [
                   BoxShadow(
-                    color: Colors.grey.withValues(alpha:0.2),
+                    color: Colors.grey.withAlpha(51),
                     spreadRadius: 2,
                     blurRadius: 5,
                     offset: Offset(0, 2),
