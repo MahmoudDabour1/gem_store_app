@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/core/utils/app_strings.dart';
-import '../../../../../core/utils/app_text_styles.dart';
+import 'package:gem_store_app/features/home/presentation/views/widgets/featured_products_widgets/featured_products_bloc_builder.dart';
+
+import '../../../../../../core/utils/app_text_styles.dart';
+import '../../../controller/home_cubit.dart';
+import '../../../controller/home_state.dart';
 import 'custom_feature_products.dart';
 
 class CustomListOfFeatureProducts extends StatelessWidget {
@@ -32,22 +37,7 @@ class CustomListOfFeatureProducts extends StatelessWidget {
           ),
         ),
         20.vs,
-        SizedBox(
-          height: 240.h,
-          child: ListView.builder(
-            shrinkWrap: true,
-            itemCount: 5,
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (context, index) {
-              return Padding(
-                padding: const EdgeInsets.only(
-                  left: 25,
-                ),
-                child: CustomFeatureProduct(),
-              );
-            },
-          ),
-        ),
+        FeaturedProductsBlocBuilder(),
       ],
     );
   }

@@ -12,20 +12,20 @@ void main() async {
   await initApp();
 
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: DevicePreview(
-        enabled: !kReleaseMode,
-        builder: (context) => GemStoreApp(
+    // ChangeNotifierProvider(
+    //   create: (context) => ThemeProvider(),
+    //   child: DevicePreview(
+    //     enabled: !kReleaseMode,
+    //     builder: (context) => GemStoreApp(
+    //       appRouter: AppRouter(),
+    //     ),
+    //   ),
+    // ),
+      ChangeNotifierProvider(
+        create: (context) => ThemeProvider(),
+        child: GemStoreApp(
           appRouter: AppRouter(),
         ),
       ),
-    ),
-      // ChangeNotifierProvider(
-      //   create: (context) => ThemeProvider(),
-      //   child: GemStoreApp(
-      //     appRouter: AppRouter(),
-      //   ),
-      // ),
   );
 }

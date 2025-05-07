@@ -46,8 +46,8 @@ class GemStoreApp extends StatelessWidget {
               NavigatorObserver(),
               analyticsService.getAnalyticsObserver(),
             ],
-            initialRoute:
-                updateRequired ? Routes.updateScreen : Routes.onBoardingScreen,
+            initialRoute: Routes.homeScreen,
+                // updateRequired ? Routes.updateScreen : Routes.onBoardingScreen,
           ),
         );
       },
