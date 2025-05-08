@@ -6,8 +6,15 @@ import 'package:shimmer/shimmer.dart';
 
 class FeaturedProductsCachedNetworkImage extends StatelessWidget {
   final FeaturedProductsModel featuredProductsModel;
+  final double? height;
+  final double? width;
 
-  const FeaturedProductsCachedNetworkImage({super.key, required this.featuredProductsModel});
+  const FeaturedProductsCachedNetworkImage({
+    super.key,
+    required this.featuredProductsModel,
+     this.height,
+     this.width,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -16,21 +23,21 @@ class FeaturedProductsCachedNetworkImage extends StatelessWidget {
       child: CachedNetworkImage(
         imageUrl: featuredProductsModel.images!.first,
         imageBuilder: (context, imageProvider) => Container(
-          height: 180.h,
+          height: height??180.h,
+          width: width??126.w,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: imageProvider,
-                fit: BoxFit.cover,
-                colorFilter:
-                ColorFilter.mode(Colors.red, BlendMode.colorBurn)),
+              image: imageProvider,
+              fit: BoxFit.fill,
+            ),
           ),
         ),
         placeholder: (context, url) => Shimmer.fromColors(
           baseColor: Colors.grey[300]!,
           highlightColor: Colors.grey[100]!,
           child: Container(
-            height: 180.h,
-            width: 126.w,
+            height: height??180.h,
+            width: width??126.w,
             decoration: BoxDecoration(
               color: Colors.white,
               borderRadius: BorderRadius.circular(10.r),
@@ -38,8 +45,8 @@ class FeaturedProductsCachedNetworkImage extends StatelessWidget {
           ),
         ),
         errorWidget: (context, url, error) => Container(
-          height: 180.h,
-          width: 126.w,
+          height: height??180.h,
+          width: width??126.w,
           decoration: BoxDecoration(
             color: Colors.grey[200],
             borderRadius: BorderRadius.circular(10.r),

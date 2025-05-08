@@ -40,34 +40,30 @@ class CustomListOfRecommendedProduct extends StatelessWidget {
         20.vs,
         SizedBox(
           height: 66.h,
-          child: BlocProvider(
-            create: (context) =>
-                HomeCubit(sl(), sl())..getRecommendedProducts(2),
-            child: BlocBuilder<HomeCubit, HomeState>(
-              builder: (context, state) {
-                if (state is RecommendedProductsLoading) {
-                  return const Center(
-                      child: ListOfShimmerRecommendedProducts());
-                } else if (state is RecommendedProductsFailure) {
-                  return Center(child: Text(state.message));
-                } else if (state is RecommendedProductsSuccess) {
-                  return ListView.builder(
-                    shrinkWrap: true,
-                    itemCount: state.products.length,
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      return Padding(
-                        padding: const EdgeInsets.only(left: 25),
-                        child: CustomRecommendedProduct(
-                          recommendedProductModel: state.products[index],
-                        ),
-                      );
-                    },
-                  );
-                }
-                return const Center(child: ListOfShimmerRecommendedProducts());
-              },
-            ),
+          child: BlocBuilder<HomeCubit, HomeState>(
+            builder: (context, state) {
+              if (state is RecommendedProductsLoading) {
+                return const Center(
+                    child: ListOfShimmerRecommendedProducts());
+              } else if (state is RecommendedProductsFailure) {
+                return Center(child: Text(state.message));
+              } else if (state is RecommendedProductsSuccess) {
+                return ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: state.products.length,
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) {
+                    return Padding(
+                      padding: const EdgeInsets.only(left: 25),
+                      child: CustomRecommendedProduct(
+                        recommendedProductModel: state.products[index],
+                      ),
+                    );
+                  },
+                );
+              }
+              return const Center(child: ListOfShimmerRecommendedProducts());
+            },
           ),
         ),
       ],

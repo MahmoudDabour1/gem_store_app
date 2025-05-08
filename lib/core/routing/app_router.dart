@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gem_store_app/features/home/presentation/controller/home_cubit.dart';
 import 'package:gem_store_app/features/search/presentation/search_view/setting/setting_screen.dart';
 
+import '../../features/home/presentation/views/widgets/featured_products_widgets/all_featured_products_screen.dart';
 import '../../features/login/auth/cubit/googleauth_cubit.dart';
 import '../analytics/analytics_services.dart';
 import '../di/dependency_injection.dart';
@@ -112,6 +113,10 @@ class AppRouter {
       case Routes.updateScreen:
         return buildPageRoute(
           child: UpdateScreen(),
+          routeSettings: settings,
+        ); case Routes.allFeaturedProductsScreen:
+        return buildPageRoute(
+          child: AllFeaturedProductsScreen(),
           routeSettings: settings,
         );
       default:
