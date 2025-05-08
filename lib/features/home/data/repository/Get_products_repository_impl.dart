@@ -26,24 +26,6 @@ class ProductRepositoryImpl extends GetProductRepository {
     }
   }
 
-  Future<Either<Failure, List<RecommendedProductModel>>>
-      getRecommendedProductsByCategory(int categryId) async {
-    try {
-      logger.d('Fetching recommended products from remote data source');
-      final result =
-          await remoteDataSource.getRecommendedProductsByCategory(categryId);
-      logger.d('Successfully fetched ${result.length} products');
-      return Right(result);
-    } on ServerException catch (e) {
-      logger.e(
-          'DioError in getRecommendedProducts: ${e.errorMessageModel.statusMessage}');
-      return Left(ServerFailure(e.errorMessageModel.statusMessage));
-    } catch (e, stackTrace) {
-      logger.e('Unexpected error in getRecommendedProducts',
-          error: e, stackTrace: stackTrace);
-      return Left(ServerFailure('An unexpected error occurred'));
-    }
-  }
 
   @override
   Future<List<FeaturedProductsModel>> sortProductsByPrice(
@@ -98,4 +80,25 @@ class ProductRepositoryImpl extends GetProductRepository {
 
     return result;
   }
+
+  @override
+  Future<Either<Failure, List<RecommendedProductModel>>>
+  getRecommendedProductsByCategory(int categryId) async {
+    try {
+      logger.d('Fetching recommended products from remote data source');
+      final result =
+      await remoteDataSource.getRecommendedProductsByCategory(categryId);
+      logger.d('Successfully fetched ${result.length} products');
+      return Right(result);
+    } on ServerException catch (e) {
+      logger.e(
+          'DioError in getRecommendedProducts: ${e.errorMessageModel.statusMessage}');
+      return Left(ServerFailure(e.errorMessageModel.statusMessage));
+    } catch (e, stackTrace) {
+      logger.e('Unexpected error in getRecommendedProducts',
+          error: e, stackTrace: stackTrace);
+      return Left(ServerFailure('An unexpected error occurred'));
+    }
+  }
+
 }
