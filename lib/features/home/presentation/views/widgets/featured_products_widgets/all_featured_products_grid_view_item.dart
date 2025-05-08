@@ -22,14 +22,16 @@ class AllFeaturedProductsGridViewItem extends StatelessWidget {
         10.vs,
         Text(
           featuredProductsModel.title ?? '',
-          style: AppTextStyles.font12Darkmedium,
+          style: AppTextStyles.font14DArkGraySemiBold.copyWith(
+            color: AppColors.blackColor,
+          ),
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
         ),
         5.vs,
         Text(
           '\$ ${featuredProductsModel.price ?? 0}',
-          style: AppTextStyles.font16DarkBold,
+          style: AppTextStyles.font14DarkGrayMedium,
           overflow: TextOverflow.ellipsis,
           maxLines: 1,
         )
