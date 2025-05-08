@@ -21,4 +21,5 @@ class Routes {
   static const String settings = "/SettingsScreen";
   static const String profileDrawer = "/profileDrawer";
   static const String updateScreen = "/updateScreen";
+  static const String allFeaturedProductsScreen = "/allFeaturedProductsScreen";
 }

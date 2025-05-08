@@ -16,55 +16,66 @@ class ProductRepositoryImpl extends FeaturedProductRepository {
   Future<Either<Failure, List<FeaturedProductsModel>>>
       getFeaturedProducts() async {
     try {
-      logger.d('Fetching featured products from remote data source');
       final result = await remoteDataSource.getFeaturedProducts();
-      logger.d('Successfully fetched ${result.length} products');
       return Right(result);
     } on ServerException catch (e) {
-      logger.e(
-          'DioError in getFeaturedProducts: ${e.errorMessageModel.statusMessage}');
       return Left(ServerFailure(e.errorMessageModel.statusMessage));
     } catch (e, stackTrace) {
-      logger.e('Unexpected error in getFeaturedProducts',
-          error: e, stackTrace: stackTrace);
       return Left(ServerFailure('An unexpected error occurred'));
     }
   }
 
-//   @override
-//   Future<List<FeaturedProductsModel>> sortProductsByPrice(List<FeaturedProductsModel> products, bool ascending) async {
-//     return mergeSort(products, ascending);
-//   }
-//
-//   List<FeaturedProductsModel> mergeSort(List<FeaturedProductsModel> products, bool ascending) {
-//     if (products.length <= 1) return products;
-//
-//     int mid = products.length ~/ 2;
-//     List<FeaturedProductsModel> left = mergeSort(products.sublist(0, mid), ascending);
-//     List<FeaturedProductsModel> right = mergeSort(products.sublist(mid), ascending);
-//
-//     return merge(left, right, ascending);
-//   }
-//
-//   List<FeaturedProductsModel> merge(List<FeaturedProductsModel> left, List<FeaturedProductsModel> right, bool ascending) {
-//     List<FeaturedProductsModel> result = [];
-//     int leftIndex = 0;
-//     int rightIndex = 0;
-//
-//     while (leftIndex < left.length && rightIndex < right.length) {
-//       if ((ascending && left[leftIndex].price <= right[rightIndex].price) ||
-//           (!ascending && left[leftIndex].price >= right[rightIndex].price)) {
-//         result.add(left[leftIndex]);
-//         leftIndex++;
-//       } else {
-//         result.add(right[rightIndex]);
-//         rightIndex++;
-//       }
-//     }
-//
-//     result.addAll(left.sublist(leftIndex));
-//     result.addAll(right.sublist(rightIndex));
-//
-//     return result;
-//   }
+  @override
+  Future<List<FeaturedProductsModel>> sortProductsByPrice(
+      List<FeaturedProductsModel> products,
+      bool ascending,
+      ) async {
+    if (products.length <= 1) return products;
+
+    final productsCopy = List<FeaturedProductsModel>.from(products);
+
+    return mergeSort(productsCopy, ascending);
+  }
+
+  List<FeaturedProductsModel> mergeSort(
+      List<FeaturedProductsModel> products,
+      bool ascending,
+      ) {
+    if (products.length <= 1) return products;
+
+    final mid = products.length ~/ 2;
+    final left = mergeSort(products.sublist(0, mid), ascending);
+    final right = mergeSort(products.sublist(mid), ascending);
+
+    return merge(left, right, ascending);
+  }
+
+  List<FeaturedProductsModel> merge(
+      List<FeaturedProductsModel> left,
+      List<FeaturedProductsModel> right,
+      bool ascending,
+      ) {
+    final result = <FeaturedProductsModel>[];
+    int leftIndex = 0;
+    int rightIndex = 0;
+
+    while (leftIndex < left.length && rightIndex < right.length) {
+      final leftPrice = left[leftIndex].price ?? 0;
+      final rightPrice = right[rightIndex].price ?? 0;
+
+      if ((ascending && leftPrice <= rightPrice) ||
+          (!ascending && leftPrice >= rightPrice)) {
+        result.add(left[leftIndex]);
+        leftIndex++;
+      } else {
+        result.add(right[rightIndex]);
+        rightIndex++;
+      }
+    }
+
+    result.addAll(left.sublist(leftIndex));
+    result.addAll(right.sublist(rightIndex));
+
+    return result;
+  }
 }

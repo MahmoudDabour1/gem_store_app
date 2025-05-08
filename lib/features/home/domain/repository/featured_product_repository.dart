@@ -6,4 +6,9 @@ import '../../../../core/error/failure.dart';
 
 abstract class FeaturedProductRepository {
   Future<Either<Failure, List<FeaturedProductsModel>>> getFeaturedProducts();
+
+  Future<List<FeaturedProductsModel>> sortProductsByPrice(
+      List<FeaturedProductsModel> products,
+      bool ascending,
+      );
 }
