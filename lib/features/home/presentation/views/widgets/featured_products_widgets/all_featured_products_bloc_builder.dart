@@ -1,9 +1,10 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gem_store_app/features/home/presentation/views/widgets/featured_products_widgets/all_featured_products_grid_view_item.dart';
 
 import '../../../../../../core/helpers/public_imports.dart';
 import '../../../controller/home_cubit.dart';
 import '../../../controller/home_state.dart';
+import 'all_featured_products_grid_view.dart';
+import 'all_featured_products_shimmer_grid_view.dart';
 
 class AllFeaturedProductsBlocBuilder extends StatelessWidget {
   const AllFeaturedProductsBlocBuilder({super.key});
@@ -23,21 +24,8 @@ class AllFeaturedProductsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupSuccessWidget(products) {
-    return GridView.builder(
-      shrinkWrap: true,
-      physics: BouncingScrollPhysics(),
-      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 2,
-        crossAxisSpacing: 16.w,
-        mainAxisSpacing: 16.h,
-        childAspectRatio: 1.1 / 1.5,
-      ),
-      itemCount: products.length,
-      itemBuilder: (context, index) {
-        return AllFeaturedProductsGridViewItem(
-          featuredProductsModel: products[index],
-        );
-      },
+    return AllFeaturedProductsGridView(
+      products: products,
     );
   }
 
@@ -46,6 +34,6 @@ class AllFeaturedProductsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupLoading() {
-    return const Center(child: CircularProgressIndicator());
+    return AllFeaturedProductsShimmerGridView();
   }
 }

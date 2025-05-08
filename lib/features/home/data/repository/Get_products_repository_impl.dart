@@ -21,7 +21,7 @@ class ProductRepositoryImpl extends GetProductRepository {
       return Right(result);
     } on ServerException catch (e) {
       return Left(ServerFailure(e.errorMessageModel.statusMessage));
-    } catch (e, stackTrace) {
+    } catch (e) {
       return Left(ServerFailure('An unexpected error occurred'));
     }
   }
