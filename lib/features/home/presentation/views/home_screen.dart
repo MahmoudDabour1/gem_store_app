@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => HomeCubit(sl())..getFeaturedProducts(),
+      create: (context) => HomeCubit(sl(), sl())..getFeaturedProducts(),
       child: SafeArea(
         child: Scaffold(
           backgroundColor: AppColors.whiteColor(context),
