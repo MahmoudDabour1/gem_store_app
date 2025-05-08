@@ -1,14 +1,17 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gem_store_app/core/usecase/base_usecase.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/featured_products_use_case.dart';
+import 'package:gem_store_app/features/home/domain/use_cases/get_recommended_products_use_case.dart';
 
 import '../../data/models/featured_products_model.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit(this.featuredProductsUseCase) : super(HomeState.initial());
+  HomeCubit(this.featuredProductsUseCase, this.getRecommendedProductsUseCase)
+      : super(HomeState.initial());
 
   final GetFeaturedProductsUseCase featuredProductsUseCase;
+  final GetRecommendedProductsUseCase getRecommendedProductsUseCase;
 
   int currentIndex = 0;
 
@@ -68,6 +71,20 @@ class HomeCubit extends Cubit<HomeState> {
     final mid = products.length ~/ 2;
     final left = await _mergeSort(products.sublist(0, mid), ascending);
     final right = await _mergeSort(products.sublist(mid), ascending);
+  Future<void> getRecommendedProducts(int categoryId) async {
+    emit(HomeState.recommendedProductsLoading());
+    final result = await getRecommendedProductsUseCase.call(categoryId);
+    result.fold(
+      (failure) {
+        emit(HomeState.recommendedProductsFailure(failure.message));
+      },
+      (recommendedProducts) {
+        emit(HomeState.recommendedProductsSuccess(recommendedProducts));
+      },
+    );
+  }
+
+  int currentIndex = 0;
 
     return _merge(left, right, ascending);
   }

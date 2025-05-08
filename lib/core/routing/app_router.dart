@@ -19,7 +19,7 @@ class AppRouter {
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return buildPageRoute(
-          child: OnboardingScreen(),
+          child: HomeScreen(),
           routeSettings: settings,
         );
       case Routes.onBoardingIntroScreen:
