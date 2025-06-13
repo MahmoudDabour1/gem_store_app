@@ -15,11 +15,4 @@ class HomeState with _$HomeState {
   const factory HomeState.featuredProductsFailure(String errorMessage) =
       FeaturedProductsFailure;
   const factory HomeState.selectedCategory() = SelectedCategory;
-
-  const factory HomeState.recommendedProductsLoading() =
-      RecommendedProductsLoading;
-  const factory HomeState.recommendedProductsSuccess(
-      List<RecommendedProductModel> products) = RecommendedProductsSuccess;
-  const factory HomeState.recommendedProductsFailure(String message) =
-      RecommendedProductsFailure;
 }

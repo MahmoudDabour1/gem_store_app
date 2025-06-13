@@ -17,5 +17,7 @@ abstract class ProductRemoteDataSource {
   @GET("${ApiConstants.getRecommendedProductsByCategory}{categoryId}/products")
   Future<List<RecommendedProductModel>> getRecommendedProductsByCategory(
     @Path("categoryId") int categoryId,
+    @Query("offset") int offset,
+    @Query("limit") int limit,
   );
 }

@@ -50,7 +50,7 @@ class CustomRecommendedProduct extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                width: 120.w,
+                width: 100.w,
                 child: Text(
                   recommendedProductModel.title,
                   style: AppTextStyles.font12Darkmedium,

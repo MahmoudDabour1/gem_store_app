@@ -24,10 +24,6 @@ mixin _$HomeState {
         featuredProductsSuccess,
     required TResult Function(String errorMessage) featuredProductsFailure,
     required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,10 +34,6 @@ mixin _$HomeState {
         featuredProductsSuccess,
     TResult? Function(String errorMessage)? featuredProductsFailure,
     TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -52,10 +44,6 @@ mixin _$HomeState {
         featuredProductsSuccess,
     TResult Function(String errorMessage)? featuredProductsFailure,
     TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -69,12 +57,6 @@ mixin _$HomeState {
     required TResult Function(FeaturedProductsFailure value)
         featuredProductsFailure,
     required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -84,12 +66,6 @@ mixin _$HomeState {
     TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -99,12 +75,6 @@ mixin _$HomeState {
     TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -177,10 +147,6 @@ class _$HomeInitialImpl implements HomeInitial {
         featuredProductsSuccess,
     required TResult Function(String errorMessage) featuredProductsFailure,
     required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
   }) {
     return initial();
   }
@@ -194,10 +160,6 @@ class _$HomeInitialImpl implements HomeInitial {
         featuredProductsSuccess,
     TResult? Function(String errorMessage)? featuredProductsFailure,
     TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
   }) {
     return initial?.call();
   }
@@ -211,10 +173,6 @@ class _$HomeInitialImpl implements HomeInitial {
         featuredProductsSuccess,
     TResult Function(String errorMessage)? featuredProductsFailure,
     TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -234,12 +192,6 @@ class _$HomeInitialImpl implements HomeInitial {
     required TResult Function(FeaturedProductsFailure value)
         featuredProductsFailure,
     required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
   }) {
     return initial(this);
   }
@@ -252,12 +204,6 @@ class _$HomeInitialImpl implements HomeInitial {
     TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
   }) {
     return initial?.call(this);
   }
@@ -270,12 +216,6 @@ class _$HomeInitialImpl implements HomeInitial {
     TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -339,10 +279,6 @@ class _$FeaturedProductsLoadingImpl implements FeaturedProductsLoading {
         featuredProductsSuccess,
     required TResult Function(String errorMessage) featuredProductsFailure,
     required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
   }) {
     return featuredProductsLoading();
   }
@@ -356,10 +292,6 @@ class _$FeaturedProductsLoadingImpl implements FeaturedProductsLoading {
         featuredProductsSuccess,
     TResult? Function(String errorMessage)? featuredProductsFailure,
     TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
   }) {
     return featuredProductsLoading?.call();
   }
@@ -373,10 +305,6 @@ class _$FeaturedProductsLoadingImpl implements FeaturedProductsLoading {
         featuredProductsSuccess,
     TResult Function(String errorMessage)? featuredProductsFailure,
     TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (featuredProductsLoading != null) {
@@ -396,12 +324,6 @@ class _$FeaturedProductsLoadingImpl implements FeaturedProductsLoading {
     required TResult Function(FeaturedProductsFailure value)
         featuredProductsFailure,
     required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
   }) {
     return featuredProductsLoading(this);
   }
@@ -414,12 +336,6 @@ class _$FeaturedProductsLoadingImpl implements FeaturedProductsLoading {
     TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
   }) {
     return featuredProductsLoading?.call(this);
   }
@@ -432,12 +348,6 @@ class _$FeaturedProductsLoadingImpl implements FeaturedProductsLoading {
     TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (featuredProductsLoading != null) {
@@ -538,10 +448,6 @@ class _$FeaturedProductsSuccessImpl implements FeaturedProductsSuccess {
         featuredProductsSuccess,
     required TResult Function(String errorMessage) featuredProductsFailure,
     required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
   }) {
     return featuredProductsSuccess(featuredProducts);
   }
@@ -555,10 +461,6 @@ class _$FeaturedProductsSuccessImpl implements FeaturedProductsSuccess {
         featuredProductsSuccess,
     TResult? Function(String errorMessage)? featuredProductsFailure,
     TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
   }) {
     return featuredProductsSuccess?.call(featuredProducts);
   }
@@ -572,10 +474,6 @@ class _$FeaturedProductsSuccessImpl implements FeaturedProductsSuccess {
         featuredProductsSuccess,
     TResult Function(String errorMessage)? featuredProductsFailure,
     TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (featuredProductsSuccess != null) {
@@ -595,12 +493,6 @@ class _$FeaturedProductsSuccessImpl implements FeaturedProductsSuccess {
     required TResult Function(FeaturedProductsFailure value)
         featuredProductsFailure,
     required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
   }) {
     return featuredProductsSuccess(this);
   }
@@ -613,12 +505,6 @@ class _$FeaturedProductsSuccessImpl implements FeaturedProductsSuccess {
     TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
   }) {
     return featuredProductsSuccess?.call(this);
   }
@@ -631,12 +517,6 @@ class _$FeaturedProductsSuccessImpl implements FeaturedProductsSuccess {
     TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (featuredProductsSuccess != null) {
@@ -738,10 +618,6 @@ class _$FeaturedProductsFailureImpl implements FeaturedProductsFailure {
         featuredProductsSuccess,
     required TResult Function(String errorMessage) featuredProductsFailure,
     required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
   }) {
     return featuredProductsFailure(errorMessage);
   }
@@ -755,10 +631,6 @@ class _$FeaturedProductsFailureImpl implements FeaturedProductsFailure {
         featuredProductsSuccess,
     TResult? Function(String errorMessage)? featuredProductsFailure,
     TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
   }) {
     return featuredProductsFailure?.call(errorMessage);
   }
@@ -772,10 +644,6 @@ class _$FeaturedProductsFailureImpl implements FeaturedProductsFailure {
         featuredProductsSuccess,
     TResult Function(String errorMessage)? featuredProductsFailure,
     TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (featuredProductsFailure != null) {
@@ -795,12 +663,6 @@ class _$FeaturedProductsFailureImpl implements FeaturedProductsFailure {
     required TResult Function(FeaturedProductsFailure value)
         featuredProductsFailure,
     required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
   }) {
     return featuredProductsFailure(this);
   }
@@ -813,12 +675,6 @@ class _$FeaturedProductsFailureImpl implements FeaturedProductsFailure {
     TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
   }) {
     return featuredProductsFailure?.call(this);
   }
@@ -831,12 +687,6 @@ class _$FeaturedProductsFailureImpl implements FeaturedProductsFailure {
     TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (featuredProductsFailure != null) {
@@ -906,10 +756,6 @@ class _$SelectedCategoryImpl implements SelectedCategory {
         featuredProductsSuccess,
     required TResult Function(String errorMessage) featuredProductsFailure,
     required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
   }) {
     return selectedCategory();
   }
@@ -923,10 +769,6 @@ class _$SelectedCategoryImpl implements SelectedCategory {
         featuredProductsSuccess,
     TResult? Function(String errorMessage)? featuredProductsFailure,
     TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
   }) {
     return selectedCategory?.call();
   }
@@ -940,10 +782,6 @@ class _$SelectedCategoryImpl implements SelectedCategory {
         featuredProductsSuccess,
     TResult Function(String errorMessage)? featuredProductsFailure,
     TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (selectedCategory != null) {
@@ -963,12 +801,6 @@ class _$SelectedCategoryImpl implements SelectedCategory {
     required TResult Function(FeaturedProductsFailure value)
         featuredProductsFailure,
     required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
   }) {
     return selectedCategory(this);
   }
@@ -981,12 +813,6 @@ class _$SelectedCategoryImpl implements SelectedCategory {
     TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
   }) {
     return selectedCategory?.call(this);
   }
@@ -999,12 +825,6 @@ class _$SelectedCategoryImpl implements SelectedCategory {
     TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
     TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
     TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
     required TResult orElse(),
   }) {
     if (selectedCategory != null) {
@@ -1016,571 +836,4 @@ class _$SelectedCategoryImpl implements SelectedCategory {
 
 abstract class SelectedCategory implements HomeState {
   const factory SelectedCategory() = _$SelectedCategoryImpl;
-}
-
-/// @nodoc
-abstract class _$$RecommendedProductsLoadingImplCopyWith<$Res> {
-  factory _$$RecommendedProductsLoadingImplCopyWith(
-          _$RecommendedProductsLoadingImpl value,
-          $Res Function(_$RecommendedProductsLoadingImpl) then) =
-      __$$RecommendedProductsLoadingImplCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$RecommendedProductsLoadingImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$RecommendedProductsLoadingImpl>
-    implements _$$RecommendedProductsLoadingImplCopyWith<$Res> {
-  __$$RecommendedProductsLoadingImplCopyWithImpl(
-      _$RecommendedProductsLoadingImpl _value,
-      $Res Function(_$RecommendedProductsLoadingImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-}
-
-/// @nodoc
-
-class _$RecommendedProductsLoadingImpl implements RecommendedProductsLoading {
-  const _$RecommendedProductsLoadingImpl();
-
-  @override
-  String toString() {
-    return 'HomeState.recommendedProductsLoading()';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RecommendedProductsLoadingImpl);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() featuredProductsLoading,
-    required TResult Function(List<FeaturedProductsModel> featuredProducts)
-        featuredProductsSuccess,
-    required TResult Function(String errorMessage) featuredProductsFailure,
-    required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
-  }) {
-    return recommendedProductsLoading();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? featuredProductsLoading,
-    TResult? Function(List<FeaturedProductsModel> featuredProducts)?
-        featuredProductsSuccess,
-    TResult? Function(String errorMessage)? featuredProductsFailure,
-    TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
-  }) {
-    return recommendedProductsLoading?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? featuredProductsLoading,
-    TResult Function(List<FeaturedProductsModel> featuredProducts)?
-        featuredProductsSuccess,
-    TResult Function(String errorMessage)? featuredProductsFailure,
-    TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
-    required TResult orElse(),
-  }) {
-    if (recommendedProductsLoading != null) {
-      return recommendedProductsLoading();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(FeaturedProductsLoading value)
-        featuredProductsLoading,
-    required TResult Function(FeaturedProductsSuccess value)
-        featuredProductsSuccess,
-    required TResult Function(FeaturedProductsFailure value)
-        featuredProductsFailure,
-    required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
-  }) {
-    return recommendedProductsLoading(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomeInitial value)? initial,
-    TResult? Function(FeaturedProductsLoading value)? featuredProductsLoading,
-    TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
-    TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
-    TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
-  }) {
-    return recommendedProductsLoading?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(FeaturedProductsLoading value)? featuredProductsLoading,
-    TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
-    TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
-    TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
-    required TResult orElse(),
-  }) {
-    if (recommendedProductsLoading != null) {
-      return recommendedProductsLoading(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RecommendedProductsLoading implements HomeState {
-  const factory RecommendedProductsLoading() = _$RecommendedProductsLoadingImpl;
-}
-
-/// @nodoc
-abstract class _$$RecommendedProductsSuccessImplCopyWith<$Res> {
-  factory _$$RecommendedProductsSuccessImplCopyWith(
-          _$RecommendedProductsSuccessImpl value,
-          $Res Function(_$RecommendedProductsSuccessImpl) then) =
-      __$$RecommendedProductsSuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({List<RecommendedProductModel> products});
-}
-
-/// @nodoc
-class __$$RecommendedProductsSuccessImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$RecommendedProductsSuccessImpl>
-    implements _$$RecommendedProductsSuccessImplCopyWith<$Res> {
-  __$$RecommendedProductsSuccessImplCopyWithImpl(
-      _$RecommendedProductsSuccessImpl _value,
-      $Res Function(_$RecommendedProductsSuccessImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? products = null,
-  }) {
-    return _then(_$RecommendedProductsSuccessImpl(
-      null == products
-          ? _value._products
-          : products // ignore: cast_nullable_to_non_nullable
-              as List<RecommendedProductModel>,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$RecommendedProductsSuccessImpl implements RecommendedProductsSuccess {
-  const _$RecommendedProductsSuccessImpl(
-      final List<RecommendedProductModel> products)
-      : _products = products;
-
-  final List<RecommendedProductModel> _products;
-  @override
-  List<RecommendedProductModel> get products {
-    if (_products is EqualUnmodifiableListView) return _products;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_products);
-  }
-
-  @override
-  String toString() {
-    return 'HomeState.recommendedProductsSuccess(products: $products)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RecommendedProductsSuccessImpl &&
-            const DeepCollectionEquality().equals(other._products, _products));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(_products));
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RecommendedProductsSuccessImplCopyWith<_$RecommendedProductsSuccessImpl>
-      get copyWith => __$$RecommendedProductsSuccessImplCopyWithImpl<
-          _$RecommendedProductsSuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() featuredProductsLoading,
-    required TResult Function(List<FeaturedProductsModel> featuredProducts)
-        featuredProductsSuccess,
-    required TResult Function(String errorMessage) featuredProductsFailure,
-    required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
-  }) {
-    return recommendedProductsSuccess(products);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? featuredProductsLoading,
-    TResult? Function(List<FeaturedProductsModel> featuredProducts)?
-        featuredProductsSuccess,
-    TResult? Function(String errorMessage)? featuredProductsFailure,
-    TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
-  }) {
-    return recommendedProductsSuccess?.call(products);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? featuredProductsLoading,
-    TResult Function(List<FeaturedProductsModel> featuredProducts)?
-        featuredProductsSuccess,
-    TResult Function(String errorMessage)? featuredProductsFailure,
-    TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
-    required TResult orElse(),
-  }) {
-    if (recommendedProductsSuccess != null) {
-      return recommendedProductsSuccess(products);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(FeaturedProductsLoading value)
-        featuredProductsLoading,
-    required TResult Function(FeaturedProductsSuccess value)
-        featuredProductsSuccess,
-    required TResult Function(FeaturedProductsFailure value)
-        featuredProductsFailure,
-    required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
-  }) {
-    return recommendedProductsSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomeInitial value)? initial,
-    TResult? Function(FeaturedProductsLoading value)? featuredProductsLoading,
-    TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
-    TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
-    TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
-  }) {
-    return recommendedProductsSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(FeaturedProductsLoading value)? featuredProductsLoading,
-    TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
-    TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
-    TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
-    required TResult orElse(),
-  }) {
-    if (recommendedProductsSuccess != null) {
-      return recommendedProductsSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RecommendedProductsSuccess implements HomeState {
-  const factory RecommendedProductsSuccess(
-          final List<RecommendedProductModel> products) =
-      _$RecommendedProductsSuccessImpl;
-
-  List<RecommendedProductModel> get products;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RecommendedProductsSuccessImplCopyWith<_$RecommendedProductsSuccessImpl>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$RecommendedProductsFailureImplCopyWith<$Res> {
-  factory _$$RecommendedProductsFailureImplCopyWith(
-          _$RecommendedProductsFailureImpl value,
-          $Res Function(_$RecommendedProductsFailureImpl) then) =
-      __$$RecommendedProductsFailureImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({String message});
-}
-
-/// @nodoc
-class __$$RecommendedProductsFailureImplCopyWithImpl<$Res>
-    extends _$HomeStateCopyWithImpl<$Res, _$RecommendedProductsFailureImpl>
-    implements _$$RecommendedProductsFailureImplCopyWith<$Res> {
-  __$$RecommendedProductsFailureImplCopyWithImpl(
-      _$RecommendedProductsFailureImpl _value,
-      $Res Function(_$RecommendedProductsFailureImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$RecommendedProductsFailureImpl(
-      null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$RecommendedProductsFailureImpl implements RecommendedProductsFailure {
-  const _$RecommendedProductsFailureImpl(this.message);
-
-  @override
-  final String message;
-
-  @override
-  String toString() {
-    return 'HomeState.recommendedProductsFailure(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$RecommendedProductsFailureImpl &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$RecommendedProductsFailureImplCopyWith<_$RecommendedProductsFailureImpl>
-      get copyWith => __$$RecommendedProductsFailureImplCopyWithImpl<
-          _$RecommendedProductsFailureImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() featuredProductsLoading,
-    required TResult Function(List<FeaturedProductsModel> featuredProducts)
-        featuredProductsSuccess,
-    required TResult Function(String errorMessage) featuredProductsFailure,
-    required TResult Function() selectedCategory,
-    required TResult Function() recommendedProductsLoading,
-    required TResult Function(List<RecommendedProductModel> products)
-        recommendedProductsSuccess,
-    required TResult Function(String message) recommendedProductsFailure,
-  }) {
-    return recommendedProductsFailure(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? featuredProductsLoading,
-    TResult? Function(List<FeaturedProductsModel> featuredProducts)?
-        featuredProductsSuccess,
-    TResult? Function(String errorMessage)? featuredProductsFailure,
-    TResult? Function()? selectedCategory,
-    TResult? Function()? recommendedProductsLoading,
-    TResult? Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult? Function(String message)? recommendedProductsFailure,
-  }) {
-    return recommendedProductsFailure?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? featuredProductsLoading,
-    TResult Function(List<FeaturedProductsModel> featuredProducts)?
-        featuredProductsSuccess,
-    TResult Function(String errorMessage)? featuredProductsFailure,
-    TResult Function()? selectedCategory,
-    TResult Function()? recommendedProductsLoading,
-    TResult Function(List<RecommendedProductModel> products)?
-        recommendedProductsSuccess,
-    TResult Function(String message)? recommendedProductsFailure,
-    required TResult orElse(),
-  }) {
-    if (recommendedProductsFailure != null) {
-      return recommendedProductsFailure(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(HomeInitial value) initial,
-    required TResult Function(FeaturedProductsLoading value)
-        featuredProductsLoading,
-    required TResult Function(FeaturedProductsSuccess value)
-        featuredProductsSuccess,
-    required TResult Function(FeaturedProductsFailure value)
-        featuredProductsFailure,
-    required TResult Function(SelectedCategory value) selectedCategory,
-    required TResult Function(RecommendedProductsLoading value)
-        recommendedProductsLoading,
-    required TResult Function(RecommendedProductsSuccess value)
-        recommendedProductsSuccess,
-    required TResult Function(RecommendedProductsFailure value)
-        recommendedProductsFailure,
-  }) {
-    return recommendedProductsFailure(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(HomeInitial value)? initial,
-    TResult? Function(FeaturedProductsLoading value)? featuredProductsLoading,
-    TResult? Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
-    TResult? Function(FeaturedProductsFailure value)? featuredProductsFailure,
-    TResult? Function(SelectedCategory value)? selectedCategory,
-    TResult? Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult? Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult? Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
-  }) {
-    return recommendedProductsFailure?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(HomeInitial value)? initial,
-    TResult Function(FeaturedProductsLoading value)? featuredProductsLoading,
-    TResult Function(FeaturedProductsSuccess value)? featuredProductsSuccess,
-    TResult Function(FeaturedProductsFailure value)? featuredProductsFailure,
-    TResult Function(SelectedCategory value)? selectedCategory,
-    TResult Function(RecommendedProductsLoading value)?
-        recommendedProductsLoading,
-    TResult Function(RecommendedProductsSuccess value)?
-        recommendedProductsSuccess,
-    TResult Function(RecommendedProductsFailure value)?
-        recommendedProductsFailure,
-    required TResult orElse(),
-  }) {
-    if (recommendedProductsFailure != null) {
-      return recommendedProductsFailure(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class RecommendedProductsFailure implements HomeState {
-  const factory RecommendedProductsFailure(final String message) =
-      _$RecommendedProductsFailureImpl;
-
-  String get message;
-
-  /// Create a copy of HomeState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RecommendedProductsFailureImplCopyWith<_$RecommendedProductsFailureImpl>
-      get copyWith => throw _privateConstructorUsedError;
 }
