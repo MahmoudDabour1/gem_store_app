@@ -1,14 +1,21 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 
 import '../../../controller/home_cubit.dart';
 import '../../../controller/home_state.dart';
-import 'custom_feature_products.dart';
+import 'featured_product_shimmer_list_view.dart';
+import 'featured_products_list_view.dart';
 
-class FeaturedProductsBlocBuilder extends StatelessWidget {
+class FeaturedProductsBlocBuilder extends StatefulWidget {
   const FeaturedProductsBlocBuilder({super.key});
 
+  @override
+  State<FeaturedProductsBlocBuilder> createState() =>
+      _FeaturedProductsBlocBuilderState();
+}
+
+class _FeaturedProductsBlocBuilderState
+    extends State<FeaturedProductsBlocBuilder> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -27,21 +34,7 @@ class FeaturedProductsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupSuccessWidget(products) {
-    return ListView.builder(
-      shrinkWrap: true,
-      itemCount: products.length,
-      scrollDirection: Axis.horizontal,
-      itemBuilder: (context, index) {
-        return Padding(
-          padding: EdgeInsets.only(
-            left: 25.w,
-          ),
-          child: CustomFeatureProduct(
-            featuredProductsModel: products[index],
-          ),
-        );
-      },
-    );
+    return FeaturedProductsListView(products: products);
   }
 
   Widget setupError(final String error) {
@@ -49,6 +42,6 @@ class FeaturedProductsBlocBuilder extends StatelessWidget {
   }
 
   Widget setupLoading() {
-    return const Center(child: CircularProgressIndicator());
+    return FeaturedProductShimmerListView();
   }
 }
