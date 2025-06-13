@@ -54,9 +54,6 @@ class HomeCubit extends Cubit<HomeState> {
           return ascending
               ? aPrice.compareTo(bPrice)
               : bPrice.compareTo(aPrice);
-          return ascending
-              ? aPrice.compareTo(bPrice)
-              : bPrice.compareTo(aPrice);
         });
       await Future.delayed(Duration(milliseconds: 50));
       final sortedProducts = await _mergeSort(productsToSort, isAscending);
@@ -109,18 +106,5 @@ class HomeCubit extends Cubit<HomeState> {
     result.addAll(right.sublist(rightIndex));
 
     return result;
-  }
-
-  Future<void> getRecommendedProducts(int categoryId) async {
-    emit(HomeState.recommendedProductsLoading());
-    final result = await getRecommendedProductsUseCase.call(categoryId);
-    result.fold(
-      (failure) {
-        emit(HomeState.recommendedProductsFailure(failure.message));
-      },
-      (recommendedProducts) {
-        emit(HomeState.recommendedProductsSuccess(recommendedProducts));
-      },
-    );
   }
 }
