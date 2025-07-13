@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
+
 import '../../../../../core/utils/app_assets.dart';
-import '../../manager/cubit/category_cubit.dart';
 import 'custom_category.dart';
 
 class CustomListOfCategory extends StatelessWidget {
@@ -11,33 +10,30 @@ class CustomListOfCategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => CategoryCubit(),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          CustomCategory(
-            index: 0,
-            image: AppAssets.women,
-            title: 'Women',
-          ),
-          CustomCategory(
-            index: 1,
-            image: AppAssets.men,
-            title: 'Men',
-          ),
-          CustomCategory(
-            index: 2,
-            image: AppAssets.access,
-            title: 'Accessories',
-          ),
-          CustomCategory(
-            index: 3,
-            image: AppAssets.beauty,
-            title: 'Beauty',
-          ),
-        ],
-      ),
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        CustomCategory(
+          index: 0,
+          image: AppAssets.women,
+          title: 'Women',
+        ),
+        CustomCategory(
+          index: 1,
+          image: AppAssets.men,
+          title: 'Men',
+        ),
+        CustomCategory(
+          index: 2,
+          image: AppAssets.access,
+          title: 'Accessories',
+        ),
+        CustomCategory(
+          index: 3,
+          image: AppAssets.beauty,
+          title: 'Beauty',
+        ),
+      ],
     );
   }
 }

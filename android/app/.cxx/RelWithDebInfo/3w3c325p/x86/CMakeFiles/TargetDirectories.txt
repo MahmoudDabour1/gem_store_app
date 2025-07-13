@@ -1,0 +1,2 @@
+F:/myapps/gem_store_app/android/app/.cxx/RelWithDebInfo/3w3c325p/x86/CMakeFiles/edit_cache.dir
+F:/myapps/gem_store_app/android/app/.cxx/RelWithDebInfo/3w3c325p/x86/CMakeFiles/rebuild_cache.dir

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/core/utils/app_strings.dart';
+import 'package:gem_store_app/features/home/presentation/views/widgets/recommended_producs_widgets/custom_list_of_recommended_product.dart';
 import '../../../../../core/utils/app_text_styles.dart';
 import '../../../../../core/widgets/custom_app_bar.dart';
 import 'collection_section.dart';
 import 'custom_list_of_category.dart';
-import 'custom_list_of_feature_products.dart';
-import 'custom_list_of_recommended_product.dart';
+import 'featured_products_widgets/custom_list_of_feature_products.dart';
 import 'new_collection_section.dart';
 import 'top_collection_section.dart';
 

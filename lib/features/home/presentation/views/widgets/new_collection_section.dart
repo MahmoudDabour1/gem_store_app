@@ -52,7 +52,7 @@ class NewCollectionSection extends StatelessWidget {
                   decoration: BoxDecoration(
                       shape: BoxShape.circle,
                       color:
-                          AppColors.firstGreyContainerColor.withValues(alpha:0.5)),
+                          AppColors.firstGreyContainerColor.withAlpha(51) ),
                 ),
                 Container(
                   height: 100.h,
