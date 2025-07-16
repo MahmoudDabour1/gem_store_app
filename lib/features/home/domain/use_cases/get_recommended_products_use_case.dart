@@ -5,16 +5,27 @@ import 'package:gem_store_app/features/home/data/models/recommended_product_mode
 import 'package:gem_store_app/features/home/domain/repository/get_product_repository.dart';
 
 class GetRecommendedProductsUseCase
-    extends BaseUseCase<List<RecommendedProductModel>, int> {
+    extends BaseUseCase<List<RecommendedProductModel>, RecommendedParams> {
   final GetProductRepository repository;
 
   GetRecommendedProductsUseCase(this.repository);
 
   @override
   Future<Either<Failure, List<RecommendedProductModel>>> call(
-      int categoryId) async {
+      RecommendedParams params) async {
     return await repository.getRecommendedProductsByCategory(
-      categoryId,
-    );
+        params.categoryId, params.offset, params.limit);
   }
+}
+
+class RecommendedParams {
+  final int categoryId;
+  final int offset;
+  final int limit;
+
+  RecommendedParams({
+    required this.categoryId,
+    required this.offset,
+    required this.limit,
+  });
 }

@@ -4,14 +4,13 @@ import 'package:gem_store_app/features/home/data/models/recommended_product_mode
 
 import '../../../../core/error/failure.dart';
 
-
 abstract class GetProductRepository {
   Future<Either<Failure, List<FeaturedProductsModel>>> getFeaturedProducts();
 
   Future<List<FeaturedProductsModel>> sortProductsByPrice(
-      List<FeaturedProductsModel> products,
-      bool ascending,
-      );
+    List<FeaturedProductsModel> products,
+    bool ascending,
+  );
   Future<Either<Failure, List<RecommendedProductModel>>>
-      getRecommendedProductsByCategory(int categryId);
+      getRecommendedProductsByCategory(int categryId, int offset, int limit);
 }

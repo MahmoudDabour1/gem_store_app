@@ -73,6 +73,9 @@ class HomeCubit extends Cubit<HomeState> {
     final mid = products.length ~/ 2;
     final left = await _mergeSort(products.sublist(0, mid), ascending);
     final right = await _mergeSort(products.sublist(mid), ascending);
+
+    int currentIndex = 0;
+
     return _merge(left, right, ascending);
   }
 
@@ -103,18 +106,5 @@ class HomeCubit extends Cubit<HomeState> {
     result.addAll(right.sublist(rightIndex));
 
     return result;
-  }
-
-  Future<void> getRecommendedProducts(int categoryId) async {
-    emit(HomeState.recommendedProductsLoading());
-    final result = await getRecommendedProductsUseCase.call(categoryId);
-    result.fold(
-      (failure) {
-        emit(HomeState.recommendedProductsFailure(failure.message));
-      },
-      (recommendedProducts) {
-        emit(HomeState.recommendedProductsSuccess(recommendedProducts));
-      },
-    );
   }
 }

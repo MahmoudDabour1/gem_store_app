@@ -38,7 +38,7 @@ class GemStoreApp extends StatelessWidget {
         return MultiBlocProvider(
           providers: [
             BlocProvider<HomeCubit>(
-              create: (context) => HomeCubit(sl(),sl())..getFeaturedProducts(),
+              create: (context) => HomeCubit(sl(), sl())..getFeaturedProducts(),
             ),
           ],
           child: ScreenUtilInit(
@@ -56,7 +56,7 @@ class GemStoreApp extends StatelessWidget {
                 analyticsService.getAnalyticsObserver(),
               ],
               initialRoute: Routes.homeScreen,
-                  // updateRequired ? Routes.updateScreen : Routes.onBoardingScreen,
+              // updateRequired ? Routes.updateScreen : Routes.onBoardingScreen,
             ),
           ),
         );

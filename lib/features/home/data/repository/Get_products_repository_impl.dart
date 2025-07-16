@@ -26,12 +26,11 @@ class ProductRepositoryImpl extends GetProductRepository {
     }
   }
 
-
   @override
   Future<List<FeaturedProductsModel>> sortProductsByPrice(
-      List<FeaturedProductsModel> products,
-      bool ascending,
-      ) async {
+    List<FeaturedProductsModel> products,
+    bool ascending,
+  ) async {
     if (products.length <= 1) return products;
 
     final productsCopy = List<FeaturedProductsModel>.from(products);
@@ -40,9 +39,9 @@ class ProductRepositoryImpl extends GetProductRepository {
   }
 
   List<FeaturedProductsModel> mergeSort(
-      List<FeaturedProductsModel> products,
-      bool ascending,
-      ) {
+    List<FeaturedProductsModel> products,
+    bool ascending,
+  ) {
     if (products.length <= 1) return products;
 
     final mid = products.length ~/ 2;
@@ -53,10 +52,10 @@ class ProductRepositoryImpl extends GetProductRepository {
   }
 
   List<FeaturedProductsModel> merge(
-      List<FeaturedProductsModel> left,
-      List<FeaturedProductsModel> right,
-      bool ascending,
-      ) {
+    List<FeaturedProductsModel> left,
+    List<FeaturedProductsModel> right,
+    bool ascending,
+  ) {
     final result = <FeaturedProductsModel>[];
     int leftIndex = 0;
     int rightIndex = 0;
@@ -83,11 +82,12 @@ class ProductRepositoryImpl extends GetProductRepository {
 
   @override
   Future<Either<Failure, List<RecommendedProductModel>>>
-  getRecommendedProductsByCategory(int categryId) async {
+      getRecommendedProductsByCategory(
+          int categryId, int offset, int limit) async {
     try {
       logger.d('Fetching recommended products from remote data source');
-      final result =
-      await remoteDataSource.getRecommendedProductsByCategory(categryId);
+      final result = await remoteDataSource.getRecommendedProductsByCategory(
+          categryId, offset, limit);
       logger.d('Successfully fetched ${result.length} products');
       return Right(result);
     } on ServerException catch (e) {
@@ -100,5 +100,4 @@ class ProductRepositoryImpl extends GetProductRepository {
       return Left(ServerFailure('An unexpected error occurred'));
     }
   }
-
 }

@@ -54,9 +54,14 @@ class _ProductRemoteDataSource implements ProductRemoteDataSource {
   @override
   Future<List<RecommendedProductModel>> getRecommendedProductsByCategory(
     int categoryId,
+    int offset,
+    int limit,
   ) async {
     final _extra = <String, dynamic>{};
-    final queryParameters = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{
+      r'offset': offset,
+      r'limit': limit,
+    };
     final _headers = <String, dynamic>{};
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<List<RecommendedProductModel>>(
