@@ -28,7 +28,7 @@ class CacheHelper {
     return await _storage.delete(key: key);
   }
 
-  Future clearSecureData() async {
+  Future clearSecureData({required String key}) async {
     return await _storage.deleteAll();
   }
 

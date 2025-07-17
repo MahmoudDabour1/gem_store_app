@@ -4,14 +4,12 @@ import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
 
 class LoginScreen extends StatelessWidget {
-  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
-
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor:AppColors.whiteColor(context),
+      backgroundColor: AppColors.whiteColor(context),
       body: Padding(
         padding: 33.ph,
         child: SingleChildScrollView(

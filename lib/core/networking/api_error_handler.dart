@@ -35,7 +35,8 @@ class ApiErrorHandler {
   static ApiErrorModel _handleError(int? statusCode, dynamic error) {
     if (error is String && error.contains('<html')) {
       return ApiErrorModel(
-        message: "Received an HTML response instead of JSON. Possible server error.",
+        message:
+            "Received an HTML response instead of JSON. Possible server error.",
         statusCode: statusCode,
       );
     }

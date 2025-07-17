@@ -8,6 +8,7 @@ import '../../features/login/auth/cubit/googleauth_cubit.dart';
 import '../analytics/analytics_services.dart';
 import '../di/dependency_injection.dart';
 import '../enums.dart';
+import '../er_login/cubit/requiststate_cubit.dart';
 import 'routes_exports.dart';
 
 class AppRouter {
@@ -50,7 +51,7 @@ class AppRouter {
       case Routes.loginScreen:
         return buildPageRoute(
           child: BlocProvider(
-            create: (context) => GoogleauthCubit(),
+            create: (context) => RequiststateCubit(),
             child: const LoginScreen(),
           ),
           routeSettings: settings,
@@ -72,7 +73,7 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return buildPageRoute(
-          child: HomeScreen(),
+          child: BottomNavBar(),
           routeSettings: settings,
         );
       case Routes.discoverScreen:
@@ -114,7 +115,8 @@ class AppRouter {
         return buildPageRoute(
           child: UpdateScreen(),
           routeSettings: settings,
-        ); case Routes.allFeaturedProductsScreen:
+        );
+      case Routes.allFeaturedProductsScreen:
         return buildPageRoute(
           child: AllFeaturedProductsScreen(),
           routeSettings: settings,
