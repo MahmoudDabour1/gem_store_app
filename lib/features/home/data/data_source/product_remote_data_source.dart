@@ -20,4 +20,6 @@ abstract class ProductRemoteDataSource {
     @Query("offset") int offset,
     @Query("limit") int limit,
   );
+  @GET(ApiConstants.getCategories)
+  Future<List<CategoryModel>> getCategories();
 }

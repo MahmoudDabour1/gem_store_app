@@ -1,27 +1,47 @@
+import 'dart:async';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gem_store_app/core/usecase/base_usecase.dart';
+import 'package:gem_store_app/features/home/data/models/recommended_product_model.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/featured_products_use_case.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/get_recommended_products_use_case.dart';
+import 'package:gem_store_app/features/home/domain/use_cases/get_categories_use_case.dart';
 
 import '../../data/models/featured_products_model.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
-  HomeCubit(this.featuredProductsUseCase, this.getRecommendedProductsUseCase)
+  Timer? _debounceTimer;
+  HomeCubit(this.featuredProductsUseCase, this.getRecommendedProductsUseCase,
+      this.getCategoriesUseCase)
       : super(HomeState.initial());
 
   final GetFeaturedProductsUseCase featuredProductsUseCase;
   final GetRecommendedProductsUseCase getRecommendedProductsUseCase;
+  final GetCategoriesUseCase getCategoriesUseCase;
 
   int currentIndex = 0;
 
   void changeIndex(int index) {
     currentIndex = index;
-
     emit(HomeState.selectedCategory());
+
+    emit(HomeState.recommendedProductsLoading());
+    _debounceTimer?.cancel();
+    _debounceTimer = Timer(const Duration(milliseconds: 300), () {
+      recommendedPages.clear();
+      recommendedKeys.clear();
+      recommendedHasNextPage = true;
+      recommendedIsLoading = false;
+      recommendedError = null;
+
+      final categoryId = catergoryModel[index].id;
+      fetchNextPageOfRecommendedProducts(categoryId: categoryId);
+    });
   }
 
   List<FeaturedProductsModel> _allProducts = [];
+  List<CategoryModel> catergoryModel = [];
   bool isAscending = true;
 
   Future<void> getFeaturedProducts() async {
@@ -106,5 +126,78 @@ class HomeCubit extends Cubit<HomeState> {
     result.addAll(right.sublist(rightIndex));
 
     return result;
+  }
+
+  Future<void> getCategories() async {
+    emit(HomeState.getCategoriesLoading());
+    final result = await getCategoriesUseCase.call(NoParameters());
+    result.fold((failure) {
+      emit(HomeState.getCategoriesFailure(failure.message));
+    }, (categories) {
+      catergoryModel = categories;
+      emit(HomeState.getCategoriesSuccess(categories));
+      if (categories.isNotEmpty) {
+        final firstCategoryId = categories.first.id;
+        fetchNextPageOfRecommendedProducts(categoryId: firstCategoryId);
+      }
+    });
+  }
+
+  List<List<RecommendedProductModel>> recommendedPages = [];
+  List<int> recommendedKeys = [];
+  bool recommendedHasNextPage = true;
+  bool recommendedIsLoading = false;
+  String? recommendedError;
+
+  Future<void> fetchNextPageOfRecommendedProducts(
+      {required int categoryId}) async {
+    if (recommendedIsLoading || !recommendedHasNextPage) return;
+
+    recommendedIsLoading = true;
+    emit(HomeState.recommendedProductsLoading());
+
+    try {
+      final offset =
+          recommendedPages.fold<int>(0, (sum, page) => sum + page.length);
+      final limit = 10;
+
+      final result = await getRecommendedProductsUseCase.call(
+        RecommendedParams(categoryId: categoryId, offset: offset, limit: limit),
+      );
+
+      result.fold(
+        (failure) {
+          recommendedIsLoading = false;
+          recommendedError = failure.message;
+          emit(HomeState.recommendedProductsFailure(failure.message));
+        },
+        (products) {
+          final isLastPage = products.length < limit;
+
+          recommendedPages.add(products);
+          recommendedKeys.add(offset);
+          recommendedHasNextPage = !isLastPage;
+          recommendedIsLoading = false;
+
+          emit(HomeState.recommendedProductsSuccess(
+            recommendedPages,
+            recommendedKeys,
+            recommendedHasNextPage,
+            recommendedIsLoading,
+            null,
+          ));
+        },
+      );
+    } catch (e) {
+      recommendedIsLoading = false;
+      recommendedError = e.toString();
+      emit(HomeState.recommendedProductsFailure(e.toString()));
+    }
+  }
+
+  @override
+  Future<void> close() {
+    _debounceTimer?.cancel();
+    return super.close();
   }
 }

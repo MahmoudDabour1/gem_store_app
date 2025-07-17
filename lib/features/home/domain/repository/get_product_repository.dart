@@ -13,4 +13,6 @@ abstract class GetProductRepository {
   );
   Future<Either<Failure, List<RecommendedProductModel>>>
       getRecommendedProductsByCategory(int categryId, int offset, int limit);
+
+  Future<Either<Failure, List<CategoryModel>>> getCategories();
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/features/home/data/models/recommended_product_model.dart';
 import 'package:gem_store_app/features/home/presentation/controller/home_cubit.dart';
 import 'package:gem_store_app/features/home/presentation/controller/home_state.dart';
 
@@ -12,13 +12,11 @@ import '../../../../../core/utils/app_text_styles.dart';
 class CustomCategory extends StatelessWidget {
   const CustomCategory({
     super.key,
-    required this.image,
-    required this.title,
+    required this.categoryModel,
     required this.index,
   });
 
-  final String image;
-  final String title;
+  final CategoryModel categoryModel;
   final int index;
 
   @override
@@ -54,8 +52,23 @@ class CustomCategory extends StatelessWidget {
                     height: 36.h,
                     width: 36.w,
                     child: Center(
-                      child: SvgPicture.asset(
-                        image,
+                      child: ClipOval(
+                        child: Image.network(
+                          categoryModel.image,
+                          width: 32.w,
+                          height: 32.h,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Icon(
+                              Icons.category,
+                              size: 20.w,
+                              color: context.read<HomeCubit>().currentIndex ==
+                                      index
+                                  ? Colors.white
+                                  : Colors.grey,
+                            );
+                          },
+                        ),
                       ),
                     ),
                   ),
@@ -64,10 +77,11 @@ class CustomCategory extends StatelessWidget {
             ),
             10.vs,
             Text(
-              title,
+              categoryModel.name,
               style: context.read<HomeCubit>().currentIndex == index
                   ? AppTextStyles.font10BrownRegular
                   : AppTextStyles.font10GreyRegular,
+              overflow: TextOverflow.ellipsis,
             ),
           ],
         );

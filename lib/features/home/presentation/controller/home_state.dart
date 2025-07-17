@@ -15,4 +15,23 @@ class HomeState with _$HomeState {
   const factory HomeState.featuredProductsFailure(String errorMessage) =
       FeaturedProductsFailure;
   const factory HomeState.selectedCategory() = SelectedCategory;
+
+  const factory HomeState.getCategoriesLoading() = GetCategoriesLoading;
+  const factory HomeState.getCategoriesSuccess(
+      List<CategoryModel> categoryMode) = GetCategoriesSuccess;
+  const factory HomeState.getCategoriesFailure(String errorMessage) =
+      GetCategoriesFailure;
+
+  const factory HomeState.recommendedProductsSuccess(
+    List<List<RecommendedProductModel>> pages,
+    List<int> keys,
+    bool hasNextPage,
+    bool isLoading,
+    String? error,
+  ) = RecommendedProductsSuccess;
+
+  const factory HomeState.recommendedProductsLoading() =
+      RecommendedProductsLoading;
+  const factory HomeState.recommendedProductsFailure(String errorMessage) =
+      RecommendedProductsFailure;
 }

@@ -4,6 +4,7 @@ import 'package:gem_store_app/features/home/data/data_source/product_remote_data
 import 'package:gem_store_app/features/home/domain/repository/get_product_repository.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/featured_products_use_case.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/get_recommended_products_use_case.dart';
+import 'package:gem_store_app/features/home/domain/use_cases/get_categories_use_case.dart';
 import 'package:gem_store_app/features/home/presentation/controller/home_cubit.dart';
 import 'package:get_it/get_it.dart';
 import 'package:logger/logger.dart';
@@ -37,10 +38,16 @@ Future<void> setupGetIt() async {
   sl.registerLazySingleton<GetRecommendedProductsUseCase>(
     () => GetRecommendedProductsUseCase(sl<GetProductRepository>()),
   );
+  sl.registerLazySingleton<GetCategoriesUseCase>(
+    () => GetCategoriesUseCase(sl<GetProductRepository>()),
+  );
 
   // 5. Register Cubit/Bloc last
   sl.registerFactory<HomeCubit>(
     () => HomeCubit(
-        sl<GetFeaturedProductsUseCase>(), sl<GetRecommendedProductsUseCase>()),
+      sl<GetFeaturedProductsUseCase>(),
+      sl<GetRecommendedProductsUseCase>(),
+      sl<GetCategoriesUseCase>(),
+    ),
   );
 }
