@@ -5,6 +5,8 @@ import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/features/home/data/models/recommended_product_model.dart';
 import 'package:gem_store_app/features/home/presentation/controller/home_cubit.dart';
 import 'package:gem_store_app/features/home/presentation/controller/home_state.dart';
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:shimmer/shimmer.dart';
 
 import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/app_text_styles.dart';
@@ -53,14 +55,27 @@ class CustomCategory extends StatelessWidget {
                     width: 36.w,
                     child: Center(
                       child: ClipOval(
-                        child: Image.network(
-                          categoryModel.image,
+                        child: CachedNetworkImage(
+                          placeholder: (context, url) => ClipRRect(
+                            borderRadius: BorderRadius.circular(10.r),
+                            child: Shimmer.fromColors(
+                              baseColor: AppColors.lightGrayColor,
+                              highlightColor:
+                                  AppColors.lightGreyText12w300Color,
+                              child: Container(
+                                height: 36.h,
+                                width: 36.h,
+                                color: AppColors.greyTextColor,
+                              ),
+                            ),
+                          ),
+                          imageUrl: categoryModel.image,
                           width: 32.w,
                           height: 32.h,
                           fit: BoxFit.cover,
-                          errorBuilder: (context, error, stackTrace) {
+                          errorWidget: (context, url, error) {
                             return Icon(
-                              Icons.category,
+                              Icons.error,
                               size: 20.w,
                               color: context.read<HomeCubit>().currentIndex ==
                                       index
