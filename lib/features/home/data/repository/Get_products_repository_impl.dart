@@ -100,4 +100,16 @@ class ProductRepositoryImpl extends GetProductRepository {
       return Left(ServerFailure('An unexpected error occurred'));
     }
   }
+
+  @override
+  Future<Either<Failure, List<CategoryModel>>> getCategories() async {
+    try {
+      final result = await remoteDataSource.getCategories();
+      return Right(result);
+    } on ServerException catch (e) {
+      return Left(ServerFailure(e.errorMessageModel.statusMessage));
+    } catch (e) {
+      return Left(ServerFailure('An unexpected error occurred'));
+    }
+  }
 }

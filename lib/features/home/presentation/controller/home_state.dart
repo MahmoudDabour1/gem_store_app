@@ -14,5 +14,13 @@ class HomeState with _$HomeState {
 
   const factory HomeState.featuredProductsFailure(String errorMessage) =
       FeaturedProductsFailure;
-  const factory HomeState.selectedCategory() = SelectedCategory;
+  //const factory HomeState.selectedCategory() = SelectedCategory;
+  const factory HomeState.selectedCategory(int selectedIndex) =
+      SelectedCategory;
+
+  const factory HomeState.getCategoriesLoading() = GetCategoriesLoading;
+  const factory HomeState.getCategoriesSuccess(
+      List<CategoryModel> categoryMode) = GetCategoriesSuccess;
+  const factory HomeState.getCategoriesFailure(String errorMessage) =
+      GetCategoriesFailure;
 }
