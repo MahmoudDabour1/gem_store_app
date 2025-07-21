@@ -3,7 +3,8 @@ import 'package:shimmer/shimmer.dart';
 import '../../../../../../core/helpers/public_imports.dart';
 
 class AllFeaturedProductsShimmerGridView extends StatelessWidget {
-  const AllFeaturedProductsShimmerGridView({super.key});
+  final int? itemCount;
+  const AllFeaturedProductsShimmerGridView({super.key, this.itemCount});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +17,7 @@ class AllFeaturedProductsShimmerGridView extends StatelessWidget {
         mainAxisSpacing: 16.h,
         childAspectRatio: 1.1 / 1.5,
       ),
-      itemCount:8,
+      itemCount:itemCount??8,
       itemBuilder: (context, index) {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,

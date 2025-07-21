@@ -1,17 +1,25 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gem_store_app/core/usecase/base_usecase.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/featured_products_use_case.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/get_recommended_products_use_case.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../../data/models/featured_products_model.dart';
 import 'home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit(this.featuredProductsUseCase, this.getRecommendedProductsUseCase)
-      : super(HomeState.initial());
+      : super(HomeState.initial()) {
+    pagingController.addPageRequestListener((pageKey) {
+      getFeaturedProducts(pageKey);
+    });
+  }
 
   final GetFeaturedProductsUseCase featuredProductsUseCase;
   final GetRecommendedProductsUseCase getRecommendedProductsUseCase;
+
+  final PagingController<int, FeaturedProductsModel> pagingController =
+      PagingController(firstPageKey: 0);
+  static const int limit = 10;
 
   int currentIndex = 0;
 
@@ -24,18 +32,54 @@ class HomeCubit extends Cubit<HomeState> {
   List<FeaturedProductsModel> _allProducts = [];
   bool isAscending = true;
 
-  Future<void> getFeaturedProducts() async {
-    emit(HomeState.featuredProductsLoading());
-    final result = await featuredProductsUseCase.call(NoParameters());
-    result.fold(
-      (failure) {
-        emit(HomeState.featuredProductsFailure(failure.message));
-      },
-      (featuredProducts) {
-        _allProducts = featuredProducts;
-        emit(HomeState.featuredProductsSuccess(featuredProducts));
-      },
-    );
+  Future<void> getFeaturedProducts(int offset) async {
+    if (offset == 0) emit(HomeState.featuredProductsLoading());    // final result = await featuredProductsUseCase.call(NoParameters());
+    // result.fold(
+    //   (failure) {
+    //     emit(HomeState.featuredProductsFailure(failure.message));
+    //   },
+    //   (featuredProducts) {
+    //     _allProducts = featuredProducts;
+    //     emit(HomeState.featuredProductsSuccess(featuredProducts));
+    //   },
+    // );
+    try {
+      final result = await featuredProductsUseCase.call(
+        FeaturedProductParams(offset: offset, limit: limit),
+      );
+
+      result.fold(
+        (failure) {
+          pagingController.error = failure.message;
+          emit(HomeState.featuredProductsFailure(failure.message));
+
+        },
+        (fetchedProducts) {
+          _allProducts = [..._allProducts, ...fetchedProducts];
+          final isLastPage = fetchedProducts.length < limit;
+          if (isLastPage) {
+            pagingController.appendLastPage(fetchedProducts);
+          } else {
+            final nextPageKey = offset + 1;
+            pagingController.appendPage(fetchedProducts, nextPageKey);
+
+          }
+          emit(HomeState.featuredProductsSuccess(_allProducts));
+        },
+      );
+    } catch (error) {
+      pagingController.error = error.toString();
+    }
+  }
+
+  void refreshFeaturedProducts() {
+    pagingController.refresh();
+  }
+
+  @override
+  Future<void> close() {
+    pagingController.dispose();
+    return super.close();
   }
 
   Future<void> sortProductsByPrice({required bool ascending}) async {
@@ -55,6 +99,7 @@ class HomeCubit extends Cubit<HomeState> {
               ? aPrice.compareTo(bPrice)
               : bPrice.compareTo(aPrice);
         });
+      pagingController.itemList = productsToSort;
       await Future.delayed(Duration(milliseconds: 50));
       final sortedProducts = await _mergeSort(productsToSort, isAscending);
 

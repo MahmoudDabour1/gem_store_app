@@ -31,18 +31,16 @@ class _AllFeaturedProductsScreenState extends State<AllFeaturedProductsScreen> {
         ),
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 25.w),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.end,
-              children: [
-                20.vs,
-                SortByPriceDropDownButton(),
-                20.vs,
-                AllFeaturedProductsBlocBuilder(),
-              ],
-            ),
+        child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 25.w),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              20.vs,
+              SortByPriceDropDownButton(),
+              20.vs,
+              Expanded(child: AllFeaturedProductsBlocBuilder()),
+            ],
           ),
         ),
       ),

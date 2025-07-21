@@ -15,9 +15,9 @@ class ProductRepositoryImpl extends GetProductRepository {
 
   @override
   Future<Either<Failure, List<FeaturedProductsModel>>>
-      getFeaturedProducts() async {
+      getFeaturedProducts( int offset, int limit) async {
     try {
-      final result = await remoteDataSource.getFeaturedProducts();
+      final result = await remoteDataSource.getFeaturedProducts(offset, limit);
       return Right(result);
     } on ServerException catch (e) {
       return Left(ServerFailure(e.errorMessageModel.statusMessage));

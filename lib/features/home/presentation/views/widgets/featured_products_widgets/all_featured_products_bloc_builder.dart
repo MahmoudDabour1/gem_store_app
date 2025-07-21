@@ -15,17 +15,15 @@ class AllFeaturedProductsBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           featuredProductsLoading: () => setupLoading(),
-          featuredProductsSuccess: (products) => setupSuccessWidget(products),
+          // featuredProductsSuccess: (products) => setupSuccessWidget(products),
           featuredProductsFailure: (error) => setupError(error),
-          orElse: () => const Center(child: CircularProgressIndicator()),
-        );
+          orElse: () => const AllFeaturedProductsGridView(),        );
       },
     );
   }
 
   Widget setupSuccessWidget(products) {
     return AllFeaturedProductsGridView(
-      products: products,
     );
   }
 

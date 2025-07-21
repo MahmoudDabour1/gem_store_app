@@ -16,13 +16,14 @@ class CustomListOfRecommendedProduct extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (_) =>
-          RecommendedProductsCubit(sl())..fetchNextPageOfRecommendedProducts(),
-      child: BlocBuilder<RecommendedProductsCubit,
-          PagingState<int, RecommendedProductModel>>(
-        builder: (context, state) {
-          final cubit = context.read<RecommendedProductsCubit>();
+    // return BlocProvider(
+    //   create: (_) =>
+    //       RecommendedProductsCubit(sl())..fetchNextPageOfRecommendedProducts(),
+    //   child:
+    //   BlocBuilder<RecommendedProductsCubit,
+    //       PagingState<int, RecommendedProductModel>>(
+    //     builder: (context, state) {
+    //       final cubit = context.read<RecommendedProductsCubit>();
           return Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -46,37 +47,37 @@ class CustomListOfRecommendedProduct extends StatelessWidget {
                 ),
               ),
               20.vs,
-              SizedBox(
-                height: 160.h,
-                child: PagedListView<int, RecommendedProductModel>(
-                  state: state,
-                  fetchNextPage: cubit.fetchNextPageOfRecommendedProducts,
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  physics: const ClampingScrollPhysics(),
-                  builderDelegate:
-                      PagedChildBuilderDelegate<RecommendedProductModel>(
-                    itemBuilder: (context, item, index) => Padding(
-                      padding: const EdgeInsets.only(left: 25),
-                      child: CustomRecommendedProduct(
-                        recommendedProductModel: item,
-                      ),
-                    ),
-                    newPageProgressIndicatorBuilder: (_) =>
-                        const ListOfShimmerRecommendedProducts(),
-                    firstPageProgressIndicatorBuilder: (_) =>
-                        const ListOfShimmerRecommendedProducts(),
-                    noItemsFoundIndicatorBuilder: (_) =>
-                        const Center(child: Text('No products found')),
-                    firstPageErrorIndicatorBuilder: (_) =>
-                        const Center(child: Text('Failed to load products')),
-                  ),
-                ),
-              ),
+              // SizedBox(
+              //   height: 160.h,
+              //   child: PagedListView<int, RecommendedProductModel>(
+              //     state: state,
+              //     fetchNextPage: cubit.fetchNextPageOfRecommendedProducts,
+              //     scrollDirection: Axis.horizontal,
+              //     shrinkWrap: true,
+              //     physics: const ClampingScrollPhysics(),
+              //     builderDelegate:
+              //         PagedChildBuilderDelegate<RecommendedProductModel>(
+              //       itemBuilder: (context, item, index) => Padding(
+              //         padding: const EdgeInsets.only(left: 25),
+              //         child: CustomRecommendedProduct(
+              //           recommendedProductModel: item,
+              //         ),
+              //       ),
+              //       newPageProgressIndicatorBuilder: (_) =>
+              //           const ListOfShimmerRecommendedProducts(),
+              //       firstPageProgressIndicatorBuilder: (_) =>
+              //           const ListOfShimmerRecommendedProducts(),
+              //       noItemsFoundIndicatorBuilder: (_) =>
+              //           const Center(child: Text('No products found')),
+              //       firstPageErrorIndicatorBuilder: (_) =>
+              //           const Center(child: Text('Failed to load products')),
+              //     ),
+              //   ),
+              // ),
             ],
           );
-        },
-      ),
-    );
+    //     },
+    //   ),
+    // );
   }
 }

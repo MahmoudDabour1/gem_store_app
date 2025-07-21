@@ -24,9 +24,9 @@ class _FeaturedProductsBlocBuilderState
         builder: (context, state) {
           return state.maybeWhen(
             featuredProductsLoading: () => setupLoading(),
-            featuredProductsSuccess: (products) => setupSuccessWidget(products),
+            // featuredProductsSuccess: (products) => setupSuccessWidget(products),
             featuredProductsFailure: (error) => setupError(error),
-            orElse: () => const Center(child: CircularProgressIndicator()),
+            orElse:()=>FeaturedProductsListView(),
           );
         },
       ),
@@ -34,7 +34,7 @@ class _FeaturedProductsBlocBuilderState
   }
 
   Widget setupSuccessWidget(products) {
-    return FeaturedProductsListView(products: products);
+    return FeaturedProductsListView();
   }
 
   Widget setupError(final String error) {
