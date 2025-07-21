@@ -6,6 +6,7 @@ import 'package:gem_store_app/features/home/data/models/recommended_product_mode
 import 'package:gem_store_app/features/home/domain/use_cases/featured_products_use_case.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/get_recommended_products_use_case.dart';
 import 'package:gem_store_app/features/home/domain/use_cases/get_categories_use_case.dart';
+import 'package:infinite_scroll_pagination/infinite_scroll_pagination.dart';
 
 import '../../data/models/featured_products_model.dart';
 import 'home_state.dart';
@@ -21,22 +22,12 @@ class HomeCubit extends Cubit<HomeState> {
   final GetCategoriesUseCase getCategoriesUseCase;
 
   int currentIndex = 0;
-
   void changeIndex(int index) {
     currentIndex = index;
-    emit(HomeState.selectedCategory());
-
-    emit(HomeState.recommendedProductsLoading());
+    emit(HomeState.selectedCategory(index));
     _debounceTimer?.cancel();
-    _debounceTimer = Timer(const Duration(milliseconds: 300), () {
-      recommendedPages.clear();
-      recommendedKeys.clear();
-      recommendedHasNextPage = true;
-      recommendedIsLoading = false;
-      recommendedError = null;
-
-      final categoryId = catergoryModel[index].id;
-      fetchNextPageOfRecommendedProducts(categoryId: categoryId);
+    _debounceTimer = Timer(const Duration(seconds: 2), () {
+      pagingController.refresh();
     });
   }
 
@@ -137,61 +128,51 @@ class HomeCubit extends Cubit<HomeState> {
       catergoryModel = categories;
       emit(HomeState.getCategoriesSuccess(categories));
       if (categories.isNotEmpty) {
-        final firstCategoryId = categories.first.id;
-        fetchNextPageOfRecommendedProducts(categoryId: firstCategoryId);
+        currentIndex = 0;
+        addPaginationListener();
+        pagingController.refresh();
+        fetchNextPageOfRecommendedProducts(categoryId: categories.first.id);
       }
     });
   }
 
-  List<List<RecommendedProductModel>> recommendedPages = [];
-  List<int> recommendedKeys = [];
-  bool recommendedHasNextPage = true;
-  bool recommendedIsLoading = false;
-  String? recommendedError;
+  final PagingController<int, RecommendedProductModel> pagingController =
+      PagingController(firstPageKey: 0);
+
+  void addPaginationListener() {
+    pagingController.addPageRequestListener((pageKey) {
+      final categoryId = catergoryModel[currentIndex].id;
+      fetchNextPageOfRecommendedProducts(categoryId: categoryId);
+    });
+  }
 
   Future<void> fetchNextPageOfRecommendedProducts(
       {required int categoryId}) async {
-    if (recommendedIsLoading || !recommendedHasNextPage) return;
-
-    recommendedIsLoading = true;
-    emit(HomeState.recommendedProductsLoading());
+    final nextPageKey = pagingController.nextPageKey ?? 0;
+    final limit = 5;
 
     try {
-      final offset =
-          recommendedPages.fold<int>(0, (sum, page) => sum + page.length);
-      final limit = 10;
-
       final result = await getRecommendedProductsUseCase.call(
-        RecommendedParams(categoryId: categoryId, offset: offset, limit: limit),
+        RecommendedParams(
+            categoryId: categoryId, offset: nextPageKey, limit: limit),
       );
 
       result.fold(
         (failure) {
-          recommendedIsLoading = false;
-          recommendedError = failure.message;
-          emit(HomeState.recommendedProductsFailure(failure.message));
+          pagingController.error = failure.message;
         },
         (products) {
           final isLastPage = products.length < limit;
-
-          recommendedPages.add(products);
-          recommendedKeys.add(offset);
-          recommendedHasNextPage = !isLastPage;
-          recommendedIsLoading = false;
-
-          emit(HomeState.recommendedProductsSuccess(
-            recommendedPages,
-            recommendedKeys,
-            recommendedHasNextPage,
-            recommendedIsLoading,
-            null,
-          ));
+          if (isLastPage) {
+            pagingController.appendLastPage(products);
+          } else {
+            final newOffset = nextPageKey + limit;
+            pagingController.appendPage(products, newOffset);
+          }
         },
       );
     } catch (e) {
-      recommendedIsLoading = false;
-      recommendedError = e.toString();
-      emit(HomeState.recommendedProductsFailure(e.toString()));
+      pagingController.error = e.toString();
     }
   }
 

@@ -25,6 +25,10 @@ class CustomCategory extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<HomeCubit, HomeState>(
       builder: (context, state) {
+        int selectedIndex = 0;
+        if (state is SelectedCategory) {
+          selectedIndex = state.selectedIndex;
+        }
         return Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -39,7 +43,7 @@ class CustomCategory extends StatelessWidget {
                   shape: BoxShape.circle,
                   border: Border.all(
                     width: 2.w,
-                    color: context.read<HomeCubit>().currentIndex == index
+                    color: context.watch<HomeCubit>().currentIndex == index
                         ? AppColors.brownColor
                         : AppColors.whiteColor(context),
                   ),
@@ -48,7 +52,7 @@ class CustomCategory extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                         shape: BoxShape.circle,
-                        color: context.read<HomeCubit>().currentIndex == index
+                        color: context.watch<HomeCubit>().currentIndex == index
                             ? AppColors.brownColor
                             : AppColors.greyContainerColor),
                     height: 36.h,
@@ -77,7 +81,7 @@ class CustomCategory extends StatelessWidget {
                             return Icon(
                               Icons.error,
                               size: 20.w,
-                              color: context.read<HomeCubit>().currentIndex ==
+                              color: context.watch<HomeCubit>().currentIndex ==
                                       index
                                   ? Colors.white
                                   : Colors.grey,
@@ -93,7 +97,7 @@ class CustomCategory extends StatelessWidget {
             10.vs,
             Text(
               categoryModel.name,
-              style: context.read<HomeCubit>().currentIndex == index
+              style: context.watch<HomeCubit>().currentIndex == index
                   ? AppTextStyles.font10BrownRegular
                   : AppTextStyles.font10GreyRegular,
               overflow: TextOverflow.ellipsis,
