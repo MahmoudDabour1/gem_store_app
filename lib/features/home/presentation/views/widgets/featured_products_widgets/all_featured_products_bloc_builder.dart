@@ -15,7 +15,6 @@ class AllFeaturedProductsBlocBuilder extends StatelessWidget {
       builder: (context, state) {
         return state.maybeWhen(
           featuredProductsLoading: () => setupLoading(),
-          // featuredProductsSuccess: (products) => setupSuccessWidget(products),
           featuredProductsFailure: (error) => setupError(error),
           orElse: () => const AllFeaturedProductsGridView(),        );
       },
