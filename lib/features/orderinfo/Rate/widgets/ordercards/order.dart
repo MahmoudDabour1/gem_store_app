@@ -43,7 +43,7 @@ class TrackingInfo extends StatelessWidget {
 
 class OrderStatusAndDetailsButton extends StatelessWidget {
   final OrdersModel order;
-  const OrderStatusAndDetailsButton({required this.order});
+  const OrderStatusAndDetailsButton({super.key, required this.order});
 
   @override
   Widget build(BuildContext context) {

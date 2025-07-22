@@ -19,26 +19,21 @@ class _FeaturedProductsBlocBuilderState
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 240.h,
-        child: BlocBuilder<HomeCubit, HomeState>(
-          buildWhen: (previous, current) =>
-              current is FeaturedProductsLoading ||
-              current is FeaturedProductsSuccess ||
-              current is FeaturedProductsFailure,
-          builder: (context, state) {
-            return state.maybeWhen(
-              featuredProductsLoading: () => setupLoading(),
-              featuredProductsSuccess: (products) =>
-                  setupSuccessWidget(products),
-              featuredProductsFailure: (error) => setupError(error),
-              orElse: () => const Center(child: CircularProgressIndicator()),
-            );
-          },
-        ));
+      height: 240.h,
+      child: BlocBuilder<HomeCubit, HomeState>(
+        builder: (context, state) {
+          return state.maybeWhen(
+            featuredProductsLoading: () => setupLoading(),
+            featuredProductsFailure: (error) => setupError(error),
+            orElse: () => FeaturedProductsListView(),
+          );
+        },
+      ),
+    );
   }
 
   Widget setupSuccessWidget(products) {
-    return FeaturedProductsListView(products: products);
+    return FeaturedProductsListView();
   }
 
   Widget setupError(final String error) {
