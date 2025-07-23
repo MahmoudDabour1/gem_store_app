@@ -2,6 +2,7 @@ class ApiConstants {
   static const String apiBaseUrl = "https://api.escuelajs.co/api/v1/";
   static const String featuredProductsUrl = "products/";
   static const String getRecommendedProductsByCategory = '/categories/';
+  static const String getCategories = 'categories';
 }
 
 class ApiErrors {

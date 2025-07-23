@@ -1,17 +1,22 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
 
 class LoginScreen extends StatelessWidget {
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 9c94946d94ff55d9a4b8eef6abe71e3fc075a459
   const LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+<<<<<<< HEAD
       backgroundColor:Colors.white,
+=======
+      backgroundColor: AppColors.whiteColor(context),
+>>>>>>> 9c94946d94ff55d9a4b8eef6abe71e3fc075a459
       body: Padding(
         padding: 33.ph,
         child: SingleChildScrollView(

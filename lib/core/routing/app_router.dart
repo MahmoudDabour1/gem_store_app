@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:gem_store_app/features/home/presentation/controller/home_cubit.dart';
 import 'package:gem_store_app/features/search/presentation/search_view/setting/setting_screen.dart';
 
 import '../../features/home/presentation/views/widgets/featured_products_widgets/all_featured_products_screen.dart';
-import '../../features/login/auth/cubit/googleauth_cubit.dart';
 import '../analytics/analytics_services.dart';
-import '../di/dependency_injection.dart';
 import '../enums.dart';
+import '../er_login/cubit/requiststate_cubit.dart';
 import 'routes_exports.dart';
 
 class AppRouter {
@@ -50,7 +48,7 @@ class AppRouter {
       case Routes.loginScreen:
         return buildPageRoute(
           child: BlocProvider(
-            create: (context) => GoogleauthCubit(),
+            create: (context) => RequiststateCubit(),
             child: const LoginScreen(),
           ),
           routeSettings: settings,
@@ -72,7 +70,7 @@ class AppRouter {
         );
       case Routes.homeScreen:
         return buildPageRoute(
-          child: HomeScreen(),
+          child: BottomNavBar(),
           routeSettings: settings,
         );
       case Routes.discoverScreen:
@@ -114,7 +112,8 @@ class AppRouter {
         return buildPageRoute(
           child: UpdateScreen(),
           routeSettings: settings,
-        ); case Routes.allFeaturedProductsScreen:
+        );
+      case Routes.allFeaturedProductsScreen:
         return buildPageRoute(
           child: AllFeaturedProductsScreen(),
           routeSettings: settings,

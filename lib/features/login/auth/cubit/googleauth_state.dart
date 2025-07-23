@@ -1,3 +1,4 @@
+// googleauth_state.dart
 part of 'googleauth_cubit.dart';
 
 @immutable

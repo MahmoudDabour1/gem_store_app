@@ -13,7 +13,7 @@ class GoogleauthCubit extends Cubit<GoogleauthState> {
 
   GoogleauthCubit() : super(GoogleauthInitial());
 
-  Future<void> signInWithGoogle() async {
+  Future<void> signInWithGoogle(dynamic dio) async {
     emit(AuthLoading());
     try {
       final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
@@ -22,23 +22,31 @@ class GoogleauthCubit extends Cubit<GoogleauthState> {
         return;
       }
 
-      final GoogleSignInAuthentication? googleAuth =
+      final GoogleSignInAuthentication googleAuth =
           await googleUser.authentication;
 
       final OAuthCredential credential = GoogleAuthProvider.credential(
-        accessToken: googleAuth?.accessToken,
-        idToken: googleAuth?.idToken,
+        accessToken: googleAuth.accessToken,
+        idToken: googleAuth.idToken,
       );
 
       final UserCredential userCredential =
           await _auth.signInWithCredential(credential);
 
-      await sl<CacheHelper>()
-          .writeSecureData(key: 'email', value: googleUser.email);
-      await sl<CacheHelper>()
-          .writeSecureData(key: 'name', value: googleUser.displayName ?? '');
-
       if (userCredential.user != null) {
+        final String? token = await userCredential.user!.getIdToken();
+
+        await sl<CacheHelper>()
+            .writeSecureData(key: 'email', value: googleUser.email);
+        await sl<CacheHelper>()
+            .writeSecureData(key: 'name', value: googleUser.displayName ?? '');
+        await sl<CacheHelper>()
+            .writeSecureData(key: 'token', value: token ?? '');
+
+        dio?.options.headers = {
+          'Authorization': 'Bearer $token',
+        };
+
         emit(AuthSuccess(userCredential.user!));
       } else {
         emit(AuthError("User is null after sign in"));
@@ -53,6 +61,9 @@ class GoogleauthCubit extends Cubit<GoogleauthState> {
     try {
       await _googleSignIn.signOut();
       await _auth.signOut();
+
+      await sl<CacheHelper>().clearSecureData(key: 'token');
+
       emit(AuthSignedOut());
     } catch (e) {
       emit(AuthError(e.toString()));

@@ -43,7 +43,7 @@ class _ListOfCircleAvatarState extends State<ListOfCircleAvatar> {
                   circleAvatarModel: circleAvatarModel[index],
                   onTap: () async {
                     if (index == 1) {
-                      context.read<GoogleauthCubit>().signInWithGoogle();
+                      context.read<GoogleauthCubit>().signInWithGoogle(context);
                     }
                   },
                 );

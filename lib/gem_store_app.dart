@@ -40,7 +40,12 @@ class GemStoreApp extends StatelessWidget {
         return MultiBlocProvider(
           providers: [
             BlocProvider<HomeCubit>(
-              create: (context) => HomeCubit(sl(), sl())..getFeaturedProducts(),
+              create: (context) {
+                final cubit = HomeCubit(sl(), sl(), sl());
+                cubit.getFeaturedProducts(0);
+                cubit.getCategories();
+                return cubit;
+              },
             ),
           ],
           child: ScreenUtilInit(

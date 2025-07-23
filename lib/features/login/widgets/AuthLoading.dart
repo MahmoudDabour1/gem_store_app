@@ -28,18 +28,6 @@ class AuthLoadingOverlay extends StatelessWidget {
                       ),
                       strokeWidth: 4.5,
                     ),
-                    SizedBox(
-                      height: 5,
-                    ),
-                    Text(
-                      "Signing you in...",
-                      style: TextStyle(
-                        color: Color.fromARGB(255, 255, 255, 255),
-                        fontSize: 16,
-                        fontWeight: FontWeight.w500,
-                        letterSpacing: 1,
-                      ),
-                    ),
                   ],
                 ),
               ),
