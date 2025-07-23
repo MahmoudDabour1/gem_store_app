@@ -58,12 +58,9 @@ class CustomCategory extends StatelessWidget {
                     height: 36.h,
                     width: 36.w,
                     child: Center(
-<<<<<<< HEAD
-                      child: SvgPicture.asset(
-                        image,
-                         colorFilter: ColorFilter.mode(context.read<HomeCubit>().currentIndex == index? Colors.white: Color(0xff9D9D9D) , BlendMode.srcIn)
-                         
-=======
+
+                     
+
                       child: ClipOval(
                         child: CachedNetworkImage(
                           placeholder: (context, url) => ClipRRect(
@@ -94,7 +91,7 @@ class CustomCategory extends StatelessWidget {
                             );
                           },
                         ),
->>>>>>> 9c94946d94ff55d9a4b8eef6abe71e3fc075a459
+
                       ),
                     ),
                   ),

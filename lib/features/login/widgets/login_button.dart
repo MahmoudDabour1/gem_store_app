@@ -10,17 +10,13 @@ class LoginButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-<<<<<<< HEAD
-    return Center(
-      child: AppCustomButton(
-        onPressed: () {
-          // Navigator.push(
-          //     context, MaterialPageRoute(builder: (context) => BottomNavBar()));
-=======
+
+
+
     return BlocConsumer<RequiststateCubit, RequiststateState>(
       listener: (context, state) {
         if (state is RequiststateSuccess) {
->>>>>>> 9c94946d94ff55d9a4b8eef6abe71e3fc075a459
+
           context.pushNamed(Routes.bottomNavBar);
         } else if (state is RequiststateFailure) {
           ScaffoldMessenger.of(context).showSnackBar(
