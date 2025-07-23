@@ -6,7 +6,8 @@ import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import '../../../../core/utils/app_colors.dart';
 
 class CurrentImageIndecator extends StatelessWidget {
-  const CurrentImageIndecator({super.key});
+  final int index;
+  const CurrentImageIndecator({super.key, required this.index});
 
   @override
   Widget build(BuildContext context) {
@@ -17,19 +18,16 @@ class CurrentImageIndecator extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            for (int index = 0; index < 3; index++)
+            for (int ind = 0; ind < 3; ind++)
               Container(
-                padding:
-                index == 0 ? 2.allEdgeInsets : 0.allEdgeInsets,
-                width: index == 0 ? 10.5 : 5.5,
-                height: index == 0 ? 10.5 : 5.5,
+                padding: ind == index ? 2.allEdgeInsets : 0.allEdgeInsets,
+                width: ind == index ? 10.5 : 5.5,
+                height: ind == index ? 10.5 : 5.5,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(7.r),
-                    border: Border.all(
-                        color: AppColors.deepGrayColor, width: 1.5),
-                    color: index == 0
-                        ? Colors.white
-                        : AppColors.deepGrayColor),
+                    border:
+                        Border.all(color: AppColors.deepGrayColor, width: 1.5),
+                    color: ind == index ? Colors.white : AppColors.deepGrayColor),
                 child: Container(
                   height: 5.5.h,
                   width: 5.5.w,
@@ -40,7 +38,6 @@ class CurrentImageIndecator extends StatelessWidget {
                 ),
               )
           ],
-        )
-    );
+        ));
   }
 }

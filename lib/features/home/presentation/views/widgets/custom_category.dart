@@ -56,6 +56,8 @@ class CustomCategory extends StatelessWidget {
                     child: Center(
                       child: SvgPicture.asset(
                         image,
+                         colorFilter: ColorFilter.mode(context.read<HomeCubit>().currentIndex == index? Colors.white: Color(0xff9D9D9D) , BlendMode.srcIn)
+                         
                       ),
                     ),
                   ),

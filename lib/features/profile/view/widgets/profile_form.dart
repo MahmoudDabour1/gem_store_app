@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/public_imports.dart';
 import 'package:gem_store_app/core/utils/app_strings.dart';
 import 'package:gem_store_app/core/widgets/app_custom_button.dart';
 import 'package:gem_store_app/core/widgets/app_text_form_field.dart';
@@ -25,17 +26,19 @@ class ProfileForm extends StatelessWidget {
         Row(
           children: [
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2 - 30,
+              width:MediaQuery.of(context).size.width / 2 ,
               child: AppTextFormField(
                 controller: firstNameController,
                 labelText: AppStrings.firstName,
                 validator: (value) => value.isEmpty ? AppStrings.required : null,
               ),
             ),
-            Spacer(),
+            10.hs,
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2 - 30,
+              width: MediaQuery.of(context).size.width / 2 - 50,
+              
               child: AppTextFormField(
+                
                 controller: lastNameController,
                 labelText: AppStrings.lastName,
                 validator: (value) => value.isEmpty ? AppStrings.required : null,
@@ -56,16 +59,16 @@ class ProfileForm extends StatelessWidget {
         Row(
           children: [
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2 - 30,
+              width: MediaQuery.of(context).size.width / 2 - 105,
               child: AppTextFormField(
                 controller: genderController,
                 labelText: AppStrings.gender,
                 validator: (value) => value.isEmpty ? AppStrings.required : null,
               ),
             ),
-            Spacer(),
+            10.hs,
             SizedBox(
-              width: MediaQuery.of(context).size.width / 2 - 30,
+              width: MediaQuery.of(context).size.width / 2 + 57,
               child: AppTextFormField(
                 controller: phoneController,
                 labelText: AppStrings.phone,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import 'package:gem_store_app/core/routing/routes_exports.dart';
 import 'package:gem_store_app/features/search/presentation/search_view/setting/models/setting_row_model.dart';
 
@@ -15,7 +16,7 @@ class SettingRow extends StatelessWidget {
     return Column(
       children: [
         SizedBox(
-          height: 50.sp,
+          // height: 100.sp,
           child: Row(
             children: [
               Image.asset(settingRowModel.image),
@@ -28,11 +29,14 @@ class SettingRow extends StatelessWidget {
                 flex: 1,
               ),
               SvgPicture.asset(AppAssets.rightArrow),
-              horizontalSpace(5)
+              horizontalSpace(
+              5)
             ],
           ),
         ),
-        Divider(),
+        10.vs,
+        Divider(color: Color(0xffF3F3F6),),
+        44.vs
       ],
     );
   }

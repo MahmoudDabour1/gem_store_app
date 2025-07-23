@@ -36,8 +36,8 @@ class Orderdatailscard extends StatelessWidget {
           child: Card(
             color: AppColors.lightGreyText13RobotoColor,
             child: SizedBox(
-              width: 327,
-              height: 92,
+              width: 327.w,
+              height: 120.h,
               child: Padding(
                 padding: const EdgeInsets.all(15),
                 child: Row(

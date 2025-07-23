@@ -67,7 +67,7 @@ class _ListOfCircleAvatarState extends State<ListOfCircleAvatar> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        backgroundColor: Colors.red,
+        backgroundColor: const Color.fromARGB(255, 204, 88, 80),
       ),
     );
   }

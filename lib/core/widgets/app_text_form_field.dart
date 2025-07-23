@@ -47,7 +47,19 @@ class AppTextFormField extends StatelessWidget {
       decoration: InputDecoration(
           border: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: AppColors.lighterGrayColor,
+              color:AppColors.lightGreyhintText,
+              width: 1.0,
+            ),
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.lightGreyhintText,
+              width: 1.0,
+            ),
+          ),
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(
+              color: AppColors.lightGreyhintText,
               width: 1.0,
             ),
           ),

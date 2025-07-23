@@ -65,26 +65,31 @@ class HeaderOfDiscover extends StatelessWidget {
               ),
             ),
             Spacer(),
-            Container(
-              width: 51.w,
-              height: 49.h,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(15.r),
-                color: AppColors.morewhiteColor,
-                boxShadow: [
-                  BoxShadow(
-                    color: Color.fromRGBO(0, 0, 0, 0.15),
-                    offset: const Offset(0, 1),
-                    blurRadius: 3,
-                    spreadRadius: 0.r,
+            InkWell(
+              onTap: () {
+                Scaffold.of(context).openEndDrawer();
+              },
+              child: Container(
+                width: 51.w,
+                height: 49.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15.r),
+                  color: AppColors.morewhiteColor,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromRGBO(0, 0, 0, 0.15),
+                      offset: const Offset(0, 1),
+                      blurRadius: 3,
+                      spreadRadius: 0.r,
+                    ),
+                  ],
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    height: 27.h,
+                    width: 27.w,
+                    AppAssets.filter,
                   ),
-                ],
-              ),
-              child: Center(
-                child: SvgPicture.asset(
-                  height: 27.h,
-                  width: 27.w,
-                  AppAssets.filter,
                 ),
               ),
             ),

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
+import 'package:gem_store_app/core/routing/routes_exports.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'package:gem_store_app/features/discover/presentation/views/discover_screen.dart';
 import 'package:gem_store_app/features/home/presentation/views/home_screen.dart';
@@ -38,6 +39,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
       backgroundColor: AppColors.whiteColor(context),
       body: _widgetOptions[_selectedIndex],
       extendBody: true,
+      drawer: ProfileDrawer(),
       bottomNavigationBar: Container(
         padding: 10.ph + 10.pv,
         decoration: BoxDecoration(

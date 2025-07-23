@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/helpers/sizes_utils_extensions.dart';
 import '../../../../core/utils/app_colors.dart';
 import 'rating_bar.dart';
@@ -30,7 +31,7 @@ class CustomeReview extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 30,
-                  backgroundImage: AssetImage(AppAssets.imagesTestItem),
+                  backgroundImage: AssetImage(AppAssets.girlImage),
                 ),
                 14.hs,
                 Column(
@@ -38,7 +39,7 @@ class CustomeReview extends StatelessWidget {
                   children: [
                     Text(
                       userName,
-                      style: AppTextStyles.font13GreyMedium,
+                      style: AppTextStyles.font13GreyMedium.copyWith(color: Colors.black),
                     ),
                     5.vs,
                     CustomeRatingBar(
@@ -51,7 +52,7 @@ class CustomeReview extends StatelessWidget {
             ),
             Text(
               dateOfReview,
-              style: AppTextStyles.font14greyRegular,
+              style: AppTextStyles.font14greyRegular.copyWith(color: Color(0xff33302E).withValues(alpha: .25)),
             )
           ],
         ),
@@ -61,7 +62,7 @@ class CustomeReview extends StatelessWidget {
           maxLines: 3,
           textAlign: TextAlign.justify,
           review,
-          style: AppTextStyles.font12regular,
+          style: AppTextStyles.font12regular.copyWith(fontSize: 11.sp,color: Colors.black),
         ),
         10.vs
       ],

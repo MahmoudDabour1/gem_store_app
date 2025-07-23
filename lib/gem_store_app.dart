@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gem_store_app/core/firebase_remote_config/remote_config.dart';
 import 'package:gem_store_app/core/utils/themeData.dart';
+import 'package:gem_store_app/features/profile/view/profiledrawer_screen.dart';
 import 'package:provider/provider.dart';
 
 import 'core/analytics/analytics_services.dart';
@@ -30,6 +31,7 @@ class GemStoreApp extends StatelessWidget {
         if (!snapshot.hasData) {
           return const MaterialApp(
             home: Scaffold(
+              drawer: ProfileDrawer(),
               body: Center(child: CircularProgressIndicator()),
             ),
           );
@@ -49,13 +51,15 @@ class GemStoreApp extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               theme: lightTheme,
               darkTheme: darkTheme,
+              
+              
               themeMode: themeProvider.themeMode,
               onGenerateRoute: appRouter.generateRoute,
               navigatorObservers: [
                 NavigatorObserver(),
                 analyticsService.getAnalyticsObserver(),
               ],
-              initialRoute: Routes.homeScreen,
+              initialRoute: Routes.onBoardingIntroScreen ,
               // updateRequired ? Routes.updateScreen : Routes.onBoardingScreen,
             ),
           ),

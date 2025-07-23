@@ -10,10 +10,10 @@ class ModeButton extends StatelessWidget {
     final themeProvider = Provider.of<ThemeProvider>(context);
 
     return Container(
-      width: 200.w,
+      width: 220.w,
       padding: 4.allEdgeInsets,
       decoration: BoxDecoration(
-        color: themeProvider.isDarkMode ? Colors.grey[800] : Colors.grey[200],
+        color: Color(0xffF4F4F4) ,
         borderRadius: BorderRadius.circular(30.r),
       ),
       child: Row(
@@ -41,6 +41,7 @@ class ModeButton extends StatelessWidget {
                   Text(
                     'Light',
                     style: TextStyle(
+                      fontSize: 14.sp,
                         color: Colors.black, fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -70,6 +71,7 @@ class ModeButton extends StatelessWidget {
                   Text(
                     'Dark',
                     style: TextStyle(
+                      fontSize: 14.sp,
                         color: Colors.grey, fontWeight: FontWeight.bold),
                   ),
                 ],

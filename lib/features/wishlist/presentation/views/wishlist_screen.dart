@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gem_store_app/core/routing/routes_exports.dart';
 import 'package:gem_store_app/core/utils/app_colors.dart';
 import 'widgets/wishlist_screen_body.dart';
 
@@ -10,6 +11,7 @@ class WishlistScreen extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         backgroundColor: AppColors.whiteColor(context),
+        drawer: ProfileDrawer(),
 
         body: const WishlistScreenBody(),
       ),

@@ -48,11 +48,11 @@ class OnboardingIntroScreen extends StatelessWidget {
                             Text(
                               AppStrings.onBoardingItemsTitles[index],
                               style: AppTextStyles.font20semiBold
-                                  .copyWith(height: 2.h),
+                                  .copyWith(color: Colors.black, height: 2.h),
                             ),
                             Text(
                               AppStrings.onBoardingItemsSubTitles[index],
-                              style: AppTextStyles.font16regular,
+                              style: AppTextStyles.font16regular.copyWith(color:Colors.black),
                             ),
                           ],
                         );
@@ -69,7 +69,7 @@ class OnboardingIntroScreen extends StatelessWidget {
                         sl<CacheHelper>()
                             .saveData(key: 'onBoarding', value: true);
                         context.pushNamed(Routes.loginScreen);
-                        context.read<ScrollingCubit>().destroyController();
+                       
                       },
                     ),
                   ],

@@ -12,8 +12,8 @@ class LoginButton extends StatelessWidget {
     return Center(
       child: AppCustomButton(
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => BottomNavBar()));
+          // Navigator.push(
+          //     context, MaterialPageRoute(builder: (context) => BottomNavBar()));
           context.pushNamed(Routes.bottomNavBar);
         },
         text: AppStrings.loginButtonString,

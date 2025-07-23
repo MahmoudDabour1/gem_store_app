@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gem_store_app/core/helpers/extenstions.dart';
+import 'package:gem_store_app/core/routing/routes.dart';
 import 'package:gem_store_app/features/product_details/views/widgets/custome_details_sheet.dart';
 import '../../../../core/utils/app_assets.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -16,6 +18,7 @@ class FullDetails extends StatelessWidget {
     return Column(
       children: [
         CustomeDetailsSheet(),
+        // Spacer(),
         ColoredBox(
           color: Colors.white,
           child: Container(
@@ -26,7 +29,9 @@ class FullDetails extends StatelessWidget {
             decoration: BoxDecoration(
                 color: AppColors.darkerGrayColor, borderRadius: borderRadius),
             child: TextButton.icon(
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.cartScreen);
+              },
               label: Text(
                 "Add To Cart",
                 style: AppTextStyles.font18BlackSemiBold

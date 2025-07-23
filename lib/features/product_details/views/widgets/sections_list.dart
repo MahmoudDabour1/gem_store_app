@@ -11,7 +11,7 @@ import 'custome_review.dart';
 import 'custome_section_of_details.dart';
 
 class SectionsList extends StatelessWidget {
-  // TODO: Refactor this file to follow best practices and keep it within 50 lines if possible.
+
 
   const SectionsList({super.key});
 
@@ -25,7 +25,7 @@ class SectionsList extends StatelessWidget {
             maxLines: 3,
             textAlign: TextAlign.justify,
             'Sportswear is no longer under culture, it is no longer indie or cobbled together as it once was. Sport is fashion today. The top is oversized in fit and style, may need to size down.',
-            style: AppTextStyles.font12regular,
+            style: AppTextStyles.font12regular.copyWith(color: Colors.black),
           ),
         ]),
         10.vs,

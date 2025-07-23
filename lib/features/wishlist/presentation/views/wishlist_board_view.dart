@@ -16,6 +16,9 @@ class WishlistBoardView extends StatelessWidget {
       backgroundColor: Colors.white,
 
       drawer: ProfileDrawer(),
+      bottomNavigationBar:BottomNavBar(
+        
+      ),
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
         child: SingleChildScrollView(

@@ -1,5 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gem_store_app/core/helpers/public_imports.dart';
+import 'package:gem_store_app/core/routing/routes_exports.dart';
+import 'package:gem_store_app/features/profile/view/profiledrawer_screen.dart';
 import '../Rate/widgets/buildTabItem.dart';
 import '../cubit/orderinfo_cubit.dart';
 import '../models/myordersmodel.dart';
@@ -22,7 +24,10 @@ class OrdersView extends StatelessWidget {
         length: 3,
         child: Scaffold(
           backgroundColor: Colors.white,
+          drawer: ProfileDrawer(),
+          
           appBar: AppBar(
+            
             title: Center(
               child: Padding(
                 padding: EdgeInsets.only(top: 26.h, right: 35.w),
@@ -47,7 +52,7 @@ class OrdersView extends StatelessWidget {
                   indicatorSize: TabBarIndicatorSize.label,
                   indicatorColor: Colors.transparent,
                   tabs: [
-                    // TODO: Use constants or an enum for the tab titles to avoid hardcoding strings.
+                   
                     Tab(child: buildTabItem(TabTitles.pending)),
                     Tab(child: buildTabItem(TabTitles.delivered)),
                     Tab(child: buildTabItem(TabTitles.canceled)),

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 final ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   primaryColor: Colors.black,
+  fontFamily: "Product Sans",
   scaffoldBackgroundColor: Colors.white,
   colorScheme: const ColorScheme.light(
     primary: Colors.black,
@@ -12,16 +13,18 @@ final ThemeData lightTheme = ThemeData(
     onSurface: Colors.black,
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.black,
-    iconTheme: IconThemeData(color: Colors.white),
+    backgroundColor: Colors.white,
+    iconTheme: IconThemeData(color: Colors.black),
   ),
   textTheme: const TextTheme(
+    
     bodyMedium: TextStyle(color: Colors.black),
   ),
 );
 
 final ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
+  fontFamily: "Product Sans",
   primaryColor: Colors.white,
   scaffoldBackgroundColor: Colors.black,
   colorScheme: const ColorScheme.dark(
@@ -33,8 +36,8 @@ final ThemeData darkTheme = ThemeData(
     onSurface: Colors.white,
   ),
   appBarTheme: const AppBarTheme(
-    backgroundColor: Colors.white,
-    iconTheme: IconThemeData(color: Colors.black),
+    backgroundColor: Colors.black,
+    iconTheme: IconThemeData(color: Colors.white),
   ),
   textTheme: const TextTheme(
     bodyMedium: TextStyle(color: Colors.white),
