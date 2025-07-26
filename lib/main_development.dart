@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 void main() async {
   await initApp();
 
+
   runApp(
     // ChangeNotifierProvider(
     //   create: (context) => ThemeProvider(),
